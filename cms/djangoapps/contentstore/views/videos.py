@@ -755,9 +755,12 @@ def storage_service_bucket():
     # https://github.com/boto/boto/issues/2207#issuecomment-60682869
     bucket_location = bucket.get_location()
     if bucket_location:
-        conn = s3.connect_to_region(bucket_location)
-        if conn:
-            bucket = conn.get_bucket(settings.VIDEO_UPLOAD_PIPELINE["BUCKET"])
+        conn = s3.connect_to_region(
+            'us-west-2',
+            aws_access_key_id=settings.AWS_ACCESS_KEY_ID,
+            aws_secret_access_key=settings.AWS_SECRET_ACCESS_KEY
+        )
+        bucket = conn.get_bucket(settings.VIDEO_UPLOAD_PIPELINE["BUCKET"], validate=False)
     return bucket
 
 
