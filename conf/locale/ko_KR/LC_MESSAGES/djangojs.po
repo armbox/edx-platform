@@ -3466,7 +3466,7 @@ msgid ""
 " data is permanent and cannot be undone. EdX will not be able to recover "
 "your account or the data that is deleted."
 msgstr ""
-""내 계정 삭제"를 선택했습니다. 계정 및 개인 데이터 삭제는 "
+"\"내 계정 삭제\"를 선택했습니다. 계정 및 개인 데이터 삭제는 "
 "구적이며 취소 할 수 없습니다. EdX는 귀하의 계정이나 "
 "삭제 된 데이터를 복구 할 수 없습니다."
 
@@ -3859,7 +3859,6 @@ msgstr "약 1분"
 msgid "%d minute"
 msgid_plural "%d minutes"
 msgstr[0] "%d 분"
-"%d 분"
 
 #: common/static/js/src/jquery.timeago.locale.js
 msgid "about an hour"
@@ -3870,7 +3869,6 @@ msgstr "약 한 시간"
 msgid "about %d hour"
 msgid_plural "about %d hours"
 msgstr[0] "약 %d 시간"
-"약 %d 시간"
 
 #: common/static/js/src/jquery.timeago.locale.js
 msgid "a day"
@@ -3881,7 +3879,6 @@ msgstr "하루"
 msgid "%d day"
 msgid_plural "%d days"
 msgstr[0] "%d 일"
-"%d 일"
 
 #: common/static/js/src/jquery.timeago.locale.js
 msgid "about a month"
@@ -3892,7 +3889,6 @@ msgstr "약 1개월"
 msgid "%d month"
 msgid_plural "%d months"
 msgstr[0] "%d 개월"
-"%d 개월"
 
 #: common/static/js/src/jquery.timeago.locale.js
 msgid "about a year"
@@ -3903,7 +3899,6 @@ msgstr "약 1년"
 msgid "%d year"
 msgid_plural "%d years"
 msgstr[0] "%d 년"
-"%d 년"
 
 #: lms/djangoapps/support/static/support/js/views/certificates.js
 msgid "An unexpected error occurred.  Please try again."
@@ -8508,8 +8503,7 @@ msgid ""
 "You will not receive notification for emails that bounce, so double-check "
 "your spelling."
 msgstr ""
-"
-반송 이메일에 대한 알림을받지 않으므로 맞춤법을 "
+"반송 이메일에 대한 알림을받지 않으므로 맞춤법을 "
 " 다시 확인하십시오."
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-editor.underscore
@@ -9139,7 +9133,7 @@ msgid ""
 "submit photos for verification again."
 msgstr ""
 " 사진을 제출해 주셔서 감사합니다. 우리는 곧 그들을 검토 할 것입니다. "
-" 이제 인증 된 인증서를 제공하는 모든 % (platformName) 코스에 등록 할 수 있습니다."
+" 이제 인증 된 인증서를 제공하는 모든 %(platformName)s 코스에 등록 할 수 있습니다."
 " 검증은 1 년 동안 유효합니다. 1 년 후에 다시 확인을 "
 " 위해 사진을 제출해야합니다."
 
@@ -10334,8 +10328,7 @@ msgstr " 업데이트 설정을 눌러 조직의 정보를 업데이트하십시
 
 #: cms/templates/js/course-video-settings-update-settings-footer.underscore
 msgid "Press discard changes to discard changes."
-msgstr " 변경사항을 삭제하려면 변경사항을 누릅니다.
- "
+msgstr " 변경사항을 삭제하려면 변경사항을 누릅니다."
 
 #: cms/templates/js/course-video-settings-update-settings-footer.underscore
 msgid "Press update settings to update course video settings"
@@ -11070,7 +11063,7 @@ msgid ""
 "the unit. Only units that are explicitly hidden from learners will remain "
 "hidden after you clear this option for the %(xblockType)s."
 msgstr ""
-"이 % (xblockType)을 학습자가 볼 수있게하면 학습자는 출시 날짜가 "
+"이 %(xblockType)s을 학습자가 볼 수있게하면 학습자는 출시 날짜가 "
 "지나고 해당 단위를 게시 한 후에 해당 내용을 볼 수 있습니다."
 "%(xblockType)s에 대해 이 옵션을 지우면 학습자로부터 명시 적으로 숨겨진 단위만 "
 "숨겨집니다."
