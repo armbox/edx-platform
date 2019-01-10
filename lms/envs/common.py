@@ -1528,24 +1528,28 @@ PIPELINE_CSS = {
     'style-main-v1': {
         'source_filenames': [
             'css/lms-main-v1.css',
+            'css/bootstrap/lms-main.css',
         ],
         'output_filename': 'css/lms-main-v1.css',
     },
     'style-main-v1-rtl': {
         'source_filenames': [
             'css/lms-main-v1-rtl.css',
+            'css/bootstrap/lms-main.css',
         ],
         'output_filename': 'css/lms-main-v1-rtl.css',
     },
     'style-main-v2': {
         'source_filenames': [
             'css/lms-main-v2.css',
+            'css/bootstrap/lms-main.css',
         ],
         'output_filename': 'css/lms-main-v2.css',
     },
     'style-main-v2-rtl': {
         'source_filenames': [
             'css/lms-main-v2-rtl.css',
+            'css/bootstrap/lms-main.css',
         ],
         'output_filename': 'css/lms-main-v2-rtl.css',
     },
