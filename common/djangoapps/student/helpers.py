@@ -35,7 +35,7 @@ from lms.djangoapps.verify_student.utils import is_verification_expiring_soon, v
 from openedx.core.djangoapps.certificates.api import certificates_viewable_for_course
 from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
 from openedx.core.djangoapps.theming import helpers as theming_helpers
-from openedx.core.djangoapps.theming.helpers import get_themes
+from openedx.core.djangoapps.theming.helpers import get_themes, get_current_site
 from openedx.core.djangoapps.user_authn.utils import is_safe_login_or_logout_redirect
 from student.models import (
     LinkedInAddToProfileConfiguration,
@@ -381,6 +381,7 @@ def generate_activation_email_context(user, registration):
     return {
         'name': user.profile.name,
         'key': registration.activation_key,
+        'site': get_current_site(),
         'lms_url': configuration_helpers.get_value('LMS_ROOT_URL', settings.LMS_ROOT_URL),
         'platform_name': configuration_helpers.get_value('PLATFORM_NAME', settings.PLATFORM_NAME),
         'support_url': configuration_helpers.get_value('SUPPORT_SITE_LINK', settings.SUPPORT_SITE_LINK),

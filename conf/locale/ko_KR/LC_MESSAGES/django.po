@@ -17213,7 +17213,7 @@ msgid ""
 "This email message was automatically sent by {lms_url} because someone "
 "attempted to create an account on {platform_name} using this email address."
 msgstr ""
-" 누군가 {plan_name}에 이 이메일 주소를 사용하여 계정을 만들려고했기 때문에"
+" 누군가 {platform_name}에 이 이메일 주소를 사용하여 계정을 만들려고했기 때문에"
 " 이 이메일 메시지는 {lms_url}에 의해 자동으로 전송되었습니다 "
 
 #: lms/templates/emails/activation_email_subject.txt
