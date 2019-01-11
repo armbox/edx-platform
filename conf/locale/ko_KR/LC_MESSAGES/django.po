@@ -375,7 +375,7 @@ msgstr "축하합니다! {course_name}에 등록되었습니다."
 
 #: common/djangoapps/course_modes/views.py
 msgid "Enrollment is closed"
-msgstr "등록이 마감되었습니다."
+msgstr "지금은 수강신청할수 없습니다."
 
 #: common/djangoapps/course_modes/views.py
 msgid "Enrollment mode not supported"
@@ -824,7 +824,7 @@ msgstr "찾고있는 과정은 {date}까지 시작되지 않습니다."
 #: common/djangoapps/student/views/dashboard.py
 #, python-brace-format
 msgid "The course you are looking for is closed for enrollment as of {date}."
-msgstr "찾고 계신 과정은 {date}부터 등록마감입니다."
+msgstr "찾고 계신 과정은 {date}부터 수강신청 마감입니다."
 
 #: common/djangoapps/student/views/management.py
 msgid "No inactive user with this e-mail exists"
@@ -5485,7 +5485,7 @@ msgstr ""
 #: openedx/core/djangoapps/ace_common/templates/ace_common/edx_ace/common/base_body.html
 #: themes/red-theme/lms/templates/ace_common/edx_ace/common/base_body.html
 msgid "All rights reserved"
-msgstr "판권 소유"
+msgstr "All rights reserved"
 
 #. Translators:  This text is bound to the HTML 'title' element of the page
 #. and appears
@@ -7420,7 +7420,7 @@ msgstr " 데이터 다운로드 "
 
 #: lms/djangoapps/instructor/views/instructor_dashboard.py
 msgid "Analytics"
-msgstr "해석학"
+msgstr "학습분석"
 
 #: lms/djangoapps/instructor/views/instructor_dashboard.py
 msgid "Metrics"
@@ -10023,7 +10023,7 @@ msgstr " Google Play 스토어에서 Android 앱 다운로드 "
 #: openedx/core/djangoapps/ace_common/templates/ace_common/edx_ace/common/base_body.html
 #: themes/red-theme/lms/templates/ace_common/edx_ace/common/base_body.html
 msgid "Our mailing address is"
-msgstr "우리 메일 주소는"
+msgstr "메일 주소: "
 
 #: openedx/core/djangoapps/ace_common/templates/ace_common/edx_ace/common/base_head.html
 msgid "edX Email"
@@ -15886,7 +15886,7 @@ msgstr " {course_name}을 장바구니 <span>({price} USD)에 추가</span>"
 
 #: lms/templates/courseware/course_about.html
 msgid "Enroll in {course_name}"
-msgstr " {course_name}에 등록하십시오."
+msgstr " {course_name}에 수강신청."
 
 #: lms/templates/courseware/course_about.html
 msgid "View About Page in studio"

@@ -8730,7 +8730,7 @@ msgstr "세션 선택:"
 
 #: lms/templates/learner_dashboard/course_enroll.underscore
 msgid "Enroll Now"
-msgstr "지금 등록"
+msgstr "수강신청"
 
 #: lms/templates/learner_dashboard/course_enroll.underscore
 msgid "Coming Soon"
