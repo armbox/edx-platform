@@ -15878,7 +15878,7 @@ msgstr "이 강좌는 초대된 사람만 등록가능합니다"
 
 #: lms/templates/courseware/course_about.html
 msgid "Enrollment is Closed"
-msgstr "등록마감"
+msgstr "수강신청기간이 아닙니다."
 
 #: lms/templates/courseware/course_about.html
 msgid "Add {course_name} to Cart <span>({price} USD)</span>"
@@ -15886,7 +15886,7 @@ msgstr " {course_name}을 장바구니 <span>({price} USD)에 추가</span>"
 
 #: lms/templates/courseware/course_about.html
 msgid "Enroll in {course_name}"
-msgstr " {course_name}에 수강신청."
+msgstr "수강신청."
 
 #: lms/templates/courseware/course_about.html
 msgid "View About Page in studio"
