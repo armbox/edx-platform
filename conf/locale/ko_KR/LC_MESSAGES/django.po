@@ -17218,7 +17218,7 @@ msgstr ""
 
 #: lms/templates/emails/activation_email_subject.txt
 msgid "Action Required: Activate your {platform_name} account"
-msgstr " 필요한 조치 : {platform_name} 계정 활성화 "
+msgstr " 처리 요망 : {platform_name} 계정 활성화 "
 
 #: lms/templates/emails/business_order_confirmation_email.txt
 msgid "Thank you for your purchase of "
