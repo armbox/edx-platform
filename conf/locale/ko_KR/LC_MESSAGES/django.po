@@ -13671,7 +13671,7 @@ msgstr "계정 승인"
 #: themes/stanford-style/lms/templates/register-form.html
 #: themes/stanford-style/lms/templates/register-shib.html
 msgid "I agree to the {link_start}Terms of Service{link_end}"
-msgstr "{link_start}서비스 조항{link_end}에 동의합니다."
+msgstr "{link_start}이용약관{link_end} 및 {privacy_start}개인정보 처리방침{privacy_end}에 동의합니다."
 
 #: lms/templates/register-form.html lms/templates/register-shib.html
 #: lms/templates/signup_modal.html
