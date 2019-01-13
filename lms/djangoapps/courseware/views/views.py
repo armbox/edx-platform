@@ -887,6 +887,7 @@ def course_about(request, course_id):
             'reviews_fragment_view': reviews_fragment_view,
             'sidebar_html_enabled': sidebar_html_enabled,
         }
+        context['uses_bootstrap'] = True
 
         return render_to_response('courseware/course_about.html', context)
 
