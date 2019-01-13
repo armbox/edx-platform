@@ -61,6 +61,7 @@ NPM_INSTALLED_LIBRARIES = [
     'moment-timezone/builds/moment-timezone-with-data.js',
     'moment/min/moment-with-locales.js',
     'picturefill/dist/picturefill.js',
+    'popper.js/dist/popper.min.js',
     'requirejs/require.js',
     'underscore.string/dist/underscore.string.js',
     'underscore/underscore.js',
