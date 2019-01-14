@@ -375,11 +375,11 @@ msgstr "축하합니다! {course_name}에 등록되었습니다."
 
 #: common/djangoapps/course_modes/views.py
 msgid "Enrollment is closed"
-msgstr "지금은 수강신청할수 없습니다."
+msgstr "수강신청 기간이 아닙니다"
 
 #: common/djangoapps/course_modes/views.py
 msgid "Enrollment mode not supported"
-msgstr "등록 모드가 지원되지 않습니다."
+msgstr "등록 모드가 지원되지 않습니다"
 
 #: common/djangoapps/course_modes/views.py
 msgid "Invalid amount selected."
@@ -15886,7 +15886,7 @@ msgstr " {course_name}을 장바구니 <span>({price} USD)에 추가</span>"
 
 #: lms/templates/courseware/course_about.html
 msgid "Enroll in {course_name}"
-msgstr "수강신청."
+msgstr "수강신청"
 
 #: lms/templates/courseware/course_about.html
 msgid "View About Page in studio"
