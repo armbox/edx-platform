@@ -12875,7 +12875,7 @@ msgstr "대시보드"
 
 #: lms/templates/dashboard.html themes/edx.org/lms/templates/dashboard.html
 msgid "You are not enrolled in any courses yet."
-msgstr " 아직 어떤 과목에도 등록되어 있지 않습니다."
+msgstr "아직 어떤 과목에도 등록되어 있지 않습니다."
 
 #: lms/templates/dashboard.html
 #: lms/templates/header/navbar-not-authenticated.html
@@ -12888,7 +12888,7 @@ msgstr "코스 탐색"
 #: lms/templates/dashboard.html
 #: lms/templates/registration/account_activation_sidebar_notice.html
 msgid "Activate your account!"
-msgstr " 당신의 계정을 활성화시키세요!"
+msgstr "당신의 계정을 활성화시키세요!"
 
 #: lms/templates/dashboard.html themes/edx.org/lms/templates/dashboard.html
 msgid "Course-loading errors"
