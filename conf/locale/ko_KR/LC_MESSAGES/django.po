@@ -170,7 +170,7 @@ msgstr "\"{language_code}\" 언어 코드가있는 스크립트가 이미 있습
 #: cms/djangoapps/contentstore/views/transcripts_ajax.py
 #: common/lib/xmodule/xmodule/video_module/video_handlers.py
 msgid "A transcript file is required."
-msgstr "성적 증명서 파일이 필요합니다."
+msgstr "자막 파일이 필요합니다."
 
 #: cms/djangoapps/contentstore/views/transcript_settings.py
 #: cms/djangoapps/contentstore/views/transcripts_ajax.py
@@ -4735,24 +4735,24 @@ msgid ""
 "Add transcripts in different languages. Click below to specify a language "
 "and upload an .srt transcript file for that language."
 msgstr ""
-" 다른 언어로 성적 증명서를 추가하십시오. 아래를 클릭하여 언어를 지정하고 "
+" 다른 언어로 자막을 추가하십시오. 아래를 클릭하여 언어를 지정하고 "
 " 해당 언어에 대한 .srt 사본 파일을 업로드하십시오."
 
 #: common/lib/xmodule/xmodule/video_module/video_xfields.py
 msgid "Transcript Languages"
-msgstr "대본 언어"
+msgstr "자막 언어"
 
 #: common/lib/xmodule/xmodule/video_module/video_xfields.py
 msgid "Preferred language for transcript."
-msgstr " 성적 증명서의 선호 언어."
+msgstr " 선호 자막 언어."
 
 #: common/lib/xmodule/xmodule/video_module/video_xfields.py
 msgid "Preferred language for transcript"
-msgstr " 성적 증명서의 선호 언어 "
+msgstr " 선호 자막 언어 "
 
 #: common/lib/xmodule/xmodule/video_module/video_xfields.py
 msgid "Transcript file format to download by user."
-msgstr " 사용자가 다운로드할 성적표 파일 형식."
+msgstr " 사용자가 다운로드할 자막 파일 형식."
 
 #. Translators: This is a type of file used for captioning in the video
 #. player.
@@ -12217,11 +12217,11 @@ msgstr " 위치 찾기로 항목을 찾을 수 없습니다."
 
 #: cms/djangoapps/contentstore/views/transcripts_ajax.py
 msgid "No such transcript."
-msgstr " 그러한 성적 증명서는 없습니다."
+msgstr " 그러한 자막은 없습니다."
 
 #: cms/djangoapps/contentstore/views/transcripts_ajax.py
 msgid "There is a problem with the chosen transcript file."
-msgstr " 선택한 성적표 파일에 문제가 있습니다."
+msgstr " 선택한 자막 파일에 문제가 있습니다."
 
 #: cms/djangoapps/contentstore/views/transcripts_ajax.py
 msgid ""
@@ -14217,7 +14217,7 @@ msgstr ""
 
 #: lms/templates/video.html
 msgid "Downloads and transcripts"
-msgstr " 다운로드 및 성적 증명서 "
+msgstr " 다운로드 및 자막"
 
 #: lms/templates/video.html
 msgid "Download video file"
@@ -14225,7 +14225,7 @@ msgstr " 비디오 파일 다운로드 "
 
 #: lms/templates/video.html
 msgid "Transcripts"
-msgstr "성적 증명서"
+msgstr "자막"
 
 #: lms/templates/video.html
 msgid "Download {file}"

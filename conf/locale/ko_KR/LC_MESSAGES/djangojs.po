@@ -2915,12 +2915,12 @@ msgstr "동영상 스크립트"
 #: common/lib/xmodule/xmodule/js/src/video/09_video_caption.js
 #: common/static/bundles/VideoModule.js
 msgid "Start of transcript. Skip to the end."
-msgstr "성적 증명서의 시작. 끝으로 건너 뜁니다."
+msgstr "자막의 시작. 끝으로 건너 뜁니다."
 
 #: common/lib/xmodule/xmodule/js/src/video/09_video_caption.js
 #: common/static/bundles/VideoModule.js
 msgid "End of transcript. Skip to the start."
-msgstr "성적 증명서의 끝. 시작으로 건너 뜁니다."
+msgstr "자막의 끝. 시작으로 건너 뜁니다."
 
 #: common/lib/xmodule/xmodule/js/src/video/09_video_caption.js
 #: common/static/bundles/VideoModule.js
@@ -2951,12 +2951,12 @@ msgstr "자막 사용"
 #: common/lib/xmodule/xmodule/js/src/video/09_video_caption.js
 #: common/static/bundles/VideoModule.js
 msgid "Turn on transcripts"
-msgstr "성적 증명서 사용"
+msgstr "자막 사용"
 
 #: common/lib/xmodule/xmodule/js/src/video/09_video_caption.js
 #: common/static/bundles/VideoModule.js
 msgid "Turn off transcripts"
-msgstr "성적 증명서 사용 중지"
+msgstr "자막 사용 중지"
 
 #: common/static/bundles/CourseGoals.js
 #: openedx/features/course_experience/static/course_experience/js/CourseGoals.js
@@ -10348,7 +10348,7 @@ msgstr " 대본 처리 "
 
 #: cms/templates/js/course-video-transcript-preferences.underscore
 msgid "Transcript Fidelity"
-msgstr "성적 증명서 성실도"
+msgstr "자막 신뢰도"
 
 #: cms/templates/js/course-video-transcript-preferences.underscore
 msgid "Video Source Language"
@@ -10383,7 +10383,7 @@ msgstr "변경"
 
 #: cms/templates/js/course-video-transcript-provider-selected.underscore
 msgid "Press change to change selected transcript provider."
-msgstr " 선택한 성적 증명서 제공자를 변경하려면 변경을 누르십시오. "
+msgstr " 선택한 자막 제공자를 변경하려면 변경을 누르십시오. "
 
 #: cms/templates/js/course_grade_policy.underscore
 msgid "Assignment Type Name"
@@ -10778,7 +10778,7 @@ msgstr "동영상 ID"
 
 #: cms/templates/js/previous-video-upload-list.underscore
 msgid "Transcripts"
-msgstr "성적 증명서"
+msgstr "자막"
 
 #: cms/templates/js/previous-video-upload-list.underscore
 msgid "Video Status"
@@ -11295,7 +11295,7 @@ msgstr "성적표 표시 ({totalTranscripts})"
 
 #: cms/templates/js/video-transcripts.underscore
 msgid "No transcript uploaded."
-msgstr " 성적 증명서가 업로드되지 않았습니다."
+msgstr " 업로드된 자막이 없습니다."
 
 #: cms/templates/js/xblock-access-editor.underscore
 msgid "Set Access"
