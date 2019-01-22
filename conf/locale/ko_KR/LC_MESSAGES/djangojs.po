@@ -7501,11 +7501,11 @@ msgstr " 이 소식은 모든 사용자에게 공개됩니다."
 
 #: common/static/common/templates/discussion/new-post.underscore
 msgid "Add a Post"
-msgstr " 소식 추가 "
+msgstr "글 등록"
 
 #: common/static/common/templates/discussion/new-post.underscore
 msgid "Visible to"
-msgstr " 공개 대상 "
+msgstr "공개 대상 "
 
 #: common/static/common/templates/discussion/new-post.underscore
 msgid ""
@@ -7786,7 +7786,7 @@ msgid ""
 "Check this box to receive an email digest once a day notifying you about "
 "new, unread activity from posts you are following."
 msgstr ""
-" 소식을받는 글의 읽지 않은 새로운 활동에 대해 알리는 이메일 다이제스트를 하루에"
+" 관심글의 변동에 대한 게시물 일림을 이메일을 통해 하루에"
 " 한 번 받으려면이 체크 박스를 선택하십시오."
 
 #: lms/djangoapps/discussion/static/discussion/templates/user-profile.underscore
