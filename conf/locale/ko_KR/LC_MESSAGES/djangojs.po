@@ -7604,7 +7604,7 @@ msgstr "고정됨"
 
 #: common/static/common/templates/discussion/thread-list-item.underscore
 msgid "Following"
-msgstr "수행원"
+msgstr "팔로우"
 
 #: common/static/common/templates/discussion/thread-list-item.underscore
 msgid "Community TA"
