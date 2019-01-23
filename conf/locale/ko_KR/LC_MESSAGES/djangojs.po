@@ -4634,7 +4634,7 @@ msgstr "게시물의 HTML 미리보기"
 #: lms/static/js/customwmd.js
 #: common/static/common/templates/discussion/new-post.underscore
 msgid "Your question or idea (required)"
-msgstr "귀하의 질문 또는 아이디어 (필수)"
+msgstr "질문 또는 아이디어 (필수)"
 
 #: lms/static/js/dashboard/donation.js
 msgid "Please enter a valid donation amount."
@@ -5846,7 +5846,7 @@ msgstr ""
 
 #: lms/static/js/student_account/views/RegisterView.js
 msgid "We couldn't create your account."
-msgstr "귀하의 계정을 만들 수 없습니다."
+msgstr "계정을 만들 수 없습니다."
 
 #: lms/static/js/student_account/views/RegisterView.js
 #: lms/templates/student_account/register.underscore
@@ -6092,7 +6092,7 @@ msgstr "{accountName} 계정의 연결을 해제하십시오."
 
 #: lms/static/js/student_account/views/account_settings_fields.js
 msgid "Link Your Account"
-msgstr "귀하의 계정 연결"
+msgstr "계정 연결"
 
 #: lms/static/js/student_account/views/account_settings_fields.js
 msgid ""
