@@ -14140,7 +14140,7 @@ msgstr "종류"
 
 #: lms/templates/unsubscribe.html
 msgid "Unsubscribe Successful!"
-msgstr "구독해재 성공"
+msgstr "구독해지 되었습니다."
 
 #: lms/templates/unsubscribe.html
 msgid ""
@@ -16102,7 +16102,7 @@ msgstr "새소식 - MITx 6.002x"
 
 #: lms/templates/courseware/news.html
 msgid "Updates to Discussion Posts You Follow"
-msgstr "구독하는 게시글 업데이트"
+msgstr "팔로우하는 게시글 업데이트"
 
 #: lms/templates/courseware/program_marketing.html
 msgid "Purchase the Program ("
@@ -17074,7 +17074,7 @@ msgstr "모든 게시물"
 
 #: lms/templates/discussion/_filter_dropdown.html
 msgid "Posts I'm Following"
-msgstr "구독하는 게시글"
+msgstr "팔로우하는 게시글들"
 
 #. Translators: This labels a filter menu in forum navigation
 #: lms/templates/discussion/_thread_list_template.html

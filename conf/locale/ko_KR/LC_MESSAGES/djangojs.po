@@ -7452,52 +7452,52 @@ msgstr "미승인"
 
 #: common/static/common/templates/discussion/forum-action-follow.underscore
 msgid "Follow"
-msgstr "따라가기"
+msgstr "팔로우"
 
 #: common/static/common/templates/discussion/forum-action-follow.underscore
 msgid "Unfollow"
-msgstr "따라가지 않음"
+msgstr "언팔로우"
 
 #: common/static/common/templates/discussion/forum-action-pin.underscore
 msgid "Pin"
-msgstr "꽂음"
+msgstr "고정"
 
 #: common/static/common/templates/discussion/forum-action-pin.underscore
 msgid "Unpin"
-msgstr "꽂지않음"
+msgstr "고정해제"
 
 #: common/static/common/templates/discussion/forum-action-report.underscore
 msgid "Report abuse"
-msgstr " 남용 보고 "
+msgstr "남용 보고 "
 
 #: common/static/common/templates/discussion/forum-action-report.underscore
 msgid "Report"
-msgstr "보고"
+msgstr "신고"
 
 #: common/static/common/templates/discussion/forum-action-report.underscore
 msgid "Unreport"
-msgstr "보고하지 않음"
+msgstr "신고 취소"
 
 #: common/static/common/templates/discussion/forum-action-vote.underscore
 msgid "Vote for this post,"
-msgstr "이 게시물에 투표하십시오."
+msgstr "이 게시물에 투표."
 
 #: common/static/common/templates/discussion/nav-load-more-link.underscore
 msgid "Load more"
-msgstr " 더 많은로드 "
+msgstr "더 보기 "
 
 #: common/static/common/templates/discussion/new-post-alert.underscore
 msgid "Error posting your message."
-msgstr " 메시지 게시 오류."
+msgstr "메시지 게시 오류."
 
 #: common/static/common/templates/discussion/new-post-visibility.underscore
 #, python-format
 msgid "This post will be visible only to %(group_name)s."
-msgstr " 이 게시물은 %(group_name)s 에만 표시됩니다."
+msgstr "이 게시물은 %(group_name)s 에만 표시됩니다."
 
 #: common/static/common/templates/discussion/new-post-visibility.underscore
 msgid "This post will be visible to everyone."
-msgstr " 이 소식은 모든 사용자에게 공개됩니다."
+msgstr "이 소식은 모든 사용자에게 공개됩니다."
 
 #: common/static/common/templates/discussion/new-post.underscore
 msgid "Add a Post"
@@ -7746,7 +7746,7 @@ msgstr "토론 찾기"
 
 #: lms/djangoapps/discussion/static/discussion/templates/discussion-home.underscore
 msgid "Use the All Topics menu to find specific topics."
-msgstr " 특정 주제를 찾으려면 모든 주제 메뉴를 사용하십시오."
+msgstr "'모든 주제'메뉴를 통해 특정 주제를 찾을수 있습니다."
 
 #: lms/djangoapps/discussion/static/discussion/templates/discussion-home.underscore
 #: lms/djangoapps/discussion/static/discussion/templates/search.underscore
@@ -7763,7 +7763,7 @@ msgstr "소식 사용"
 
 #: lms/djangoapps/discussion/static/discussion/templates/discussion-home.underscore
 msgid "Vote for good posts and responses"
-msgstr "좋은 게시물과 응답에 투표하십시오."
+msgstr "좋은 게시물과 응답에 투표"
 
 #: lms/djangoapps/discussion/static/discussion/templates/discussion-home.underscore
 msgid "Report abuse, topics, and responses"
@@ -7771,7 +7771,7 @@ msgstr "악용 사례, 주제 및 응답 신고"
 
 #: lms/djangoapps/discussion/static/discussion/templates/discussion-home.underscore
 msgid "Follow or unfollow posts"
-msgstr "소식 팔로우 또는 팔로우 해제"
+msgstr "소식 팔로우 또는 언팔로우"
 
 #: lms/djangoapps/discussion/static/discussion/templates/discussion-home.underscore
 msgid "Receive updates"
