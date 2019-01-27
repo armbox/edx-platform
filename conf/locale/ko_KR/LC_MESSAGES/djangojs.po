@@ -7527,11 +7527,11 @@ msgstr " 참여를 장려하기 위해 명확하고 설명이 담긴 제목을 �
 
 #: common/static/common/templates/discussion/new-post.underscore
 msgid "follow this post"
-msgstr " 이 소식을 따르십시오. "
+msgstr " 이 소식을 팔로우. "
 
 #: common/static/common/templates/discussion/new-post.underscore
 msgid "post anonymously"
-msgstr " 익명으로 게시하다 "
+msgstr " 익명으로 게시 "
 
 #: common/static/common/templates/discussion/new-post.underscore
 msgid "post anonymously to classmates"
@@ -7579,7 +7579,7 @@ msgstr "소식 수정"
 
 #: common/static/common/templates/discussion/thread-edit.underscore
 msgid "Edit your post below."
-msgstr " 아래에서 게시물을 수정하십시오."
+msgstr " 아래에서 게시물을 수정."
 
 #: common/static/common/templates/discussion/thread-edit.underscore
 msgid "Update post"
