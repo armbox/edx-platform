@@ -62,6 +62,7 @@ def render(request, template):
             context['page_header'] = mark_safe(page_header)
         if page_content:
             context['page_content'] = mark_safe(page_content)
+        context['uses_bootstrap'] = True
         result = render_to_response('static_templates/' + template, context, content_type=content_type)
         return result
     except TopLevelLookupException:
@@ -91,7 +92,7 @@ def render_press_release(request, slug):
 
 @fix_crum_request
 def render_404(request):
-    return HttpResponseNotFound(render_to_string('static_templates/404.html', {}, request=request))
+    return HttpResponseNotFound(render_to_string('static_templates/404.html', {'uses_bootstrap': True}, request=request))
 
 
 @fix_crum_request
