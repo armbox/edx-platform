@@ -5465,8 +5465,8 @@ msgid ""
 "successfully completed, received a passing grade, and was awarded this "
 "{platform_name} {certificate_type} Certificate of Completion in "
 msgstr ""
-" 성공적으로 완료되고 합격 점수를 받고"
-"{platform_name} {certificate_type} 수료증을 받았습니다."
+"위 사람은 {platform_name} {certificate_type} 과정을 수료하였으므로"
+"이 증서를 수여합니다"
 
 #. Translators: This text describes the purpose (and therefore, value) of a
 #. course certificate
@@ -5596,8 +5596,8 @@ msgid ""
 "a course of study offered by {partner_short_name}, an online learning "
 "initiative of {partner_long_name}."
 msgstr ""
-" {partner_long_name}의 온라인 학습 전략인 {partner_short_name}에서"
-" 제공하는 학습 과정입니다."
+" 본 과정은 {partner_long_name}에서 주관하고 온라인 학습 플랫폼 {partner_short_name}에서"
+" 운영하였습니다 "
 
 #. Translators:  This text represents the description of course
 #: lms/djangoapps/certificates/views/webview.py
