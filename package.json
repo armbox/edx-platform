@@ -63,6 +63,13 @@
     "which-country": "1.0.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.3.0",
+    "@babel/plugin-proposal-decorators": "^7.3.0",
+    "@babel/plugin-proposal-optional-chaining": "^7.2.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/preset-env": "^7.3.1",
     "@edx/stylelint-config-edx": "1.1.0",
     "babel-jest": "23.0.1",
     "edx-custom-a11y-rules": "1.0.5",
@@ -95,5 +102,9 @@
     "sinon": "2.3.5",
     "squirejs": "0.1.0",
     "stylelint-formatter-pretty": "1.0.3"
+  },
+  "scripts": {
+    "git": "babel-node tools/run git",
+    "shell": "bash ./shell.sh"
   }
 }
