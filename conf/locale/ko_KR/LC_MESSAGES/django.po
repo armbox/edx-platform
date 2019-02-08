@@ -13308,7 +13308,7 @@ msgstr "{platform_name} 로그인"
 
 #: lms/templates/login.html
 msgid "Access My Courses"
-msgstr "학습하기"
+msgstr "내 강좌보기"
 
 #: lms/templates/login.html lms/templates/register-shib.html
 #: lms/templates/register.html
@@ -13470,7 +13470,7 @@ msgstr "노트가 없습니다."
 
 #: lms/templates/preview_menu.html
 msgid "Course View"
-msgstr "학습하기"
+msgstr "강좌보기"
 
 #: lms/templates/preview_menu.html
 msgid "View this course as:"
@@ -15862,7 +15862,7 @@ msgstr " 등록하셨습니다 "
 #: lms/templates/shoppingcart/registration_code_receipt.html
 #: openedx/features/journals/templates/journals/bundle_about.html
 msgid "View Course"
-msgstr "학습하기"
+msgstr "강좌보기"
 
 #: lms/templates/courseware/course_about.html
 msgid "This course is in your <a href=\"{cart_link}\">cart</a>."
@@ -16146,7 +16146,7 @@ msgstr " YouTube 동영상"
 #: lms/templates/shoppingcart/billing_details.html
 #: lms/templates/shoppingcart/shopping_cart.html
 msgid "View Courses"
-msgstr "학습하기"
+msgstr "강좌보기"
 
 #: lms/templates/courseware/program_marketing.html
 msgid "Meet the Instructors"
