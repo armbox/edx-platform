@@ -15855,7 +15855,7 @@ msgstr ""
 
 #: lms/templates/courseware/course_about.html
 msgid "You are enrolled in this course"
-msgstr " 등록하셨습니다(개강 예정) "
+msgstr " 등록하셨습니다 "
 
 #: lms/templates/courseware/course_about.html
 #: lms/templates/dashboard/_dashboard_course_listing.html
