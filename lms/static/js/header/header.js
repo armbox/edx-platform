@@ -23,7 +23,7 @@ $(document).ready(function() {
     var $hamburgerMenu;
     var $mobileMenu;
     // Toggling visibility for the user dropdown
-    $('.global-header .toggle-user-dropdown, .global-header .toggle-user-dropdown span').click(function(e) {
+    $('.global-header .toggle-user-dropdown, .global-header .toggle-user-dropdown span, .global-header .toggle-user-dropdown img').click(function(e) {
         var $dropdownMenu = $('.global-header .nav-item .dropdown-user-menu');
         var $userDropdown = $('.global-header .toggle-user-dropdown');
         if ($dropdownMenu.is(':visible')) {
