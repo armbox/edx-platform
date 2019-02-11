@@ -229,6 +229,7 @@ class ChooseModeView(View):
                     context['currency_data'] = json.dumps(currency_data)
                 except TypeError:
                     pass
+        context['uses_bootstrap'] = True
         return render_to_response("course_modes/choose.html", context)
 
     @method_decorator(transaction.non_atomic_requests)
