@@ -3534,7 +3534,7 @@ msgstr " 과정 학습 정보 "
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Specify what student can learn from the course."
-msgstr " 코스를 배울 수있는 학생을 지정하십시오."
+msgstr " 코스에서 학생이 어떤것을 배울 수 있는지 기술하세요."
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Course Instructor"
