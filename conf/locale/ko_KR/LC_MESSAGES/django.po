@@ -5883,12 +5883,12 @@ msgstr " 캘린더 알림을 잊지 마세요!"
 #: lms/djangoapps/courseware/date_summary.py
 #, python-brace-format
 msgid "Course starts in {time_remaining_string} on {course_start_date}."
-msgstr " 코스는 {course_start_date}에 {time_remaining_string}에 시작됩니다."
+msgstr " 코스는 {course_start_date}에 {time_remaining_string} 후에 시작됩니다."
 
 #: lms/djangoapps/courseware/date_summary.py
 #, python-brace-format
 msgid "Course starts in {time_remaining_string} at {course_start_time}."
-msgstr " 코스는 {time_remaining_string} {course_start_time}에 시작됩니다."
+msgstr " 코스는 {time_remaining_string} {course_start_time} 에 시작됩니다."
 
 #: lms/djangoapps/courseware/date_summary.py
 msgid "Course End"
