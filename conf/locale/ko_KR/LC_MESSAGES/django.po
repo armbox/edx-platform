@@ -5874,11 +5874,11 @@ msgstr "{relative} - {absolute}"
 
 #: lms/djangoapps/courseware/date_summary.py
 msgid "Course Starts"
-msgstr "코스 시작"
+msgstr "코스 시작일"
 
 #: lms/djangoapps/courseware/date_summary.py
 msgid "Don't forget to add a calendar reminder!"
-msgstr " 캘린더 알림을 잊지 마세요!"
+msgstr " 캘린더에 알림을 추가해 주세요!"
 
 #: lms/djangoapps/courseware/date_summary.py
 #, python-brace-format
@@ -5892,25 +5892,25 @@ msgstr " 코스는 {time_remaining_string} {course_start_time} 에 시작됩니�
 
 #: lms/djangoapps/courseware/date_summary.py
 msgid "Course End"
-msgstr "코스 종료"
+msgstr "코스 종료일"
 
 #: lms/djangoapps/courseware/date_summary.py
 msgid ""
 "To earn a certificate, you must complete all requirements before this date."
 msgstr ""
-" 인증서를 취득하려면 이 날짜 이전에 모든 요구사항을 완료해야합니다."
+" 인증서를 취득하려면 이 날짜 이전에 모든 요구사항을 충족해야합니다."
 
 #: lms/djangoapps/courseware/date_summary.py
 msgid "After this date, course content will be archived."
-msgstr " 이 날짜가 지나면 강좌 내용이 보관됩니다."
+msgstr " 이 날짜가 지나면 강좌 내용이 아카이브 됩니다."
 
 #: lms/djangoapps/courseware/date_summary.py
 msgid ""
 "This course is archived, which means you can review course content but it is"
 " no longer active."
 msgstr ""
-" 이 과정은 보관 처리됩니다. 즉, 과정 내용을 검토할 수 있지만"
-" 더 이상 활동하지 않습니다."
+" 이 강좌 는 아카이브 됩니다. 즉, 과정 내용을 검토할 수 있지만"
+" 더 이상 운영되지는 않습니다."
 
 #: lms/djangoapps/courseware/date_summary.py
 #, python-brace-format
@@ -20768,7 +20768,7 @@ msgstr " 이 강좌는 업데이트되지 않습니다."
 
 #: openedx/features/course_experience/templates/course_experience/dates-summary.html
 msgid "Today is {date}"
-msgstr " 오늘은 {date}입니다."
+msgstr " 지금은 {date}입니다."
 
 #: openedx/features/course_experience/templates/course_experience/latest-update-fragment.html
 msgid "Latest Update"
