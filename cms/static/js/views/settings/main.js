@@ -15,8 +15,8 @@ define(['js/views/validation', 'codemirror', 'underscore', 'jquery', 'jquery.ui'
                    'change textarea': 'updateModel',
                    'change select': 'updateModel',
                    'click .remove-course-introduction-video': 'removeVideo',
-                   'focus #course-overview': 'codeMirrorize',
-                   'focus #course-about-sidebar-html': 'codeMirrorize',
+                  //  'focus #course-overview': 'codeMirrorize',
+                  //  'focus #course-about-sidebar-html': 'codeMirrorize',
                    'mouseover .timezone': 'updateTime',
         // would love to move to a general superclass, but event hashes don't inherit in backbone :-(
                    'focus :input': 'inputFocus',
@@ -84,8 +84,9 @@ define(['js/views/validation', 'codemirror', 'underscore', 'jquery', 'jquery.ui'
                    DateUtils.setupDatePicker('enrollment_start', this);
                    DateUtils.setupDatePicker('enrollment_end', this);
 
-                   this.$el.find('#' + this.fieldToSelectorMap.overview).val(this.model.get('overview'));
-                   this.codeMirrorize(null, $('#course-overview')[0]);
+                   $('#' + this.fieldToSelectorMap.overview).froalaEditor(
+                     'html.set', this.model.get('overview')
+                   );
 
                    if (this.model.get('title') !== '') {
                        this.$el.find('#' + this.fieldToSelectorMap.title).val(this.model.get('title'));
@@ -101,7 +102,7 @@ define(['js/views/validation', 'codemirror', 'underscore', 'jquery', 'jquery.ui'
                    this.$el.find('#' + this.fieldToSelectorMap.about_sidebar_html).val(
                        this.model.get('about_sidebar_html')
                    );
-                   this.codeMirrorize(null, $('#course-about-sidebar-html')[0]);
+                  //  this.codeMirrorize(null, $('#course-about-sidebar-html')[0]);
 
                    this.$el.find('.current-course-introduction-video iframe').attr('src', this.model.videosourceSample());
                    this.$el.find('#' + this.fieldToSelectorMap.intro_video).val(this.model.get('intro_video') || '');
@@ -338,40 +339,6 @@ define(['js/views/validation', 'codemirror', 'underscore', 'jquery', 'jquery.ui'
                        this.$el.find('.remove-course-introduction-video').hide();
                    }
                },
-               codeMirrors: {},
-               codeMirrorize: function(e, forcedTarget) {
-                   var thisTarget, cachethis, field, cmTextArea;
-                   if (forcedTarget) {
-                       thisTarget = forcedTarget;
-                       thisTarget.id = $(thisTarget).attr('id');
-                   } else if (e !== null) {
-                       thisTarget = e.currentTarget;
-                   } else {
-            // e and forcedTarget can be null so don't deference it
-            // This is because in cases where we have a marketing site
-            // we don't display the codeMirrors for editing the marketing
-            // materials, except we do need to show the 'set course image'
-            // workflow. So in this case e = forcedTarget = null.
-                       return;
-                   }
-
-                   if (!this.codeMirrors[thisTarget.id]) {
-                       cachethis = this;
-                       field = this.selectorToField[thisTarget.id];
-                       this.codeMirrors[thisTarget.id] = CodeMirror.fromTextArea(thisTarget, {
-                           mode: 'text/html', lineNumbers: true, lineWrapping: true});
-                       this.codeMirrors[thisTarget.id].on('change', function(mirror) {
-                           mirror.save();
-                           cachethis.clearValidationErrors();
-                           var newVal = mirror.getValue();
-                           if (cachethis.model.get(field) != newVal) {
-                               cachethis.setAndValidate(field, newVal);
-                           }
-                       });
-                       cmTextArea = this.codeMirrors[thisTarget.id].getInputField();
-                       cmTextArea.setAttribute('id', thisTarget.id + '-cm-textarea');
-                   }
-               },
 
                revertView: function() {
         // Make sure that the CodeMirror instance has the correct
@@ -380,11 +347,6 @@ define(['js/views/validation', 'codemirror', 'underscore', 'jquery', 'jquery.ui'
                    this.model.fetch({
                        success: function() {
                            self.render();
-                           _.each(self.codeMirrors, function(mirror) {
-                               var ele = mirror.getTextArea();
-                               var field = self.selectorToField[ele.id];
-                               mirror.setValue(self.model.get(field));
-                           });
                            self.licenseModel.setFromString(self.model.get('license'), {silent: true});
                            self.licenseView.render();
                        },

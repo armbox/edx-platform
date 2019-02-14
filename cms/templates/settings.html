@@ -22,6 +22,9 @@
     <%static:include path="js/${template_name}.underscore" />
   </script>
 % endfor
+  <!-- Include Editor style. -->
+  <link href="https://cdn.jsdelivr.net/npm/froala-editor@2.9.3/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css">
+  <link href="https://cdn.jsdelivr.net/npm/froala-editor@2.9.3/css/froala_style.min.css" rel="stylesheet" type="text/css">
 </%block>
 
 <%block name="jsextra">
@@ -35,13 +38,19 @@ CMS.URL.UPLOAD_ASSET = '${upload_asset_url | n, js_escaped_string}'
 </%block>
 
 <%block name="requirejs">
-    require(["js/factories/settings"], function(SettingsFactory) {
-        SettingsFactory(
-            "${details_url | n, js_escaped_string}",
-            ${show_min_grade_warning | n, dump_js_escaped_json},
-            ${can_show_certificate_available_date_field(context_course) | n, dump_js_escaped_json}
-        );
+  <%static:webpack entry="js/factories/settings">
+    SettingsFactory(
+        "${details_url | n, js_escaped_string}",
+        ${show_min_grade_warning | n, dump_js_escaped_json},
+        ${can_show_certificate_available_date_field(context_course) | n, dump_js_escaped_json}
+    );
+  </%static:webpack>
+  <%static:webpack entry="froala-editor" />
+  <script type="text/javascript">
+    $('#course-overview').froalaEditor({
+      key: 'VA5D6F4A3eC3I3C7B7C4C4C3A3A2E2xvkfzD-11fnmJ-7c1A8A-13c==',
     });
+  </script>
 </%block>
 
 <%block name="content">
@@ -356,7 +365,7 @@ CMS.URL.UPLOAD_ASSET = '${upload_asset_url | n, js_escaped_string}'
                 % if about_page_editable:
                 <li class="field text" id="field-course-overview">
                   <label for="course-overview">${_("Course Overview")}</label>
-                  <textarea class="tinymce text-editor" id="course-overview"></textarea>
+                  <textarea id="course-overview"></textarea>
                   <label class="sr" for="course-overview-cm-textarea">
                     ${_('HTML Code Editor')}
                   </label>
