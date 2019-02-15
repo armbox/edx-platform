@@ -10547,15 +10547,15 @@ msgstr "챕터 추가"
 
 #: cms/templates/js/grading-editor.underscore
 msgid "Grading"
-msgstr "등급"
+msgstr "평가"
 
 #: cms/templates/js/grading-editor.underscore
 msgid "Grade as:"
-msgstr "학년:"
+msgstr "평가 항목:"
 
 #: cms/templates/js/grading-editor.underscore
 msgid "Not Graded"
-msgstr "등급 없음"
+msgstr "평가 없음"
 
 #: cms/templates/js/group-configuration-details.underscore
 #: cms/templates/js/group-configuration-editor.underscore

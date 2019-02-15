@@ -510,7 +510,8 @@
     #field-course-overview,
     #field-course-about-sidebar-html {
       #course-overview,
-      #course-about-sidebar-html {
+      #course-about-sidebar-html,
+      .fr-box.fr-basic .fr-element {
         height: ($baseline*20);
       }
 

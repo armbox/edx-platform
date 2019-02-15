@@ -375,7 +375,7 @@ msgstr "{course_name}강좌 과정 선택"
 
 #: common/djangoapps/course_modes/views.py
 msgid "Enrollment is closed"
-msgstr "수강신청 기간이 아닙니다"
+msgstr "수강신청하실 수 없습니다."
 
 #: common/djangoapps/course_modes/views.py
 msgid "Enrollment mode not supported"
@@ -3534,7 +3534,7 @@ msgstr " 과정 학습 정보 "
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Specify what student can learn from the course."
-msgstr " 코스를 배울 수있는 학생을 지정하십시오."
+msgstr " 코스에서 학생이 어떤것을 배울 수 있는지 기술하세요."
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Course Instructor"
@@ -5874,43 +5874,43 @@ msgstr "{relative} - {absolute}"
 
 #: lms/djangoapps/courseware/date_summary.py
 msgid "Course Starts"
-msgstr "코스 시작"
+msgstr "코스 시작일"
 
 #: lms/djangoapps/courseware/date_summary.py
 msgid "Don't forget to add a calendar reminder!"
-msgstr " 캘린더 알림을 잊지 마세요!"
+msgstr " 캘린더에 알림을 추가해 주세요!"
 
 #: lms/djangoapps/courseware/date_summary.py
 #, python-brace-format
 msgid "Course starts in {time_remaining_string} on {course_start_date}."
-msgstr " 코스는 {course_start_date}에 {time_remaining_string}에 시작됩니다."
+msgstr " 코스는 {course_start_date}에 {time_remaining_string} 후에 시작됩니다."
 
 #: lms/djangoapps/courseware/date_summary.py
 #, python-brace-format
 msgid "Course starts in {time_remaining_string} at {course_start_time}."
-msgstr " 코스는 {time_remaining_string} {course_start_time}에 시작됩니다."
+msgstr " 코스는 {time_remaining_string} {course_start_time} 에 시작됩니다."
 
 #: lms/djangoapps/courseware/date_summary.py
 msgid "Course End"
-msgstr "코스 종료"
+msgstr "코스 종료일"
 
 #: lms/djangoapps/courseware/date_summary.py
 msgid ""
 "To earn a certificate, you must complete all requirements before this date."
 msgstr ""
-" 인증서를 취득하려면 이 날짜 이전에 모든 요구사항을 완료해야합니다."
+" 인증서를 취득하려면 이 날짜 이전에 모든 요구사항을 충족해야합니다."
 
 #: lms/djangoapps/courseware/date_summary.py
 msgid "After this date, course content will be archived."
-msgstr " 이 날짜가 지나면 강좌 내용이 보관됩니다."
+msgstr " 이 날짜가 지나면 강좌 내용이 아카이브 됩니다."
 
 #: lms/djangoapps/courseware/date_summary.py
 msgid ""
 "This course is archived, which means you can review course content but it is"
 " no longer active."
 msgstr ""
-" 이 과정은 보관 처리됩니다. 즉, 과정 내용을 검토할 수 있지만"
-" 더 이상 활동하지 않습니다."
+" 이 강좌 는 아카이브 됩니다. 즉, 과정 내용을 검토할 수 있지만"
+" 더 이상 운영되지는 않습니다."
 
 #: lms/djangoapps/courseware/date_summary.py
 #, python-brace-format
@@ -9422,9 +9422,9 @@ msgid ""
 "the course staff. This course will now appear on your %(site_name)s "
 "dashboard."
 msgstr ""
-" 강좌 직원이 %(site_name)s에 %(course_name)s에 등록했습니다."
-" 이 과정은 이제 %(site_name)s 대시 보드에 "
-" 나타납니다."
+" 강좌 운영진이 %(site_name)s의 %(course_name)s에 등록시켰습니다."
+" 이 과정은 %(site_name)s 대시 보드에서 "
+" 찾아볼 수 있습니다.."
 
 #: lms/templates/instructor/edx_ace/enrollenrolled/email/body.html
 msgid "Access the Course Materials Now"
@@ -13308,7 +13308,7 @@ msgstr "{platform_name} 로그인"
 
 #: lms/templates/login.html
 msgid "Access My Courses"
-msgstr "학습하기"
+msgstr "내 강좌보기"
 
 #: lms/templates/login.html lms/templates/register-shib.html
 #: lms/templates/register.html
@@ -13470,7 +13470,7 @@ msgstr "노트가 없습니다."
 
 #: lms/templates/preview_menu.html
 msgid "Course View"
-msgstr "학습하기"
+msgstr "강좌보기"
 
 #: lms/templates/preview_menu.html
 msgid "View this course as:"
@@ -13750,10 +13750,10 @@ msgid ""
 "spam folder and mark {platform_name} emails as 'not spam'. At "
 "{platform_name}, we communicate mostly through email."
 msgstr ""
-" {platform_name}에 가입하는 과정에서 계정을 활성화하기위한 안내가 포함된 "
-" 이메일 메시지가 전송됩니다. 이메일이 보이지 않습니까? 스팸 폴더를 확인하고 "
+"{platform_name}에 가입하는 과정에서 계정을 활성화하기위한 안내가 포함된 "
+"이메일 메시지가 전송됩니다. 이메일이 보이지 않으시면, 스팸 폴더를 확인하고 "
 "{platform_name} 이메일을 '스팸 아님'으로 표시하십시오."
-"{platform_name}에서 우리는 대부분 전자 메일을 통해 통신합니다."
+"{platform_name}에서는 거의 전자 메일을 통해 상호작용 합니다."
 
 #: lms/templates/register-sidebar.html
 msgid "Need help registering with {platform_name}?"
@@ -15851,14 +15851,14 @@ msgstr ""
 
 #: lms/templates/courseware/course_about.html
 msgid "You are enrolled in this course"
-msgstr " 등록하셨습니다(개강 예정) "
+msgstr " 등록하셨습니다 "
 
 #: lms/templates/courseware/course_about.html
 #: lms/templates/dashboard/_dashboard_course_listing.html
 #: lms/templates/shoppingcart/registration_code_receipt.html
 #: openedx/features/journals/templates/journals/bundle_about.html
 msgid "View Course"
-msgstr "학습하기"
+msgstr "강좌보기"
 
 #: lms/templates/courseware/course_about.html
 msgid "This course is in your <a href=\"{cart_link}\">cart</a>."
@@ -15874,11 +15874,11 @@ msgstr "이 강좌는 초대된 사람만 등록가능합니다"
 
 #: lms/templates/courseware/course_about.html
 msgid "Enrollment is Closed"
-msgstr "수강신청기간이 아닙니다."
+msgstr "수강신청하실 수 없습니다."
 
 #: lms/templates/courseware/course_about.html
 msgid "Add {course_name} to Cart <span>({price} USD)</span>"
-msgstr " {course_name}을 장바구니 <span>({price} USD)에 추가</span>"
+msgstr " {course_name}을 장바구니에 <span> 추가({price} 원)</span>"
 
 #: lms/templates/courseware/course_about.html
 msgid "Enroll in {course_name}"
@@ -15928,7 +15928,7 @@ msgstr "친구 및 가족과 공유"
 
 #: lms/templates/courseware/course_about_sidebar_header.html
 msgid "I just enrolled in {number} {title} through {account}: {url}"
-msgstr " {account}을(를) 통해 {number} {title}에 등록했습니다 : {url}"
+msgstr " {account}을(를) 통해 {number} {title} 에 등록했습니다 : {url}"
 
 #: lms/templates/courseware/course_about_sidebar_header.html
 msgid "Take a course with {platform} online"
@@ -15936,7 +15936,7 @@ msgstr "{platform} 온라인으로 수강하세요"
 
 #: lms/templates/courseware/course_about_sidebar_header.html
 msgid "I just enrolled in {number} {title} through {platform} {url}"
-msgstr " {platform} {url}을(를) 통해 {number} {title}에 등록했습니다."
+msgstr " {platform}의 {url} 에서, {number} {title} 에 등록했습니다."
 
 #: lms/templates/courseware/course_about_sidebar_header.html
 #: themes/stanford-style/lms/templates/courseware/course_about_sidebar_header.html
@@ -16142,7 +16142,7 @@ msgstr " YouTube 동영상"
 #: lms/templates/shoppingcart/billing_details.html
 #: lms/templates/shoppingcart/shopping_cart.html
 msgid "View Courses"
-msgstr "학습하기"
+msgstr "강좌보기"
 
 #: lms/templates/courseware/program_marketing.html
 msgid "Meet the Instructors"
@@ -20764,7 +20764,7 @@ msgstr " 이 강좌는 업데이트되지 않습니다."
 
 #: openedx/features/course_experience/templates/course_experience/dates-summary.html
 msgid "Today is {date}"
-msgstr " 오늘은 {date}입니다."
+msgstr " 지금은 {date}입니다."
 
 #: openedx/features/course_experience/templates/course_experience/latest-update-fragment.html
 msgid "Latest Update"

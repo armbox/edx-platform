@@ -849,6 +849,7 @@ def student_dashboard(request):
     context.update({
         'resume_button_urls': resume_button_urls
     })
+    context['uses_bootstrap'] = True
 
     response = render_to_response('dashboard.html', context)
     set_deprecated_user_info_cookie(response, request, user)  # pylint: disable=protected-access
