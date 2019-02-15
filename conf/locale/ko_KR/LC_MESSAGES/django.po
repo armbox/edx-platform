@@ -371,7 +371,7 @@ msgstr ""
 #: common/djangoapps/course_modes/views.py
 #, python-brace-format
 msgid "Congratulations!  You are now enrolled in {course_name}"
-msgstr "축하합니다! {course_name}에 등록되었습니다."
+msgstr "{course_name}강좌 과정 선택"
 
 #: common/djangoapps/course_modes/views.py
 msgid "Enrollment is closed"
@@ -15714,7 +15714,7 @@ msgstr ""
 #: lms/templates/course_modes/choose.html
 #: themes/edx.org/lms/templates/course_modes/choose.html
 msgid "Benefits of a Verified Certificate"
-msgstr "인증된 이수증의 혜택"
+msgstr "수료증의 효력"
 
 #: lms/templates/course_modes/choose.html
 #: themes/edx.org/lms/templates/course_modes/choose.html
@@ -15733,7 +15733,7 @@ msgstr "{b_start}공유 용이:{b_end} 이력서에 강좌 이수증을 추가�
 #: lms/templates/course_modes/choose.html
 #: themes/edx.org/lms/templates/course_modes/choose.html
 msgid "Pursue a Verified Certificate"
-msgstr "인증된 강좌 이수증을 받으세요."
+msgstr "인증 과정"
 
 #: lms/templates/course_modes/choose.html
 #: themes/edx.org/lms/templates/course_modes/choose.html
@@ -15747,29 +15747,28 @@ msgid ""
 "this valuable credential to improve your job prospects and advance your "
 "career, or highlight your certificate in school applications."
 msgstr ""
-"인증된 강좌 이수증으로 당신의 새로운 지식과 기술을 돋보이게 하세요. 보다 나은 직업을 갖도록 하는데 가치있는 증명서로 활용하세요. 또한"
-" 학교 입학 지원서에 강좌 이수증을 강조해 보세요."
+"수료증 발급"
 
 #: lms/templates/course_modes/choose.html
 #: themes/edx.org/lms/templates/course_modes/choose.html
 msgid ""
 "{b_start}Official: {b_end}Receive an instructor-signed certificate with the "
 "institution's logo"
-msgstr "{b_start}공식:{b_end} 기관의 로고와 교수자의 서명이 담긴 강좌 이수증을 받으세오."
+msgstr "{b_start}공신력{b_end} 주최기관에서 인증한, 신뢰할수 있는 수료증 입니다"
 
 #: lms/templates/course_modes/choose.html
 #: themes/edx.org/lms/templates/course_modes/choose.html
 msgid ""
 "{b_start}Easily shareable: {b_end}Add the certificate to your CV or resume, "
 "or post it directly on LinkedIn"
-msgstr "{b_start}공유 용이:{b_end} 이력서에 강좌 이수증을 추가하거나 LinkedIn에 바로 게시하세요."
+msgstr "{b_start}스펙 업{b_end} 수료한 강좌를 새로운 이력으로 추가해보세요"
 
 #: lms/templates/course_modes/choose.html
 #: themes/edx.org/lms/templates/course_modes/choose.html
 msgid ""
 "{b_start}Motivating: {b_end}Give yourself an additional incentive to "
 "complete the course"
-msgstr "{b_start}동기부여: {b_end} 강좌를 마치고 자신에게 추가 인센티브를 주세요."
+msgstr "{b_start}동기부여{b_end} 학업성취률을 높이고 강좌 완주를 위한 자극으로 활용해보세요"
 
 #: lms/templates/course_modes/choose.html
 #: themes/edx.org/lms/templates/course_modes/choose.html
@@ -15788,7 +15787,7 @@ msgstr ""
 #: lms/templates/course_modes/choose.html
 #: themes/edx.org/lms/templates/course_modes/choose.html
 msgid "Audit This Course (No Certificate)"
-msgstr " 이 과정 감사 (인증서 없음)"
+msgstr " 강좌 청강"
 
 #: lms/templates/course_modes/choose.html
 #: themes/edx.org/lms/templates/course_modes/choose.html
@@ -15809,10 +15808,7 @@ msgid ""
 "track does not offer a certificate for learners who earn a passing "
 "grade.{b_end}"
 msgstr ""
-" 이 과정을 무료로 감사하고 모든 과정 자료, 활동, 테스트 및 포럼에 대한 "
-" 완전한 액세스 권한을 얻으십시오. {b_start} "
-" 이 트랙에는 합격점을 얻는 학습자를위한 인증서가 "
-" 없습니다. {b_end}"
+"이 과정은 수료증을 발급하지 않습니다"
 
 #: lms/templates/courseware/accordion.html
 msgid "{chapter} current chapter"
