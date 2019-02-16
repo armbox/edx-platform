@@ -511,8 +511,19 @@
     #field-course-about-sidebar-html {
       #course-overview,
       #course-about-sidebar-html,
-      .fr-box.fr-basic .fr-element {
-        height: ($baseline*20);
+      .fr-box .fr-element,
+      .fr-box .fr-code {
+        height: ($baseline*20) !important;
+      }
+
+      textarea.fr-code {
+        display: none !important;
+      }
+
+      .fr-box.fr-code-view {
+        textarea.fr-code {
+          display: block !important;
+        }
       }
 
       //adds back in CodeMirror border removed due to Unit page styling of component editors
