@@ -84,9 +84,7 @@ define(['js/views/validation', 'codemirror', 'underscore', 'jquery', 'jquery.ui'
                    DateUtils.setupDatePicker('enrollment_start', this);
                    DateUtils.setupDatePicker('enrollment_end', this);
 
-                   $('#' + this.fieldToSelectorMap.overview).froalaEditor(
-                     'html.set', this.model.get('overview')
-                   );
+                   this.applyFroalaEditor(null, $('#' + this.fieldToSelectorMap.overview)[0]);
 
                    if (this.model.get('title') !== '') {
                        this.$el.find('#' + this.fieldToSelectorMap.title).val(this.model.get('title'));
@@ -337,6 +335,38 @@ define(['js/views/validation', 'codemirror', 'underscore', 'jquery', 'jquery.ui'
                        this.$el.find('.current-course-introduction-video iframe').attr('src', '');
                        this.$el.find('#' + this.fieldToSelectorMap.intro_video).val('');
                        this.$el.find('.remove-course-introduction-video').hide();
+                   }
+               },
+
+               froalaEditors: {},
+               applyFroalaEditor: function(e, forcedTarget) {
+                   var thisTarget, cachethis, field;
+                   if (forcedTarget) {
+                       thisTarget = forcedTarget;
+                       thisTarget.id = $(thisTarget).attr('id');
+                   } else if (e !== null) {
+                       thisTarget = e.currentTarget;
+                   } else {
+            // e and forcedTarget can be null so don't deference it
+            // This is because in cases where we have a marketing site
+            // we don't display the codeMirrors for editing the marketing
+            // materials, except we do need to show the 'set course image'
+            // workflow. So in this case e = forcedTarget = null.
+                       return;
+                   }
+
+                   if (!this.froalaEditors[thisTarget.id]) {
+                       cachethis = this;
+                       field = this.selectorToField[thisTarget.id];
+                       this.froalaEditors[thisTarget.id] = thisTarget;
+                       $('#' + thisTarget.id).froalaEditor('html.set', this.model.get(field));
+                       $('#' + thisTarget.id).on('froalaEditor.contentChanged', function(e) {
+                           cachethis.clearValidationErrors();
+                           var newVal = e.currentTarget.value;
+                           if (cachethis.model.get(field) != newVal) {
+                               cachethis.setAndValidate(field, newVal);
+                           }
+                       });
                    }
                },
 
