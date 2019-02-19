@@ -671,7 +671,7 @@ msgstr "학생들에게 명시 적으로 숨어 있음"
 #: common/static/bundles/js/factories/container.js
 #: common/static/bundles/js/factories/library.js
 msgid "Inheriting Student Visibility"
-msgstr " 학생의 가시성 상속 "
+msgstr " 학생의 표시여부 상속 "
 
 #: cms/static/js/views/pages/container_subviews.js
 #: common/static/bundles/js/factories/container.js
@@ -7063,11 +7063,11 @@ msgstr "모든 학습자와 직원"
 
 #: cms/static/js/views/modals/course_outline_modals.js
 msgid "Basic"
-msgstr "기초"
+msgstr "기본"
 
 #: cms/static/js/views/modals/course_outline_modals.js
 msgid "Visibility"
-msgstr "시계"
+msgstr "표시"
 
 #: cms/static/js/views/modals/validation_error_modal.js
 msgid "Validation Error While Saving"
@@ -9950,9 +9950,9 @@ msgid ""
 "you include additional signatories, preview the certificate in Print View to"
 " ensure the certificate will print correctly on one page."
 msgstr ""
-" 4 명 이하의 서명국을 포함시키는 것이 좋습니다. 추가 서명자를 "
-" 포함하는 경우 인쇄보기에서 인증서를 미리 보면 "
-" 인증서가 한 페이지에 올바르게 인쇄됩니다."
+" 서명자는 4 명 이하로 하는것이 좋습니다. 서명자를 "
+" 추가하는 경우 인쇄보기에서 인증서를 미리보기 하셔서 "
+" 인증서가 한 페이지에 올바르게 인쇄되는지 확인하실 수 있습니다."
 
 #: cms/templates/js/certificate-editor.underscore
 msgid "Certificate Information"
@@ -10903,7 +10903,7 @@ msgstr "공개 날짜/시간 지우기"
 
 #: cms/templates/js/show-correctness-editor.underscore
 msgid "Assessment Results Visibility"
-msgstr "평가 결과 가시성"
+msgstr "평가 결과 표시"
 
 #: cms/templates/js/show-correctness-editor.underscore
 msgid "Always show assessment results"
@@ -11041,11 +11041,11 @@ msgstr "서명 이미지 업로드"
 
 #: cms/templates/js/staff-lock-editor.underscore
 msgid "Unit Visibility"
-msgstr "유닛 가시성"
+msgstr "유닛 표시"
 
 #: cms/templates/js/staff-lock-editor.underscore
 msgid "Section Visibility"
-msgstr "단면 가시성"
+msgstr "섹션 표시"
 
 #: cms/templates/js/staff-lock-editor.underscore
 msgid ""
