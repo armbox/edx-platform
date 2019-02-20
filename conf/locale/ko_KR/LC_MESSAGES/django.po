@@ -7976,7 +7976,7 @@ msgstr ""
 
 #: lms/djangoapps/shoppingcart/models.py
 msgid "Trying to add a different currency into the cart"
-msgstr " 장바구니에 다른 통화를 추가하려고 합니다."
+msgstr "결제 방식에 다른 통화를 추가하려고 합니다."
 
 #: lms/djangoapps/shoppingcart/models.py
 msgid "Internal reference code for this invoice."
@@ -8305,7 +8305,7 @@ msgid ""
 "have been saved. If you have any questions about this transaction, please "
 "contact us at {email}."
 msgstr ""
-" 죄송 합니다만 결제 금액이 거부되었습니다. 장바구니의 항목이 저장되었습니다."
+" 죄송 합니다만 결제가 취소 되었습니다. 결제가 취소된 강좌는 신청 강좌 목록에서 확인가능합니다."
 " 이 거래에 대해 궁금한 점이 있으시면 "
 "{email}에 문의하십시오."
 
@@ -8746,7 +8746,7 @@ msgstr "총 환불 금액"
 
 #: lms/djangoapps/shoppingcart/views.py
 msgid "You must be logged-in to add to a shopping cart"
-msgstr " 장바구니에 담기 위해 로그인해야합니다 "
+msgstr " 강좌를 신청하려면 로그인을 해주세요"
 
 #: lms/djangoapps/shoppingcart/views.py
 msgid "The course you requested does not exist."
@@ -8755,16 +8755,16 @@ msgstr " 요청한 코스가 존재하지 않습니다."
 #: lms/djangoapps/shoppingcart/views.py
 #, python-brace-format
 msgid "The course {course_id} is already in your cart."
-msgstr " {course_id} 과정이 이미 장바구니에 있습니다."
+msgstr "이미 {course_id}강좌를 신청 하셨습니다."
 
 #: lms/djangoapps/shoppingcart/views.py
 #, python-brace-format
 msgid "You are already registered in course {course_id}."
-msgstr " 귀하는 이미 코스 {course_id}에 등록되어 있습니다."
+msgstr "이미 {course_id}강좌에 등록 되셨습니다."
 
 #: lms/djangoapps/shoppingcart/views.py
 msgid "Course added to cart."
-msgstr " 코스가 장바구니에 추가되었습니다."
+msgstr "강좌가 신청 강좌 목록에 추가되었습니다."
 
 #: lms/djangoapps/shoppingcart/views.py
 #, python-brace-format
@@ -8786,19 +8786,18 @@ msgstr " 이 등록 코드 ({enrollment_code})는 유효하지 않습니다."
 msgid ""
 "Code '{registration_code}' is not valid for any course in the shopping cart."
 msgstr ""
-" 장바구니의 코스에는 '{registration_code}'코드가 유효하지 않습니다."
+" 이 코드는 '신청 강좌' 목록에 적용할수 없습니다."
 
 #: lms/djangoapps/shoppingcart/views.py
 msgid ""
 "Cart item quantity should not be greater than 1 when applying activation "
 "code"
 msgstr ""
-" 장바구니 품목 수량은 활성화 코드를 적용할 때 1보다 "
-" 커야합니다."
+" 강좌를 활성화 시키려면, 수강 신청하려는 강좌가 1개 이상 있어야 합니다"
 
 #: lms/djangoapps/shoppingcart/views.py
 msgid "Only one coupon redemption is allowed against an order"
-msgstr " 주문에 대해 쿠폰 사용을 한번만 허용됩니다. "
+msgstr " 쿠폰 사용은 한번만 허용됩니다. "
 
 #: lms/djangoapps/shoppingcart/views.py
 msgid "success"
@@ -15862,7 +15861,7 @@ msgstr "강좌보기"
 
 #: lms/templates/courseware/course_about.html
 msgid "This course is in your <a href=\"{cart_link}\">cart</a>."
-msgstr "이 강좌가 <a href=\"{cart_link}\">장바구니</a>에 담겼습니다."
+msgstr "이 강좌가 <a href=\"{cart_link}\">신청 강좌목록</a>에 담겼습니다."
 
 #: lms/templates/courseware/course_about.html
 msgid "Course is full"
@@ -15878,7 +15877,7 @@ msgstr "수강신청하실 수 없습니다."
 
 #: lms/templates/courseware/course_about.html
 msgid "Add {course_name} to Cart <span>({price} USD)</span>"
-msgstr " {course_name}을 장바구니에 <span> 추가({price} 원)</span>"
+msgstr " {course_name}을(를) 신청 강좌에 <span> 추가({price} 원)</span>"
 
 #: lms/templates/courseware/course_about.html
 msgid "Enroll in {course_name}"
@@ -17858,7 +17857,7 @@ msgstr "시스템관리자"
 #: lms/templates/shoppingcart/shopping_cart.html
 #: themes/edx.org/lms/templates/header/navbar-authenticated.html
 msgid "Shopping Cart"
-msgstr "장바구니"
+msgstr "신청 강좌"
 
 #: lms/templates/header/navbar-not-authenticated.html
 msgid "Supplemental Links"
@@ -19898,7 +19897,7 @@ msgstr "결제 처리는 별도의 안전한 사이트에서 이루어지고 있
 #: lms/templates/shoppingcart/billing_details.html
 #: lms/templates/shoppingcart/shopping_cart.html
 msgid "Your Shopping cart is currently empty."
-msgstr "장바구니가 비었습니다."
+msgstr "신청하신 강좌가 없습니다."
 
 #: lms/templates/shoppingcart/cybersource_form.html
 #: lms/templates/shoppingcart/shopping_cart_flow.html
@@ -20201,7 +20200,7 @@ msgstr " 할인 또는 활성화 코드 "
 
 #: lms/templates/shoppingcart/shopping_cart.html
 msgid "discount or activation code"
-msgstr "할인 및 활성화 코드"
+msgstr "활성화 코드"
 
 #: lms/templates/shoppingcart/shopping_cart.html
 msgid "Apply"
@@ -20213,7 +20212,7 @@ msgstr "코드가 적용되었습니다."
 
 #: lms/templates/shoppingcart/shopping_cart.html
 msgid "TOTAL:"
-msgstr "총합:"
+msgstr "결제 금액"
 
 #. Translators: currency_symbol is a symbol indicating type of currency, ex
 #. "$". currency_abbr is
@@ -20238,15 +20237,15 @@ msgstr "구매가 완료된후, {username}은 본 강좌에 등록될것입니�
 
 #: lms/templates/shoppingcart/shopping_cart.html
 msgid "Empty Cart"
-msgstr "장바구니가 비어 있습니다."
+msgstr "신청하신 강좌가 없습니다."
 
 #: lms/templates/shoppingcart/shopping_cart_flow.html
 msgid "Shopping cart"
-msgstr "장바구니"
+msgstr "신청 강좌"
 
 #: lms/templates/shoppingcart/shopping_cart_flow.html
 msgid "{platform_name} -  Shopping Cart"
-msgstr "{platform_name} - 장바구니"
+msgstr "{platform_name} - 신청 강좌"
 
 #: lms/templates/shoppingcart/shopping_cart_flow.html
 msgid "Confirmation"

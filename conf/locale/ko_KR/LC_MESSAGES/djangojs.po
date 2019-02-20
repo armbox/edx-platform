@@ -5776,7 +5776,7 @@ msgstr "선택된 강좌에 수강신청 처리중입니다. "
 
 #: lms/static/js/student_account/views/FinishAuthView.js
 msgid "Adding the selected course to your cart"
-msgstr "장바구니에 선택된 강좌를 추가하고 있습니다."
+msgstr "신청 강좌 목록에 선택된 강좌를 추가하고 있습니다."
 
 #: lms/static/js/student_account/views/FinishAuthView.js
 msgid "Loading your courses"
