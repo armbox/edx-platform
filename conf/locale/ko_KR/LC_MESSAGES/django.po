@@ -20192,7 +20192,7 @@ msgstr "감소"
 #: lms/templates/shoppingcart/shopping_cart.html
 #: wiki/plugins/attachments/templates/wiki/plugins/attachments/delete.html
 msgid "Remove"
-msgstr "제거"
+msgstr "강좌 삭제"
 
 #: lms/templates/shoppingcart/shopping_cart.html
 msgid "Discount or activation code"
