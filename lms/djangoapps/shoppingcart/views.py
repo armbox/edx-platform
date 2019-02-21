@@ -214,6 +214,7 @@ def show_cart(request):
         'currency': settings.PAID_COURSE_REGISTRATION_CURRENCY[0],
         'enable_bulk_purchase': configuration_helpers.get_value('ENABLE_SHOPPING_CART_BULK_PURCHASE', True)
     }
+    context['uses_bootstrap'] = True
     return render_to_response("shoppingcart/shopping_cart.html", context)
 
 
