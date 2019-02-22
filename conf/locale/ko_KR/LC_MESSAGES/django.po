@@ -371,7 +371,7 @@ msgstr ""
 #: common/djangoapps/course_modes/views.py
 #, python-brace-format
 msgid "Congratulations!  You are now enrolled in {course_name}"
-msgstr "{course_name}강좌 과정 선택"
+msgstr "{course_name}강좌의 수강 등록이 되었습니다! 해당 강좌를 더 좋은 과정으로 만나보세요"
 
 #: common/djangoapps/course_modes/views.py
 msgid "Enrollment is closed"
@@ -15713,7 +15713,7 @@ msgstr ""
 #: lms/templates/course_modes/choose.html
 #: themes/edx.org/lms/templates/course_modes/choose.html
 msgid "Benefits of a Verified Certificate"
-msgstr "수료증의 효력"
+msgstr "수료증을 활용해 보세요"
 
 #: lms/templates/course_modes/choose.html
 #: themes/edx.org/lms/templates/course_modes/choose.html
@@ -15753,14 +15753,14 @@ msgstr ""
 msgid ""
 "{b_start}Official: {b_end}Receive an instructor-signed certificate with the "
 "institution's logo"
-msgstr "{b_start}공신력{b_end} 주최기관에서 인증한, 신뢰할수 있는 수료증 입니다"
+msgstr "{b_start}공신력{b_end} 주최기관에서 인증한 신뢰할수 있는 수료증 입니다"
 
 #: lms/templates/course_modes/choose.html
 #: themes/edx.org/lms/templates/course_modes/choose.html
 msgid ""
 "{b_start}Easily shareable: {b_end}Add the certificate to your CV or resume, "
 "or post it directly on LinkedIn"
-msgstr "{b_start}스펙 업{b_end} 수료한 강좌를 새로운 이력으로 추가해보세요"
+msgstr "{b_start}스펙 업{b_end} 이력서에 수료증을 새로운 이력으로 추가해보세요"
 
 #: lms/templates/course_modes/choose.html
 #: themes/edx.org/lms/templates/course_modes/choose.html
