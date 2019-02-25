@@ -363,6 +363,7 @@ def register_code_redemption(request, registration_code):
             'course': course,
             'registered_for_course': not _is_enrollment_code_an_update(course, request.user, course_registration)
         }
+        context['uses_bootstrap'] = True
         return render_to_response(template_to_render, context)
     elif request.method == "POST":
         reg_code_is_valid, reg_code_already_redeemed, course_registration = get_reg_code_validity(
