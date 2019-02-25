@@ -19961,7 +19961,7 @@ msgstr "구매해 주셔서 감사드립니다!"
 #: lms/templates/shoppingcart/receipt.html
 #: lms/templates/shoppingcart/registration_code_redemption.html
 msgid "View Dashboard"
-msgstr "대시보드 보기"
+msgstr "대시보드로 바로가기"
 
 #: lms/templates/shoppingcart/receipt.html
 msgid ""
@@ -20089,12 +20089,12 @@ msgstr "주의: <del> 이렇게</del> 취소선이 있는 것은 환불된 것�
 #: lms/templates/shoppingcart/registration_code_receipt.html
 #: lms/templates/shoppingcart/registration_code_redemption.html
 msgid "Confirm Enrollment"
-msgstr "수강신청 확인"
+msgstr "등록 완료"
 
 #: lms/templates/shoppingcart/registration_code_receipt.html
 #: lms/templates/shoppingcart/registration_code_redemption.html
 msgid "{site_name} -  Confirm Enrollment"
-msgstr "{site_name}  - 수강신청 확인"
+msgstr "{site_name}  - 등록 완료"
 
 #: lms/templates/shoppingcart/registration_code_receipt.html
 #: lms/templates/shoppingcart/registration_code_redemption.html
@@ -20104,7 +20104,7 @@ msgstr "{course_number} {course_title} 대표 이미지"
 #: lms/templates/shoppingcart/registration_code_receipt.html
 #: lms/templates/shoppingcart/registration_code_redemption.html
 msgid "Confirm your enrollment for: {span_start}course dates{span_end}"
-msgstr "수강신청 확인: {span_start}강좌 날짜{span_end}"
+msgstr "등록 : {span_start}강좌 날짜{span_end}"
 
 #: lms/templates/shoppingcart/registration_code_receipt.html
 msgid "{course_name}"
@@ -20117,35 +20117,35 @@ msgid ""
 "Check your {link_start}course dashboard{link_end} to see if you're enrolled "
 "in the course, or contact your company's administrator."
 msgstr ""
-"이미 사용된 수강신청 코드를 위한 링크를 클릭했습니다. {link_start}강좌 대시보드{link_end}를 클릭해서 강좌에 신청이 "
-"되었는지를 살펴보거나 회사 관리자에게 연락하세요. "
+"해당 강좌는 이미 등록이 완료되었습니다. 내 {link_start}대시보드{link_end}에서 강좌를 확인해 보세요."
+"<i>강좌가 보이지 않습니다</i>-smartlearn-info@postech.ac.kr으로 문의 바랍니다."
 
 #: lms/templates/shoppingcart/registration_code_receipt.html
 #: lms/templates/shoppingcart/registration_code_redemption.html
 msgid ""
 "You have successfully enrolled in {course_name}. This course has now been "
 "added to your dashboard."
-msgstr "{course_name}에 등록되었습니다. 교수자 대시보드에 강좌가 추가되었습니다."
+msgstr "강좌 등록이 정상적으로 완료되었습니다."
 
 #: lms/templates/shoppingcart/registration_code_receipt.html
 #: lms/templates/shoppingcart/registration_code_redemption.html
 msgid ""
 "You're already enrolled for this course. Visit your "
 "{link_start}dashboard{link_end} to see the course."
-msgstr "본 강좌에 이미 수강신청되어 있습니다. 강좌를 보기 위해 {link_start}대시보드{link_end}를 방문하세요."
+msgstr "해당 강좌는 이미 등록이 완료되었습니다. 내 {link_start}대시보드{link_end}에서 강좌를 확인해 보세요."
 
 #: lms/templates/shoppingcart/registration_code_receipt.html
 msgid "The course you are enrolling for is full."
-msgstr "수강인원이 초과되었습니다. "
+msgstr "수강 인원이 초과되었습니다. "
 
 #: lms/templates/shoppingcart/registration_code_receipt.html
 msgid "The course you are enrolling for is closed."
-msgstr "수강하려는 강좌의 신청이 마감되었습니다."
+msgstr "요청하신 강좌는 이미 신청이 마감되었습니다."
 
 #: lms/templates/shoppingcart/registration_code_receipt.html
 #: lms/templates/shoppingcart/registration_code_redemption.html
 msgid "There was an error processing your redeem code."
-msgstr "Redeem 코드를 처리하는 동안 오류가 발생했습니다."
+msgstr "수강 등록을 처리하는 동안 오류가 발생했습니다."
 
 #: lms/templates/shoppingcart/registration_code_receipt.html
 #: lms/templates/shoppingcart/registration_code_redemption.html
@@ -20154,20 +20154,20 @@ msgid ""
 "{site_name}. This code can only be used one time, so you should only "
 "activate this code if you're its intended recipient."
 msgstr ""
-"{site_name}의 {course_name} 등록 코드를 활성화하려고 합니다.  이 코드는 특정 이용자 전용으로 생성된 것이기 "
-"때문에, 이용자 확인을 위해 이 코드를 활성화해야 합니다."
+" 수강등록을 하시겠습니까?" 
+" 발급된 등록 코드는 1회만 사용 가능하며, 재사용이 불가합니다. "
 
 #: lms/templates/shoppingcart/registration_code_receipt.html
 #: lms/templates/shoppingcart/registration_code_redemption.html
 msgid "Activate Course Enrollment"
-msgstr "강좌 수강 신청을 활성화하기"
+msgstr "수강등록 진행"
 
 #: lms/templates/shoppingcart/shopping_cart.html
 msgid ""
 "{course_names} has been removed because the enrollment period has closed."
 msgid_plural ""
 "{course_names} have been removed because the enrollment period has closed."
-msgstr[0] "수강신청 기간이 지났기 때문에 {course_names}가 나타나지 않습니다. "
+msgstr[0] "강좌의 수강신청 기간이 지나 등록을 할수 없습니다."
 
 #: lms/templates/shoppingcart/shopping_cart.html
 msgid "Cover Image"
