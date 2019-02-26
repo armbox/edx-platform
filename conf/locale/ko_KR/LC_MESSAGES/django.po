@@ -4287,7 +4287,7 @@ msgid ""
 "Tag this course module as an Entrance Exam. Note, you must enable Entrance "
 "Exams for this course setting to take effect."
 msgstr ""
-" 이 과정 모듈을 입학 시험으로 표시하십시오. 이 코스 설정을 적용하려면 "
+" 이 과정 모듈을 입학 시험으로 설정합니다. 이 코스 설정을 적용하려면 "
 " 입학 시험을 활성화해야합니다."
 
 #: common/lib/xmodule/xmodule/seq_module.py
@@ -13751,7 +13751,7 @@ msgid ""
 msgstr ""
 "{platform_name}에 가입하는 과정에서 계정을 활성화하기위한 안내가 포함된 "
 "이메일 메시지가 전송됩니다. 이메일이 보이지 않으시면, 스팸 폴더를 확인하고 "
-"{platform_name} 이메일을 '스팸 아님'으로 표시하십시오."
+"{platform_name} 이메일을 '스팸 아님'으로 설정합니다."
 "{platform_name}에서는 거의 전자 메일을 통해 상호작용 합니다."
 
 #: lms/templates/register-sidebar.html
@@ -17974,7 +17974,7 @@ msgstr ""
 #: lms/templates/instructor/instructor_dashboard_2/send_email.html
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid "Pending Tasks"
-msgstr "보류중이 과제"
+msgstr "보류중인 작업"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificates.html
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
@@ -19406,7 +19406,7 @@ msgstr "문제 위치 "
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid "Attempts"
-msgstr "시도"
+msgstr "시도 횟수"
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid ""
@@ -19420,7 +19420,7 @@ msgstr " 0으로 시도 다시 설정 "
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid "Rescore"
-msgstr "재기록"
+msgstr "다시 채점"
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid ""
@@ -19438,7 +19438,7 @@ msgstr "점수 오버라이드"
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid "For the specified problem, override the learner's score."
-msgstr " 지정된 문제에 대해 학습자의 점수를 무시하십시오."
+msgstr "지정된 문제에 대해 학습자의 점수를 무시합니다."
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid ""
@@ -19448,19 +19448,19 @@ msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid "Override Learner's Score"
-msgstr " 학습자의 점수 무시 "
+msgstr " 학습자의 점수 오버라이드 "
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid "Problem History"
-msgstr "역사 문제"
+msgstr "문제 기록"
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid ""
 "For the specified problem, permanently and completely delete the learner's "
 "answers and scores from the database."
 msgstr ""
-" 지정된 문제의 경우 데이터베이스에서 학습자의 답변과 점수를 "
-" 영구적으로 완전히 삭제하십시오."
+" 지정된 문제에 대해 데이터베이스에서 학습자의 답변과 점수를 "
+" 영구적으로 완전히 삭제합니다."
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid "Task Status"
@@ -19484,7 +19484,7 @@ msgstr " 학습자의 입학 시험 결과 조정 "
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid "Allow the learner to take the exam again."
-msgstr " 학습자가 시험에 다시 응시하도록 허용하십시오."
+msgstr " 학습자가 시험에 다시 응시하도록 허용합니다."
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid "Allow Skip"
@@ -19492,11 +19492,11 @@ msgstr "건너뛰기 허용"
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid "Waive the requirement for the learner to take the exam."
-msgstr " 시험을 치러야하는 학습자의 요구 사항을 무시하십시오."
+msgstr " 시험을 치러야하는 학습자의 요구 사항을 무시합니다."
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid "Let Learner Skip Entrance Exam"
-msgstr " 학습자가 입학 시험을 건너뛸 수 있게 하십시오. "
+msgstr " 학습자가 입학 시험을 건너뛸 수 있게 합니다. "
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid ""
@@ -19504,8 +19504,8 @@ msgid ""
 "Only If Score Improves' option updates the learner's scores only if it "
 "improves in the learner's favor."
 msgstr ""
-" 제출된 응답을 무시하십시오. '점수가 향상되는 경우에만 모든 문제를 "
-" 해결하십시오'옵션은 학습자의 호감을 향상시키는 경우에만 "
+" 제출된 응답을 무시합니다. '점수가 향상되는 경우에만 모든 문제를 "
+" 다시 채점'옵션은 학습자를 위해, 점수가 향상되는 경우에만 "
 " 학습자의 점수를 업데이트합니다."
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
@@ -19514,7 +19514,7 @@ msgstr "모든 문제 재채점"
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid "Rescore All Problems Only If Score Improves"
-msgstr " 점수가 향상되는 경우에만 모든 문제를 해결하십시오 "
+msgstr " 점수가 향상되는 경우에만 모든 문제를 다시 채점 "
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid "Entrance Exam History"
@@ -19526,7 +19526,7 @@ msgid ""
 "learner's answers and scores from the database."
 msgstr ""
 " 전체 입시 시험의 경우 데이터베이스에서 학습자의 "
-" 답변과 점수를 영구적으로 완전히 삭제하십시오."
+" 답변과 점수를 영구적으로 완전히 삭제합니다."
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid ""
@@ -19534,7 +19534,7 @@ msgid ""
 "and entrance exam."
 msgstr ""
 " 이 학습자와 입학 시험을 위해 제출한 탈퇴 과제의 상태를 "
-" 보여주십시오."
+" 보여줍니다."
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid "Adjust all enrolled learners' grades for a specific problem"
@@ -19542,27 +19542,27 @@ msgstr " 특정 문제에 대해 등록된 모든 학습자의 성적 조정 "
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid "Allows all learners to work on the problem again."
-msgstr " 모든 학습자가 문제를 다시 해결할 수 있습니다."
+msgstr " 모든 학습자가 문제를 다시 풀 수 있도록 합니다."
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid ""
 "Rescore submitted responses. The 'Rescore Only If Scores Improve' option "
 "updates a learner's score only if it improves in the learner's favor."
 msgstr ""
-" 제출된 응답을 다시 기록합니다. '점수 향상시에만 점수 계산'옵션은 학습자가 "
-" 선호하는 점수가 향상되는 경우에만 점수를 업데이트합니다."
+" 제출된 응답을 다시 채점합니다. '점수 향상시에만 점수 계산'옵션은 학습자의 편의를 봐 주어"
+" 점수가 향상되는 경우에만 점수를 업데이트합니다."
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid "Rescore All Learners' Submissions"
-msgstr " 모든 학습자의 제출을 다시 기록합니다"
+msgstr "모든 학습자의 제출을 다시 채점"
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid "Rescore Only If Scores Improve"
-msgstr " 점수가 향상된 경우에만 점수 다시 매기기"
+msgstr "점수가 향상될 경우에만 다시 채점"
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid "Show the status for the tasks that you submitted for this problem."
-msgstr " 이 문제에 대해 제출한 작업의 상태를 표시하십시오."
+msgstr "이 문제에 대해 제출한 작업의 상태를 보여줍니다."
 
 #: lms/templates/learner_dashboard/_dashboard_navigation_courses.html
 #: themes/edx.org/lms/templates/dashboard.html
