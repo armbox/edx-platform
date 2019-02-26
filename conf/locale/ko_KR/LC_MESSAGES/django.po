@@ -7369,7 +7369,7 @@ msgstr "특별 시험"
 #: cms/templates/certificates.html cms/templates/export.html
 #: cms/templates/widgets/header.html
 msgid "Certificates"
-msgstr "이수증"
+msgstr "수료증"
 
 #: lms/djangoapps/instructor/views/instructor_dashboard.py
 msgid "Please Enter the numeric value for the course price"
@@ -13831,7 +13831,7 @@ msgstr "예: 당신의 이름(포럼에 표시된)"
 
 #: lms/templates/signup_modal.html
 msgid "e.g. Your Name (for certificates)"
-msgstr "예: 당신의 이름(이수증용)"
+msgstr "예: 당신의 이름(수료증용)"
 
 #: lms/templates/signup_modal.html
 msgid "<i>Welcome</i> {name}"
@@ -15495,11 +15495,11 @@ msgstr "학습자 성적 다운로드"
 #: lms/templates/certificates/_accomplishment-banner.html
 #: themes/edx.org/lms/templates/certificates/_accomplishment-banner.html
 msgid "Print or share your certificate:"
-msgstr "강좌 이수증을 인쇄하거나 공유하기"
+msgstr "강좌 수료증을 인쇄하거나 공유하기"
 
 #: lms/templates/certificates/_accomplishment-banner.html
 msgid "Click the link to see my certificate."
-msgstr "저의 강좌 이수증을 보기 위해 링크를 클릭해 주세요."
+msgstr "저의 강좌 수료증을 보기 위해 링크를 클릭해 주세요."
 
 #: lms/templates/certificates/_accomplishment-banner.html
 msgid "Post on Facebook"
@@ -15526,7 +15526,7 @@ msgstr "Mozilla Backpack에 추가하기"
 
 #: lms/templates/certificates/_accomplishment-banner.html
 msgid "Print Certificate"
-msgstr "강좌 이수증 인쇄하기"
+msgstr "강좌 수료증 인쇄하기"
 
 #: lms/templates/certificates/_accomplishment-header.html
 msgid "{platform_name} Home"
@@ -15656,7 +15656,7 @@ msgstr " 확인된 트랙으로 학업적 학점을 추구하십시오. "
 #: lms/templates/course_modes/choose.html
 #: themes/edx.org/lms/templates/course_modes/choose.html
 msgid "Pursue Academic Credit with a Verified Certificate"
-msgstr "인증된 이수증으로 학점 받기"
+msgstr "인증된 수료증으로 학점 받기"
 
 #: lms/templates/course_modes/choose.html
 #: themes/edx.org/lms/templates/course_modes/choose.html
@@ -15720,14 +15720,14 @@ msgstr "수료증을 활용해 보세요"
 msgid ""
 "{b_start}Official:{b_end} Receive an instructor-signed certificate with the "
 "institution's logo"
-msgstr "{b_start}공식:{b_end} 기관의 로고와 교수자의 서명이 담긴 이수증을 받으세요."
+msgstr "{b_start}공식:{b_end} 기관의 로고와 교수자의 서명이 담긴 수료증을 받으세요."
 
 #: lms/templates/course_modes/choose.html
 #: themes/edx.org/lms/templates/course_modes/choose.html
 msgid ""
 "{b_start}Easily shareable:{b_end} Add the certificate to your CV or resume, "
 "or post it directly on LinkedIn"
-msgstr "{b_start}공유 용이:{b_end} 이력서에 강좌 이수증을 추가하거나 LinkedIn에 바로 게시하세요."
+msgstr "{b_start}공유 용이:{b_end} 이력서에 강좌 수료증을 추가하거나 LinkedIn에 바로 게시하세요."
 
 #: lms/templates/course_modes/choose.html
 #: themes/edx.org/lms/templates/course_modes/choose.html
@@ -16072,7 +16072,7 @@ msgstr " {course_title}에 오신 것을 환영합니다."
 #: lms/templates/dashboard/_dashboard_course_listing.html
 #: openedx/features/course_experience/templates/course_experience/course-home-fragment.html
 msgid "Resume Course"
-msgstr "코스를 재개"
+msgstr "코스 다시 시작"
 
 #: lms/templates/courseware/info.html
 msgid "View Updates in Studio"
@@ -16080,7 +16080,7 @@ msgstr " 스튜디오에서 업데이트보기 "
 
 #: lms/templates/courseware/info.html
 msgid "Course Updates and News"
-msgstr " 코스 업데이트 및 뉴스 "
+msgstr " 코스 업데이트와 뉴스 "
 
 #: lms/templates/courseware/info.html
 msgid "Handout Navigation"
@@ -16230,7 +16230,7 @@ msgstr "'{username}' ({email})의 학습 진행 상황"
 
 #: lms/templates/courseware/progress.html
 msgid "View Certificate"
-msgstr "강좌 이수증 보기"
+msgstr "강좌 수료증 보기"
 
 #: lms/templates/courseware/progress.html
 msgid "Opens in a new browser window"
@@ -16238,11 +16238,11 @@ msgstr " 새 브라우저 창에서 열기 "
 
 #: lms/templates/courseware/progress.html
 msgid "Download Your Certificate"
-msgstr "강좌 이수증 다운로드하기"
+msgstr "강좌 수료증 다운로드하기"
 
 #: lms/templates/courseware/progress.html
 msgid "Request Certificate"
-msgstr "강좌 이수증 신청하기"
+msgstr "강좌 수료증 신청하기"
 
 #: lms/templates/courseware/progress.html
 msgid "Requirements for Course Credit"
@@ -16469,7 +16469,7 @@ msgstr " 인증서는 {date} 또는 그 이전에 제공됩니다."
 
 #: lms/templates/dashboard/_dashboard_certificate_information.html
 msgid "Your final grade:"
-msgstr "최종 성적"
+msgstr "최종 성적:"
 
 #: lms/templates/dashboard/_dashboard_certificate_information.html
 msgid "Grade required for a {cert_name_short}:"
@@ -16523,7 +16523,7 @@ msgstr "{cert_name_short}이 만들어지고 있습니다."
 
 #: lms/templates/dashboard/_dashboard_certificate_information.html
 msgid "This link will open the certificate web view"
-msgstr "링크는 강좌 이수증을 웹으로 보게 될것입니다."
+msgstr "링크는 강좌 수료증을 웹으로 보게 될것입니다."
 
 #: lms/templates/dashboard/_dashboard_certificate_information.html
 msgid "View {cert_name_short}"
@@ -16557,7 +16557,7 @@ msgstr "강좌 피드백 조사를 완료하세요."
 
 #: lms/templates/dashboard/_dashboard_certificate_information.html
 msgid "Add Certificate to LinkedIn Profile"
-msgstr "LinkedIn 프로필에 강좌 이수증 추가하기"
+msgstr "LinkedIn 프로필에 강좌 수료증 추가하기"
 
 #: lms/templates/dashboard/_dashboard_certificate_information.html
 msgid "Share on LinkedIn"
@@ -16570,7 +16570,7 @@ msgid ""
 "{cert_name_short}. An honor code {cert_name_short} has been granted instead."
 msgstr ""
 "{cert_name_long} 발급 과정에서 귀하의 유효한 인증 사진을 받지 못했기 때문에,   {cert_name_short}인증 "
-"이수증을 수여할 수 없습니다. 대신 {cert_name_short}명예 수료증 발급은 가능합니다. "
+"수료증을 수여할 수 없습니다. 대신 {cert_name_short}명예 수료증 발급은 가능합니다. "
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Course details"
@@ -17897,15 +17897,15 @@ msgstr "쿠폰 만기일 추가"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificates.html
 msgid "Example Certificates"
-msgstr "예비 이수증"
+msgstr "예비 수료증"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificates.html
 msgid "Generate example certificates for the course."
-msgstr "강좌 예비 이수증 생성하기"
+msgstr "강좌 예비 수료증 생성하기"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificates.html
 msgid "Generate Example Certificates"
-msgstr "예비 이수증 생성하기"
+msgstr "예비 수료증 생성하기"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificates.html
 msgid "Status:"
@@ -17913,15 +17913,15 @@ msgstr "상태:"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificates.html
 msgid "Generating example {name} certificate"
-msgstr "{name} 의 예비 이수증 생성하기"
+msgstr "{name} 의 예비 수료증 생성하기"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificates.html
 msgid "Error generating example {name} certificate: {error}"
-msgstr "{name}의 예비 이수증 생성시 오류 발생: {error}"
+msgstr "{name}의 예비 수료증 생성시 오류 발생: {error}"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificates.html
 msgid "View {name} certificate"
-msgstr "{name}의 이수증 보기"
+msgstr "{name}의 수료증 보기"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificates.html
 msgid "Refresh Status"
@@ -17929,25 +17929,25 @@ msgstr "다시 불러오기"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificates.html
 msgid "Student-Generated Certificates"
-msgstr "학습자 생성 이수증"
+msgstr "학습자 생성 수료증"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificates.html
 msgid "Disable Student-Generated Certificates"
-msgstr "학습자 생성 이수증 비활성화하기"
+msgstr "학습자 생성 수료증 비활성화하기"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificates.html
 msgid "Enable Student-Generated Certificates"
-msgstr "학습자 생성 이수증 활성화하기"
+msgstr "학습자 생성 수료증 활성화하기"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificates.html
 msgid ""
 "You must successfully generate example certificates before you enable "
 "student-generated certificates."
-msgstr "학습자 생성 이수증을 활성화하기 전에 반드시 예비 이수증을 성공적으로 생성해야 합니다."
+msgstr "학습자 생성 수료증을 활성화하기 전에 반드시 예비 수료증을 성공적으로 생성해야 합니다."
 
 #: lms/templates/instructor/instructor_dashboard_2/certificates.html
 msgid "Generate Certificates"
-msgstr "이수증 생성하기"
+msgstr "수료증 생성하기"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificates.html
 msgid ""
@@ -21267,7 +21267,7 @@ msgstr "파일 및 업로드"
 
 #: cms/templates/certificates.html
 msgid "Course Certificates"
-msgstr "이수증"
+msgstr "수료증"
 
 #: cms/templates/certificates.html
 msgid "This module is not enabled."
@@ -21341,7 +21341,7 @@ msgstr ""
 
 #: cms/templates/certificates.html
 msgid "Learn more about certificates"
-msgstr "이수증에 대해 자세히 알아보기"
+msgstr "수료증에 대해 자세히 알아보기"
 
 #: cms/templates/certificates.html cms/templates/settings_graders.html
 msgid "Details &amp; Schedule"
