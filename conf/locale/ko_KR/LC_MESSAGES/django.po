@@ -20222,7 +20222,7 @@ msgstr "결제 금액"
 #. "$500.00 USD"
 #: lms/templates/shoppingcart/shopping_cart.html
 msgid "{currency_symbol}{price} {currency_abbr}"
-msgstr "{price}{currency_symbol} {currency_abbr}"
+msgstr "{price} {currency_symbol}"
 
 #: lms/templates/shoppingcart/shopping_cart.html
 msgid ""
