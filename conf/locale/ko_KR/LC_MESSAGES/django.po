@@ -15877,7 +15877,7 @@ msgstr "수강신청하실 수 없습니다."
 
 #: lms/templates/courseware/course_about.html
 msgid "Add {course_name} to Cart <span>({price} USD)</span>"
-msgstr " {course_name}을(를) 신청 강좌에 <span> 추가({price} 원)</span>"
+msgstr "신청 강좌에 추가 <span>({price})</span>"
 
 #: lms/templates/courseware/course_about.html
 msgid "Enroll in {course_name}"
