@@ -8769,7 +8769,7 @@ msgstr "강좌가 신청 강좌 목록에 추가되었습니다."
 #: lms/djangoapps/shoppingcart/views.py
 #, python-brace-format
 msgid "Discount does not exist against code '{code}'."
-msgstr " '{code}'코드에 대한 할인이 없습니다."
+msgstr " '{code}': 유효한 코드가 아닙니다."
 
 #: lms/djangoapps/shoppingcart/views.py
 #, python-brace-format
