@@ -1556,6 +1556,8 @@ class PaidCourseRegistration(OrderItem):
         ### handle default arguments for mode_slug, cost, currency
         course_mode = CourseMode.mode_for_course(course_id, mode_slug)
         if not course_mode:
+            course_mode = CourseMode.first_mode_for_course(course_id)
+        if not course_mode:
             # user could have specified a mode that's not set, in that case return the DEFAULT_MODE
             course_mode = CourseMode.DEFAULT_SHOPPINGCART_MODE
         if not cost:
