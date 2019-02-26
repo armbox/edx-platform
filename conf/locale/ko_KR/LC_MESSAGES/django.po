@@ -354,7 +354,7 @@ msgstr "인증 모드는 무료가 될 수 없습니다."
 #. "$500.00"
 #: lms/templates/shoppingcart/shopping_cart.html
 msgid "{currency_symbol}{price}"
-msgstr "{currency_symbol}{price}"
+msgstr "{price}{currency_symbol}"
 
 #. Translators: This refers to the cost of the course. In this case, the
 #. course costs nothing so it is free.
@@ -17260,7 +17260,7 @@ msgstr "수량 - 구입내역 - 금액"
 #: lms/templates/emails/business_order_confirmation_email.txt
 #: lms/templates/emails/order_confirmation_email.txt
 msgid "Total billed to credit/debit card: {currency_symbol}{total_cost}"
-msgstr "신용 / 직불 카드 청구 : {currency_symbol}{total_cost}"
+msgstr "신용 / 직불 카드 청구 : {total_cost}{currency_symbol}"
 
 #: lms/templates/emails/business_order_confirmation_email.txt
 msgid "Company Name:"
@@ -17489,7 +17489,7 @@ msgid ""
 "An invoice for {currency_symbol}{total_price} is attached. Payment is due "
 "upon receipt. You can find information about payment methods on the invoice."
 msgstr ""
-"{currency_symbol}{total_price}에 대한 청구서가 첨부되었습니다. 결제 금액은 영수증에 있습니다. 결제 방법은 "
+"{total_price}{currency_symbol}에 대한 청구서가 첨부되었습니다. 결제 금액은 영수증에 있습니다. 결제 방법은 "
 "청구서에서 확인할 수 있습니다."
 
 #: lms/templates/emails/registration_codes_sale_email.txt
@@ -17574,7 +17574,7 @@ msgstr "고객 참조 번호: {reference_number}"
 
 #: lms/templates/emails/registration_codes_sale_invoice_attachment.txt
 msgid "Balance Due: {currency_symbol}{sale_price}"
-msgstr "잔액 만기: {currency_symbol}{sale_price}"
+msgstr "잔액 만기: {sale_price}{currency_symbol}"
 
 #: lms/templates/emails/registration_codes_sale_invoice_attachment.txt
 msgid "Course: {course_name}"
@@ -17586,8 +17586,8 @@ msgid ""
 "Sub-Total:    {currency_symbol}{sub_total}  Discount:  "
 "{currency_symbol}{discount}"
 msgstr ""
-"가격: {currency_symbol}{course_price} 양:  {quantity}  소계: "
-"{currency_symbol}{sub_total}  할인: {currency_symbol}{discount}"
+"가격: {course_price}{currency_symbol} 양:  {quantity}  소계: "
+"{sub_total}{currency_symbol}  할인: {discount}{currency_symbol}"
 
 #: lms/templates/emails/registration_codes_sale_invoice_attachment.txt
 msgid "Total:      {currency_symbol}{sale_price}"
@@ -20154,7 +20154,7 @@ msgid ""
 "{site_name}. This code can only be used one time, so you should only "
 "activate this code if you're its intended recipient."
 msgstr ""
-" 수강등록을 하시겠습니까?" 
+" 수강등록을 하시겠습니까?"
 " 발급된 등록 코드는 1회만 사용 가능하며, 재사용이 불가합니다. "
 
 #: lms/templates/shoppingcart/registration_code_receipt.html
@@ -20222,7 +20222,7 @@ msgstr "결제 금액"
 #. "$500.00 USD"
 #: lms/templates/shoppingcart/shopping_cart.html
 msgid "{currency_symbol}{price} {currency_abbr}"
-msgstr "{currency_symbol}{price} {currency_abbr}"
+msgstr "{price}{currency_symbol} {currency_abbr}"
 
 #: lms/templates/shoppingcart/shopping_cart.html
 msgid ""
