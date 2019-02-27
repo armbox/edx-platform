@@ -154,6 +154,7 @@ class Order(models.Model):
         except ObjectDoesNotExist:
             # if nothing exists in the database, create a new cart
             cart_order, _created = cls.objects.get_or_create(user=user, status='cart')
+        cart_order.currency="krw"
         return cart_order
 
     @classmethod
