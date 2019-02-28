@@ -20089,12 +20089,12 @@ msgstr "주의: <del> 이렇게</del> 취소선이 있는 것은 환불된 것�
 #: lms/templates/shoppingcart/registration_code_receipt.html
 #: lms/templates/shoppingcart/registration_code_redemption.html
 msgid "Confirm Enrollment"
-msgstr "등록 완료"
+msgstr "수강 등록"
 
 #: lms/templates/shoppingcart/registration_code_receipt.html
 #: lms/templates/shoppingcart/registration_code_redemption.html
 msgid "{site_name} -  Confirm Enrollment"
-msgstr "{site_name}  - 등록 완료"
+msgstr "{site_name}  - 수강 등록"
 
 #: lms/templates/shoppingcart/registration_code_receipt.html
 #: lms/templates/shoppingcart/registration_code_redemption.html
@@ -20160,7 +20160,7 @@ msgstr ""
 #: lms/templates/shoppingcart/registration_code_receipt.html
 #: lms/templates/shoppingcart/registration_code_redemption.html
 msgid "Activate Course Enrollment"
-msgstr "수강등록 진행"
+msgstr "등록 진행"
 
 #: lms/templates/shoppingcart/shopping_cart.html
 msgid ""
