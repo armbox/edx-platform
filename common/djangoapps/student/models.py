@@ -1616,7 +1616,7 @@ class CourseEnrollment(models.Model):
             )
 
     @classmethod
-    def is_enrolled(cls, user, course_key):
+    def is_enrolled(cls, user, course_key, modes=None):
         """
         Returns True if the user is enrolled in the course (the entry must exist
         and it must have `is_active=True`). Otherwise, returns False.
@@ -1628,6 +1628,9 @@ class CourseEnrollment(models.Model):
         `course_id` is our usual course_id string (e.g. "edX/Test101/2013_Fall)
         """
         enrollment_state = cls._get_enrollment_state(user, course_key)
+        # if it's not enrolled in "modes"
+        if(modes and not( enrollment_state.mode in modes)):
+            return False
         return enrollment_state.is_active or False
 
     @classmethod

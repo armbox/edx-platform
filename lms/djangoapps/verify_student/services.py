@@ -62,12 +62,12 @@ class IDVerificationService(object):
 
         This will check for the user's *initial* verification.
         """
+	return True
         filter_kwargs = {
             'user': user,
             'status': 'approved',
             'created_at__gte': (earliest_allowed_date or earliest_allowed_verification_date())
         }
-
         return (SoftwareSecurePhotoVerification.objects.filter(**filter_kwargs).exists() or
                 SSOVerification.objects.filter(**filter_kwargs).exists() or
                 ManualVerification.objects.filter(**filter_kwargs).exists())
@@ -140,6 +140,7 @@ class IDVerificationService(object):
         Returns:
             bool: True or False according to existence of valid verifications
         """
+	return True
         filter_kwargs = {
             'user': user,
             'status__in': ['submitted', 'approved', 'must_retry'],

@@ -443,6 +443,10 @@ class CourseMode(models.Model):
         """
         modes = cls.modes_for_course(course_id, include_expired=False)
 
+        matched = [m for m in modes if m.slug in cls.CREDIT_ELIGIBLE_MODES ]
+        if matched:
+            return matched[0]
+
         if modes:
             return modes[0]
         else:

@@ -172,6 +172,9 @@ class ChooseModeView(View):
                                 'program_title': program_data.get('title'),
                                 'program_price': program_data.get('full_program_price'),
                             }
+        reg_then_add_to_cart_link = "{reg_url}?course_id={course_id}&enrollment_action=add_to_cart".format(
+            reg_url=reverse('register_user'), course_id=urllib.quote(str(course_id))
+        )
 
         context = {
             "bundle_data": bundle_data,
@@ -189,6 +192,8 @@ class ChooseModeView(View):
             "responsive": True,
             "nav_hidden": True,
             "content_gating_enabled": ContentTypeGatingConfig.enabled_for_course(course_key=course_key),
+            "course": course,
+            "reg_then_add_to_cart_link": reg_then_add_to_cart_link,
         }
         context.update(
             get_experiment_user_metadata_context(
