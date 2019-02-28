@@ -418,6 +418,41 @@ class CourseMode(models.Model):
             return None
 
     @classmethod
+    def first_mode_for_course(cls, course_id):
+        """Returns the mode for the course corresponding to mode_slug.
+
+        Returns only non-expired modes.
+
+        If this particular mode is not set for the course, returns None
+
+        Arguments:
+            course_id (CourseKey): Search for course modes for this course.
+            mode_slug (str): Search for modes with this slug.
+
+        Keyword Arguments:
+            modes (list of `Mode`): If provided, search through this list
+                of course modes.  This can be used to avoid an additional
+                database query if you have already loaded the modes list.
+
+            include_expired (bool): If True, expired course modes will be included
+                in the returned values. If False, these modes will be omitted.
+
+        Returns:
+            Mode
+
+        """
+        modes = cls.modes_for_course(course_id, include_expired=False)
+
+        matched = [m for m in modes if m.slug in cls.CREDIT_ELIGIBLE_MODES ]
+        if matched:
+            return matched[0]
+
+        if modes:
+            return modes[0]
+        else:
+            return None
+
+    @classmethod
     def verified_mode_for_course(cls, course_id, modes=None, include_expired=False):
         """Find a verified mode for a particular course.
 
@@ -681,7 +716,7 @@ class CourseMode(models.Model):
         If there is no mode found, will return the price of DEFAULT_MODE, which is 0
         """
         modes = cls.modes_for_course(course_id)
-        return min(mode.min_price for mode in modes if mode.currency.lower() == currency.lower())
+        return min(mode.min_price for mode in modes )
 
     @classmethod
     def is_eligible_for_certificate(cls, mode_slug):

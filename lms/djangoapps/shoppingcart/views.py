@@ -430,6 +430,7 @@ def register_code_redemption(request, registration_code):
                 context['redemption_success'] = False
         else:
             context['redemption_success'] = False
+        context['uses_bootstrap'] = True
         return render_to_response(template_to_render, context)
 
 

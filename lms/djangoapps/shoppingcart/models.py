@@ -154,6 +154,7 @@ class Order(models.Model):
         except ObjectDoesNotExist:
             # if nothing exists in the database, create a new cart
             cart_order, _created = cls.objects.get_or_create(user=user, status='cart')
+        cart_order.currency="krw"
         return cart_order
 
     @classmethod
@@ -1547,7 +1548,7 @@ class PaidCourseRegistration(OrderItem):
             )
             raise ItemAlreadyInCartException
 
-        if CourseEnrollment.is_enrolled(user=order.user, course_key=course_id):
+        if CourseEnrollment.is_enrolled(user=order.user, course_key=course_id, modes=CourseMode.CREDIT_ELIGIBLE_MODES):
             log.warning("User {} trying to add course {} to cart id {}, already registered"
                         .format(order.user.email, course_id, order.id))
             raise AlreadyEnrolledInCourseException
@@ -1555,6 +1556,8 @@ class PaidCourseRegistration(OrderItem):
         ### Validations done, now proceed
         ### handle default arguments for mode_slug, cost, currency
         course_mode = CourseMode.mode_for_course(course_id, mode_slug)
+        if not course_mode:
+            course_mode = CourseMode.first_mode_for_course(course_id)
         if not course_mode:
             # user could have specified a mode that's not set, in that case return the DEFAULT_MODE
             course_mode = CourseMode.DEFAULT_SHOPPINGCART_MODE

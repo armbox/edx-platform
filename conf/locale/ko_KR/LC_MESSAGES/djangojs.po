@@ -8917,7 +8917,7 @@ msgstr " 확인된 인증서가 필요합니다. "
 
 #: lms/templates/learner_dashboard/upgrade_message.underscore
 msgid "Upgrade to Verified"
-msgstr " 확인됨으로 업그레이드 "
+msgstr " 인증과정으로 업그레이드 "
 
 #: lms/templates/student_account/account.underscore
 msgid "New Address"

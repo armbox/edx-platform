@@ -354,7 +354,7 @@ msgstr "인증 모드는 무료가 될 수 없습니다."
 #. "$500.00"
 #: lms/templates/shoppingcart/shopping_cart.html
 msgid "{currency_symbol}{price}"
-msgstr "{currency_symbol}{price}"
+msgstr "{price}{currency_symbol}"
 
 #. Translators: This refers to the cost of the course. In this case, the
 #. course costs nothing so it is free.
@@ -4287,7 +4287,7 @@ msgid ""
 "Tag this course module as an Entrance Exam. Note, you must enable Entrance "
 "Exams for this course setting to take effect."
 msgstr ""
-" 이 과정 모듈을 입학 시험으로 표시하십시오. 이 코스 설정을 적용하려면 "
+" 이 과정 모듈을 입학 시험으로 설정합니다. 이 코스 설정을 적용하려면 "
 " 입학 시험을 활성화해야합니다."
 
 #: common/lib/xmodule/xmodule/seq_module.py
@@ -5855,7 +5855,7 @@ msgstr " 모바일 장치에서이 코스에 액세스 할 수 없습니다. "
 #: lms/djangoapps/courseware/course_tools.py
 #: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Upgrade to Verified"
-msgstr " 확인됨으로 업그레이드 "
+msgstr "인증과정으로 업그레이드 "
 
 #. Translators: 'absolute' is a date such as "Jan 01,
 #. 2020". 'relative' is a fuzzy description of the time until
@@ -6113,7 +6113,7 @@ msgstr "로그인"
 #: openedx/core/lib/xblock_builtin/xblock_discussion/xblock_discussion/__init__.py
 #: openedx/features/course_experience/views/course_home_messages.py
 msgid "register"
-msgstr "등록부"
+msgstr "가입"
 
 #: lms/djangoapps/courseware/views/views.py
 msgid "Your enrollment: Audit track"
@@ -7369,7 +7369,7 @@ msgstr "특별 시험"
 #: cms/templates/certificates.html cms/templates/export.html
 #: cms/templates/widgets/header.html
 msgid "Certificates"
-msgstr "이수증"
+msgstr "수료증"
 
 #: lms/djangoapps/instructor/views/instructor_dashboard.py
 msgid "Please Enter the numeric value for the course price"
@@ -8769,7 +8769,7 @@ msgstr "강좌가 신청 강좌 목록에 추가되었습니다."
 #: lms/djangoapps/shoppingcart/views.py
 #, python-brace-format
 msgid "Discount does not exist against code '{code}'."
-msgstr " '{code}'코드에 대한 할인이 없습니다."
+msgstr " '{code}': 유효한 코드가 아닙니다."
 
 #: lms/djangoapps/shoppingcart/views.py
 #, python-brace-format
@@ -13751,7 +13751,7 @@ msgid ""
 msgstr ""
 "{platform_name}에 가입하는 과정에서 계정을 활성화하기위한 안내가 포함된 "
 "이메일 메시지가 전송됩니다. 이메일이 보이지 않으시면, 스팸 폴더를 확인하고 "
-"{platform_name} 이메일을 '스팸 아님'으로 표시하십시오."
+"{platform_name} 이메일을 '스팸 아님'으로 설정합니다."
 "{platform_name}에서는 거의 전자 메일을 통해 상호작용 합니다."
 
 #: lms/templates/register-sidebar.html
@@ -13831,7 +13831,7 @@ msgstr "예: 당신의 이름(포럼에 표시된)"
 
 #: lms/templates/signup_modal.html
 msgid "e.g. Your Name (for certificates)"
-msgstr "예: 당신의 이름(이수증용)"
+msgstr "예: 당신의 이름(수료증용)"
 
 #: lms/templates/signup_modal.html
 msgid "<i>Welcome</i> {name}"
@@ -15495,11 +15495,11 @@ msgstr "학습자 성적 다운로드"
 #: lms/templates/certificates/_accomplishment-banner.html
 #: themes/edx.org/lms/templates/certificates/_accomplishment-banner.html
 msgid "Print or share your certificate:"
-msgstr "강좌 이수증을 인쇄하거나 공유하기"
+msgstr "강좌 수료증을 인쇄하거나 공유하기"
 
 #: lms/templates/certificates/_accomplishment-banner.html
 msgid "Click the link to see my certificate."
-msgstr "저의 강좌 이수증을 보기 위해 링크를 클릭해 주세요."
+msgstr "저의 강좌 수료증을 보기 위해 링크를 클릭해 주세요."
 
 #: lms/templates/certificates/_accomplishment-banner.html
 msgid "Post on Facebook"
@@ -15526,7 +15526,7 @@ msgstr "Mozilla Backpack에 추가하기"
 
 #: lms/templates/certificates/_accomplishment-banner.html
 msgid "Print Certificate"
-msgstr "강좌 이수증 인쇄하기"
+msgstr "강좌 수료증 인쇄하기"
 
 #: lms/templates/certificates/_accomplishment-header.html
 msgid "{platform_name} Home"
@@ -15656,7 +15656,7 @@ msgstr " 확인된 트랙으로 학업적 학점을 추구하십시오. "
 #: lms/templates/course_modes/choose.html
 #: themes/edx.org/lms/templates/course_modes/choose.html
 msgid "Pursue Academic Credit with a Verified Certificate"
-msgstr "인증된 이수증으로 학점 받기"
+msgstr "인증된 수료증으로 학점 받기"
 
 #: lms/templates/course_modes/choose.html
 #: themes/edx.org/lms/templates/course_modes/choose.html
@@ -15720,24 +15720,24 @@ msgstr "수료증을 활용해 보세요"
 msgid ""
 "{b_start}Official:{b_end} Receive an instructor-signed certificate with the "
 "institution's logo"
-msgstr "{b_start}공식:{b_end} 기관의 로고와 교수자의 서명이 담긴 이수증을 받으세요."
+msgstr "{b_start}공식:{b_end} 기관의 로고와 교수자의 서명이 담긴 수료증을 받으세요."
 
 #: lms/templates/course_modes/choose.html
 #: themes/edx.org/lms/templates/course_modes/choose.html
 msgid ""
 "{b_start}Easily shareable:{b_end} Add the certificate to your CV or resume, "
 "or post it directly on LinkedIn"
-msgstr "{b_start}공유 용이:{b_end} 이력서에 강좌 이수증을 추가하거나 LinkedIn에 바로 게시하세요."
+msgstr "{b_start}공유 용이:{b_end} 이력서에 강좌 수료증을 추가하거나 LinkedIn에 바로 게시하세요."
 
 #: lms/templates/course_modes/choose.html
 #: themes/edx.org/lms/templates/course_modes/choose.html
 msgid "Pursue a Verified Certificate"
-msgstr "인증 과정"
+msgstr "인증과정으로 업그레이드"
 
 #: lms/templates/course_modes/choose.html
 #: themes/edx.org/lms/templates/course_modes/choose.html
 msgid "Pursue the Verified Track"
-msgstr " 확인된 트랙 추적 "
+msgstr "인증과정으로 업그레이드"
 
 #: lms/templates/course_modes/choose.html
 #: themes/edx.org/lms/templates/course_modes/choose.html
@@ -15772,7 +15772,7 @@ msgstr "{b_start}동기부여{b_end} 학업성취률을 높이고 강좌 완주�
 #: lms/templates/course_modes/choose.html
 #: themes/edx.org/lms/templates/course_modes/choose.html
 msgid "Audit This Course"
-msgstr "이 강좌 청강"
+msgstr "강좌로 이동"
 
 #: lms/templates/course_modes/choose.html
 #: themes/edx.org/lms/templates/course_modes/choose.html
@@ -15877,7 +15877,7 @@ msgstr "수강신청하실 수 없습니다."
 
 #: lms/templates/courseware/course_about.html
 msgid "Add {course_name} to Cart <span>({price} USD)</span>"
-msgstr " {course_name}을(를) 신청 강좌에 <span> 추가({price} 원)</span>"
+msgstr "신청 강좌에 추가 <span>({price})</span>"
 
 #: lms/templates/courseware/course_about.html
 msgid "Enroll in {course_name}"
@@ -16072,7 +16072,7 @@ msgstr " {course_title}에 오신 것을 환영합니다."
 #: lms/templates/dashboard/_dashboard_course_listing.html
 #: openedx/features/course_experience/templates/course_experience/course-home-fragment.html
 msgid "Resume Course"
-msgstr "코스를 재개"
+msgstr "코스 다시 시작"
 
 #: lms/templates/courseware/info.html
 msgid "View Updates in Studio"
@@ -16080,7 +16080,7 @@ msgstr " 스튜디오에서 업데이트보기 "
 
 #: lms/templates/courseware/info.html
 msgid "Course Updates and News"
-msgstr " 코스 업데이트 및 뉴스 "
+msgstr " 코스 업데이트와 뉴스 "
 
 #: lms/templates/courseware/info.html
 msgid "Handout Navigation"
@@ -16230,7 +16230,7 @@ msgstr "'{username}' ({email})의 학습 진행 상황"
 
 #: lms/templates/courseware/progress.html
 msgid "View Certificate"
-msgstr "강좌 이수증 보기"
+msgstr "강좌 수료증 보기"
 
 #: lms/templates/courseware/progress.html
 msgid "Opens in a new browser window"
@@ -16238,11 +16238,11 @@ msgstr " 새 브라우저 창에서 열기 "
 
 #: lms/templates/courseware/progress.html
 msgid "Download Your Certificate"
-msgstr "강좌 이수증 다운로드하기"
+msgstr "강좌 수료증 다운로드하기"
 
 #: lms/templates/courseware/progress.html
 msgid "Request Certificate"
-msgstr "강좌 이수증 신청하기"
+msgstr "강좌 수료증 신청하기"
 
 #: lms/templates/courseware/progress.html
 msgid "Requirements for Course Credit"
@@ -16469,7 +16469,7 @@ msgstr " 인증서는 {date} 또는 그 이전에 제공됩니다."
 
 #: lms/templates/dashboard/_dashboard_certificate_information.html
 msgid "Your final grade:"
-msgstr "최종 성적"
+msgstr "최종 성적:"
 
 #: lms/templates/dashboard/_dashboard_certificate_information.html
 msgid "Grade required for a {cert_name_short}:"
@@ -16523,7 +16523,7 @@ msgstr "{cert_name_short}이 만들어지고 있습니다."
 
 #: lms/templates/dashboard/_dashboard_certificate_information.html
 msgid "This link will open the certificate web view"
-msgstr "링크는 강좌 이수증을 웹으로 보게 될것입니다."
+msgstr "링크는 강좌 수료증을 웹으로 보게 될것입니다."
 
 #: lms/templates/dashboard/_dashboard_certificate_information.html
 msgid "View {cert_name_short}"
@@ -16557,7 +16557,7 @@ msgstr "강좌 피드백 조사를 완료하세요."
 
 #: lms/templates/dashboard/_dashboard_certificate_information.html
 msgid "Add Certificate to LinkedIn Profile"
-msgstr "LinkedIn 프로필에 강좌 이수증 추가하기"
+msgstr "LinkedIn 프로필에 강좌 수료증 추가하기"
 
 #: lms/templates/dashboard/_dashboard_certificate_information.html
 msgid "Share on LinkedIn"
@@ -16570,7 +16570,7 @@ msgid ""
 "{cert_name_short}. An honor code {cert_name_short} has been granted instead."
 msgstr ""
 "{cert_name_long} 발급 과정에서 귀하의 유효한 인증 사진을 받지 못했기 때문에,   {cert_name_short}인증 "
-"이수증을 수여할 수 없습니다. 대신 {cert_name_short}명예 수료증 발급은 가능합니다. "
+"수료증을 수여할 수 없습니다. 대신 {cert_name_short}명예 수료증 발급은 가능합니다. "
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Course details"
@@ -16766,8 +16766,8 @@ msgid ""
 "Pursue a {cert_name_long} to highlight the knowledge and skills you gain in "
 "this course."
 msgstr ""
-" {cert_name_long}이(가)이 과정에서 습득한 지식과 "
-" 기술을 강조하십시오."
+"{cert_name_long} 을 구매하여 이 코스에서 습득한 지식과 기술에"
+" 방점을 찍으십시오."
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
 msgid ""
@@ -16775,8 +16775,8 @@ msgid ""
 "the course. {line_break}{link_start}Learn more about the verified "
 "{cert_name_long}{link_end}."
 msgstr ""
-" 공식입니다. 쉽게 공유할 수 있습니다. 코스를 완료하는 데 입증된 동기입니다."
-"{line_break} {link_start} 확인된 {cert_name_long} {link_end}에 "
+" 공식적으로 인증됩니다. 쉽게 공유할 수 있습니다. 코스를 완료하는데 원동력이 될 것입니다."
+"{line_break} {link_start} 인증된 {cert_name_long} {link_end}에 "
 " 대해 자세히 알아보세요."
 
 #. Translators: provider_name is the name of a credit provider or university
@@ -17260,7 +17260,7 @@ msgstr "수량 - 구입내역 - 금액"
 #: lms/templates/emails/business_order_confirmation_email.txt
 #: lms/templates/emails/order_confirmation_email.txt
 msgid "Total billed to credit/debit card: {currency_symbol}{total_cost}"
-msgstr "신용 / 직불 카드 청구 : {currency_symbol}{total_cost}"
+msgstr "신용 / 직불 카드 청구 : {total_cost}{currency_symbol}"
 
 #: lms/templates/emails/business_order_confirmation_email.txt
 msgid "Company Name:"
@@ -17489,7 +17489,7 @@ msgid ""
 "An invoice for {currency_symbol}{total_price} is attached. Payment is due "
 "upon receipt. You can find information about payment methods on the invoice."
 msgstr ""
-"{currency_symbol}{total_price}에 대한 청구서가 첨부되었습니다. 결제 금액은 영수증에 있습니다. 결제 방법은 "
+"{total_price}{currency_symbol}에 대한 청구서가 첨부되었습니다. 결제 금액은 영수증에 있습니다. 결제 방법은 "
 "청구서에서 확인할 수 있습니다."
 
 #: lms/templates/emails/registration_codes_sale_email.txt
@@ -17574,7 +17574,7 @@ msgstr "고객 참조 번호: {reference_number}"
 
 #: lms/templates/emails/registration_codes_sale_invoice_attachment.txt
 msgid "Balance Due: {currency_symbol}{sale_price}"
-msgstr "잔액 만기: {currency_symbol}{sale_price}"
+msgstr "잔액 만기: {sale_price}{currency_symbol}"
 
 #: lms/templates/emails/registration_codes_sale_invoice_attachment.txt
 msgid "Course: {course_name}"
@@ -17586,8 +17586,8 @@ msgid ""
 "Sub-Total:    {currency_symbol}{sub_total}  Discount:  "
 "{currency_symbol}{discount}"
 msgstr ""
-"가격: {currency_symbol}{course_price} 양:  {quantity}  소계: "
-"{currency_symbol}{sub_total}  할인: {currency_symbol}{discount}"
+"가격: {course_price}{currency_symbol} 양:  {quantity}  소계: "
+"{sub_total}{currency_symbol}  할인: {discount}{currency_symbol}"
 
 #: lms/templates/emails/registration_codes_sale_invoice_attachment.txt
 msgid "Total:      {currency_symbol}{sale_price}"
@@ -17897,15 +17897,15 @@ msgstr "쿠폰 만기일 추가"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificates.html
 msgid "Example Certificates"
-msgstr "예비 이수증"
+msgstr "예비 수료증"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificates.html
 msgid "Generate example certificates for the course."
-msgstr "강좌 예비 이수증 생성하기"
+msgstr "강좌 예비 수료증 생성하기"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificates.html
 msgid "Generate Example Certificates"
-msgstr "예비 이수증 생성하기"
+msgstr "예비 수료증 생성하기"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificates.html
 msgid "Status:"
@@ -17913,15 +17913,15 @@ msgstr "상태:"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificates.html
 msgid "Generating example {name} certificate"
-msgstr "{name} 의 예비 이수증 생성하기"
+msgstr "{name} 의 예비 수료증 생성하기"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificates.html
 msgid "Error generating example {name} certificate: {error}"
-msgstr "{name}의 예비 이수증 생성시 오류 발생: {error}"
+msgstr "{name}의 예비 수료증 생성시 오류 발생: {error}"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificates.html
 msgid "View {name} certificate"
-msgstr "{name}의 이수증 보기"
+msgstr "{name}의 수료증 보기"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificates.html
 msgid "Refresh Status"
@@ -17929,25 +17929,25 @@ msgstr "다시 불러오기"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificates.html
 msgid "Student-Generated Certificates"
-msgstr "학습자 생성 이수증"
+msgstr "학습자 생성 수료증"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificates.html
 msgid "Disable Student-Generated Certificates"
-msgstr "학습자 생성 이수증 비활성화하기"
+msgstr "학습자 생성 수료증 비활성화하기"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificates.html
 msgid "Enable Student-Generated Certificates"
-msgstr "학습자 생성 이수증 활성화하기"
+msgstr "학습자 생성 수료증 활성화하기"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificates.html
 msgid ""
 "You must successfully generate example certificates before you enable "
 "student-generated certificates."
-msgstr "학습자 생성 이수증을 활성화하기 전에 반드시 예비 이수증을 성공적으로 생성해야 합니다."
+msgstr "학습자 생성 수료증을 활성화하기 전에 반드시 예비 수료증을 성공적으로 생성해야 합니다."
 
 #: lms/templates/instructor/instructor_dashboard_2/certificates.html
 msgid "Generate Certificates"
-msgstr "이수증 생성하기"
+msgstr "수료증 생성하기"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificates.html
 msgid ""
@@ -17974,7 +17974,7 @@ msgstr ""
 #: lms/templates/instructor/instructor_dashboard_2/send_email.html
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid "Pending Tasks"
-msgstr "보류중이 과제"
+msgstr "보류중인 작업"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificates.html
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
@@ -18314,40 +18314,40 @@ msgstr "수강신청 코드"
 msgid ""
 "Create one or more pre-paid course enrollment codes. Students can use these "
 "codes to enroll in the course."
-msgstr "1개 이상의 사전 지불 강좌 등록 코드를 만듭니다. 학습자들이 이 코드를 강좌 등록을 위해 사용할 수 있습니다."
+msgstr "사전 지불 강좌 등록 코드를 생성합니다. 이 코드로 학습자들이 강좌에 등록할 수 있습니다."
 
 #: lms/templates/instructor/instructor_dashboard_2/e-commerce.html
 #: lms/templates/instructor/instructor_dashboard_2/generate_registarion_codes_modal.html
 msgid "Create Enrollment Codes"
-msgstr "수강신청 코드 생성"
+msgstr "강좌 등록 코드 생성"
 
 #: lms/templates/instructor/instructor_dashboard_2/e-commerce.html
 msgid "Cancel, restore, or mark an enrollment code as unused."
-msgstr "수강신청 코드의 취소, 복구, 사용하지 않음으로 표시하기."
+msgstr "강좌 등록 코드를 취소, 복구, 사용하지 않음으로 표시하기."
 
 #: lms/templates/instructor/instructor_dashboard_2/e-commerce.html
 msgid "Change Enrollment Code Status"
-msgstr "수강신청 코드 상태 변경"
+msgstr "강좌 등록 코드 상태 변경"
 
 #: lms/templates/instructor/instructor_dashboard_2/e-commerce.html
 msgid "Download a .csv file of all enrollment codes for this course."
-msgstr "강좌의 모든 수강신청 코드의 .csv 파일 다운로드"
+msgstr "강좌의 모든 강좌 등록 코드를 .csv 파일로 다운로드"
 
 #: lms/templates/instructor/instructor_dashboard_2/e-commerce.html
 msgid "Download All Enrollment Codes"
-msgstr "전체 수강신청 코드 다운로드"
+msgstr "전체 강좌 등록 코드 다운로드"
 
 #: lms/templates/instructor/instructor_dashboard_2/e-commerce.html
 msgid "Download a .csv file of all unused enrollment codes for this course."
-msgstr "본 강좌에서 사용되지 않은 수강신청 코드가 저장된 .csv 파일 다운로드"
+msgstr "강좌의 사용되지 않은 강좌 등록 코드를 .csv 파일로 다운로드"
 
 #: lms/templates/instructor/instructor_dashboard_2/e-commerce.html
 msgid "Download Unused Enrollment Codes"
-msgstr "사용되지 않은 수강신청 코드 다운로드"
+msgstr "사용되지 않은 강좌 등록 코드 다운로드"
 
 #: lms/templates/instructor/instructor_dashboard_2/e-commerce.html
 msgid "Download a .csv file of all used enrollment codes for this course."
-msgstr "강좌의 모든 사용된 수강신청코드가 저장된 .csv 파일 다운로드."
+msgstr "강좌의 모든 사용된 강좌 등록 코드를 .csv 파일로 다운로드."
 
 #: lms/templates/instructor/instructor_dashboard_2/e-commerce.html
 msgid "Download Used Enrollment Codes"
@@ -19406,7 +19406,7 @@ msgstr "문제 위치 "
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid "Attempts"
-msgstr "시도"
+msgstr "시도 횟수"
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid ""
@@ -19420,7 +19420,7 @@ msgstr " 0으로 시도 다시 설정 "
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid "Rescore"
-msgstr "재기록"
+msgstr "다시 채점"
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid ""
@@ -19438,7 +19438,7 @@ msgstr "점수 오버라이드"
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid "For the specified problem, override the learner's score."
-msgstr " 지정된 문제에 대해 학습자의 점수를 무시하십시오."
+msgstr "지정된 문제에 대해 학습자의 점수를 무시합니다."
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid ""
@@ -19448,19 +19448,19 @@ msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid "Override Learner's Score"
-msgstr " 학습자의 점수 무시 "
+msgstr " 학습자의 점수 오버라이드 "
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid "Problem History"
-msgstr "역사 문제"
+msgstr "문제 기록"
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid ""
 "For the specified problem, permanently and completely delete the learner's "
 "answers and scores from the database."
 msgstr ""
-" 지정된 문제의 경우 데이터베이스에서 학습자의 답변과 점수를 "
-" 영구적으로 완전히 삭제하십시오."
+" 지정된 문제에 대해 데이터베이스에서 학습자의 답변과 점수를 "
+" 영구적으로 완전히 삭제합니다."
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid "Task Status"
@@ -19484,7 +19484,7 @@ msgstr " 학습자의 입학 시험 결과 조정 "
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid "Allow the learner to take the exam again."
-msgstr " 학습자가 시험에 다시 응시하도록 허용하십시오."
+msgstr " 학습자가 시험에 다시 응시하도록 허용합니다."
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid "Allow Skip"
@@ -19492,11 +19492,11 @@ msgstr "건너뛰기 허용"
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid "Waive the requirement for the learner to take the exam."
-msgstr " 시험을 치러야하는 학습자의 요구 사항을 무시하십시오."
+msgstr " 시험을 치러야하는 학습자의 요구 사항을 무시합니다."
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid "Let Learner Skip Entrance Exam"
-msgstr " 학습자가 입학 시험을 건너뛸 수 있게 하십시오. "
+msgstr " 학습자가 입학 시험을 건너뛸 수 있게 합니다. "
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid ""
@@ -19504,8 +19504,8 @@ msgid ""
 "Only If Score Improves' option updates the learner's scores only if it "
 "improves in the learner's favor."
 msgstr ""
-" 제출된 응답을 무시하십시오. '점수가 향상되는 경우에만 모든 문제를 "
-" 해결하십시오'옵션은 학습자의 호감을 향상시키는 경우에만 "
+" 제출된 응답을 무시합니다. '점수가 향상되는 경우에만 모든 문제를 "
+" 다시 채점'옵션은 학습자를 위해, 점수가 향상되는 경우에만 "
 " 학습자의 점수를 업데이트합니다."
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
@@ -19514,7 +19514,7 @@ msgstr "모든 문제 재채점"
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid "Rescore All Problems Only If Score Improves"
-msgstr " 점수가 향상되는 경우에만 모든 문제를 해결하십시오 "
+msgstr " 점수가 향상되는 경우에만 모든 문제를 다시 채점 "
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid "Entrance Exam History"
@@ -19526,7 +19526,7 @@ msgid ""
 "learner's answers and scores from the database."
 msgstr ""
 " 전체 입시 시험의 경우 데이터베이스에서 학습자의 "
-" 답변과 점수를 영구적으로 완전히 삭제하십시오."
+" 답변과 점수를 영구적으로 완전히 삭제합니다."
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid ""
@@ -19534,7 +19534,7 @@ msgid ""
 "and entrance exam."
 msgstr ""
 " 이 학습자와 입학 시험을 위해 제출한 탈퇴 과제의 상태를 "
-" 보여주십시오."
+" 보여줍니다."
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid "Adjust all enrolled learners' grades for a specific problem"
@@ -19542,27 +19542,27 @@ msgstr " 특정 문제에 대해 등록된 모든 학습자의 성적 조정 "
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid "Allows all learners to work on the problem again."
-msgstr " 모든 학습자가 문제를 다시 해결할 수 있습니다."
+msgstr " 모든 학습자가 문제를 다시 풀 수 있도록 합니다."
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid ""
 "Rescore submitted responses. The 'Rescore Only If Scores Improve' option "
 "updates a learner's score only if it improves in the learner's favor."
 msgstr ""
-" 제출된 응답을 다시 기록합니다. '점수 향상시에만 점수 계산'옵션은 학습자가 "
-" 선호하는 점수가 향상되는 경우에만 점수를 업데이트합니다."
+" 제출된 응답을 다시 채점합니다. '점수 향상시에만 점수 계산'옵션은 학습자의 편의를 봐 주어"
+" 점수가 향상되는 경우에만 점수를 업데이트합니다."
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid "Rescore All Learners' Submissions"
-msgstr " 모든 학습자의 제출을 다시 기록합니다"
+msgstr "모든 학습자의 제출을 다시 채점"
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid "Rescore Only If Scores Improve"
-msgstr " 점수가 향상된 경우에만 점수 다시 매기기"
+msgstr "점수가 향상될 경우에만 다시 채점"
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid "Show the status for the tasks that you submitted for this problem."
-msgstr " 이 문제에 대해 제출한 작업의 상태를 표시하십시오."
+msgstr "이 문제에 대해 제출한 작업의 상태를 보여줍니다."
 
 #: lms/templates/learner_dashboard/_dashboard_navigation_courses.html
 #: themes/edx.org/lms/templates/dashboard.html
@@ -20154,7 +20154,7 @@ msgid ""
 "{site_name}. This code can only be used one time, so you should only "
 "activate this code if you're its intended recipient."
 msgstr ""
-" 수강등록을 하시겠습니까?" 
+" 수강등록을 하시겠습니까?"
 " 발급된 등록 코드는 1회만 사용 가능하며, 재사용이 불가합니다. "
 
 #: lms/templates/shoppingcart/registration_code_receipt.html
@@ -20222,7 +20222,7 @@ msgstr "결제 금액"
 #. "$500.00 USD"
 #: lms/templates/shoppingcart/shopping_cart.html
 msgid "{currency_symbol}{price} {currency_abbr}"
-msgstr "{currency_symbol}{price} {currency_abbr}"
+msgstr "{price} {currency_symbol}"
 
 #: lms/templates/shoppingcart/shopping_cart.html
 msgid ""
@@ -20950,7 +20950,7 @@ msgstr " EdX, Open edX 및 MicroMasters는 edX Inc.의 등록 상표입니다."
 
 #: themes/edx.org/lms/templates/certificates/_about-accomplishments.html
 msgid "About edX Verified Certificates"
-msgstr " edX 검증 인증서 정보 "
+msgstr " SmartLearn 인증 수료증에 대하여 "
 
 #: themes/edx.org/lms/templates/certificates/_about-accomplishments.html
 msgid ""
@@ -20966,7 +20966,7 @@ msgstr ""
 
 #: themes/edx.org/lms/templates/certificates/_about-edx.html
 msgid "About edX"
-msgstr "edX 소개"
+msgstr "SmartLearn에 대하여"
 
 #: themes/edx.org/lms/templates/certificates/_about-edx.html
 msgid ""
@@ -21267,7 +21267,7 @@ msgstr "파일 및 업로드"
 
 #: cms/templates/certificates.html
 msgid "Course Certificates"
-msgstr "이수증"
+msgstr "수료증"
 
 #: cms/templates/certificates.html
 msgid "This module is not enabled."
@@ -21341,7 +21341,7 @@ msgstr ""
 
 #: cms/templates/certificates.html
 msgid "Learn more about certificates"
-msgstr "이수증에 대해 자세히 알아보기"
+msgstr "수료증에 대해 자세히 알아보기"
 
 #: cms/templates/certificates.html cms/templates/settings_graders.html
 msgid "Details &amp; Schedule"
