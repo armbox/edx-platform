@@ -15772,7 +15772,7 @@ msgstr "{b_start}동기부여{b_end} 학업성취률을 높이고 강좌 완주�
 #: lms/templates/course_modes/choose.html
 #: themes/edx.org/lms/templates/course_modes/choose.html
 msgid "Audit This Course"
-msgstr "그냥 청강하기"
+msgstr "강좌로 이동"
 
 #: lms/templates/course_modes/choose.html
 #: themes/edx.org/lms/templates/course_modes/choose.html
