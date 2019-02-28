@@ -15732,12 +15732,12 @@ msgstr "{b_start}공유 용이:{b_end} 이력서에 강좌 수료증을 추가�
 #: lms/templates/course_modes/choose.html
 #: themes/edx.org/lms/templates/course_modes/choose.html
 msgid "Pursue a Verified Certificate"
-msgstr "인증 과정"
+msgstr "인증과정으로 업그레이드"
 
 #: lms/templates/course_modes/choose.html
 #: themes/edx.org/lms/templates/course_modes/choose.html
 msgid "Pursue the Verified Track"
-msgstr " 확인된 트랙 추적 "
+msgstr "인증과정으로 업그레이드"
 
 #: lms/templates/course_modes/choose.html
 #: themes/edx.org/lms/templates/course_modes/choose.html
@@ -15772,7 +15772,7 @@ msgstr "{b_start}동기부여{b_end} 학업성취률을 높이고 강좌 완주�
 #: lms/templates/course_modes/choose.html
 #: themes/edx.org/lms/templates/course_modes/choose.html
 msgid "Audit This Course"
-msgstr "이 강좌 청강"
+msgstr "그냥 청강하기"
 
 #: lms/templates/course_modes/choose.html
 #: themes/edx.org/lms/templates/course_modes/choose.html
