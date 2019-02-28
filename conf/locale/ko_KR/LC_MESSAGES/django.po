@@ -20117,8 +20117,8 @@ msgid ""
 "Check your {link_start}course dashboard{link_end} to see if you're enrolled "
 "in the course, or contact your company's administrator."
 msgstr ""
-"해당 강좌는 이미 등록이 완료되었습니다. 내 {link_start}대시보드{link_end}에서 강좌를 확인해 보세요."
-"<i>강좌가 보이지 않습니다</i>-smartlearn-info@postech.ac.kr으로 문의 바랍니다."
+"이미 사용된 등록 코드를 입력 하셨습니다. {link_start}대시보드{link_end}에서 강좌가 이미 등록되어 있는지 확인하시고,"
+"강좌가 보이지 않는다면 smartlearn-info@postech.ac.kr으로 문의 바랍니다."
 
 #: lms/templates/shoppingcart/registration_code_receipt.html
 #: lms/templates/shoppingcart/registration_code_redemption.html
@@ -20132,7 +20132,7 @@ msgstr "강좌 등록이 정상적으로 완료되었습니다."
 msgid ""
 "You're already enrolled for this course. Visit your "
 "{link_start}dashboard{link_end} to see the course."
-msgstr "해당 강좌는 이미 등록이 완료되었습니다. 내 {link_start}대시보드{link_end}에서 강좌를 확인해 보세요."
+msgstr "해당 강좌 이미 등록하셨습니다. 내 {link_start}대시보드{link_end}에서 강좌를 확인해 보세요."
 
 #: lms/templates/shoppingcart/registration_code_receipt.html
 msgid "The course you are enrolling for is full."
