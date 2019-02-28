@@ -5855,7 +5855,7 @@ msgstr " 모바일 장치에서이 코스에 액세스 할 수 없습니다. "
 #: lms/djangoapps/courseware/course_tools.py
 #: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Upgrade to Verified"
-msgstr " 확인됨으로 업그레이드 "
+msgstr "인증과정으로 업그레이드 "
 
 #. Translators: 'absolute' is a date such as "Jan 01,
 #. 2020". 'relative' is a fuzzy description of the time until
@@ -16766,8 +16766,8 @@ msgid ""
 "Pursue a {cert_name_long} to highlight the knowledge and skills you gain in "
 "this course."
 msgstr ""
-" {cert_name_long}이(가)이 과정에서 습득한 지식과 "
-" 기술을 강조하십시오."
+"{cert_name_long} 을 구매하여 이 코스에서 습득한 지식과 기술에"
+" 방점을 찍으십시오."
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
 msgid ""
@@ -16775,8 +16775,8 @@ msgid ""
 "the course. {line_break}{link_start}Learn more about the verified "
 "{cert_name_long}{link_end}."
 msgstr ""
-" 공식입니다. 쉽게 공유할 수 있습니다. 코스를 완료하는 데 입증된 동기입니다."
-"{line_break} {link_start} 확인된 {cert_name_long} {link_end}에 "
+" 공식적으로 인증됩니다. 쉽게 공유할 수 있습니다. 코스를 완료하는데 원동력이 될 것입니다."
+"{line_break} {link_start} 인증된 {cert_name_long} {link_end}에 "
 " 대해 자세히 알아보세요."
 
 #. Translators: provider_name is the name of a credit provider or university
