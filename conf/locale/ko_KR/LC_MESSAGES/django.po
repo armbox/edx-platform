@@ -1715,7 +1715,7 @@ msgstr "부분적으로 맞음"
 
 #: common/lib/capa/capa/inputtypes.py
 msgid "incomplete"
-msgstr "불완전함"
+msgstr "완료되지 않음"
 
 #: common/lib/capa/capa/inputtypes.py
 msgid "unanswered"
@@ -7449,11 +7449,11 @@ msgstr[0] "{num_emails} 실패"
 
 #: lms/djangoapps/instructor/views/instructor_task_helpers.py
 msgid "Complete"
-msgstr "완전함"
+msgstr "완료됨"
 
 #: lms/djangoapps/instructor/views/instructor_task_helpers.py
 msgid "Incomplete"
-msgstr "불완전함"
+msgstr "완료되지 않음"
 
 #: lms/djangoapps/instructor/views/registration_codes.py
 #, python-brace-format
