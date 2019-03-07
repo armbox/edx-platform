@@ -12,7 +12,13 @@ CERTIFICATES_URLS = ([
             username=settings.USERNAME_PATTERN,
             course_id=settings.COURSE_ID_PATTERN
         ),
-        views.CertificatesDetailView.as_view(), name='detail'
+        views.CertificatesDetailView.as_view(),
+        name='detail'
+    ),
+    url(
+        r'^(?P<uuid>[0-9a-f]{32})$',
+        views.CertificatesDetailViewByUUID.as_view(),
+        name='cert_by_uuid'
     ),
 ], 'certificates')
 

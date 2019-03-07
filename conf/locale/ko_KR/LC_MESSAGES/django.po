@@ -268,7 +268,7 @@ msgstr "인증된 학생으로 등록되었습니다."
 
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
 msgid "Verified"
-msgstr "인증"
+msgstr "전문과정"
 
 #: common/djangoapps/course_modes/helpers.py
 msgid "ID Verified Ribbon/Badge"
@@ -334,7 +334,7 @@ msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
 msgid "Honor"
-msgstr "명예"
+msgstr "일반과정"
 
 #: common/djangoapps/course_modes/models.py
 msgid ""
@@ -1715,7 +1715,7 @@ msgstr "부분적으로 맞음"
 
 #: common/lib/capa/capa/inputtypes.py
 msgid "incomplete"
-msgstr "불완전함"
+msgstr "완료되지 않음"
 
 #: common/lib/capa/capa/inputtypes.py
 msgid "unanswered"
@@ -2605,13 +2605,13 @@ msgid ""
 msgstr ""
 " 이 조건부 모듈의 내용을 표시하기 위해 모든 조건이 충족되지 않은 경우"
 " 학습자에게 표시되는 메시지입니다. 메시지의 텍스트에 {link}를 포함하여"
-" 학습자에게 필수 단위에 대한 직접 링크를 제공하십시오. 예를 들어,"
-" '본 기기에 액세스하려면 먼저 {link} 완료해야합니다.'"
+" 학습자에게 필수 유닛에 대한 직접 링크가 제공됩니다 . 예를 들어,"
+" '본 유닛에 액세스하려면 먼저 {link} 를  완료해야합니다.'"
 
 #: common/lib/xmodule/xmodule/conditional_module.py
 #, python-brace-format
 msgid "You must complete {link} before you can access this unit."
-msgstr " 이 기기에 액세스하려면 먼저 {link}을 완료해야합니다."
+msgstr " 이 유닛에 액세스하려면 먼저 {link}을 완료해야합니다."
 
 #: common/lib/xmodule/xmodule/conditional_module.py
 msgid "This component has no source components configured yet."
@@ -7449,11 +7449,11 @@ msgstr[0] "{num_emails} 실패"
 
 #: lms/djangoapps/instructor/views/instructor_task_helpers.py
 msgid "Complete"
-msgstr "완전함"
+msgstr "완료됨"
 
 #: lms/djangoapps/instructor/views/instructor_task_helpers.py
 msgid "Incomplete"
-msgstr "불완전함"
+msgstr "완료되지 않음"
 
 #: lms/djangoapps/instructor/views/registration_codes.py
 #, python-brace-format
@@ -7504,7 +7504,7 @@ msgstr " 연장된 만기일은 원래 만기일보다 늦어야합니다."
 
 #: lms/djangoapps/instructor/views/tools.py
 msgid "No due date extension is set for that student and unit."
-msgstr " 해당 학생 및 단위에 대해 만기 연장을 설정하지 않았습니다."
+msgstr " 해당 학생 및 유닛에 대해 만기 연장을 설정하지 않았습니다."
 
 #: cms/templates/register.html lms/templates/register-form.html
 #: lms/templates/register-shib.html lms/templates/signup_modal.html
@@ -7566,7 +7566,7 @@ msgstr " 입학 시험의 모든 문제가 다시 채점되는 것은 아닙니�
 #. messages as {action}.
 #: lms/djangoapps/instructor_task/tasks.py
 msgid "rescored"
-msgstr "무효화됨"
+msgstr "재평가됨"
 
 #. Translators: This is a past-tense verb that is inserted into task progress
 #. messages as {action}.
@@ -10037,8 +10037,8 @@ msgid ""
 "%(user_schedule_upgrade_deadline_time)s."
 msgstr ""
 " 검증된 인증서를 획득하여 새로운 지식과 기술을 강조할 수 있는 기회를 놓치지 마십시오."
-"%(user_schedule_upgrade_deadline_time)s"
-" 단위로 업그레이드하십시오."
+"%(user_schedule_upgrade_deadline_time)s 까지"
+" 업그레이드가 가능합니다."
 
 #: openedx/core/djangoapps/ace_common/templates/ace_common/edx_ace/common/upsell_cta.html
 #: openedx/core/djangoapps/ace_common/templates/ace_common/edx_ace/common/upsell_cta.txt
@@ -10825,8 +10825,8 @@ msgid ""
 msgstr ""
 " 지금까지 %(platform_name)s에서 우리와 함께 학습을 즐기시 길 바랍니다! 검증된 인증서를 통해 새로운 지식과 기술을 "
 " 강조할 수 있습니다. %(platform_name)s의 인증서는 공식이며 쉽게 "
-" 공유할 수 있습니다. %(user_schedule_upgrade_deadline_time)s"
-" 단위로 업그레이드하십시오."
+" 공유할 수 있습니다. %(user_schedule_upgrade_deadline_time)s 까지"
+" 업그레이드가 가능합니다."
 
 #: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/upgradereminder/email/body.html
 #: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/upgradereminder/email/body.txt
@@ -10840,7 +10840,7 @@ msgstr ""
 " 지금까지 %(first_course_name)s님과 함께 학습을 즐기시길 바랍니다!"
 " 검증된 인증서를 통해 새로운 지식과 기술을 강조할 수 있습니다."
 "%(platform_name)s의 인증서는 공식이며 쉽게 공유할 수 있습니다."
-"%(user_schedule_upgrade_deadline_time)s단위로 업그레이드하십시오."
+"%(user_schedule_upgrade_deadline_time)s 까지 업그레이드가 가능합니다."
 
 #: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/upgradereminder/email/body.html
 msgid "Upgrade now"
@@ -18064,7 +18064,7 @@ msgstr "청강"
 
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
 msgid "Professional"
-msgstr "전문"
+msgstr "전문과정"
 
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
 msgid "Basic Course Information"
@@ -18819,7 +18819,7 @@ msgstr "우편번호 "
 
 #: lms/templates/instructor/instructor_dashboard_2/generate_registarion_codes_modal.html
 msgid "Unit Price"
-msgstr "단위 가격"
+msgstr "유닛 가격"
 
 #: lms/templates/instructor/instructor_dashboard_2/generate_registarion_codes_modal.html
 msgid "The price per enrollment purchased"
@@ -20117,8 +20117,8 @@ msgid ""
 "Check your {link_start}course dashboard{link_end} to see if you're enrolled "
 "in the course, or contact your company's administrator."
 msgstr ""
-"해당 강좌는 이미 등록이 완료되었습니다. 내 {link_start}대시보드{link_end}에서 강좌를 확인해 보세요."
-"<i>강좌가 보이지 않습니다</i>-smartlearn-info@postech.ac.kr으로 문의 바랍니다."
+"이미 사용된 등록 코드를 입력 하셨습니다. {link_start}대시보드{link_end}에서 강좌가 이미 등록되어 있는지 확인하시고,"
+"강좌가 보이지 않는다면 smartlearn-info@postech.ac.kr으로 문의 바랍니다."
 
 #: lms/templates/shoppingcart/registration_code_receipt.html
 #: lms/templates/shoppingcart/registration_code_redemption.html
@@ -20132,7 +20132,7 @@ msgstr "강좌 등록이 정상적으로 완료되었습니다."
 msgid ""
 "You're already enrolled for this course. Visit your "
 "{link_start}dashboard{link_end} to see the course."
-msgstr "해당 강좌는 이미 등록이 완료되었습니다. 내 {link_start}대시보드{link_end}에서 강좌를 확인해 보세요."
+msgstr "해당 강좌에 이미 등록하셨습니다. {link_start}대시보드{link_end}에서 강좌를 확인해 보세요."
 
 #: lms/templates/shoppingcart/registration_code_receipt.html
 msgid "The course you are enrolling for is full."
@@ -20192,7 +20192,7 @@ msgstr "감소"
 #: lms/templates/shoppingcart/shopping_cart.html
 #: wiki/plugins/attachments/templates/wiki/plugins/attachments/delete.html
 msgid "Remove"
-msgstr "강좌 삭제"
+msgstr "삭제"
 
 #: lms/templates/shoppingcart/shopping_cart.html
 msgid "Discount or activation code"
@@ -22294,7 +22294,7 @@ msgid ""
 "On unit pages in the course outline, you can restrict access to components "
 "to learners based on their enrollment track."
 msgstr ""
-" 과정 개요의 단위 페이지에서 등록 트랙을 기반으로 구성 요소에 대한 액세스를 "
+" 과정 개요의 유닛 페이지에서 등록 트랙을 기반으로 구성 요소에 대한 액세스를 "
 " 학습자에게 제한할 수 있습니다."
 
 #: cms/templates/group_configurations.html
@@ -24243,7 +24243,7 @@ msgid ""
 " access settings defined here."
 msgstr ""
 "{screen_reader_start} 경고 : {screen_reader_end}이 구성 요소가 포함된 "
-" 장치는 학습자에게 표시되지 않습니다. 단위 설정은 여기에 정의된 구성 요소 "
+" 장치는 학습자에게 표시되지 않습니다. 이 유닛 설정은 여기에 정의된 구성 요소 "
 " 액세스 설정보다 우선합니다."
 
 #: cms/templates/visibility_editor.html

@@ -124,6 +124,23 @@ def get_certificate_for_user(username, course_key):
     return format_certificate_for_user(username, cert)
 
 
+def get_certificate_for_uuid(uuid):
+    """
+    Retrieve certificate information for uuid.
+
+    Arguments:
+        uuid (string): The verify_uuid of certificate.
+    Returns: dict
+    """
+    try:
+        cert = GeneratedCertificate.eligible_certificates.get(
+            verify_uuid=uuid,
+        )
+    except GeneratedCertificate.DoesNotExist:
+        return None
+    return format_certificate_for_user(cert.user.username, cert)
+
+
 def generate_user_certificates(student, course_key, course=None, insecure=False, generation_mode='batch',
                                forced_grade=None):
     """
