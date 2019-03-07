@@ -6124,7 +6124,7 @@ msgid ""
 "You are enrolled in the audit track for this course. The audit track does "
 "not include a certificate."
 msgstr ""
-" 이 과정의 감사 추적에 등록되어 있습니다. 감사 추적에는 인증서가"
+" 이 과정에 청강으로 등록되어 있습니다. 청강에는 인증서가"
 " 포함되어 있지 않습니다."
 
 #: lms/djangoapps/courseware/views/views.py
