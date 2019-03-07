@@ -268,7 +268,7 @@ msgstr "인증된 학생으로 등록되었습니다."
 
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
 msgid "Verified"
-msgstr "인증"
+msgstr "전문과정"
 
 #: common/djangoapps/course_modes/helpers.py
 msgid "ID Verified Ribbon/Badge"
@@ -334,7 +334,7 @@ msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
 msgid "Honor"
-msgstr "명예"
+msgstr "일반과정"
 
 #: common/djangoapps/course_modes/models.py
 msgid ""
@@ -18064,7 +18064,7 @@ msgstr "청강"
 
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
 msgid "Professional"
-msgstr "전문"
+msgstr "전문과정"
 
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
 msgid "Basic Course Information"
