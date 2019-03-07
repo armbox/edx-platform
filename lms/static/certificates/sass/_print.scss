@@ -191,10 +191,8 @@
 
   .accomplishment-rendering {
     top: 0 !important;
-    border-top: rem(4) solid $cert-base-color;
-    border-left: rem(1) solid #ddd;
-    border-right: rem(1) solid #ddd;
-    border-bottom: rem(1) solid #ddd;
+    //border-top: rem(4) solid $cert-base-color;
+    border: rem(1) solid #ddd;
     box-shadow: none;
     //padding: spacing-vertical(small) spacing-horizontal(mid-large);
     padding: 0;
