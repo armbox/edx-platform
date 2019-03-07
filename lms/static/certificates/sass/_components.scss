@@ -164,7 +164,7 @@
 
 // brief accomplishment
 .accomplishment-brief {
-  @extend %depth-card;
+  //@extend %depth-card;
 
   .accomplishment-type-symbol, .accomplishment-details {
     display: inline-block;
@@ -210,11 +210,14 @@
 }
 
 .accomplishment-rendering {
-  @extend %depth-card;
+  //@extend %depth-card;
 
   position: relative;
   top: -(spacing-vertical(base));
   border-top: rem(4) solid $cert-base-color;
+  box-shadow: 0 15px 30px 0 rgba(0,0,0,0.3);
+  padding: 0;
+  background: $white;
 
   // type
   .accomplishment-type {
@@ -369,6 +372,8 @@
     .src {
       max-height: 100%;
       border: rem(4) solid $white;
+      width: 50px;
+      height: 50px;
     }
   }
 
@@ -507,8 +512,8 @@
   }
 
   .accomplishment-rendering {
-    background: $white url('../images/bg-verified.png') center no-repeat;
-    background-size: 65%;
+    // background: $white url('../images/bg-verified.png') center no-repeat;
+    //background-size: 65%;
 
     .deco-corner-tl {
       @include triangle(20px, $cert-distinguished-color, up-right);
@@ -529,7 +534,7 @@
   }
 
   .accomplishment-rendering {
-    border-color: $cert-distinguished-color;
+    border-top-color: $cert-distinguished-color;
 
     .accomplishment-type-label {
       color: $cert-distinguished-color;

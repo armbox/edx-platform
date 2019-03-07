@@ -39,7 +39,7 @@
   }
 
   %print-rendering-section {
-    margin-bottom: spacing-vertical(small);
+    //margin-bottom: spacing-vertical(small);
     border-bottom: none !important;
     padding-bottom: 0 !important;
 
@@ -73,7 +73,7 @@
 
   body {
     height: auto;
-    margin: spacing-vertical(mid-large) spacing-vertical(mid-small) 0 spacing-vertical(mid-small) !important;
+    margin: spacing-vertical(mid-small) spacing-vertical(mid-small) 0 spacing-vertical(mid-small) !important;
     padding: 0;
   }
 
@@ -191,11 +191,17 @@
 
   .accomplishment-rendering {
     top: 0 !important;
-    border: rem(1) solid palette(grayscale, back);
-    border-top: rem(2) solid $cert-base-color;
+    border-top: rem(4) solid $cert-base-color;
+    border-left: rem(1) solid #ddd;
+    border-right: rem(1) solid #ddd;
+    border-bottom: rem(1) solid #ddd;
     box-shadow: none;
-    padding: spacing-vertical(small) spacing-horizontal(mid-large);
+    //padding: spacing-vertical(small) spacing-horizontal(mid-large);
+    padding: 0;
 
+    h1{
+      margin-bottom: 2rem;
+    }
 
     .accomplishment-type {
       margin-top: -(spacing-vertical(mid-large));
