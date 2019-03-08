@@ -6141,7 +6141,7 @@ msgstr ""
 
 #: lms/djangoapps/courseware/views/views.py
 msgid "We're working on it..."
-msgstr " 우리가 작업 중입니다 ..."
+msgstr " 작업 중입니다 ..."
 
 #: lms/djangoapps/courseware/views/views.py
 msgid ""
@@ -6165,7 +6165,7 @@ msgstr " 축하드립니다. 수료증에 대한 조건을 통과 하셨습니�
 
 #: lms/djangoapps/courseware/views/views.py
 msgid "You've earned a certificate for this course."
-msgstr " 이 과정의 수료증을 받았습니다."
+msgstr " 이 과정에 대한 수료증을 받았습니다."
 
 #: lms/djangoapps/courseware/views/views.py
 msgid "Certificate unavailable"
@@ -6182,7 +6182,7 @@ msgstr ""
 
 #: lms/djangoapps/courseware/views/views.py
 msgid "Your certificate is available"
-msgstr " 수료증을 사용할 수 있습니다."
+msgstr " 수료증이 있습니다."
 
 #: lms/djangoapps/courseware/views/views.py
 #, python-brace-format
