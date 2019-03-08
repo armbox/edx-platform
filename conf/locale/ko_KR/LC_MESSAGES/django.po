@@ -16527,7 +16527,7 @@ msgstr "링크는 강좌 수료증을 웹으로 보게 될것입니다."
 
 #: lms/templates/dashboard/_dashboard_certificate_information.html
 msgid "View {cert_name_short}"
-msgstr "{cert_name_short} 보기"
+msgstr "{cert_name_short} 확인"
 
 #: lms/templates/dashboard/_dashboard_certificate_information.html
 msgid "This link will open/download a PDF document"
@@ -24532,7 +24532,7 @@ msgstr "현재 로그인된 사용자이름:"
 
 #: cms/templates/widgets/user_dropdown.html
 msgid "Maintenance"
-msgstr "유지"
+msgstr "유지 보수"
 
 #: wiki/apps.py
 msgid "Wiki notifications"
