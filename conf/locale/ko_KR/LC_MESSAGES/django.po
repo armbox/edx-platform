@@ -6161,7 +6161,7 @@ msgstr " 질문이 있으시면 코스팀에게 문의하십시오."
 
 #: lms/djangoapps/courseware/views/views.py
 msgid "Congratulations, you qualified for a certificate!"
-msgstr " 축하드립니다. 수료증에 대한 자격이 있습니다."
+msgstr " 축하드립니다. 수료증에 대한 조건을 통과 하셨습니다."
 
 #: lms/djangoapps/courseware/views/views.py
 msgid "You've earned a certificate for this course."
