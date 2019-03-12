@@ -955,6 +955,7 @@ def _show_receipt_html(request, order):
         'reg_code_info_list': reg_code_info_list,
         'order_purchase_date': order.purchase_time.strftime("%B %d, %Y"),
     }
+    context['uses_bootstrap'] = True
 
     # We want to have the ability to override the default receipt page when
     # there is only one item in the order.
