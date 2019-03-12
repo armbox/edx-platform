@@ -721,7 +721,7 @@ msgid ""
 "to LinkedIn."
 msgstr ""
 "추적 코드에 사용 된 LinkedIn 파트너의 단축 식별자입니다."
-"(예 : 'edx') 값을 입력하지 않으면 추적 코드가 LinkedIn에 "
+"(예 : 'smartlearn') 값을 입력하지 않으면 추적 코드가 LinkedIn에 "
 "전송되지 않습니다."
 
 #: common/djangoapps/student/models.py
@@ -1056,7 +1056,7 @@ msgid ""
 "synchronization."
 msgstr ""
 " 아이디 공급자로부터 받은 사용자 프로필 데이터를 각 SSO 로그인시"
-" edX 사용자 계정과 동기화합니다. 이 동기화의 일부로"
+" SmartLearn 사용자 계정과 동기화합니다. 이 동기화의 일부로"
 " 계정과 연결된 이메일 주소가 변경되면 사용자에게 알림이 "
 " 전송됩니다."
 
@@ -2719,7 +2719,7 @@ msgstr ""
 msgid ""
 "Enter the name of the course as it should appear in the edX.org course list."
 msgstr ""
-" 코스 이름을 edX.org 코스 목록에 표시할 때 입력하십시오."
+" 코스 이름을 smartlearn.kr 코스 목록에 표시할 때 입력하십시오."
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Course Display Name"
@@ -2843,7 +2843,7 @@ msgid ""
 "Enter true or false. If true, the course appears in the list of new courses "
 "on edx.org, and a New! badge temporarily appears next to the course image."
 msgstr ""
-" true 또는 false를 입력하십시오. true이면 코스가 edx.org의 새로운 코스 목록에 나타나고 "
+" true 또는 false를 입력하십시오. true이면 코스가 smartlearn.kr의 새로운 코스 목록에 나타나고 "
 " New! 코스 이미지 옆에 배지가 일시적으로 나타납니다."
 
 #: common/lib/xmodule/xmodule/course_module.py
@@ -2866,7 +2866,7 @@ msgstr " 비디오 업로드 자격 증명 "
 msgid ""
 "Enter the unique identifier for your course's video files provided by edX."
 msgstr ""
-" edX에서 제공 한 코스 비디오 파일의 고유 식별자를 입력하십시오."
+" smartlearn.kr에서 제공한 코스 비디오 파일의 고유 식별자를 입력하십시오."
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Course Not Graded"
@@ -2938,7 +2938,7 @@ msgid ""
 "manage Custom Courses on edX. When false, Custom Courses cannot be created, "
 "but existing Custom Courses will be preserved."
 msgstr ""
-" 코스 강사가 CCX 코치 역할을 할당하고 코치가 edX에서 맞춤 코스를 "
+" 코스 강사가 CCX 코치 역할을 할당하고 코치가 SmartLearn에서 맞춤 코스를 "
 " 관리하도록 허용하십시오. false이면 맞춤 코스를 만들 수 없지만 "
 " 기존 맞춤 코스는 유지됩니다."
 
@@ -3271,12 +3271,12 @@ msgid ""
 "Enter true or false. If true, edX users can view the course wiki even if "
 "they're not enrolled in the course."
 msgstr ""
-" true 또는 false를 입력하십시오. 사실이라면 edX 사용자는 코스에 등록하지 않아도 "
+" true 또는 false를 입력하십시오. true일 경우 SmartLearn 사용자는 코스에 등록하지 않아도 "
 " 코스 위키를 볼 수 있습니다."
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Invitation Only"
-msgstr " 초대장 만 "
+msgstr " 초대로만"
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Whether to restrict enrollment to invitation by the course staff."
@@ -3385,7 +3385,7 @@ msgstr ""
 "대시 보드 소셜 공유 및 맞춤 코스 URL이 활성화된 경우 소셜 미디어 사이트가 "
 " 연결할 수있는 URL (코스 정보 페이지의 URL과 같은)를 제공할 수 있습니다."
 " URL은 정규화 된 것이어야합니다."
-"예 : http://www.edx.org/course/Introduction-to-MOOCs-ITM001"
+"예 : https://www.smartlearn.kr/course/Introduction-to-MOOCs-ITM001"
 
 #: cms/templates/settings.html
 msgid "Course Language"
@@ -4642,7 +4642,7 @@ msgid ""
 "they cannot use the edX video player or do not have access to YouTube. You "
 "must add at least one non-YouTube URL in the Video File URLs field."
 msgstr ""
-" edX 동영상 플레이어를 사용할 수 없거나 YouTube에 액세스할 수 없는 "
+" SmartLearn 동영상 플레이어를 사용할 수 없거나 YouTube에 액세스할 수 없는 "
 " 경우 학생들이 다른 형식으로이 동영상의 버전을 다운로드하도록 허용합니다."
 " 동영상 파일 URL 입력란에 YouTube 이외의 URL을 하나 이상 추가해야합니다."
 
@@ -4816,7 +4816,7 @@ msgid ""
 "were not assigned a Video ID, enter values in those other fields and ignore "
 "this field."
 msgstr ""
-" 이 구성 요소에서 재생할 비디오에 대해 edX에서 비디오 ID를 할당한 "
+" 이 구성 요소에서 재생할 비디오에 대해 SmartLearn에서 비디오 ID를 할당한 "
 " 경우 여기에 ID를 입력하십시오. 이 경우 기본 동영상 URL,"
 " 동영상 파일 URL 및 YouTube ID 입력란에 값을 입력하지 마십시오."
 " 비디오 ID를 지정하지 않은 경우 다른 필드에 값을 입력하고 "
@@ -5071,7 +5071,7 @@ msgstr " 입력 구문을 확인하십시오."
 
 #: lms/djangoapps/branding/api.py
 msgid "Take free online courses at edX.org"
-msgstr " edX.org에서 무료 온라인 수업 받기 "
+msgstr " smartlearn.kr에서 무료 온라인 수업 받기 "
 
 #. Translators: 'EdX', 'edX', and 'Open edX' are trademarks of 'edX Inc.'.
 #. Please do not translate any of these trademarks and company names.
@@ -5082,7 +5082,7 @@ msgid ""
 "their respective logos are trademarks or registered trademarks of edX Inc."
 msgstr ""
 "© {org_name}. 명시된 경우를 제외하고는 모든 권리를 보유합니다."
-"EdX, Open edX 및 해당 로고는 edX Inc.의 상표 또는 등록 상표입니다."
+"SmartLearn 및 해당 로고는 SmartLearn Inc.의 상표 또는 등록 상표입니다."
 
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: 'Open edX' is a brand, please keep this untranslated.
@@ -5094,7 +5094,7 @@ msgstr ""
 #: themes/edx.org/lms/templates/certificates/_accomplishment-footer.html
 #: themes/red-theme/lms/templates/footer.html
 msgid "Powered by Open edX"
-msgstr " Open edX로 전원이 공급됨"
+msgstr " SmartLearn에 의해 제공됨"
 
 #: lms/templates/static_templates/blog.html
 msgid "Blog"
@@ -5175,7 +5175,7 @@ msgstr "제휴사"
 
 #: lms/djangoapps/branding/api.py
 msgid "Open edX"
-msgstr " Open edX "
+msgstr " SmartLearn "
 
 #: lms/djangoapps/branding/api.py
 msgid "Trademark Policy"
@@ -5709,7 +5709,7 @@ msgstr " 전자 상거래 서비스에서 호스팅하는 코스 체크아웃 �
 #: openedx/core/djangoapps/credentials/models.py
 #: openedx/core/djangoapps/credit/models.py
 msgid "Cache Time To Live"
-msgstr "실시간 캐시"
+msgstr "캐시가 유지되는 시간"
 
 #: lms/djangoapps/commerce/models.py
 #: openedx/core/djangoapps/credentials/models.py
@@ -6293,7 +6293,7 @@ msgid ""
 "I allow edX to use the information provided in this application (except for "
 "financial information) for edX marketing purposes."
 msgstr ""
-" edX가 edX 마케팅 목적으로이 애플리케이션에서 제공하는 "
+" SmartLearn에서 마케팅 목적으로 이 애플리케이션에서 제공하는 "
 " 정보 (재무 정보 제외)를 사용하도록 허용합니다."
 
 #: lms/djangoapps/dashboard/git_import.py
@@ -6311,7 +6311,7 @@ msgid ""
 "git@github.com:mitocw/edx4edx_lite.git"
 msgstr ""
 " 사용할 수 없는 git url이 제공됩니다. 다음과 같은 것을 기대하십시오 :"
-" git@github.com:mitocw/edx4edx_lite.git "
+" git@github.com:mitocw/smartlearn_lite.git "
 
 #: lms/djangoapps/dashboard/git_import.py
 msgid "Unable to get git log"
@@ -6589,7 +6589,7 @@ msgstr "좋음"
 
 #: lms/djangoapps/edxnotes/helpers.py
 msgid "EdxNotes Service is unavailable. Please try again in a few minutes."
-msgstr " EdxNotes 서비스를 사용할 수 없습니다. 몇 분 후에 다시 시도하십시오."
+msgstr " SmartLearnNotes 서비스를 사용할 수 없습니다. 몇 분 후에 다시 시도하십시오."
 
 #: lms/djangoapps/edxnotes/helpers.py
 msgid "Invalid JSON response received from notes api."
@@ -6601,7 +6601,7 @@ msgstr " 메모 API에서 잘못된 데이터가 수신되었습니다."
 
 #: lms/djangoapps/edxnotes/helpers.py
 msgid "No endpoint was provided for EdxNotes."
-msgstr " EdxNotes에 제공된 엔드 포인트가 없습니다."
+msgstr " SmartLearnNotes에 제공된 엔드 포인트가 없습니다."
 
 #: lms/templates/edxnotes/edxnotes.html
 msgid "Notes"
@@ -6679,7 +6679,7 @@ msgid ""
 "e.g. https://courses.edx.org."
 msgstr ""
 " 선택적 lms URL 스키마 + 콘텐츠 라이브러리에 대한 URL을 구성하는 데 사용되는 호스트"
-"(예 : https://courses.edx.org.)"
+"(예 : https://courses.smartlearn.kr.)"
 
 #: lms/djangoapps/email_marketing/models.py
 msgid ""
@@ -10026,7 +10026,7 @@ msgstr "메일 주소: "
 
 #: openedx/core/djangoapps/ace_common/templates/ace_common/edx_ace/common/base_head.html
 msgid "edX Email"
-msgstr " edX 이메일"
+msgstr " SmartLearn 이메일"
 
 #: openedx/core/djangoapps/ace_common/templates/ace_common/edx_ace/common/upsell_cta.html
 #: openedx/core/djangoapps/ace_common/templates/ace_common/edx_ace/common/upsell_cta.txt
@@ -11712,7 +11712,7 @@ msgid ""
 "Remember when you enrolled in %(course_name)s, and other courses on edX.org?"
 " We do, and we’re glad to have you! Come see what everyone is learning."
 msgstr ""
-" %(course_name)s에 등록한 날짜와 edX.org의 다른 강좌를 기억하십니까?"
+" %(course_name)s에 등록한 날짜와 smartlearn.kr의 다른 강좌를 기억하십니까?"
 " 우리는 당신을 갖게되어서 기쁩니다! 모두가 배우고 있는 것을 보아라."
 
 #: themes/red-theme/lms/templates/schedules/edx_ace/recurringnudge_day3/email/body.txt
@@ -11721,8 +11721,8 @@ msgid ""
 "Remember when you enrolled in %(course_name)s on edX.org? We do, and we’re "
 "glad to have you! Come see what everyone is learning."
 msgstr ""
-" edX.org의 %(course_name)s에 등록했을 때 기억하십니까?"
-" 우리는 당신을 갖게 되어서 기쁩니다! 와서, 모두가 배우고 있는 것을 보세요."
+" smartlearn.kr의 %(course_name)s에 등록했을 때 기억하십니까?"
+" 우리는 당신과 함꼐 하게 되어서 기쁩니다! 와서, 모두가 배우고 있는 것을 보세요."
 
 #: cms/djangoapps/api/v1/serializers/course_runs.py
 msgid "Course team user does not exist"
@@ -11788,7 +11788,7 @@ msgid ""
 "git@github.com:mitocw/edx4edx_lite.git"
 msgstr ""
 " 쓸 수없는 git url이 제공됩니다. 다음과 같은 것을 기대하십시오 : "
-" git@github.com:mitocw/edx4edx_lite.git "
+" git@github.com:mitocw/smartlearn_lite.git "
 
 #: cms/djangoapps/contentstore/git_export_utils.py
 msgid ""
@@ -12663,22 +12663,22 @@ msgstr " http://docs.edx.org에서 문서에 액세스하십시오. "
 #: cms/templates/widgets/sock_links.html
 #: themes/edx.org/cms/templates/widgets/sock.html
 msgid "edX Documentation"
-msgstr " edX 문서 "
+msgstr " SmartLearn 문서 "
 
 #: cms/templates/widgets/sock_links.html
 #: themes/edx.org/cms/templates/widgets/sock.html
 msgid "Enroll in edX101: Overview of Creating an edX Course"
-msgstr " edX101에 등록 : edX 코스 만들기 개요 "
+msgstr " SmartLearn101에 등록 : SmartLearn 코스 만들기 개요 "
 
 #: cms/templates/widgets/sock_links.html
 #: themes/edx.org/cms/templates/widgets/sock.html
 msgid "Enroll in edX101"
-msgstr " edX101에 등록하십시오"
+msgstr " SmartLearn101에 등록하십시오"
 
 #: cms/templates/widgets/sock_links.html
 #: themes/edx.org/cms/templates/widgets/sock.html
 msgid "Enroll in StudioX: Creating a Course with edX Studio"
-msgstr " StudioX에 등록 : edX Studio로 코스 만들기 "
+msgstr " StudioX에 등록 : SmartLearn Studio로 코스 만들기 "
 
 #: cms/templates/widgets/sock_links.html
 #: themes/edx.org/cms/templates/widgets/sock.html
@@ -13217,13 +13217,13 @@ msgstr "강좌 찾기"
 #. untranslated. See http://open.edx.org for more information.
 #: lms/templates/index_overlay.html
 msgid "Welcome to the Open edX{registered_trademark} platform!"
-msgstr " Open edX {registered_trademark} 플랫폼에 오신 것을 환영합니다!"
+msgstr " SmartLearn{registered_trademark} 플랫폼에 오신 것을 환영합니다!"
 
 #. Translators: 'Open edX' is a registered trademark, please keep this
 #. untranslated. See http://open.edx.org for more information.
 #: lms/templates/index_overlay.html
 msgid "It works! This is the default homepage for this Open edX instance."
-msgstr "Open edX가 설치된 기본 홈페이지입니다. 정상 동작중입니다. "
+msgstr "SmartLearn이 설치된 기본 홈페이지입니다. 정상 동작중입니다. "
 
 #: lms/templates/invalid_email_key.html
 msgid "Invalid email change key"
@@ -15282,7 +15282,7 @@ msgstr " CCX 이름 지정 "
 
 #: lms/templates/ccx/coach_dashboard.html
 msgid "Create a new Custom Course for edX"
-msgstr " edX에 대한 새로운 사용자 정의 코스 만들기 "
+msgstr " SmartLearn에 대한 새로운 사용자 정의 코스 만들기 "
 
 #: lms/templates/ccx/coach_dashboard.html
 #: lms/templates/ccx/grading_policy.html
@@ -16741,7 +16741,7 @@ msgstr ""
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "You have successfully verified your ID with edX"
-msgstr " edX에서 ID를 성공적으로 확인했습니다. "
+msgstr " SmartLearn에서 ID를 성공적으로 확인했습니다. "
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Your current verification is effective until {date}."
@@ -16886,7 +16886,7 @@ msgid ""
 "Your edX verification has been approved. Your verification is effective for "
 "one year after submission."
 msgstr ""
-" edX 확인이 승인되었습니다. 귀하의 확인은 제출 후 "
+" SmartLearn 확인이 승인되었습니다. 귀하의 확인은 제출 후 "
 " 1년간 유효합니다."
 
 #: lms/templates/dashboard/_dashboard_status_verification.html
@@ -16898,7 +16898,7 @@ msgid ""
 "Your edX ID verification is pending. Your verification information has been "
 "submitted and will be reviewed shortly."
 msgstr ""
-" edX ID 확인이 보류 중입니다. 귀하의 확인 정보가 제출되었으며 "
+" SmartLearn ID 확인이 보류 중입니다. 귀하의 확인 정보가 제출되었으며 "
 " 조만간 검토될 것입니다."
 
 #: lms/templates/dashboard/_dashboard_status_verification.html
@@ -17732,7 +17732,7 @@ msgstr "학습자 참고 사항"
 
 #: lms/templates/financial-assistance/financial-assistance.html
 msgid "Dear edX Learner,"
-msgstr " 친애하는 edX 학습자님,"
+msgstr " 친애하는 SmartLearn 학습자님,"
 
 #: lms/templates/financial-assistance/financial-assistance.html
 msgid ""
@@ -17740,7 +17740,7 @@ msgid ""
 "financial circumstances a chance to earn a Verified Certificate upon "
 "successful completion of an edX course."
 msgstr ""
-" EdX Financial Assistance는 모든 금융 상황의 학습자가 edX 과정을 "
+" SmartLearn Financial Assistance는 모든 금융 상황의 학습자가 SmartLearn 과정을 "
 " 성공적으로 마친 경우 Verified Certificate를 취득할 수 있는 "
 " 기회를 제공하기 위해 만든 프로그램입니다."
 
@@ -17761,7 +17761,7 @@ msgid ""
 "To apply, you will be asked to answer a few questions about why you are "
 "applying and how the Verified Certificate will benefit you."
 msgstr ""
-" edX 재정 지원 자격을 얻으려면 검증된 인증 수수료를 "
+" SmartLearn 재정 지원 자격을 얻으려면 검증된 인증 수수료를 "
 " 지불하면 경제적 어려움이 있음을 증명해야합니다."
 " 신청할 때 신청하는 이유와 인증된 수료증이 귀하에게 "
 " 어떻게 도움이 되는지 몇 가지 질문에 대답해야합니다."
@@ -17772,8 +17772,8 @@ msgid ""
 "your identity on edx.org so you can start working toward completing your edX"
 " course."
 msgstr ""
-" 신청서가 승인되면 edx.org에서 본인 확인을 위한 지침을 "
-" 제공하므로 edX 과정을 수료하기 시작할 수 "
+" 신청서가 승인되면 smartlearn.kr에서 본인 확인을 위한 지침을 "
+" 제공하므로 SmartLearn 과정을 수료하기 시작할 수 "
 " 있습니다."
 
 #: lms/templates/financial-assistance/financial-assistance.html
@@ -20725,7 +20725,7 @@ msgstr " 친구, 고용주 및 기타 사람들과 수료증 공유 "
 
 #: openedx/features/course_experience/templates/course_experience/course-sock-fragment.html
 msgid "edX Learner Stories"
-msgstr " edX 학습자 사례 "
+msgstr " SmartLearn 학습자 사례 "
 
 #: openedx/features/course_experience/templates/course_experience/course-sock-fragment.html
 msgid ""
@@ -20739,7 +20739,7 @@ msgstr ""
 
 #: openedx/features/course_experience/templates/course_experience/course-sock-fragment.html
 msgid "{learner_name}, edX Learner"
-msgstr "{learner_name}, edX 학습자 "
+msgstr "{learner_name}, SmartLearn 학습자 "
 
 #: openedx/features/course_experience/templates/course_experience/course-sock-fragment.html
 msgid ""
@@ -20922,7 +20922,7 @@ msgstr ""
 
 #: themes/edx.org/cms/templates/widgets/sock.html
 msgid "edX Partner Portal"
-msgstr " edX 파트너 포털 "
+msgstr " SmartLearn 파트너 포털 "
 
 #: themes/edx.org/lms/templates/dashboard.html
 msgid ""
@@ -20938,15 +20938,15 @@ msgstr "꼬릿말"
 
 #: themes/edx.org/lms/templates/footer.html
 msgid "edX Home Page"
-msgstr " edX 홈페이지"
+msgstr " SmartLearn 홈페이지"
 
 #: themes/edx.org/lms/templates/footer.html
 msgid "© 2012–{year} edX Inc. "
-msgstr "© 2012–{year} edX Inc. "
+msgstr "© 2012–{year} SmartLearn Inc. "
 
 #: themes/edx.org/lms/templates/footer.html
 msgid "EdX, Open edX, and MicroMasters are registered trademarks of edX Inc. "
-msgstr " EdX, Open edX 및 MicroMasters는 edX Inc.의 등록 상표입니다."
+msgstr " SmartLearn 및 NanoMaster는 SmartLearn Inc.의 등록 상표입니다."
 
 #: themes/edx.org/lms/templates/certificates/_about-accomplishments.html
 msgid "About edX Verified Certificates"
@@ -20959,7 +20959,7 @@ msgid ""
 " under its guidelines, as well as having their photo ID checked to verify "
 "their identity."
 msgstr ""
-" edX Verified Certificate는 학습자가 edX 명예 코드를 "
+" SmartLearn Verified Certificate는 학습자가 SmartLearn 명예 코드를 "
 " 준수하기로 동의했으며 지침에 따라 이 과정의 모든 필수 "
 " 작업을 완료했으며 신원을 확인하기 위해 사진 ID를 "
 " 확인했음을 나타냅니다."
@@ -21018,22 +21018,22 @@ msgstr " 이 수료증 인쇄 "
 
 #: themes/edx.org/lms/templates/certificates/_accomplishment-footer.html
 msgid "edX Inc."
-msgstr " edX Inc."
+msgstr " SmartLearn Inc."
 
 #: themes/edx.org/lms/templates/certificates/_accomplishment-footer.html
 msgid ""
 "All rights reserved except where noted. edX, Open edX and the edX and Open "
 "edX logos are registered trademarks or trademarks of edX Inc."
 msgstr ""
-" 명시된 경우를 제외하고는 모든 권리를 보유합니다. edX, Open edX 및 edX 및 "
-" Open edX 로고는 edX Inc.의 등록 상표 또는 상표입니다."
+" 명시된 경우를 제외하고는 모든 권리를 보유합니다. SmartLearn 및 "
+" 로고는 SmartLearn Inc.의 등록 상표 또는 상표입니다."
 
 #: themes/edx.org/lms/templates/course_modes/choose.html
 msgid ""
 "{b_start}Support our Mission: {b_end}EdX, a non-profit, relies on verified "
 "certificates to help fund affordable education to everyone globally."
 msgstr ""
-"{b_start} Google 임무 지원 : {b_end} 비영리 단체인 EdX는 인증과정을 통해  전세계 모든 사람들에게 저렴한 교육비를 지원합니다."
+"{b_start}저희의 소명을 지원해 주세요: {b_end} 단체인 SmartLearn는 인증과정을 통해  전세계 모든 사람들에게 저렴한 교육비를 지원합니다."
 ""
 
 #: themes/edx.org/lms/templates/course_modes/choose.html
@@ -21041,7 +21041,7 @@ msgid ""
 "{b_start}Support our Mission: {b_end} EdX, a non-profit, relies on verified "
 "certificates to help fund free education for everyone globally"
 msgstr ""
-"{b_start} 임무 지원 : {b_end} 비영리 단체인 EdX는 인증과정을 통해 전세계 모든 사람들에게 저렴한 교육비를 지원합니다. "
+"{b_start}저희의 소명을 지원해 주세요: {b_end} 단체인 SmartLearn는 인증과정을 통해 전세계 모든 사람들에게 저렴한 교육비를 지원합니다. "
 ""
 
 #: themes/edx.org/lms/templates/header/navbar-authenticated.html
@@ -21059,7 +21059,7 @@ msgid ""
 "EdX, Open edX, and the edX and Open edX logos are registered trademarks or "
 "trademarks of {link_start}edX Inc.{link_end}"
 msgstr ""
-" EdX, Open edX 및 edX 및 Open edX 로고는 {link_start} edX Inc. {link_end}의 "
+" SmartLearn 및 로고는 {link_start} SmartLearn Inc. {link_end}의 "
 " 등록 상표 또는 상표입니다."
 
 #: themes/red-theme/lms/templates/footer.html
@@ -23415,7 +23415,7 @@ msgstr "{studio_name}에 로그인하기 위한 필요 정보"
 msgid ""
 "This will be used in public discussions with your courses and in our edX101 "
 "support forums"
-msgstr "edX101 지원 게시판이나, 강좌 게시판 등에서 나를 나타내는 아이디입니다."
+msgstr "SmartLearn101 지원 게시판이나, 강좌 게시판 등에서 나를 나타내는 아이디입니다."
 
 #: cms/templates/register.html
 msgid "Your Location"
@@ -23479,7 +23479,7 @@ msgid ""
 "running an online course. Additionally, we're always here to help, just drop"
 " us a note."
 msgstr ""
-"물론입니다. 동영상 촬영에서 연습문제 만들기, 온라인 강좌 운영 기초까지  몇 가지 모범 사례를 설명하기 위해 온라인 강좌 edX101을"
+"물론입니다. 동영상 촬영에서 연습문제 만들기, 온라인 강좌 운영 기초까지  몇 가지 모범 사례를 설명하기 위해 온라인 강좌 SmartLearn101을"
 " 만들었습니다. 또한, 항상 도와드릴 준비가 되어 있으니 메모를 남겨주세요."
 
 #: cms/templates/settings.html
@@ -23666,7 +23666,7 @@ msgstr " 마지막 날에 학생들이 등록할 수 있습니다."
 
 #: cms/templates/settings.html
 msgid "Contact your edX partner manager to update these settings."
-msgstr " 이 설정을 업데이트하려면 edX 파트너 관리자에게 문의하십시오."
+msgstr " 이 설정을 업데이트하려면 SmartLearn 파트너 관리자에게 문의하십시오."
 
 #: cms/templates/settings.html
 msgid "Enrollment End Time"
@@ -24356,7 +24356,7 @@ msgstr " 게시 과정을 강제로 실행하는데 필요한 데이터입니다
 
 #: cms/templates/maintenance/_force_publish_course.html
 msgid "course-v1:edX+DemoX+Demo_Course"
-msgstr " course-v1:edX+DemoX+Demo_Course "
+msgstr " course-v1:SmartLearn+DemoX+Demo_Course "
 
 #: cms/templates/maintenance/_force_publish_course.html
 msgid "Reset values"
@@ -24427,8 +24427,8 @@ msgid ""
 "EdX, Open edX, Studio, and the edX and Open edX logos are registered "
 "trademarks or trademarks of {link_start}edX Inc.{link_end}"
 msgstr ""
-"EdX, Open edX, Studio, and the edX and Open edX 로고는 "
-"{link_start}edX Inc.의 등록 상표 또는 상표입니다.{link_end}"
+"SmartLearn 및 로고는 "
+"{link_start}SmartLearn Inc.의 등록 상표 또는 상표입니다.{link_end}"
 
 #: cms/templates/widgets/header.html
 msgid "Current Course:"
@@ -24524,7 +24524,7 @@ msgstr " Open edX Portal에 액세스하십시오 "
 
 #: cms/templates/widgets/sock_links.html
 msgid "Open edX Portal"
-msgstr " 열린 edX 포털 "
+msgstr " 열린 SmartLearn 포털 "
 
 #: cms/templates/widgets/user_dropdown.html
 msgid "Currently signed in as:"

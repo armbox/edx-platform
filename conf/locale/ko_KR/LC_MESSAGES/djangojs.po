@@ -3380,7 +3380,7 @@ msgid ""
 msgstr ""
 "{strongStart} 경고 : 계정 삭제가 영구적입니다.{strongEnd}"
 "진행하기 전에 위의 내용을 주의 깊게 읽으십시오. 이것은 되돌릴 수 없는 작업이며"
-"edX.{strongEnd}에서 더 이상 동일한 이메일을 사용할 수 없게 됩니다."
+"SmartLearn.{strongEnd}에서 더 이상 동일한 이메일을 사용할 수 없게 됩니다."
 "{strongStart}"
 
 #: common/static/bundles/StudentAccountDeletion.js
@@ -3398,7 +3398,7 @@ msgid ""
 "that is deleted."
 msgstr ""
 "참고 : 계정 및 개인 정보 삭제는 영구적이며 취소 할 수 없습니다."
-"EdX는 귀하의 계정이나 삭제 된 데이터를 "
+"SmartLearn은 귀하의 계정이나 삭제 된 데이터를 "
 "복구 할 수 없습니다."
 
 #: common/static/bundles/StudentAccountDeletion.js
@@ -3411,9 +3411,9 @@ msgid ""
 "sites offered by MIT Open Learning, Wharton Executive Education, and Harvard"
 " Medical School."
 msgstr ""
-"계정이 삭제되면 app, edx.org 또는 edX에서 호스팅하는 "
+"계정이 삭제되면 app, smartlearn.kr 또는 SmartLearn에서 호스팅하는 "
 "다른 사이트에서 강의를 수강 할 수 없습니다. 여기에는 "
-"고용주 또는 대학의 시스템에서 edx.org에 액세스하고 MIT Open Learning, "
+"고용주 또는 대학의 시스템에서 smartlearn.kr에 액세스하고 MIT Open Learning, "
 "Wharton Executive Education 및 하버드 의과 대학에서 제공하는 개인 사이트에 액세스 "
 "할 수 있습니다."
 
@@ -3467,7 +3467,7 @@ msgid ""
 "your account or the data that is deleted."
 msgstr ""
 "\"내 계정 삭제\"를 선택했습니다. 계정 및 개인 데이터 삭제는 "
-"구적이며 취소 할 수 없습니다. EdX는 귀하의 계정이나 "
+"구적이며 취소 할 수 없습니다. SmartLearn은 귀하의 계정이나 "
 "삭제 된 데이터를 복구 할 수 없습니다."
 
 #: common/static/bundles/StudentAccountDeletion.js
@@ -3480,9 +3480,9 @@ msgid ""
 " sites offered by MIT Open Learning, Wharton Executive Education, and "
 "Harvard Medical School."
 msgstr ""
-"진행하면 edX 응용 프로그램, edx.org 또는 edX에서 호스팅하는 다른 사이트에서 "
+"진행하면 SmartLearn 응용 프로그램, smartlearn.kr 또는 SmartLearn에서 호스팅하는 다른 사이트에서 "
 "이 계정을 사용하여 수업을 들을 수 없습니다. 여기에는 "
-"고용주 또는 대학의 시스템에서 edx.org에 액세스하고 "
+"고용주 또는 대학의 시스템에서 smartlearn.kr에 액세스하고 "
 "MIT Open Learning, Wharton Executive Education 및 하버드 의과 대학에서 제공하는 개인 사이트에"
 " 액세스 할 수 있습니다."
 
@@ -3506,7 +3506,7 @@ msgstr "네, 삭제합니다."
 #: common/static/bundles/StudentAccountDeletionInitializer.js
 #: lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
 msgid "We're sorry to see you go! Your account will be deleted shortly."
-msgstr "떠나는게 슬퍼요. 귀하의 계정은 곧 삭제됩니다."
+msgstr "보내드리게 되어 유감입니다. 귀하의 계정은 곧 삭제됩니다."
 
 #: common/static/bundles/StudentAccountDeletion.js
 #: common/static/bundles/StudentAccountDeletionInitializer.js
@@ -4439,7 +4439,7 @@ msgid ""
 "now. Click Cancel to stay on this page (you must log in again to save your "
 "work)."
 msgstr ""
-"edX 계정에서 로그아웃 되었습니다. 확인을 클릭하여 지금 다시 로그인하십시오."
+"SmartLearn 계정에서 로그아웃 되었습니다. 확인을 클릭하여 지금 다시 로그인하십시오."
 "이 페이지에 머물려면 취소를 클릭하십시오 (작업을 저장하려면 다시 "
 "로그인 해야합니다)."
 
@@ -4996,7 +4996,7 @@ msgstr ""
 "이 과정은 검증 된 트랙 학습자를 위해 자동 코호트를 사용합니다. 동질 그룹을 "
 "사용 중지 할 수 없으며 '{verifiedCohortName}'이라는 수동 동질 집단의 "
 "이름을 바꿀 수 없습니다. 확인 된 트랙 동질 그룹의 구성을 변경하려면 "
-"edX 파트너 관리자에게 문의하십시오."
+"SmartLearn 파트너 관리자에게 문의하십시오."
 
 #: lms/static/js/groups/views/verified_track_settings_notification.js
 msgid ""
@@ -5875,7 +5875,7 @@ msgid ""
 "administrator or {link_start}edX Support{link_end} for help."
 msgstr ""
 "프로필 설정은 {enterprise_name}에 의해 관리됩니다. 관리자에게 "
-"도움을 요청하거나 {link_start}edX 지원 {link_end}에 문의하십시오."
+"도움을 요청하거나 {link_start}SmartLearn 지원 {link_end}에 문의하십시오."
 
 #: lms/static/js/student_account/views/account_settings_factory.js
 msgid "Email Address (Sign In)"
@@ -5995,7 +5995,7 @@ msgid ""
 "Optionally, link your personal accounts to the social media icons on your "
 "edX profile."
 msgstr ""
-"원하는 경우 개인 계정을 edX 프로필의 소셜 미디어 아이콘에 "
+"원하는 경우 개인 계정을 SmartLearn 프로필의 소셜 미디어 아이콘에 "
 "연결하십시오."
 
 #: lms/static/js/student_account/views/account_settings_factory.js
@@ -8976,7 +8976,7 @@ msgstr " 기관 / 캠퍼스 자격증 명 등록 "
 
 #: lms/templates/student_account/institution_register.underscore
 msgid "Register through edX"
-msgstr " edX를 통해 등록 "
+msgstr " SmartLearn을 통해 등록 "
 
 #: lms/templates/student_account/login.underscore
 msgid "First time here?"
@@ -8998,7 +8998,7 @@ msgstr " 학습을 계속하려면 로그인하십시오. "
 msgid ""
 "You already have an edX account with your {enterprise_name} email address."
 msgstr ""
-" {enterprise_name} 이메일 주소가있는 edX 계정이 이미 있습니다."
+" {enterprise_name} 이메일 주소가있는 SmartLearn 계정이 이미 있습니다."
 
 #: lms/templates/student_account/login.underscore
 msgid ""
@@ -11384,7 +11384,7 @@ msgid ""
 "transcript, you can download, edit, and re-upload the existing transcript. "
 "If you want to replace this transcript, upload a new .srt transcript file."
 msgstr ""
-"EdX에는이 비디오에 대한 시간 기록이 있습니다. "
+"SmartLearn에는 이 비디오에 대한 시간 기록이 있습니다. "
 "이 사본을 편집하려면 기존 사본을 다운로드, 편집하고 다시 업로드하십시오."
 "이 사본을 바꾸려면 새 .srt 사본 파일을 업로드하십시오."
 
@@ -11409,7 +11409,7 @@ msgstr " 편집을 위해 대본 다운로드 "
 
 #: cms/templates/js/video/transcripts/messages/transcripts-import.underscore
 msgid "No EdX Timed Transcript"
-msgstr " EdX 시간 기록이 없음"
+msgstr " SmartLearn 시간 기록이 없음"
 
 #: cms/templates/js/video/transcripts/messages/transcripts-import.underscore
 msgid ""
@@ -11417,7 +11417,7 @@ msgid ""
 " transcript on YouTube. You can import the YouTube transcript or upload your"
 " own .srt transcript file."
 msgstr ""
-"EdX에는 스튜디오에 이 비디오에 대한 시간 기록이 없지만 YouTube에 사본이 있습니다. "
+"SmartLearn에는 스튜디오에 이 비디오에 대한 시간 기록이 없지만 YouTube에 사본이 있습니다. "
 " YouTube 스크립트를 가져오거나 자신의 .srt 스크립트 파일을 업로드"
 " 할 수 있습니다."
 
@@ -11434,7 +11434,7 @@ msgid ""
 "EdX doesn\\'t have a timed transcript for this video. Please upload an .srt "
 "file."
 msgstr ""
-"EdX는이 비디오에 대한 시간 기록을 가지고 있지 않습니다. .srt 파일을 "
+"SmartLearn에는 이 비디오에 대한 시간 기록을 가지고 있지 않습니다. .srt 파일을 "
 "업로드하십시오."
 
 #: cms/templates/js/video/transcripts/messages/transcripts-replace.underscore
@@ -11442,16 +11442,16 @@ msgid ""
 "The timed transcript for this video on edX is out of date, but YouTube has a"
 " current timed transcript for this video."
 msgstr ""
-" edX에서 이 비디오에 대한 시간 기록이 오래되었지만 YouTube에서 이 비디오에 "
+" SmartLearn에서 이 비디오에 대한 시간 기록이 오래되었지만 YouTube에서 이 비디오에 "
 " 대한 현재 시간 기록을 가지고 있습니다."
 
 #: cms/templates/js/video/transcripts/messages/transcripts-replace.underscore
 msgid "Do you want to replace the edX transcript with the YouTube transcript?"
-msgstr " edX 사본을 YouTube 사본으로 바꾸시겠습니까?"
+msgstr " SmartLearn 자막을 YouTube 자막으로 바꾸시겠습니까?"
 
 #: cms/templates/js/video/transcripts/messages/transcripts-replace.underscore
 msgid "Yes, replace the edX transcript with the YouTube transcript"
-msgstr " 예, edX 대본을 YouTube 대본으로 대체하십시오. "
+msgstr " 예, SmartLearn 자막을 YouTube 자막으로 대체하십시오. "
 
 #: cms/templates/js/video/transcripts/messages/transcripts-uploaded.underscore
 msgid "Timed Transcript Uploaded Successfully"
@@ -11463,7 +11463,7 @@ msgid ""
 "transcript, upload a new .srt transcript file. If you want to edit this "
 "transcript, you can download, edit, and re-upload the existing transcript."
 msgstr ""
-"EdX에는이 비디오에 대한 시간 기록이 있습니다. 이 사본을 바꾸려면 "
+"SmartLearn에는 이 비디오에 대한 시간 기록이 있습니다. 이 사본을 바꾸려면 "
 "새 .srt 사본 파일을 업로드하십시오. 이 사본을 편집하려면 "
 "기존 사본을 다운로드하고 편집하고 다시 업로드하십시오."
 
