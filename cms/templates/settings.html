@@ -44,6 +44,21 @@ CMS.URL.UPLOAD_ASSET = '${upload_asset_url | n, js_escaped_string}'
         ${show_min_grade_warning | n, dump_js_escaped_json},
         ${can_show_certificate_available_date_field(context_course) | n, dump_js_escaped_json}
     );
+    $('#course-overview').on('froalaEditor.initialized', function(e, editor) {
+      editor.events.bindClick($('body'), 'a#init-course-overview', function () {
+        editor.html.set($('#course-overview-template').html());
+        editor.undo.saveStep();
+        editor.events.focus();
+      });
+      editor.events.bindClick($('body'), 'a#add-teacher', function () {
+        $($('#teacher-template').html()).appendTo('.teacher-container');
+        editor.undo.saveStep();
+      });
+      editor.events.bindClick($('body'), 'a#add-staff', function () {
+        $($('#teacher-template').html()).appendTo('.ta-container');
+        editor.undo.saveStep();
+      });
+    });
     $('#course-overview').froalaEditor({
       key: 'VA5D6F4A3eC3I3C7B7C4C4C3A3A2E2xvkfzD-11fnmJ-7c1A8A-13c==',
       imageStyles: {
@@ -369,7 +384,11 @@ CMS.URL.UPLOAD_ASSET = '${upload_asset_url | n, js_escaped_string}'
                 <li class="field text" id="field-course-overview">
                   <label for="course-overview">
                     ${_("Course Overview")}
-                    <a id="init-course-overview" style="float: right;">초기화</a>
+                    <div class="course-overview-buttons">
+                      <a id="add-teacher">교수자 추가</a> ·
+                      <a id="add-staff">조교 추가</a> ·
+                      <a id="init-course-overview">초기화</a>
+                    </div>
                   </label>
                   <textarea id="course-overview"></textarea>
                   <label class="sr" for="course-overview-cm-textarea">
@@ -380,7 +399,8 @@ CMS.URL.UPLOAD_ASSET = '${upload_asset_url | n, js_escaped_string}'
                       a_link_start=HTML("<a class='link-courseURL' rel='external' href='{lms_link_for_about_page}'>").format(lms_link_for_about_page=lms_link_for_about_page),
                       a_link_end=HTML("</a>")
                     )}</span>
-                </li>
+                  <span class="tip tip-stacked" style="color: red;">주의: Code View 모드에서 편집한 경우, Code View 모드를 꺼야 마지막 결과물을 저장할 수 있습니다.</span>
+                    </li>
                   % if sidebar_html_enabled:
                   <li class="field text" id="field-course-about-sidebar-html">
                       <label for="course-about-sidebar-html">${_("Course About Sidebar HTML")}
@@ -656,5 +676,99 @@ CMS.URL.UPLOAD_ASSET = '${upload_asset_url | n, js_escaped_string}'
      </div>
     </div>
   </div>
+</div>
+<div id="course-overview-template" style="display: none;">
+  <h2>강좌 소개</h2>
+  <p>강좌 소개에 대한 설명을 입력합니다.</p>
+
+  <h2>강좌 목차</h2>
+  <table style="width: 100%;">
+    <thead>
+      <tr>
+        <th colspan="2" style="text-align: center;">주차</th>
+        <th style="text-align: center;">주차</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="3" style="width: 9.771%; text-align: center; vertical-align: top;">1</td>
+        <td rowspan="3" style="width: 40%;">주차 제목</td>
+        <td style="width: 50.0000%;">소주제 1</td>
+      </tr>
+      <tr>
+        <td style="width: 50.0000%;">소주제 2</td>
+      </tr>
+      <tr>
+        <td>소주제 3</td>
+      </tr>
+      <tr>
+        <td rowspan="2" style="text-align: center;">2</td>
+        <td rowspan="2">주차 제목</td>
+        <td>소주제 1</td>
+      </tr>
+      <tr>
+        <td>
+          <br>
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="2">
+          <div data-empty="true" style="text-align: center;">3</div>
+        </td>
+        <td rowspan="2">주차 제목</td>
+        <td>소주제 1</td>
+      </tr>
+      <tr>
+        <td>
+          <br>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <br>
+        </td>
+        <td>
+          <br>
+        </td>
+        <td>
+          <br>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <section class="course-staff">
+    <h2>교수자</h2>
+    <div class="teacher-container">
+      <article class="teacher">
+        <div class="teacher-image"><img src="" width="80" height="80" alt="Teacher Image" class="fr-fic fr-dii"></div>
+        <div class="biography">
+          <h3>이름</h3>
+          <p>연혁1</p>
+          <p>연혁2</p>
+        </div>
+      </article>
+    </div>
+  
+    <h2>조교</h2>
+    <div class="ta-container">
+      <article class="teacher">
+        <div class="teacher-image"><img src="" width="80" height="80" alt="Teacher Image" class="fr-fic fr-dii"></div>
+        <div class="biography">
+          <h3>이름</h3>
+          <p>연혁1</p>
+        </div>
+      </article>
+    </div>
+  </section>
+</div>
+<div id="teacher-template" style="display: none;">
+  <article class="teacher">
+    <div class="teacher-image"><img src="" width="80" height="80" alt="Teacher Image" class="fr-fic fr-dii"></div>
+    <div class="biography">
+      <h3>이름</h3>
+      <p>연혁1</p>
+    </div>
+  </article>
 </div>
 </%block>

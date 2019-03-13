@@ -1389,70 +1389,75 @@
       margin-bottom: $baseline/2;
     }
 
-    .course-staff {
+    .teacher-container,
+    .ta-container {
+      width: 100%;
       display: flex;
-      flex-flow: row wrap;
+      flex-wrap: wrap;
+    }
 
-      h2 {
-        margin-top: 1.5em;
-        margin-bottom: 0;
-        width:100%;
+    .teacher {
+      background: $light-gray1;
+      padding: $baseline;
+      border-radius: 4px;
+      margin: 1em 1em 1em 0;
+      display: inline-block;
+      width: 100%;
+
+      @include media-breakpoint-up(md){
+        width: 40%; 
       }
 
-      .teacher {
-        background: $light-gray1;
-        padding: $baseline;
-        border-radius: 4px;
-        margin: 1em 1em 1em 0;
-        display: inline-block;
-        width: 100%;
+      h3 {
+        font-family: $font-family-sans-serif;
+        font-weight: 700;
+        margin: ($baseline) 0 ($baseline*0.75); 
+        text-transform: none;
+      }
 
-        @include media-breakpoint-up(md){
-          width: 40%; 
+      .teacher-image {
+        background: rgb(255, 255, 255);
+        border: 1px solid $gray-400;
+        border-radius: 50%;
+        height: 80px;
+        width: 80px;
+        //@include float(left);
+        overflow: hidden;
+        padding: 1px;
+        display: flex;
+
+        img {
+          display: block;
+          min-height: 100%;
+          max-width: 100%;
+          object-fit: cover;
+          margin: 0;
         }
+      }
+
+      .biography {
+        flex: 1 1 auto;
+        word-break: keep-all;
 
         h3 {
-          font-family: $font-family-sans-serif;
-          font-weight: 700;
-          margin: ($baseline) 0 ($baseline*0.75); 
-          text-transform: none;
+          font-size: 1.2em;
+          margin: 0.5em 0;
         }
 
-        .teacher-image {
-          background: rgb(255, 255, 255);
-          border: 1px solid $gray-400;
-          border-radius: 50%;
-          height: 80px;
-          width: 80px;
-          //@include float(left);
-          overflow: hidden;
-          padding: 1px;
-          display: flex;
-
-          img {
-            display: block;
-            min-height: 100%;
-            max-width: 100%;
-            object-fit: cover;
-            margin: 0;
-          }
-        }
-
-        .biography {
-          flex: 1 1 auto;
-          word-break: keep-all;
-
-          h3 {
-            font-size: 1.2em;
-            margin: 0.5em 0;
-          }
-
-          p {
-            font-size: 0.85em;
-            margin: 0;
-          }
+        p {
+          font-size: 0.85em;
+          margin: 0;
         }
       }
+    }
+  }
+
+  .course-overview-buttons {
+    float: right;
+
+    > a {
+      cursor: pointer;
+      margin: 0 6px;
     }
   }
 }
