@@ -20991,10 +20991,8 @@ msgid ""
 "and family to get the word out about what you mastered in "
 "{accomplishment_course_title}."
 msgstr ""
-" {accomplishment_copy_course_org} {dash}에서 "
-" 인증서를 얻기 위해 동료, 친구, 가족과 공유하여 "
-"{accomplishment_course_title}에서 마스터한 내용을 "
-" 알리기 위해 노력했습니다."
+" {accomplishment_course_title} 과정을 성공적으로 수료하였습니다."
+" 수료한 과정을 이력서 항목에 추가하고, 발급된 수료증의 링크를 모두와 공유해보세요"
 
 #: themes/edx.org/lms/templates/certificates/_accomplishment-banner.html
 msgid "Share this certificate on Facebook (opens a new tab/window)"
