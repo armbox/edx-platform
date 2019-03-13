@@ -34,6 +34,27 @@ $fg-min-width: 900px;
 // ====================
 $f-sans-serif: 'Open Sans','Helvetica Neue', Helvetica, Arial, sans-serif;
 $f-monospace: 'Bitstream Vera Sans Mono', Consolas, Courier, monospace;
+$georgia: Georgia, Cambria, "Times New Roman", Times, serif;
+$helvetica: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+$lucida-grande: "Lucida Grande", Tahoma, Verdana, Arial, sans-serif;
+$monospace: "Bitstream Vera Sans Mono", Consolas, Courier, monospace;
+$verdana: Verdana, Geneva, sans-serif;
+$font-family-sans-serif: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family-monospace: 'Bitstream Vera Sans Mono', Consolas, Courier, monospace;
+
+// ----------------------------
+// #TYPOGRAPHY
+// ----------------------------
+$monospace: Monaco, 'Bitstream Vera Sans Mono', 'Lucida Console', monospace !default;
+$serif: $georgia !default;
+
+$font-light: 300 !default;
+$font-regular: 400 !default;
+$font-semibold: 600 !default;
+$font-bold: 700 !default;
+
+$m-base-font-size: em(15) !default;
+$support-form-base-font-size: 16px;
 
 // +Colors - Utility
 // ====================
@@ -83,7 +104,17 @@ $gray-d2: shade($gray, 40%) !default;
 $gray-d3: shade($gray, 60%) !default;
 $gray-d4: shade($gray, 80%) !default;
 $gray-u1: #ecf0f1;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
 
+$body-color: $gray-900 !default;
 
 // These define button styles similar to LMS
 // The goal here is consistency (until we can overhaul all of this...)
@@ -243,6 +274,7 @@ $ui-action-primary-color-focus: $blue-s1 !default;
 $ui-link-color: $blue-u2 !default;
 $ui-link-color-focus: $blue-s1 !default;
 $link-color: $ui-link-color;
+$link-hover: $uxpl-blue-hover-active !default; // from our Pattern Library http://ux.edx.org/design_elements/colors/
 
 // +Specific UI
 // ====================
@@ -268,6 +300,12 @@ $darkGreen: rgb(52, 133, 76) !default;
 $lightBluishGrey: rgb(197, 207, 223) !default;
 $lightBluishGrey2: rgb(213, 220, 228) !default;
 $error-red: rgb(253, 87, 87) !default;
+$dark-gray1: rgb(74, 74, 74) !default;
+$light-gray1: rgb(242, 242, 242) !default;
+$light-gray2: rgb(171, 171, 171) !default;
+$light-gray3: rgb(249, 249, 249) !default;
+$light-gray4: rgb(252, 252, 252) !default;
+$dark-gray2: rgb(151, 151, 151) !default;
 
 
 //carryover from LMS for xmodules

@@ -367,7 +367,10 @@ CMS.URL.UPLOAD_ASSET = '${upload_asset_url | n, js_escaped_string}'
 
                 % if about_page_editable:
                 <li class="field text" id="field-course-overview">
-                  <label for="course-overview">${_("Course Overview")}</label>
+                  <label for="course-overview">
+                    ${_("Course Overview")}
+                    <a id="init-course-overview" style="float: right;">초기화</a>
+                  </label>
                   <textarea id="course-overview"></textarea>
                   <label class="sr" for="course-overview-cm-textarea">
                     ${_('HTML Code Editor')}

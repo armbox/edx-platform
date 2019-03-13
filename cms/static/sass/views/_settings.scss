@@ -1270,4 +1270,189 @@
       }
     }
   }
+
+  .fr-element.fr-view {
+    > section {
+      margin-bottom: $baseline*3;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: $body-color;
+      font: normal 1.2em/1.2em $font-family-sans-serif;
+      margin: 0;
+    }
+    
+    h1 {
+      color: $body-color;
+      font: normal 2em/1.4em $font-family-sans-serif;
+      margin-bottom: ($baseline*1.5);
+      text-align: center;
+    }
+    
+    h2 {
+      color: $lighter-base-font-color;
+      font: normal 1.2em/1.2em $font-family-sans-serif;
+      margin-bottom: ($baseline*0.75);
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    p + h2,
+    ul + h2,
+    ol + h2 {
+      margin-top: ($baseline*2);
+    }
+    
+    p {
+      color: inherit;
+      margin: 0;
+    }
+    
+    span {
+      color: inherit;
+      font: inherit;
+    }
+    
+    .text-center {
+      text-align: center;
+    }
+    
+    .text-dark-grey {
+      color: $dark-gray1;
+      font-size: 24px;
+    }
+    
+    p + p,
+    ul + p,
+    ol + p {
+      margin-top: $baseline;
+    }
+    
+    p {
+      a:not(.btn),
+      a:visited:not(.btn) {
+        color: $link-color;
+        font: inherit;
+        font-weight: inherit;
+        text-decoration: none;
+    
+        @include transition(all 0.1s linear 0s);
+    
+        &:hover,
+        &:focus {
+          color: $link-hover;
+          text-decoration: underline;
+        }
+      }
+    }
+    
+    a:not(.btn),
+    a:visited:not(.btn) {
+      color: $link-color;
+      font: inherit;
+      text-decoration: none;
+    
+      @include transition(all 0.1s linear 0s);
+    
+      &:hover,
+      &:focus {
+        color: $link-hover;
+        text-decoration: underline;
+      }
+    
+      &:disabled,
+      &.is-disabled,
+      &.disabled {
+        @extend %ui-disabled;
+    
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+    }
+
+    h2:nth-of-type(1) {
+      margin-top: $baseline;
+    }
+
+    h2 {
+      font-weight: 600;
+      color: $lighter-base-font-color;
+
+      margin-bottom: $baseline*0.75;
+    }
+
+    p {
+      margin-bottom: $baseline/2;
+    }
+
+    .course-staff {
+      display: flex;
+      flex-flow: row wrap;
+
+      h2 {
+        margin-top: 1.5em;
+        margin-bottom: 0;
+        width:100%;
+      }
+
+      .teacher {
+        background: $light-gray1;
+        padding: $baseline;
+        border-radius: 4px;
+        margin: 1em 1em 1em 0;
+        display: inline-block;
+        width: 100%;
+
+        @include media-breakpoint-up(md){
+          width: 40%; 
+        }
+
+        h3 {
+          font-family: $font-family-sans-serif;
+          font-weight: 700;
+          margin: ($baseline) 0 ($baseline*0.75); 
+          text-transform: none;
+        }
+
+        .teacher-image {
+          background: rgb(255, 255, 255);
+          border: 1px solid $gray-400;
+          border-radius: 50%;
+          height: 80px;
+          width: 80px;
+          //@include float(left);
+          overflow: hidden;
+          padding: 1px;
+          display: flex;
+
+          img {
+            display: block;
+            min-height: 100%;
+            max-width: 100%;
+            object-fit: cover;
+            margin: 0;
+          }
+        }
+
+        .biography {
+          flex: 1 1 auto;
+          word-break: keep-all;
+
+          h3 {
+            font-size: 1.2em;
+            margin: 0.5em 0;
+          }
+
+          p {
+            font-size: 0.85em;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
 }
