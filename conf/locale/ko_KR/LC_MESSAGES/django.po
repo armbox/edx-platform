@@ -694,17 +694,17 @@ msgstr "기타 교육"
 #: common/djangoapps/student/models.py
 #, python-brace-format
 msgid "{platform_name} Honor Code Certificate for {course_name}"
-msgstr "{course_name}을 위한 {platform_name}의 명예 훈장 인증서"
+msgstr "{course_name}을 위한 {platform_name}의 명예과정 수료증"
 
 #: common/djangoapps/student/models.py
 #, python-brace-format
 msgid "{platform_name} Verified Certificate for {course_name}"
-msgstr "{platform_name} {course_name}의 인증된 인증서"
+msgstr "{platform_name} {course_name}의 인증과정 수료증"
 
 #: common/djangoapps/student/models.py
 #, python-brace-format
 msgid "{platform_name} Professional Certificate for {course_name}"
-msgstr "{course_name}의 {platform_name} 전문 인증서"
+msgstr "{course_name}의 {platform_name} 전문가과정 수료증"
 
 #: common/djangoapps/student/models.py
 msgid ""
@@ -721,13 +721,13 @@ msgid ""
 "to LinkedIn."
 msgstr ""
 "추적 코드에 사용 된 LinkedIn 파트너의 단축 식별자입니다."
-"(예 : 'edx') 값을 입력하지 않으면 추적 코드가 LinkedIn에 "
+"(예 : 'smartlearn') 값을 입력하지 않으면 추적 코드가 LinkedIn에 "
 "전송되지 않습니다."
 
 #: common/djangoapps/student/models.py
 #, python-brace-format
 msgid "{platform_name} Certificate for {course_name}"
-msgstr "{platform_name} {course_name}의 인증서"
+msgstr "{platform_name} {course_name}의 수료증"
 
 #: common/djangoapps/student/models.py
 msgid "The ISO 639-1 language code for this language."
@@ -856,7 +856,7 @@ msgstr "이 과정에 등록하지 않았습니다."
 
 #: common/djangoapps/student/views/management.py
 msgid "Your certificate prevents you from unenrolling from this course"
-msgstr "귀하의 인증서로 인해 이 코스를 등록취소 할 수 없습니다."
+msgstr "귀하의 수료증으로 인해 이 코스를 등록취소 할 수 없습니다."
 
 #: common/djangoapps/student/views/management.py
 msgid "Enrollment action is invalid"
@@ -1056,7 +1056,7 @@ msgid ""
 "synchronization."
 msgstr ""
 " 아이디 공급자로부터 받은 사용자 프로필 데이터를 각 SSO 로그인시"
-" edX 사용자 계정과 동기화합니다. 이 동기화의 일부로"
+" SmartLearn 사용자 계정과 동기화합니다. 이 동기화의 일부로"
 " 계정과 연결된 이메일 주소가 변경되면 사용자에게 알림이 "
 " 전송됩니다."
 
@@ -2661,7 +2661,7 @@ msgstr " 이 클래스가 끝나는 날짜 "
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Date that certificates become available to learners"
-msgstr " 학습자가 인증서를 사용할 수있게되는 날짜 "
+msgstr " 학습자가 수료증을 확인할 수있게되는 날짜 "
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Cosmetic Course Display Price"
@@ -2719,7 +2719,7 @@ msgstr ""
 msgid ""
 "Enter the name of the course as it should appear in the edX.org course list."
 msgstr ""
-" 코스 이름을 edX.org 코스 목록에 표시할 때 입력하십시오."
+" 코스 이름을 smartlearn.kr 코스 목록에 표시할 때 입력하십시오."
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Course Display Name"
@@ -2843,7 +2843,7 @@ msgid ""
 "Enter true or false. If true, the course appears in the list of new courses "
 "on edx.org, and a New! badge temporarily appears next to the course image."
 msgstr ""
-" true 또는 false를 입력하십시오. true이면 코스가 edx.org의 새로운 코스 목록에 나타나고 "
+" true 또는 false를 입력하십시오. true이면 코스가 smartlearn.kr의 새로운 코스 목록에 나타나고 "
 " New! 코스 이미지 옆에 배지가 일시적으로 나타납니다."
 
 #: common/lib/xmodule/xmodule/course_module.py
@@ -2866,7 +2866,7 @@ msgstr " 비디오 업로드 자격 증명 "
 msgid ""
 "Enter the unique identifier for your course's video files provided by edX."
 msgstr ""
-" edX에서 제공 한 코스 비디오 파일의 고유 식별자를 입력하십시오."
+" smartlearn.kr에서 제공한 코스 비디오 파일의 고유 식별자를 입력하십시오."
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Course Not Graded"
@@ -2938,7 +2938,7 @@ msgid ""
 "manage Custom Courses on edX. When false, Custom Courses cannot be created, "
 "but existing Custom Courses will be preserved."
 msgstr ""
-" 코스 강사가 CCX 코치 역할을 할당하고 코치가 edX에서 맞춤 코스를 "
+" 코스 강사가 CCX 코치 역할을 할당하고 코치가 SmartLearn에서 맞춤 코스를 "
 " 관리하도록 허용하십시오. false이면 맞춤 코스를 만들 수 없지만 "
 " 기존 맞춤 코스는 유지됩니다."
 
@@ -3042,19 +3042,19 @@ msgstr " 학생들이 코스에 사용할 수있는 외부 로그인 방법을 �
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Certificates Downloadable Before End"
-msgstr " 끝날 때까지 다운로드 할 수있는 인증서 "
+msgstr " 끝날 때까지 다운로드 할 수있는 수료증 "
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid ""
 "Enter true or false. If true, students can download certificates before the "
 "course ends, if they've met certificate requirements."
 msgstr ""
-" true 또는 false를 입력하십시오. 사실이라면 학생들은 인증서 요구 사항을 충족한 경우 과정이 "
-" 끝나기 전에 인증서를 다운로드 할 수 있습니다."
+" true 또는 false를 입력하십시오. 사실이라면 학생들은 수료증의 요구 사항을 충족한 경우 과정이 "
+" 끝나기 전에 수료증을 다운로드 할 수 있습니다."
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Certificates Display Behavior"
-msgstr " 인증서 표시 동작 "
+msgstr "수료증 표시 동작 "
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid ""
@@ -3068,12 +3068,12 @@ msgid ""
 "certificates are generated, enter early_no_info."
 msgstr ""
 "end, early_with_info 또는 early_no_info를 입력하십시오. "
-"인증서를 생성한 후 통과 한 학생은 대시 보드에서 인증서에 대한"
+"수료증을 생성한 후 통과 한 학생은 대시 보드에서 수료증에 대한"
 "링크를보고 통과하지 못한 학생은 채점 구성에 대한 정보를 볼 수 있습니다. "
-"본값은 end입니다. 코스 종료 날짜 이후 모든 학생에게 이 인증서 정보를 표시합니다."
-"인증서가 생성되는 즉시 모든 학생에게 이 인증서 정보를 표시하려면"
+"본값은 end입니다. 코스 종료 날짜 이후 모든 학생에게 이 수료증 정보를 표시합니다."
+"수료증이 생성되는 즉시 모든 학생에게 이 수료증 정보를 표시하려면 "
 "early_with_info를 입력하십시오."
-"인증서가 생성되는 즉시 학생을 전달하는 링크만 표시하려면"
+"수료증이 생성되는 즉시 학생에게 전달하는 링크만 표시하려면 "
 "early_no_info를 입력하십시오."
 
 #: common/lib/xmodule/xmodule/course_module.py
@@ -3123,7 +3123,7 @@ msgid ""
 "Issue Open Badges badges for this course. Badges are generated when "
 "certificates are created."
 msgstr ""
-" 이 과정의 배지 배지를 엽니 다. 배지는 인증서를 "
+" 이 과정의 배지 배지를 엽니 다. 배지는 수료증을 "
 " 만들 때 생성됩니다."
 
 #: common/lib/xmodule/xmodule/course_module.py
@@ -3132,13 +3132,13 @@ msgid ""
 "marks, enter the short name of the type of certificate that students receive"
 " when they complete the course. For instance, \"Certificate\"."
 msgstr ""
-" PDF 인증서를 생성할 때만이 설정을 사용하십시오. 따옴표 사이에 학생들이 "
-" 코스를 수료할 때 받는 인증서 유형의 짧은 이름을 입력하십시오."
+" PDF 수료증을 생성할 때만이 설정을 사용하십시오. 따옴표 사이에 학생들이 "
+" 코스를 수료할 때 받는 수료증 유형의 짧은 이름을 입력하십시오."
 " 예를 들어, \"Certificate\"."
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Certificate Name (Short)"
-msgstr " 인증서 이름 (Short)"
+msgstr " 수료증 이름 (Short)"
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid ""
@@ -3146,27 +3146,27 @@ msgid ""
 "marks, enter the long name of the type of certificate that students receive "
 "when they complete the course. For instance, \"Certificate of Achievement\"."
 msgstr ""
-" PDF 인증서를 생성할 때만이 설정을 사용하십시오. 따옴표 사이에 학생들이 "
-" 코스를 수료할 때받는 인증서 유형의 긴 이름을 입력하십시오."
+" PDF 수료증을 생성할 때만이 설정을 사용하십시오. 따옴표 사이에 학생들이 "
+" 코스를 수료할 때받는 수료증 유형의 긴 이름을 입력하십시오."
 " 예를 들어, \"Certificate of Achievement\"."
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Certificate Name (Long)"
-msgstr " 인증서 이름 (Long)"
+msgstr " 수료증 이름 (Long)"
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Certificate Web/HTML View Enabled"
-msgstr " 인증서 웹 / HTML보기 사용 "
+msgstr " 수료증 웹 / HTML보기 사용 "
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "If true, certificate Web/HTML views are enabled for the course."
-msgstr " true 인 경우 코스의 인증서 웹 / HTML보기가 사용됩니다."
+msgstr " true 인 경우 코스의 수료증 웹 / HTML보기가 사용됩니다."
 
 #. Translators: This field is the container for course-specific certificate
 #. configuration values
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Certificate Web/HTML View Overrides"
-msgstr " 인증서 웹 / HTML보기 재정의 "
+msgstr " 수료증 웹 / HTML보기 재정의 "
 
 #. Translators: These overrides allow for an alternative configuration of the
 #. certificate web view
@@ -3182,7 +3182,7 @@ msgstr ""
 #. configuration values
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Certificate Configuration"
-msgstr " 인증서 구성 "
+msgstr "수료증 설정"
 
 #. Translators: These overrides allow for an alternative configuration of the
 #. certificate web view
@@ -3271,12 +3271,12 @@ msgid ""
 "Enter true or false. If true, edX users can view the course wiki even if "
 "they're not enrolled in the course."
 msgstr ""
-" true 또는 false를 입력하십시오. 사실이라면 edX 사용자는 코스에 등록하지 않아도 "
+" true 또는 false를 입력하십시오. true일 경우 SmartLearn 사용자는 코스에 등록하지 않아도 "
 " 코스 위키를 볼 수 있습니다."
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Invitation Only"
-msgstr " 초대장 만 "
+msgstr " 초대로만"
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Whether to restrict enrollment to invitation by the course staff."
@@ -3385,7 +3385,7 @@ msgstr ""
 "대시 보드 소셜 공유 및 맞춤 코스 URL이 활성화된 경우 소셜 미디어 사이트가 "
 " 연결할 수있는 URL (코스 정보 페이지의 URL과 같은)를 제공할 수 있습니다."
 " URL은 정규화 된 것이어야합니다."
-"예 : http://www.edx.org/course/Introduction-to-MOOCs-ITM001"
+"예 : https://www.smartlearn.kr/course/Introduction-to-MOOCs-ITM001"
 
 #: cms/templates/settings.html
 msgid "Course Language"
@@ -4642,7 +4642,7 @@ msgid ""
 "they cannot use the edX video player or do not have access to YouTube. You "
 "must add at least one non-YouTube URL in the Video File URLs field."
 msgstr ""
-" edX 동영상 플레이어를 사용할 수 없거나 YouTube에 액세스할 수 없는 "
+" SmartLearn 동영상 플레이어를 사용할 수 없거나 YouTube에 액세스할 수 없는 "
 " 경우 학생들이 다른 형식으로이 동영상의 버전을 다운로드하도록 허용합니다."
 " 동영상 파일 URL 입력란에 YouTube 이외의 URL을 하나 이상 추가해야합니다."
 
@@ -4816,7 +4816,7 @@ msgid ""
 "were not assigned a Video ID, enter values in those other fields and ignore "
 "this field."
 msgstr ""
-" 이 구성 요소에서 재생할 비디오에 대해 edX에서 비디오 ID를 할당한 "
+" 이 구성 요소에서 재생할 비디오에 대해 SmartLearn에서 비디오 ID를 할당한 "
 " 경우 여기에 ID를 입력하십시오. 이 경우 기본 동영상 URL,"
 " 동영상 파일 URL 및 YouTube ID 입력란에 값을 입력하지 마십시오."
 " 비디오 ID를 지정하지 않은 경우 다른 필드에 값을 입력하고 "
@@ -5071,7 +5071,7 @@ msgstr " 입력 구문을 확인하십시오."
 
 #: lms/djangoapps/branding/api.py
 msgid "Take free online courses at edX.org"
-msgstr " edX.org에서 무료 온라인 수업 받기 "
+msgstr " smartlearn.kr에서 무료 온라인 수업 받기 "
 
 #. Translators: 'EdX', 'edX', and 'Open edX' are trademarks of 'edX Inc.'.
 #. Please do not translate any of these trademarks and company names.
@@ -5082,7 +5082,7 @@ msgid ""
 "their respective logos are trademarks or registered trademarks of edX Inc."
 msgstr ""
 "© {org_name}. 명시된 경우를 제외하고는 모든 권리를 보유합니다."
-"EdX, Open edX 및 해당 로고는 edX Inc.의 상표 또는 등록 상표입니다."
+"SmartLearn 및 해당 로고는 SmartLearn Inc.의 상표 또는 등록 상표입니다."
 
 #. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
 #. Translators: 'Open edX' is a brand, please keep this untranslated.
@@ -5094,7 +5094,7 @@ msgstr ""
 #: themes/edx.org/lms/templates/certificates/_accomplishment-footer.html
 #: themes/red-theme/lms/templates/footer.html
 msgid "Powered by Open edX"
-msgstr " Open edX로 전원이 공급됨"
+msgstr " SmartLearn에 의해 제공됨"
 
 #: lms/templates/static_templates/blog.html
 msgid "Blog"
@@ -5175,7 +5175,7 @@ msgstr "제휴사"
 
 #: lms/djangoapps/branding/api.py
 msgid "Open edX"
-msgstr " Open edX "
+msgstr " SmartLearn "
 
 #: lms/djangoapps/branding/api.py
 msgid "Trademark Policy"
@@ -5263,8 +5263,8 @@ msgid ""
 "A human-readable description of the example certificate.  For example, "
 "'verified' or 'honor' to differentiate between two types of certificates."
 msgstr ""
-" 예제 인증서에 대한 사람이 읽을 수있는 설명입니다. 예를 들어, 두 가지 유형의 "
-" 인증서를 구별하기 위해 '확인'또는 '명예'를 사용합니다."
+" 예제 수료증에 대한 사람이 읽을 수있는 설명입니다. 예를 들어, 두 가지 유형의 "
+" 수료증을 구별하기 위해 '확인'또는 '명예'를 사용합니다."
 
 #: lms/djangoapps/certificates/models.py
 msgid ""
@@ -5272,8 +5272,8 @@ msgid ""
 "receive a response from the queue to determine which example certificate was"
 " processed."
 msgstr ""
-" 예제 인증서의 고유 식별자입니다. 이것은 큐에서 응답을"
-" 수신하여 처리된 예제 인증서를 판별할 때"
+" 예제 수료증의 고유 식별자입니다. 이것은 큐에서 응답을"
+" 수신하여 처리된 예제 수료증을 판별할 때"
 " 사용됩니다."
 
 #: lms/djangoapps/certificates/models.py
@@ -5282,29 +5282,29 @@ msgid ""
 "response from the queue to validate that the sender is the same entity we "
 "asked to generate the certificate."
 msgstr ""
-" 예제 인증서의 액세스 키입니다. 이것은 큐에서 응답을 수신하여"
-" 보낸 사람이 인증서를 생성하도록 요청한 것과 동일한 엔터티인지"
+" 예제 수료증의 액세스 키입니다. 이것은 큐에서 응답을 수신하여"
+" 보낸 사람이 수료증을 생성하도록 요청한 것과 동일한 엔터티인지"
 " 확인하기 위해 사용됩니다."
 
 #: lms/djangoapps/certificates/models.py
 msgid "The full name that will appear on the certificate."
-msgstr " 인증서에 표시될 전체 이름입니다."
+msgstr " 수료증에 표시될 전체 이름입니다."
 
 #: lms/djangoapps/certificates/models.py
 msgid "The template file to use when generating the certificate."
-msgstr " 인증서를 생성할 때 사용할 템플릿 파일입니다."
+msgstr " 수료증을 생성할 때 사용할 템플릿 파일입니다."
 
 #: lms/djangoapps/certificates/models.py
 msgid "The status of the example certificate."
-msgstr " 예제 인증서의 상태입니다."
+msgstr " 예제 수료증의 상태입니다."
 
 #: lms/djangoapps/certificates/models.py
 msgid "The reason an error occurred during certificate generation."
-msgstr " 인증서를 생성하는 동안 오류가 발생한 이유입니다."
+msgstr " 수료증을 생성하는 동안 오류가 발생한 이유입니다."
 
 #: lms/djangoapps/certificates/models.py
 msgid "The download URL for the generated certificate."
-msgstr " 생성된 인증서의 다운로드 URL입니다."
+msgstr " 생성된 수료증의 다운로드 URL입니다."
 
 #: lms/djangoapps/certificates/models.py
 msgid "Name of template."
@@ -5387,7 +5387,7 @@ msgstr " {username}사용자가 코스 {course_key}에 등록되지 않았습니
 
 #: lms/djangoapps/certificates/views/support.py
 msgid "An unexpected error occurred while regenerating certificates."
-msgstr " 인증서를 다시 생성하는 동안 예기치 않은 오류가 발생했습니다."
+msgstr " 수료증을 다시 생성하는 동안 예기치 않은 오류가 발생했습니다."
 
 #. Translators:  This text describes the 'Honor' course certificate type.
 #: lms/djangoapps/certificates/views/webview.py
@@ -5397,7 +5397,7 @@ msgid ""
 "the honor code established by {platform_name} and has completed all of the "
 "required tasks for this course under its guidelines."
 msgstr ""
-" {cert_type} 인증서는 {platform_name}이 수립한 명예 훈장을"
+" {cert_type} 수료증은 {platform_name}이 수립한 명예 의무를"
 " 준수하기로 동의하고 지침에 따라이 과정에 필요한"
 " 모든 작업을 완료했음을 의미합니다."
 
@@ -5414,10 +5414,10 @@ msgid ""
 "certificate also indicates that the identity of the learner has been checked"
 " and is valid."
 msgstr ""
-" {cert_type} 인증서는 {platform_name}이 수립한"
+" {cert_type} 수료증은 {platform_name}이 수립한"
 " 명예 강령을 준수하기로 동의하고 지침에 따라"
 " 이 과정에 필요한 모든 작업을 완료했음을 의미합니다."
-"{cert_type} 인증서는 학습자의 신원이 확인되었고"
+"{cert_type} 수료증은 학습자의 신원이 확인되었고"
 " 유효함을 나타냅니다."
 
 #. Translators:  This text describes the 'XSeries' course certificate type.
@@ -5430,7 +5430,7 @@ msgid ""
 "An {cert_type} certificate demonstrates a high level of achievement in a "
 "program of study, and includes verification of the student's identity."
 msgstr ""
-" {cert_type} 인증서는 학습 프로그램에서 높은 성취도를 보여주며"
+" {cert_type} 수료증은 학습 프로그램에서 높은 성취도를 보여주며"
 " 학생의 신원을 확인하는 것을 포함합니다."
 
 #: lms/djangoapps/certificates/views/webview.py
@@ -5446,14 +5446,14 @@ msgid ""
 "participated in {partner_short_name} {course_number}"
 msgstr ""
 " {partner_short_name} {course_number}에 참여한 {user_name}의 "
-" 유효한 {platform_name} 인증서입니다."
+" 유효한 {platform_name} 수료증입니다."
 
 #. Translators:  This text is bound to the HTML 'title' element of the page
 #. and appears in the browser title bar
 #: lms/djangoapps/certificates/views/webview.py
 #, python-brace-format
 msgid "{partner_short_name} {course_number} Certificate | {platform_name}"
-msgstr "{partner_short_name} {course_number} 인증서 | {platform_name}"
+msgstr "{partner_short_name} {course_number} 수료증 | {platform_name}"
 
 #. Translators:  This text fragment appears after the student's name
 #. (displayed in a large font) on the certificate
@@ -5477,7 +5477,7 @@ msgid ""
 "awarded for course activities that {platform_name} students complete."
 msgstr ""
 "{platform_name}은 {platform_name} 학생이 수료한 과정 활동에 "
-" 대해 수여하는 인증서를 통해 업적을 인정합니다."
+" 대해 수여하는 수료증을 통해 업적을 인정합니다."
 
 #. Translators:  'All rights reserved' is a legal term used in copyrighting to
 #. protect published content
@@ -5493,13 +5493,13 @@ msgstr "All rights reserved"
 #. recognized
 #: lms/djangoapps/certificates/views/webview.py
 msgid "Invalid Certificate"
-msgstr "유효하지 않은 인증서"
+msgstr "유효하지 않은 수료증"
 
 #. Translators: This line appears as a byline to a header image and describes
 #. the purpose of the page
 #: lms/djangoapps/certificates/views/webview.py
 msgid "Certificate Validation"
-msgstr "인증서 유효성 검사"
+msgstr "수료증 유효성 검사"
 
 #. Translators: Accomplishments describe the awards/certifications obtained by
 #. students on this platform
@@ -5518,18 +5518,18 @@ msgstr "발급일:"
 #. each individual certificate
 #: lms/djangoapps/certificates/views/webview.py
 msgid "Certificate ID Number"
-msgstr " 인증서 ID 번호 "
+msgstr " 수료증 ID 번호 "
 
 #: lms/djangoapps/certificates/views/webview.py
 #: lms/templates/certificates/invalid.html
 #, python-brace-format
 msgid "About {platform_name} Certificates"
-msgstr " {platform_name} 인증서 정보 "
+msgstr " {platform_name} 수료증 정보 "
 
 #: lms/djangoapps/certificates/views/webview.py
 #, python-brace-format
 msgid "How {platform_name} Validates Student Certificates"
-msgstr " {platform_name} 학생 인증서 확인 방법 "
+msgstr " {platform_name} 학생 수료증 확인 방법 "
 
 #. Translators:  This text describes the validation mechanism for a
 #. certificate file (known as GPG security)
@@ -5541,14 +5541,14 @@ msgid ""
 "key. For independent verification, {platform_name} uses what is called a "
 "\"detached signature\"&quot;\"."
 msgstr ""
-" {platform_name}이(가) 발급한 인증서는 {platform_name} 공개키를 가진 사람이"
+" {platform_name}이(가) 발급한 수료증은 {platform_name} 공개키를 가진 사람이"
 " 독립적으로 확인할 수 있도록 gpg 키로 서명됩니다."
 " 독립적인 확인을 위해 {platform_name}은 \"detached signature\"&quot;\"을"
 " 사용합니다."
 
 #: lms/djangoapps/certificates/views/webview.py
 msgid "Validate this certificate for yourself"
-msgstr " 이 인증서의 유효성을 직접 확인하십시오."
+msgstr " 이 수료증의 유효성을 직접 확인하십시오."
 
 #. Translators:  This text describes (at a high level) the mission and charter
 #. the edX platform and organization
@@ -5615,19 +5615,19 @@ msgstr " {platform_name}에 대한 {course_title} 과정을 완료했습니다."
 msgid ""
 "I completed a course at {platform_name}. Take a look at my certificate."
 msgstr ""
-" {platform_name}의 과정을 완료했습니다. 내 인증서를 확인해보십시오."
+" {platform_name}의 과정을 완료했습니다. 내 수료증을 확인해보십시오."
 
 #: lms/djangoapps/certificates/views/webview.py
 #, python-brace-format
 msgid "More Information About {user_name}'s Certificate:"
-msgstr " {user_name}의 인증서에 대한 추가 정보 :"
+msgstr " {user_name}의 수료증에 대한 추가 정보 :"
 
 #. Translators: This line is displayed to a user who has completed a course
 #. and achieved a certification
 #: lms/djangoapps/certificates/views/webview.py
 #, python-brace-format
 msgid "{fullname}, you earned a certificate!"
-msgstr "{fullname} 님, 인증서를 받았습니다!"
+msgstr "{fullname} 님, 수료증을 받았습니다!"
 
 #. Translators: This line congratulates the user and instructs them to share
 #. their accomplishment on social networks
@@ -5709,7 +5709,7 @@ msgstr " 전자 상거래 서비스에서 호스팅하는 코스 체크아웃 �
 #: openedx/core/djangoapps/credentials/models.py
 #: openedx/core/djangoapps/credit/models.py
 msgid "Cache Time To Live"
-msgstr "실시간 캐시"
+msgstr "캐시가 유지되는 시간"
 
 #: lms/djangoapps/commerce/models.py
 #: openedx/core/djangoapps/credentials/models.py
@@ -5793,7 +5793,7 @@ msgstr ""
 
 #: lms/djangoapps/course_goals/models.py
 msgid "Earn a certificate"
-msgstr " 인증서를 얻으십시오. "
+msgstr " 수료증을 얻으십시오. "
 
 #: lms/djangoapps/course_goals/models.py
 msgid "Complete the course"
@@ -5898,7 +5898,7 @@ msgstr "코스 종료일"
 msgid ""
 "To earn a certificate, you must complete all requirements before this date."
 msgstr ""
-" 인증서를 취득하려면 이 날짜 이전에 모든 요구사항을 충족해야합니다."
+" 수료증을 취득하려면 이 날짜 이전에 모든 요구사항을 충족해야합니다."
 
 #: lms/djangoapps/courseware/date_summary.py
 msgid "After this date, course content will be archived."
@@ -5924,7 +5924,7 @@ msgstr " 이 코스는 {course_end_time}에 {time_remaining_string}(으)로 끝�
 
 #: lms/djangoapps/courseware/date_summary.py
 msgid "Certificate Available"
-msgstr " 인증서 사용 가능 "
+msgstr " 수료증이 발급 되었습니다."
 
 #: lms/djangoapps/courseware/date_summary.py
 msgid "Day certificates will become available for passing verified learners."
@@ -5937,9 +5937,9 @@ msgid ""
 "{time_remaining_string} from now. You will also be able to view your "
 "certificates on your {learner_profile_link}."
 msgstr ""
-" 인증서를 취득한 경우 지금부터는 {time_remaining_string}에 액세스"
+" 수료증을 취득한 경우 지금부터 {time_remaining_string}에 액세스"
 " 할 수 있습니다. {learner_profile_link}에서"
-" 인증서를 볼 수도 있습니다."
+" 수료증을 볼 수도 있습니다."
 
 #: lms/djangoapps/courseware/date_summary.py
 #: openedx/features/learner_profile/templates/learner_profile/learner_profile.html
@@ -5948,22 +5948,22 @@ msgstr "학습자 프로필"
 
 #: lms/djangoapps/courseware/date_summary.py
 msgid "We are working on generating course certificates."
-msgstr " 우리는 코스 인증서를 생성하기 위해 노력하고 있습니다."
+msgstr " 코스 수료증 생성작업을 진행중입니다."
 
 #: lms/djangoapps/courseware/date_summary.py
 msgid "Upgrade to Verified Certificate"
-msgstr "확인된 인증서로 업그레이드"
+msgstr "인증 과정으로 업그레이드"
 
 #: lms/djangoapps/courseware/date_summary.py
 msgid "Verification Upgrade Deadline"
-msgstr "인증 업그레이드 마감일"
+msgstr "인증 과정 업그레이드 마감일"
 
 #: lms/djangoapps/courseware/date_summary.py
 msgid ""
 "Don't miss the opportunity to highlight your new knowledge and skills by "
 "earning a verified certificate."
 msgstr ""
-" 검증된 인증서를 획득하여 새로운 지식과 기술을 강조할 수 있는"
+" 검증된 수료증을 획득하여 새로운 지식과 기술을 강조할 수 있는"
 " 기회를 놓치지 마십시오."
 
 #: lms/djangoapps/courseware/date_summary.py
@@ -5971,8 +5971,8 @@ msgid ""
 "You are still eligible to upgrade to a Verified Certificate! Pursue it to "
 "highlight the knowledge and skills you gain in this course."
 msgstr ""
-" 아직 검증된 인증서로 업그레이드할 자격이 있습니다!"
-" 이 과정에서 얻는 지식과 기술을 강조하기 위해 그것을 추구하십시오."
+" 아직 인증과정으로 업그레이드할수 있습니다!"
+" 이 과정에서 얻는 지식과 기술을 강조하기 위해 검증 과정으로 업그레이드 하십시오."
 
 #. Translators: This describes the time by which the user
 #. should upgrade to the verified track. 'date' will be
@@ -5989,13 +5989,13 @@ msgid ""
 "Don't forget, you have {time_remaining_string} left to upgrade to a Verified"
 " Certificate."
 msgstr ""
-" 잊지 마세요. {time_remaining_string}에서 검증된 인증서로"
-" 업그레이드해야 합니다."
+" 잊지 마세요. 인증 과정으로 업그레이드 할 수 있는 기한이 {time_remaining_string}"
+" 남았습니다."
 
 #: lms/djangoapps/courseware/date_summary.py
 #, python-brace-format
 msgid "Don't forget to upgrade to a verified certificate by {localized_date}."
-msgstr " {localized_date}까지 인증된 인증서로 업그레이드하는 것을 잊지 마십시오."
+msgstr " {localized_date}까지 인증과정으로 업그레이드하는 것을 잊지 마십시오."
 
 #: lms/djangoapps/courseware/date_summary.py
 #, python-brace-format
@@ -6005,9 +6005,9 @@ msgid ""
 "your identity on {platform_name} if you have not done so "
 "already.{button_panel}"
 msgstr ""
-" 인증서를 취득하려면 코스의 모든 요구 사항을 충족하고"
+" 수료증을 취득하려면 코스의 모든 요구 사항을 충족하고"
 " 코스 마감일 전에 업그레이드해야하며"
-"{platform_name} (아직 완료하지 않은 경우)에서"
+" {platform_name} (아직 완료하지 않은 경우)에서"
 " 신원을 확인해야합니다. {button_panel}"
 
 #: lms/djangoapps/courseware/date_summary.py
@@ -6047,7 +6047,7 @@ msgid ""
 "You must successfully complete verification before this date to qualify for "
 "a Verified Certificate."
 msgstr ""
-" 확인된 인증서를 받기 위해서는 이 날짜 이전에 성공적으로 "
+" 인증된  수료증을 받기 위해서는 이 날짜 이전에 성공적으로 "
 " 인증을 완료해야합니다."
 
 #: lms/djangoapps/courseware/masquerade.py
@@ -6124,7 +6124,7 @@ msgid ""
 "You are enrolled in the audit track for this course. The audit track does "
 "not include a certificate."
 msgstr ""
-" 이 과정의 감사 추적에 등록되어 있습니다. 감사 추적에는 인증서가"
+" 이 과정에 청강으로 등록되어 있습니다. 청강에는 수료증이"
 " 포함되어 있지 않습니다."
 
 #: lms/djangoapps/courseware/views/views.py
@@ -6136,24 +6136,24 @@ msgid ""
 "You are enrolled in the honor track for this course. The honor track does "
 "not include a certificate."
 msgstr ""
-" 이 코스의 명예 트랙에 등록되었습니다. 명예 트랙에는 인증서가"
+" 이 코스의 명예 트랙에 등록되었습니다. 명예 트랙에는 수료증이"
 " 포함되어 있지 않습니다."
 
 #: lms/djangoapps/courseware/views/views.py
 msgid "We're working on it..."
-msgstr " 우리가 작업 중입니다 ..."
+msgstr " 작업 중입니다 ..."
 
 #: lms/djangoapps/courseware/views/views.py
 msgid ""
 "We're creating your certificate. You can keep working in your courses and a "
 "link to it will appear here and on your Dashboard when it is ready."
 msgstr ""
-" 인증서를 작성 중입니다. 코스에서 계속 작업할 수 "
+" 수료증을 생성 중입니다. 코스에서 계속공부 할 수 "
 " 있으며 코스 링크가 준비되면 여기와 대시 보드에 나타납니다."
 
 #: lms/djangoapps/courseware/views/views.py
 msgid "Your certificate has been invalidated"
-msgstr " 인증서가 무효화되었습니다."
+msgstr " 수료증이 무효화되었습니다."
 
 #: lms/djangoapps/courseware/views/views.py
 msgid "Please contact your course team if you have any questions."
@@ -6161,15 +6161,15 @@ msgstr " 질문이 있으시면 코스팀에게 문의하십시오."
 
 #: lms/djangoapps/courseware/views/views.py
 msgid "Congratulations, you qualified for a certificate!"
-msgstr " 축하드립니다. 인증서에 대한 자격이 있습니다."
+msgstr " 축하드립니다. 수료증에 대한 조건을 통과 하셨습니다."
 
 #: lms/djangoapps/courseware/views/views.py
 msgid "You've earned a certificate for this course."
-msgstr " 이 과정의 수료증을 받았습니다."
+msgstr " 이 과정에 대한 수료증을 받았습니다."
 
 #: lms/djangoapps/courseware/views/views.py
 msgid "Certificate unavailable"
-msgstr " 인증서를 사용할 수 없음 "
+msgstr "수료증이 없습니다"
 
 #: lms/djangoapps/courseware/views/views.py
 #, python-brace-format
@@ -6178,11 +6178,11 @@ msgid ""
 "{platform_name} verified identity."
 msgstr ""
 " 현재 {platform_name} 확인된 신원정보가 없기 때문에"
-" 인증서를 받지 못했습니다."
+" 수료증을 받지 못했습니다."
 
 #: lms/djangoapps/courseware/views/views.py
 msgid "Your certificate is available"
-msgstr " 인증서를 사용할 수 있습니다."
+msgstr " 수료증이 있습니다."
 
 #: lms/djangoapps/courseware/views/views.py
 #, python-brace-format
@@ -6215,7 +6215,7 @@ msgstr " {username} 사용자가 {location}문제에 액세스한 적이 없습�
 #: lms/djangoapps/courseware/views/views.py
 #, python-brace-format
 msgid "You must be signed in to {platform_name} to create a certificate."
-msgstr " 인증서를 만들려면 {platform_name}에 로그인해야합니다."
+msgstr " 수료증을 만들려면 {platform_name}에 로그인해야합니다."
 
 #: lms/djangoapps/courseware/views/views.py
 msgid "Course is not valid"
@@ -6223,15 +6223,15 @@ msgstr " 코스가 유효하지 않습니다."
 
 #: lms/djangoapps/courseware/views/views.py
 msgid "Your certificate will be available when you pass the course."
-msgstr " 과정을 통과하면 인증서를 사용할 수 있습니다."
+msgstr " 과정을 통과하면 수료증을 사용할 수 있습니다."
 
 #: lms/djangoapps/courseware/views/views.py
 msgid "Certificate has already been created."
-msgstr " 인증서가 이미 생성되었습니다."
+msgstr " 수료증이 이미 생성되었습니다."
 
 #: lms/djangoapps/courseware/views/views.py
 msgid "Certificate is being created."
-msgstr " 인증서가 생성됩니다."
+msgstr " 수료증이 생성됩니다."
 
 #: lms/djangoapps/courseware/views/views.py
 #, python-brace-format
@@ -6240,8 +6240,8 @@ msgid ""
 "To apply for financial assistance, enroll in the audit track for a course that offers Verified Certificates, and then complete this application. Note that you must complete a separate application for each course you take.\n"
 " We plan to use this information to evaluate your application for financial assistance and to further develop our financial assistance program."
 msgstr ""
-"{platform_name}은 이제 확인된 인증서를 받기를 원하지만 확인된 인증서 요금을 지불하지 못할 수 있는 학습자에게 재정 지원을 제공합니다. "
-"자격을 갖춘 학습자는 과정에 대한 확인된 인증서 수수료를 90{percent_sign}까지 받을 수 있습니다. \n 재정 지원을 신청하려면 인증된 인증서를 제공하는 과정에 대한 감사 트랙에 등록한 다음이 신청서를 작성하십시오. "
+"{platform_name}은 이제 확인된 수료증을 받기를 원하지만 인증과정 비용을 지불하지 못할 수 있는 학습자에게 재정 지원을 제공합니다. "
+"자격을 갖춘 학습자는 인증과정 비용의 90{percent_sign}까지 지원 받을 수 있습니다. \n 재정 지원을 신청하려면 인증된 수료증을 제공하는 과정에 대한 감사 트랙에 등록한 다음이 신청서를 작성하십시오. "
 "귀하가 수강하는 각 과목마다 별도의 신청서를 작성해야합니다. \n 이 정보를 사용하여 신청서에 재정적 지원을 평가하고 재정 지원 프로그램을 더욱 발전시킬 계획입니다."
 
 #: lms/djangoapps/courseware/views/views.py
@@ -6259,8 +6259,8 @@ msgid ""
 "Tell us about your learning or professional goals. How will a Verified "
 "Certificate in this course help you achieve these goals?"
 msgstr ""
-" 귀하의 학습 목표 또는 전문적인 목표에 대해 알려주십시오. 이 과정에서 확인된"
-" 인증서는 어떻게 이러한 목표를 달성하는데 도움이됩니까?"
+" 귀하의 학습 목표 또는 전문적인 목표에 대해 알려주십시오. 이 과정에서 인증된"
+" 수료증은 어떻게 이러한 목표를 달성하는데 도움이됩니까?"
 
 #: lms/djangoapps/courseware/views/views.py
 msgid ""
@@ -6268,7 +6268,7 @@ msgid ""
 "you complete the course work and receive a certificate?"
 msgstr ""
 " 이 과정에 대한 계획을 알려주십시오. 과정을 완료하고"
-" 인증서를받는데 도움이 되는 단계는 무엇입니까?"
+" 수료증을 받는데 도움이 되는 단계는 어디쯤 입니까?"
 
 #: lms/djangoapps/courseware/views/views.py
 msgid "Use between 250 and 500 words or so in your response."
@@ -6280,7 +6280,7 @@ msgid ""
 "course does not appear in the list, make sure that you have enrolled in the "
 "audit track for the course."
 msgstr ""
-" 확인된 인증서를 취득할 코스를 선택하십시오."
+" 인증된 수료증을 취득할 코스를 선택하십시오."
 " 과정이 목록에 나타나지 않으면 과정에 대한 감사 트랙에 "
 " 등록했는지 확인하십시오."
 
@@ -6293,7 +6293,7 @@ msgid ""
 "I allow edX to use the information provided in this application (except for "
 "financial information) for edX marketing purposes."
 msgstr ""
-" edX가 edX 마케팅 목적으로이 애플리케이션에서 제공하는 "
+" SmartLearn에서 마케팅 목적으로 이 애플리케이션에서 제공하는 "
 " 정보 (재무 정보 제외)를 사용하도록 허용합니다."
 
 #: lms/djangoapps/dashboard/git_import.py
@@ -6311,7 +6311,7 @@ msgid ""
 "git@github.com:mitocw/edx4edx_lite.git"
 msgstr ""
 " 사용할 수 없는 git url이 제공됩니다. 다음과 같은 것을 기대하십시오 :"
-" git@github.com:mitocw/edx4edx_lite.git "
+" git@github.com:mitocw/smartlearn_lite.git "
 
 #: lms/djangoapps/dashboard/git_import.py
 msgid "Unable to get git log"
@@ -6589,7 +6589,7 @@ msgstr "좋음"
 
 #: lms/djangoapps/edxnotes/helpers.py
 msgid "EdxNotes Service is unavailable. Please try again in a few minutes."
-msgstr " EdxNotes 서비스를 사용할 수 없습니다. 몇 분 후에 다시 시도하십시오."
+msgstr " SmartLearnNotes 서비스를 사용할 수 없습니다. 몇 분 후에 다시 시도하십시오."
 
 #: lms/djangoapps/edxnotes/helpers.py
 msgid "Invalid JSON response received from notes api."
@@ -6601,7 +6601,7 @@ msgstr " 메모 API에서 잘못된 데이터가 수신되었습니다."
 
 #: lms/djangoapps/edxnotes/helpers.py
 msgid "No endpoint was provided for EdxNotes."
-msgstr " EdxNotes에 제공된 엔드 포인트가 없습니다."
+msgstr " SmartLearnNotes에 제공된 엔드 포인트가 없습니다."
 
 #: lms/templates/edxnotes/edxnotes.html
 msgid "Notes"
@@ -6679,7 +6679,7 @@ msgid ""
 "e.g. https://courses.edx.org."
 msgstr ""
 " 선택적 lms URL 스키마 + 콘텐츠 라이브러리에 대한 URL을 구성하는 데 사용되는 호스트"
-"(예 : https://courses.edx.org.)"
+"(예 : https://courses.smartlearn.kr.)"
 
 #: lms/djangoapps/email_marketing/models.py
 msgid ""
@@ -6868,7 +6868,7 @@ msgstr " 코스ID "
 
 #: lms/djangoapps/instructor/views/api.py
 msgid "Certificate Type"
-msgstr "인증서 유형"
+msgstr "수료증 유형"
 
 #: lms/djangoapps/instructor/views/api.py
 msgid "Total Certificates Issued"
@@ -7155,7 +7155,7 @@ msgid ""
 "started. You can view the status of the generation task in the \"Pending "
 "Tasks\" section."
 msgstr ""
-" 이 과정의 모든 학생들을위한 인증서 생성 작업이 시작되었습니다."
+" 이 과정의 모든 학생들을위한 수료증 생성 작업이 시작되었습니다."
 "\"Pending Tasks\"섹션에서 생성 작업의 상태를"
 " 볼 수 있습니다."
 
@@ -7164,25 +7164,25 @@ msgid ""
 "Please select one or more certificate statuses that require certificate "
 "regeneration."
 msgstr ""
-" 인증서를 다시 생성해야하는 인증서 상태를 하나 이상 "
+" 수료증을 다시 생성해야하는 수료증 상태를 하나 이상 "
 " 선택하십시오."
 
 #: lms/djangoapps/instructor/views/api.py
 msgid "Please select certificate statuses from the list only."
-msgstr " 목록에서 인증서 상태만 선택하십시오."
+msgstr " 목록에서 수료증 상태만 선택하십시오."
 
 #: lms/djangoapps/instructor/views/api.py
 msgid ""
 "Certificate regeneration task has been started. You can view the status of "
 "the generation task in the \"Pending Tasks\" section."
 msgstr ""
-" 인증서 재생성 작업이 시작되었습니다. \"Pending Tasks\"섹션에서"
+" 수료증 재생성 작업이 시작되었습니다. \"Pending Tasks\"섹션에서"
 " 생성 작업의 상태를 볼 수 있습니다."
 
 #: lms/djangoapps/instructor/views/api.py
 #, python-brace-format
 msgid "Student (username/email={user}) already in certificate exception list."
-msgstr " 학생 (username/email={user})이 이미 인증서 예외 목록에 있습니다."
+msgstr " 학생 (username/email={user})이 이미 수료증 예외 목록에 있습니다."
 
 #: lms/djangoapps/instructor/views/api.py
 #, python-brace-format
@@ -7190,7 +7190,7 @@ msgid ""
 "Certificate exception (user={user}) does not exist in certificate white "
 "list. Please refresh the page and try again."
 msgstr ""
-" 인증서 예외 (user={user})가 인증서 목록에 없습니다."
+" 수료증 예외 (user={user})가 수료증 목록에 없습니다."
 " 페이지를 새로 고침하고 다시 시도하십시오."
 
 #: lms/djangoapps/instructor/views/api.py
@@ -7229,7 +7229,7 @@ msgstr " 데이터가 잘못되었습니다. generate_for는 \"new\" 또는 \"al
 
 #: lms/djangoapps/instructor/views/api.py
 msgid "Certificate generation started for white listed students."
-msgstr " 백인으로 등록된 학생들을 위한 인증서 생성이 시작되었습니다."
+msgstr " 별도 처리된 등록된 학생들을 위한 수료증 생성이 시작되었습니다."
 
 #: lms/djangoapps/instructor/views/api.py
 #, python-brace-format
@@ -7247,7 +7247,7 @@ msgid ""
 "Certificate of {user} has already been invalidated. Please check your "
 "spelling and retry."
 msgstr ""
-" {user} 인증서가 이미 무효화되었습니다. 철자를 확인하고"
+" {user} 수료증이 이미 무효화되었습니다. 철자를 확인하고"
 " 다시 시도하십시오."
 
 #: lms/djangoapps/instructor/views/api.py
@@ -7256,15 +7256,15 @@ msgid ""
 "Certificate for student {user} is already invalid, kindly verify that "
 "certificate was generated for this student and then proceed."
 msgstr ""
-" 학생용 {user} 인증서가 이미 유효하지 않으므로 "
-" 이 학생용 인증서가 생성되었는지 확인한 후 계속 진행하십시오."
+" 학생용 {user} 유료증이 이미 유효하지 않으므로 "
+" 이 학생용 유료증이 생성되었는지 확인한 후 계속 진행하십시오."
 
 #: lms/djangoapps/instructor/views/api.py
 msgid ""
 "Certificate Invalidation does not exist, Please refresh the page and try "
 "again."
 msgstr ""
-" 인증서 무효화가 존재하지 않습니다. 페이지를 새로 고침하고 다시"
+" 수료증 무효화가 존재하지 않습니다. 페이지를 새로 고침하고 다시"
 " 시도하십시오."
 
 #: lms/djangoapps/instructor/views/api.py
@@ -7282,7 +7282,7 @@ msgid ""
 "Kindly verify student username/email and the selected course are correct and"
 " try again."
 msgstr ""
-" 학생 {student}에게는 코스 {course}의 인증서가 없습니다."
+" 학생 {student}에게는 코스 {course}의 수료증이 없습니다."
 " 학생 이름/이메일 및 선택한 과정이 올바른지 확인하고 다시 "
 " 시도하십시오."
 
@@ -7621,7 +7621,7 @@ msgstr "등록 보고서 생성"
 #. messages as {action}.
 #: lms/djangoapps/instructor_task/tasks.py
 msgid "certificates generated"
-msgstr "생성된 인증서"
+msgstr "생성된 수료증"
 
 #. Translators: This is a past-tense verb that is inserted into task progress
 #. messages as {action}.
@@ -8809,7 +8809,7 @@ msgstr " 이 페이지를 볼 수 있는 권한이 없습니다."
 
 #: lms/djangoapps/support/views/index.py
 msgid "View and regenerate certificates."
-msgstr " 인증서를 보고 다시 생성합니다."
+msgstr " 수료증을 보고 다시 생성합니다."
 
 #: lms/djangoapps/support/views/index.py
 msgid "Manual Refund"
@@ -9033,7 +9033,7 @@ msgstr "선택한 가격이 유효한 번호가 아닙니다."
 
 #: lms/djangoapps/verify_student/views.py
 msgid "This course doesn't support paid certificates"
-msgstr " 이 과정은 유료 인증서를 지원하지 않습니다. "
+msgstr " 이 과정은 유료 수료증을 지원하지 않습니다. "
 
 #: lms/djangoapps/verify_student/views.py
 msgid "No selected price or selected price is below minimum."
@@ -10026,7 +10026,7 @@ msgstr "메일 주소: "
 
 #: openedx/core/djangoapps/ace_common/templates/ace_common/edx_ace/common/base_head.html
 msgid "edX Email"
-msgstr " edX 이메일"
+msgstr " SmartLearn 이메일"
 
 #: openedx/core/djangoapps/ace_common/templates/ace_common/edx_ace/common/upsell_cta.html
 #: openedx/core/djangoapps/ace_common/templates/ace_common/edx_ace/common/upsell_cta.txt
@@ -10036,7 +10036,7 @@ msgid ""
 "earning a verified certificate. Upgrade by "
 "%(user_schedule_upgrade_deadline_time)s."
 msgstr ""
-" 검증된 인증서를 획득하여 새로운 지식과 기술을 강조할 수 있는 기회를 놓치지 마십시오."
+" 인증된 수료증을 획득하여 새로운 지식과 기술을 강조할 수 있는 기회를 놓치지 마십시오."
 "%(user_schedule_upgrade_deadline_time)s 까지"
 " 업그레이드가 가능합니다."
 
@@ -10823,8 +10823,8 @@ msgid ""
 "An %(platform_name)s certificate is official and easily shareable. Upgrade "
 "by %(user_schedule_upgrade_deadline_time)s."
 msgstr ""
-" 지금까지 %(platform_name)s에서 우리와 함께 학습을 즐기시 길 바랍니다! 검증된 인증서를 통해 새로운 지식과 기술을 "
-" 강조할 수 있습니다. %(platform_name)s의 인증서는 공식이며 쉽게 "
+" 지금까지 %(platform_name)s에서 우리와 함께 학습을 즐기시 길 바랍니다! 인증된 수료증을 통해 새로운 지식과 기술을 "
+" 강조할 수 있습니다. %(platform_name)s의 수료증은 공식적이고, 쉽게 "
 " 공유할 수 있습니다. %(user_schedule_upgrade_deadline_time)s 까지"
 " 업그레이드가 가능합니다."
 
@@ -10838,8 +10838,8 @@ msgid ""
 "by %(user_schedule_upgrade_deadline_time)s."
 msgstr ""
 " 지금까지 %(first_course_name)s님과 함께 학습을 즐기시길 바랍니다!"
-" 검증된 인증서를 통해 새로운 지식과 기술을 강조할 수 있습니다."
-"%(platform_name)s의 인증서는 공식이며 쉽게 공유할 수 있습니다."
+" 검증된 수료증을 통해 새로운 지식과 기술을 강조할 수 있습니다."
+"%(platform_name)s의 수료증은 공식이며 쉽게 공유할 수 있습니다."
 "%(user_schedule_upgrade_deadline_time)s 까지 업그레이드가 가능합니다."
 
 #: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/upgradereminder/email/body.html
@@ -10855,8 +10855,8 @@ msgid ""
 " official and easily shareable."
 msgstr ""
 " 지금까지 <strong>%(platform_name)s</strong>에서 우리와 함께 "
-" 학습을 즐기시 길 바랍니다! 검증된 인증서를 통해 새로운 지식과 "
-" 기술을 강조할 수 있습니다. %(platform_name)s의 인증서는 공식이며 "
+" 학습을 즐기시 길 바랍니다! 인증된 수료증을 통해 새로운 지식과 "
+" 기술을 강조할 수 있습니다. %(platform_name)s의 수료증은 공식적이며 "
 " 쉽게 공유할 수 있습니다."
 
 #: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/upgradereminder/email/body.html
@@ -10868,8 +10868,8 @@ msgid ""
 "is official and easily shareable."
 msgstr ""
 " 지금까지 <strong>%(first_course_name)s</strong>에서 "
-" 학습을 즐기시 길 바랍니다! 검증된 인증서를 통해 새로운 지식과 "
-" 기술을 강조할 수 있습니다. %(platform_name)s의 인증서는 공식이며 "
+" 학습을 즐기시 길 바랍니다! 검증된 수료증을 통해 새로운 지식과 "
+" 기술을 강조할 수 있습니다. %(platform_name)s의 수료증은 공식적이며 "
 " 쉽게 공유할 수 있습니다."
 
 #: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/upgradereminder/email/body.html
@@ -10883,7 +10883,7 @@ msgstr " 이 과정에서 업그레이드 할 자격이 있습니다 :"
 
 #: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/upgradereminder/email/body.html
 msgid "Example of a verified certificate"
-msgstr " 확인 된 인증서의 예 "
+msgstr " 인증된 된 수료증의 예 "
 
 #: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/upgradereminder/email/body.txt
 msgid "Upgrade now at"
@@ -10892,12 +10892,12 @@ msgstr " 지금 업그레이드 "
 #: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/upgradereminder/email/subject.txt
 #, python-format
 msgid "Upgrade to earn a verified certificate on %(platform_name)s"
-msgstr " %(platform_name)s에서 확인된 인증서를 받으려면 업그레이드하십시오. "
+msgstr " %(platform_name)s에서 확인된 수료증을 받으려면 업그레이드하십시오. "
 
 #: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/upgradereminder/email/subject.txt
 #, python-format
 msgid "Upgrade to earn a verified certificate in %(first_course_name)s"
-msgstr " 인증된 인증서를 %(first_course_name)s(으)로 획득하려면 업그레이드하십시오. "
+msgstr " %(first_course_name)s 에 대한 인증된 수료증을 획득하려면 업그레이드하십시오. "
 
 #: openedx/core/djangoapps/self_paced/models.py
 msgid "Enable course home page improvements."
@@ -11154,7 +11154,7 @@ msgstr "이메일 확인"
 #. below a field meant to hold the user's full name.
 #: openedx/core/djangoapps/user_api/api.py
 msgid "This name will be used on any certificates that you earn."
-msgstr " 이 이름은 귀하가 획득한 모든 인증서에 사용됩니다."
+msgstr " 이 이름은 귀하가 획득한 모든 수료증에 사용됩니다."
 
 #: cms/templates/register.html lms/templates/register-form.html
 #: lms/templates/register-shib.html lms/templates/signup_modal.html
@@ -11712,7 +11712,7 @@ msgid ""
 "Remember when you enrolled in %(course_name)s, and other courses on edX.org?"
 " We do, and we’re glad to have you! Come see what everyone is learning."
 msgstr ""
-" %(course_name)s에 등록한 날짜와 edX.org의 다른 강좌를 기억하십니까?"
+" %(course_name)s에 등록한 날짜와 smartlearn.kr의 다른 강좌를 기억하십니까?"
 " 우리는 당신을 갖게되어서 기쁩니다! 모두가 배우고 있는 것을 보아라."
 
 #: themes/red-theme/lms/templates/schedules/edx_ace/recurringnudge_day3/email/body.txt
@@ -11721,8 +11721,8 @@ msgid ""
 "Remember when you enrolled in %(course_name)s on edX.org? We do, and we’re "
 "glad to have you! Come see what everyone is learning."
 msgstr ""
-" edX.org의 %(course_name)s에 등록했을 때 기억하십니까?"
-" 우리는 당신을 갖게 되어서 기쁩니다! 와서, 모두가 배우고 있는 것을 보세요."
+" smartlearn.kr의 %(course_name)s에 등록했을 때 기억하십니까?"
+" 우리는 당신과 함꼐 하게 되어서 기쁩니다! 와서, 모두가 배우고 있는 것을 보세요."
 
 #: cms/djangoapps/api/v1/serializers/course_runs.py
 msgid "Course team user does not exist"
@@ -11788,7 +11788,7 @@ msgid ""
 "git@github.com:mitocw/edx4edx_lite.git"
 msgstr ""
 " 쓸 수없는 git url이 제공됩니다. 다음과 같은 것을 기대하십시오 : "
-" git@github.com:mitocw/edx4edx_lite.git "
+" git@github.com:mitocw/smartlearn_lite.git "
 
 #: cms/djangoapps/contentstore/git_export_utils.py
 msgid ""
@@ -11955,12 +11955,12 @@ msgstr ""
 
 #: cms/djangoapps/contentstore/views/certificates.py
 msgid "must have name of the certificate"
-msgstr " 인증서의 이름이 있어야합니다. "
+msgstr " 수료증의 이름이 있어야합니다. "
 
 #: cms/djangoapps/contentstore/views/certificates.py
 #, python-brace-format
 msgid "Certificate dict {0} missing value key '{1}'"
-msgstr " 인증서 dict {0} 값 키 '{1}이(가) 없습니다."
+msgstr " 수료증에 dict {0} 값 키 '{1}이(가) 없습니다."
 
 #: cms/djangoapps/contentstore/views/certificates.py
 #, python-brace-format
@@ -12663,22 +12663,22 @@ msgstr " http://docs.edx.org에서 문서에 액세스하십시오. "
 #: cms/templates/widgets/sock_links.html
 #: themes/edx.org/cms/templates/widgets/sock.html
 msgid "edX Documentation"
-msgstr " edX 문서 "
+msgstr " SmartLearn 문서 "
 
 #: cms/templates/widgets/sock_links.html
 #: themes/edx.org/cms/templates/widgets/sock.html
 msgid "Enroll in edX101: Overview of Creating an edX Course"
-msgstr " edX101에 등록 : edX 코스 만들기 개요 "
+msgstr " SmartLearn101에 등록 : SmartLearn 코스 만들기 개요 "
 
 #: cms/templates/widgets/sock_links.html
 #: themes/edx.org/cms/templates/widgets/sock.html
 msgid "Enroll in edX101"
-msgstr " edX101에 등록하십시오"
+msgstr " SmartLearn101에 등록하십시오"
 
 #: cms/templates/widgets/sock_links.html
 #: themes/edx.org/cms/templates/widgets/sock.html
 msgid "Enroll in StudioX: Creating a Course with edX Studio"
-msgstr " StudioX에 등록 : edX Studio로 코스 만들기 "
+msgstr " StudioX에 등록 : SmartLearn Studio로 코스 만들기 "
 
 #: cms/templates/widgets/sock_links.html
 #: themes/edx.org/cms/templates/widgets/sock.html
@@ -13217,13 +13217,13 @@ msgstr "강좌 찾기"
 #. untranslated. See http://open.edx.org for more information.
 #: lms/templates/index_overlay.html
 msgid "Welcome to the Open edX{registered_trademark} platform!"
-msgstr " Open edX {registered_trademark} 플랫폼에 오신 것을 환영합니다!"
+msgstr " SmartLearn{registered_trademark} 플랫폼에 오신 것을 환영합니다!"
 
 #. Translators: 'Open edX' is a registered trademark, please keep this
 #. untranslated. See http://open.edx.org for more information.
 #: lms/templates/index_overlay.html
 msgid "It works! This is the default homepage for this Open edX instance."
-msgstr "Open edX가 설치된 기본 홈페이지입니다. 정상 동작중입니다. "
+msgstr "SmartLearn이 설치된 기본 홈페이지입니다. 정상 동작중입니다. "
 
 #: lms/templates/invalid_email_key.html
 msgid "Invalid email change key"
@@ -13611,7 +13611,7 @@ msgstr "다음 항목을 입력하세요."
 #: lms/templates/register-form.html
 #: themes/stanford-style/lms/templates/register-form.html
 msgid "Your legal name, used for any certificates you earn."
-msgstr " 귀하가 취득한 인증서에 사용된 귀하의 법적 이름."
+msgstr " 귀하가 취득한 수료증에 사용된 귀하의 법적 이름."
 
 #: lms/templates/register-form.html lms/templates/register-shib.html
 #: themes/stanford-style/lms/templates/register-form.html
@@ -15282,7 +15282,7 @@ msgstr " CCX 이름 지정 "
 
 #: lms/templates/ccx/coach_dashboard.html
 msgid "Create a new Custom Course for edX"
-msgstr " edX에 대한 새로운 사용자 정의 코스 만들기 "
+msgstr " SmartLearn에 대한 새로운 사용자 정의 코스 만들기 "
 
 #: lms/templates/ccx/coach_dashboard.html
 #: lms/templates/ccx/grading_policy.html
@@ -15549,12 +15549,12 @@ msgid ""
 "For tips and tricks on printing your certificate, view the {link_start}Web "
 "Certificates help documentation{link_end}."
 msgstr ""
-" 인증서 인쇄 도움말 및 유용한 정보는 {link_start} 웹 인증서 "
+" 수료증 인쇄 도움말 및 유용한 정보는 {link_start} 웹 수료증 "
 " 도움말 문서 {link_end}를 참조하세요."
 
 #: lms/templates/certificates/invalid.html
 msgid "Cannot Find Certificate"
-msgstr " 인증서를 찾을 수 없습니다. "
+msgstr " 수료증을 찾을 수 없습니다. "
 
 #: lms/templates/certificates/invalid.html
 msgid ""
@@ -15562,17 +15562,17 @@ msgid ""
 "to validate a certificate, make sure that the URL or ID number is correct. "
 "If you are sure that the URL or ID number is correct, contact support."
 msgstr ""
-" 이 URL 또는 ID 번호가있는 인증서를 찾을 수 없습니다."
-" 인증서의 유효성을 검사하려는 경우 URL 또는 ID 번호가 올바른지 확인하십시오."
+" 이 URL 또는 ID 번호가있는 수료증을 찾을 수 없습니다."
+" 수료증의 유효성을 검사하려는 경우 URL 또는 ID 번호가 올바른지 확인하십시오."
 " URL 또는 ID 번호가 맞으면 지원팀에 문의하십시오."
 
 #: lms/templates/certificates/server-error.html
 msgid "Invalid Certificate Configuration."
-msgstr " 인증서 구성이 잘못되었습니다."
+msgstr " 수료증 구성이 잘못되었습니다."
 
 #: lms/templates/certificates/server-error.html
 msgid "There is a problem with this certificate."
-msgstr " 이 인증서에 문제가 있습니다."
+msgstr " 이 수료증에 문제가 있습니다."
 
 #: lms/templates/certificates/server-error.html
 msgid ""
@@ -15604,7 +15604,7 @@ msgstr ""
 
 #: lms/templates/certificates/valid.html
 msgid "About edX Certificates"
-msgstr " edX 인증서 정보 "
+msgstr " SmartLearn 수료증 정보 "
 
 #: lms/templates/commerce/checkout_cancel.html
 msgid "Checkout Cancelled"
@@ -15666,7 +15666,7 @@ msgid ""
 "qualify for academic credit, advance your career, or strengthen your school "
 "applications."
 msgstr ""
-" 학점을받을 수있는 자격을 얻고 확인된 인증서로 새로운 기술과 "
+" 학점을받을 수있는 자격을 얻고 인증된 수료증으로 새로운 기술과 "
 " 지식을 강조하십시오. 학점을 취득하거나 경력을 쌓거나 "
 " 학교 응용 프로그램을 강화하려면 이 자격증명을 "
 " 사용하십시오."
@@ -15707,7 +15707,7 @@ msgid ""
 "{b_start}Easily Sharable: {b_end}Add the certificate to your CV or resume, "
 "or post it directly on LinkedIn."
 msgstr ""
-"{b_start} 쉽게 공유 가능 : {b_end} 이력서에 인증서를 추가하거나 이력서를 작성하거나 "
+"{b_start} 쉽게 공유 가능 : {b_end} 이력서나 경력 증명서에 수료증을 추가하거나 "
 " LinkedIn에 직접 게시하십시오."
 
 #: lms/templates/course_modes/choose.html
@@ -16465,7 +16465,7 @@ msgstr ""
 
 #: lms/templates/dashboard/_dashboard_certificate_information.html
 msgid "Your certificate will be available on or before {date}"
-msgstr " 인증서는 {date} 또는 그 이전에 제공됩니다."
+msgstr " 수료증은 {date} 또는 그 이전에 제공됩니다."
 
 #: lms/templates/dashboard/_dashboard_certificate_information.html
 msgid "Your final grade:"
@@ -16510,7 +16510,7 @@ msgid ""
 "Your certificate was not issued because you do not have a current verified "
 "identity with {platform_name}. "
 msgstr ""
-" {platform_name}에 현재 확인된 ID가 없기 때문에 인증서가 "
+" {platform_name}에 현재 확인된 ID가 없기 때문에 수료증이 "
 " 발급되지 않았습니다."
 
 #: lms/templates/dashboard/_dashboard_certificate_information.html
@@ -16527,7 +16527,7 @@ msgstr "링크는 강좌 수료증을 웹으로 보게 될것입니다."
 
 #: lms/templates/dashboard/_dashboard_certificate_information.html
 msgid "View {cert_name_short}"
-msgstr "{cert_name_short} 보기"
+msgstr "{cert_name_short} 확인"
 
 #: lms/templates/dashboard/_dashboard_certificate_information.html
 msgid "This link will open/download a PDF document"
@@ -16741,7 +16741,7 @@ msgstr ""
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "You have successfully verified your ID with edX"
-msgstr " edX에서 ID를 성공적으로 확인했습니다. "
+msgstr " SmartLearn에서 ID를 성공적으로 확인했습니다. "
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Your current verification is effective until {date}."
@@ -16886,7 +16886,7 @@ msgid ""
 "Your edX verification has been approved. Your verification is effective for "
 "one year after submission."
 msgstr ""
-" edX 확인이 승인되었습니다. 귀하의 확인은 제출 후 "
+" SmartLearn 확인이 승인되었습니다. 귀하의 확인은 제출 후 "
 " 1년간 유효합니다."
 
 #: lms/templates/dashboard/_dashboard_status_verification.html
@@ -16898,7 +16898,7 @@ msgid ""
 "Your edX ID verification is pending. Your verification information has been "
 "submitted and will be reviewed shortly."
 msgstr ""
-" edX ID 확인이 보류 중입니다. 귀하의 확인 정보가 제출되었으며 "
+" SmartLearn ID 확인이 보류 중입니다. 귀하의 확인 정보가 제출되었으며 "
 " 조만간 검토될 것입니다."
 
 #: lms/templates/dashboard/_dashboard_status_verification.html
@@ -16911,7 +16911,7 @@ msgid ""
 "certificate, you must submit a new photo of yourself and your government-"
 "issued photo ID before the verification deadline for your course."
 msgstr ""
-" 확인 제출을 수락하지 않았습니다. 확인된 인증서를 "
+" 확인 제출을 수락하지 않았습니다. 인증된 수료증을 "
 " 받으려면 코스 확인 마감일 전에 자신의 "
 " 사진과 정부 발급 신분증을 제출해야합니다."
 
@@ -16933,7 +16933,7 @@ msgid ""
 "submit a new photo of yourself and your government-issued photo ID before "
 "the verification deadline for your course."
 msgstr ""
-" 확인이 만료되었습니다. 확인된 인증서를 받으려면 "
+" 확인이 만료되었습니다. 인증된 수료증을 받으려면 "
 " 코스 확인 마감일 전에 자신의 사진과 정부 발급 "
 " 신분증을 제출해야합니다."
 
@@ -17732,7 +17732,7 @@ msgstr "학습자 참고 사항"
 
 #: lms/templates/financial-assistance/financial-assistance.html
 msgid "Dear edX Learner,"
-msgstr " 친애하는 edX 학습자님,"
+msgstr " 친애하는 SmartLearn 학습자님,"
 
 #: lms/templates/financial-assistance/financial-assistance.html
 msgid ""
@@ -17740,7 +17740,7 @@ msgid ""
 "financial circumstances a chance to earn a Verified Certificate upon "
 "successful completion of an edX course."
 msgstr ""
-" EdX Financial Assistance는 모든 금융 상황의 학습자가 edX 과정을 "
+" SmartLearn Financial Assistance는 모든 금융 상황의 학습자가 SmartLearn 과정을 "
 " 성공적으로 마친 경우 Verified Certificate를 취득할 수 있는 "
 " 기회를 제공하기 위해 만든 프로그램입니다."
 
@@ -17750,7 +17750,7 @@ msgid ""
 "afford to pay the fee, please apply now. Please note that financial "
 "assistance is limited and may not be awarded to all eligible candidates."
 msgstr ""
-" 검증된 인증서를 얻기 위해 노력하고 있지만 수수료를 지불할 여유가 "
+" 인증된 수료증을 얻기 위해 노력하고 있지만 수수료를 지불할 여유가 "
 " 없으면 지금 신청하십시오. 재정 지원은 제한적이며 적격한 모든 "
 " 후보자에게 수여되지 않을 수 있습니다."
 
@@ -17761,9 +17761,9 @@ msgid ""
 "To apply, you will be asked to answer a few questions about why you are "
 "applying and how the Verified Certificate will benefit you."
 msgstr ""
-" edX 재정 지원 자격을 얻으려면 검증된 인증 수수료를 "
+" SmartLearn 재정 지원 자격을 얻으려면 검증된 인증 수수료를 "
 " 지불하면 경제적 어려움이 있음을 증명해야합니다."
-" 신청할 때 신청하는 이유와 확인된 인증서가 귀하에게 "
+" 신청할 때 신청하는 이유와 인증된 수료증이 귀하에게 "
 " 어떻게 도움이 되는지 몇 가지 질문에 대답해야합니다."
 
 #: lms/templates/financial-assistance/financial-assistance.html
@@ -17772,8 +17772,8 @@ msgid ""
 "your identity on edx.org so you can start working toward completing your edX"
 " course."
 msgstr ""
-" 신청서가 승인되면 edx.org에서 본인 확인을 위한 지침을 "
-" 제공하므로 edX 과정을 수료하기 시작할 수 "
+" 신청서가 승인되면 smartlearn.kr에서 본인 확인을 위한 지침을 "
+" 제공하므로 SmartLearn 과정을 수료하기 시작할 수 "
 " 있습니다."
 
 #: lms/templates/financial-assistance/financial-assistance.html
@@ -17782,8 +17782,8 @@ msgid ""
 "from leading institutions regardless of your financial situation, earn a "
 "Verified Certificate, and share your success with others."
 msgstr ""
-" EdX는 재무 상황에 관계없이 최고의 교육 기관에서 양질의 교육 과정을 수강하고,"
-" 인증 인증서를 획득하고, 다른 사람들과 성공을 공유할 수 "
+" SmartLearn은 재무 상황에 관계없이 최고의 교육 기관에서 양질의 교육 과정을 수강하고,"
+" 인증된 수료증을 획득하고, 다른 사람들과 성공을 공유할 수 "
 " 있도록하기 위해 최선을 다하고 있습니다."
 
 #: lms/templates/financial-assistance/financial-assistance.html
@@ -17954,7 +17954,7 @@ msgid ""
 "Course certificate generation requires an activated web certificate "
 "configuration."
 msgstr ""
-" 코스 인증서를 생성하려면 활성화된 웹 인증서 구성이 "
+" 코스 수료증을 생성하려면 활성화된 웹 수료증 구성이 "
 " 필요합니다."
 
 #: lms/templates/instructor/instructor_dashboard_2/certificates.html
@@ -17963,8 +17963,8 @@ msgid ""
 "Certificates. You do not need to do this if you have set the certificate "
 "mode to on-demand generation."
 msgstr ""
-" 과정의 인증서를 생성할 준비가되면 인증서 생성을 클릭합니다."
-" 주문형 생성으로 인증서 모드를 설정한 경우에는 이 작업을 수행할 "
+" 과정의 수료증을 생성할 준비가되면 수료증 생성을 클릭합니다."
+" 주문형 생성으로 수강증 모드를 설정한 경우에는 이 작업을 수행할 "
 " 필요가 없습니다."
 
 #: lms/templates/instructor/instructor_dashboard_2/certificates.html
@@ -17986,15 +17986,15 @@ msgstr "활성 작업의 상태는 아래 표에 나타납니다."
 
 #: lms/templates/instructor/instructor_dashboard_2/certificates.html
 msgid "Regenerate Certificates"
-msgstr "인증서 재생성"
+msgstr "수료증 재생성"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificates.html
 msgid ""
 "To regenerate certificates for your course, choose the learners who will "
 "receive regenerated certificates and click Regenerate Certificates."
 msgstr ""
-" 코스 인증서를 다시 생성하려면 재생성된 인증서를 수신하는 "
-" 학습자를 선택하고 인증서 재생성을 클릭하십시오."
+" 코스 수료증을 다시 생성하려면 재생성된 수료증이 부여되는 "
+" 학습자를 선택하고 수료증 재생성을 클릭하십시오."
 
 #: lms/templates/instructor/instructor_dashboard_2/certificates.html
 msgid "Choose learner types for regeneration"
@@ -18004,11 +18004,11 @@ msgstr " 재생성을 위한 학습자 유형 선택 "
 msgid ""
 "Regenerate for learners who have already received certificates. ({count})"
 msgstr ""
-" 이미 인증서를받은 학습자를 위해 다시 생성하십시오. ({count})"
+" 이미 수료증을 받은 학습자에 대한 수료증을 재생성합니다. ({count})"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificates.html
 msgid "Regenerate for learners who have not received certificates. ({count})"
-msgstr " 인증서를 받지 못한 학습자를 위해 재생성하십시오. ({count})"
+msgstr " 수료증을 받지 못한 학습자를 위해 재생성하십시오. ({count})"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificates.html
 msgid "Regenerate for learners with audit passing state. ({count})"
@@ -18024,7 +18024,7 @@ msgstr " 학습자가 오류 상태로 다시 생성하십시오. ({count})"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificates.html
 msgid "Certificate Generation History"
-msgstr " 인증서 생성 기록 "
+msgstr " 수료증 생성 기록 "
 
 #: lms/templates/instructor/instructor_dashboard_2/certificates.html
 msgid "Task name"
@@ -18032,7 +18032,7 @@ msgstr "작업 이름"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificates.html
 msgid "SET CERTIFICATE EXCEPTIONS"
-msgstr " 인증서 예외 설정 "
+msgstr " 수료증 예외 설정 "
 
 #: lms/templates/instructor/instructor_dashboard_2/certificates.html
 msgid ""
@@ -18041,14 +18041,14 @@ msgid ""
 "you add learners to the exception list, click Generate Exception "
 "Certificates below."
 msgstr ""
-" 인증서를 받을 자격이 없지만 코스 팀에서 예외가 발생한 학습자를 위해 "
-" 예외를 설정하여 인증서를 생성합니다. 예외 목록에 "
-" 학습자를 추가한 후 아래에서 예외 인증서 "
+" 수료증을 받을 자격이 없지만 코스 팀에서 예외가 발생한 학습자를 위해 "
+" 예외를 설정하여 수료증을 생성합니다. 예외 목록에 "
+" 학습자를 추가한 후 아래에서 예외 수료증 "
 " 생성을 클릭하십시오."
 
 #: lms/templates/instructor/instructor_dashboard_2/certificates.html
 msgid "Invalidate Certificates"
-msgstr "인증서 무효화"
+msgstr "수료증 무효화"
 
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
 msgid "Enrollment Information"
@@ -18064,7 +18064,7 @@ msgstr "청강"
 
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
 msgid "Professional"
-msgstr "전문과정"
+msgstr "전문가과정"
 
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
 msgid "Basic Course Information"
@@ -18235,15 +18235,15 @@ msgstr " 문제 응답의 CSV 다운로드 "
 
 #: lms/templates/instructor/instructor_dashboard_2/data_download.html
 msgid "Click to list certificates that are issued for this course:"
-msgstr " 이 과정에서 발급한 인증서를 나열하려면 다음을 클릭하십시오."
+msgstr " 이 과정에서 발급한 수료증을 나열하려면 다음을 클릭하십시오."
 
 #: lms/templates/instructor/instructor_dashboard_2/data_download.html
 msgid "View Certificates Issued"
-msgstr " 발행된 인증서보기 "
+msgstr " 발행된 수료증 보기 "
 
 #: lms/templates/instructor/instructor_dashboard_2/data_download.html
 msgid "Download CSV of Certificates Issued"
-msgstr " 발행된 인증서의 CSV 다운로드 "
+msgstr " 발행된 수료증의 CSV 다운로드 "
 
 #: lms/templates/instructor/instructor_dashboard_2/data_download.html
 msgid ""
@@ -20346,7 +20346,7 @@ msgstr "학생 지원"
 
 #: lms/templates/support/certificates.html
 msgid "Student Support: Certificates"
-msgstr " 학생 지원 : 인증서 "
+msgstr " 학생 지원 : 수료증 "
 
 #: lms/templates/support/contact_us.html
 msgid "Contact {platform_name} Support"
@@ -20386,7 +20386,7 @@ msgstr "비용:"
 
 #: lms/templates/support/refund.html
 msgid "CertificateItem Status:"
-msgstr "인증서 항목 상태:"
+msgstr "수료증 항목 상태:"
 
 #: lms/templates/support/refund.html
 msgid "Order Status:"
@@ -20474,7 +20474,7 @@ msgstr "질문이 있습니까?"
 msgid ""
 "Please read {a_start}our FAQs to view common questions about our "
 "certificates{a_end}."
-msgstr "인증서 {a_end}에 대해 자주 묻는 질문 코멘트를 보기 위해서는 {a_start} FAQ를 읽어 보시기 바랍니다."
+msgstr "수료증 {a_end}에 대해 자주 묻는 질문 코멘트를 보기 위해서는 {a_start} FAQ를 읽어 보시기 바랍니다."
 
 #: lms/templates/verify_student/incourse_reverify.html
 msgid "Re-Verify for {course_name}"
@@ -20501,7 +20501,7 @@ msgid ""
 "The deadline to upgrade to a verified certificate for this course has "
 "passed."
 msgstr ""
-" 이 과정에 대한 확인된 인증서로 업그레이드하기 위한 기한이 "
+" 이 과정에 대한 인증과정으로  업그레이드하기 위한 기한이 "
 " 지났습니다."
 
 #: lms/templates/verify_student/pay_and_verify.html
@@ -20655,7 +20655,7 @@ msgstr "귀하의 코스 목표 수정:"
 
 #: openedx/features/course_experience/templates/course_experience/course-home-fragment.html
 msgid "Pursue a verified certificate"
-msgstr "확인된 인증서를 추구하십시오."
+msgstr "인증 과정 업그레이드 하세요."
 
 #: openedx/features/course_experience/templates/course_experience/course-home-fragment.html
 msgid "Upgrade ({price})"
@@ -20675,11 +20675,11 @@ msgstr "{subsection_format} 기한 {{date}}"
 
 #: openedx/features/course_experience/templates/course_experience/course-sock-fragment.html
 msgid "Learn About Verified Certificates"
-msgstr "확인된 인증서에 대해 알아보기"
+msgstr "인증 과정에 대해 알아보기"
 
 #: openedx/features/course_experience/templates/course_experience/course-sock-fragment.html
 msgid "{platform_name} Verified Certificate"
-msgstr "{platform_name} 확인된 인증서 "
+msgstr "{platform_name} 인증 과정 "
 
 #: openedx/features/course_experience/templates/course_experience/course-sock-fragment.html
 msgid "Why upgrade?"
@@ -20691,7 +20691,7 @@ msgstr "완료의 공식 증거"
 
 #: openedx/features/course_experience/templates/course_experience/course-sock-fragment.html
 msgid "Easily shareable certificate"
-msgstr "쉽게 공유할 수 있는 인증서"
+msgstr "쉽게 공유할 수 있는 수료증"
 
 #: openedx/features/course_experience/templates/course_experience/course-sock-fragment.html
 msgid "Proven motivator to complete the course"
@@ -20701,7 +20701,7 @@ msgstr " 과정을 완료하는데 동기가 있음이 입증되었습니다."
 msgid ""
 "Certificate purchases help {platform_name} continue to offer free courses"
 msgstr ""
-" 인증서 구매 {platform_name} 무료 과정 제공 계속 "
+" 인증과정을 등록해 주시면 {platform_name}에서 무료 과정을 계속 제공하는데 도움이 됩니다."
 
 #: openedx/features/course_experience/templates/course_experience/course-sock-fragment.html
 msgid "How it works"
@@ -20709,7 +20709,7 @@ msgstr "작동 원리"
 
 #: openedx/features/course_experience/templates/course_experience/course-sock-fragment.html
 msgid "Pay the Verified Certificate upgrade fee"
-msgstr " 검증된 인증서 업그레이드 요금을 지불합니다"
+msgstr " 인증 과정으로의 업그레이드 요금을 지불합니다"
 
 #: openedx/features/course_experience/templates/course_experience/course-sock-fragment.html
 msgid "Verify your identity with a webcam and government-issued ID"
@@ -20721,11 +20721,11 @@ msgstr " 열심히 공부하고 과정을 통과하십시오. "
 
 #: openedx/features/course_experience/templates/course_experience/course-sock-fragment.html
 msgid "Share your certificate with friends, employers, and others"
-msgstr " 친구, 고용주 및 기타 사람들과 인증서 공유 "
+msgstr " 친구, 고용주 및 기타 사람들과 수료증 공유 "
 
 #: openedx/features/course_experience/templates/course_experience/course-sock-fragment.html
 msgid "edX Learner Stories"
-msgstr " edX 학습자 사례 "
+msgstr " SmartLearn 학습자 사례 "
 
 #: openedx/features/course_experience/templates/course_experience/course-sock-fragment.html
 msgid ""
@@ -20733,13 +20733,13 @@ msgid ""
 "                             resume - I feel like this certificate could "
 "really help me land                             my dream job!"
 msgstr ""
-" 내 인증서는 내 이력서에 대한 지식을 보여주는데 도움을 주었습니다."
-" 이 인증서가 정말 내 꿈의 직업을 "
-" 차지할 수 있다고 생각합니다!"
+" 내 수료증이 내 이력서에 나의 지식을 보여주는데 도움을 주었습니다."
+" 이 수료증 덕분에  내 꿈의 직업을 "
+" 찾을 수 있었다고 생각합니다!"
 
 #: openedx/features/course_experience/templates/course_experience/course-sock-fragment.html
 msgid "{learner_name}, edX Learner"
-msgstr "{learner_name}, edX 학습자 "
+msgstr "{learner_name}, SmartLearn 학습자 "
 
 #: openedx/features/course_experience/templates/course_experience/course-sock-fragment.html
 msgid ""
@@ -20750,7 +20750,7 @@ msgid ""
 msgstr ""
 " 나는 내가 가지고있는 목표를 향해 일하고 실업 상태에서 "
 " 뭔가를 성취했다는 것을 설명하기 위해 "
-" 이력서와 프로필에 검증된 인증서를 "
+" 이력서와 프로필에 인증된 수료증을 "
 " 포함시키고 싶다."
 
 #: openedx/features/course_experience/templates/course_experience/course-sock-fragment.html
@@ -20883,11 +20883,11 @@ msgstr "{completion_date_html} 완료됨"
 
 #: openedx/features/learner_profile/templates/learner_profile/learner-achievements-fragment.html
 msgid "{course_mode} certificate"
-msgstr "{course_mode} 인증서"
+msgstr "{course_mode} 수료증"
 
 #: openedx/features/learner_profile/templates/learner_profile/learner-achievements-fragment.html
 msgid "You haven't earned any certificates yet."
-msgstr " 아직 인증서를 받지 못했습니다."
+msgstr " 아직 수료증을 받지 못했습니다."
 
 #: openedx/features/learner_profile/templates/learner_profile/learner-achievements-fragment.html
 #: themes/edx.org/lms/templates/dashboard.html
@@ -20922,7 +20922,7 @@ msgstr ""
 
 #: themes/edx.org/cms/templates/widgets/sock.html
 msgid "edX Partner Portal"
-msgstr " edX 파트너 포털 "
+msgstr " SmartLearn 파트너 포털 "
 
 #: themes/edx.org/lms/templates/dashboard.html
 msgid ""
@@ -20938,15 +20938,15 @@ msgstr "꼬릿말"
 
 #: themes/edx.org/lms/templates/footer.html
 msgid "edX Home Page"
-msgstr " edX 홈페이지"
+msgstr " SmartLearn 홈페이지"
 
 #: themes/edx.org/lms/templates/footer.html
 msgid "© 2012–{year} edX Inc. "
-msgstr "© 2012–{year} edX Inc. "
+msgstr "© 2012–{year} SmartLearn Inc. "
 
 #: themes/edx.org/lms/templates/footer.html
 msgid "EdX, Open edX, and MicroMasters are registered trademarks of edX Inc. "
-msgstr " EdX, Open edX 및 MicroMasters는 edX Inc.의 등록 상표입니다."
+msgstr " SmartLearn 및 NanoMaster는 SmartLearn Inc.의 등록 상표입니다."
 
 #: themes/edx.org/lms/templates/certificates/_about-accomplishments.html
 msgid "About edX Verified Certificates"
@@ -20959,7 +20959,7 @@ msgid ""
 " under its guidelines, as well as having their photo ID checked to verify "
 "their identity."
 msgstr ""
-" edX Verified Certificate는 학습자가 edX 명예 코드를 "
+" SmartLearn Verified Certificate는 학습자가 SmartLearn 명예 코드를 "
 " 준수하기로 동의했으며 지침에 따라 이 과정의 모든 필수 "
 " 작업을 완료했으며 신원을 확인하기 위해 사진 ID를 "
 " 확인했음을 나타냅니다."
@@ -20996,15 +20996,15 @@ msgstr ""
 
 #: themes/edx.org/lms/templates/certificates/_accomplishment-banner.html
 msgid "Share this certificate on Facebook (opens a new tab/window)"
-msgstr " Facebook에서 이 인증서 공유 (새 탭 / 창 열기)"
+msgstr " Facebook에서 이 수료증 공유 (새 탭 / 창 열기)"
 
 #: themes/edx.org/lms/templates/certificates/_accomplishment-banner.html
 msgid "Tweet this certificate (opens a new tab/window)"
-msgstr " 이 인증서를 트윗하십시오 (새 탭 / 창을 엽니다)."
+msgstr " 이 수료증 트윗하십시오 (새 탭 / 창을 엽니다)."
 
 #: themes/edx.org/lms/templates/certificates/_accomplishment-banner.html
 msgid "Add this certificate to your LinkedIn profile (opens a new tab/window)"
-msgstr " LinkedIn 프로필에 이 인증서 추가 (새 탭 / 창 열기)"
+msgstr " LinkedIn 프로필에 이 수료증 추가 (새 탭 / 창 열기)"
 
 #: themes/edx.org/lms/templates/certificates/_accomplishment-banner.html
 msgid "Print"
@@ -21012,26 +21012,26 @@ msgstr "인쇄"
 
 #: themes/edx.org/lms/templates/certificates/_accomplishment-banner.html
 msgid "Print this certificate"
-msgstr " 이 인증서 인쇄 "
+msgstr " 이 수료증 인쇄 "
 
 #: themes/edx.org/lms/templates/certificates/_accomplishment-footer.html
 msgid "edX Inc."
-msgstr " edX Inc."
+msgstr " SmartLearn Inc."
 
 #: themes/edx.org/lms/templates/certificates/_accomplishment-footer.html
 msgid ""
 "All rights reserved except where noted. edX, Open edX and the edX and Open "
 "edX logos are registered trademarks or trademarks of edX Inc."
 msgstr ""
-" 명시된 경우를 제외하고는 모든 권리를 보유합니다. edX, Open edX 및 edX 및 "
-" Open edX 로고는 edX Inc.의 등록 상표 또는 상표입니다."
+" 명시된 경우를 제외하고는 모든 권리를 보유합니다. SmartLearn 및 "
+" 로고는 SmartLearn Inc.의 등록 상표 또는 상표입니다."
 
 #: themes/edx.org/lms/templates/course_modes/choose.html
 msgid ""
 "{b_start}Support our Mission: {b_end}EdX, a non-profit, relies on verified "
 "certificates to help fund affordable education to everyone globally."
 msgstr ""
-"{b_start} Google 임무 지원 : {b_end} 비영리 단체인 EdX는 검증된 인증서를 사용하여 전세계 모든 사람들에게 저렴한 교육비를 지원합니다."
+"{b_start}저희의 소명을 지원해 주세요: {b_end} 단체인 SmartLearn는 인증과정을 통해  전세계 모든 사람들에게 저렴한 교육비를 지원합니다."
 ""
 
 #: themes/edx.org/lms/templates/course_modes/choose.html
@@ -21039,7 +21039,7 @@ msgid ""
 "{b_start}Support our Mission: {b_end} EdX, a non-profit, relies on verified "
 "certificates to help fund free education for everyone globally"
 msgstr ""
-"{b_start} 임무 지원 : {b_end} 비영리 단체인 EdX는 검증된 인증서를 사용하여 전세계 모든 사람들에게 저렴한 교육비를 지원합니다. "
+"{b_start}저희의 소명을 지원해 주세요: {b_end} 단체인 SmartLearn는 인증과정을 통해 전세계 모든 사람들에게 저렴한 교육비를 지원합니다. "
 ""
 
 #: themes/edx.org/lms/templates/header/navbar-authenticated.html
@@ -21057,7 +21057,7 @@ msgid ""
 "EdX, Open edX, and the edX and Open edX logos are registered trademarks or "
 "trademarks of {link_start}edX Inc.{link_end}"
 msgstr ""
-" EdX, Open edX 및 edX 및 Open edX 로고는 {link_start} edX Inc. {link_end}의 "
+" SmartLearn 및 로고는 {link_start} SmartLearn Inc. {link_end}의 "
 " 등록 상표 또는 상표입니다."
 
 #: themes/red-theme/lms/templates/footer.html
@@ -21273,11 +21273,11 @@ msgstr "모듈이 활성화되지 않았습니다."
 
 #: cms/templates/certificates.html
 msgid "This course does not use a mode that offers certificates."
-msgstr " 이 과정에서는 인증서를 제공하는 모드를 사용하지 않습니다."
+msgstr " 이 과정에서는 수료증을  제공하는 모드를 사용하지 않습니다."
 
 #: cms/templates/certificates.html
 msgid "Working with Certificates"
-msgstr "인증서 작업"
+msgstr "수료증 작업"
 
 #: cms/templates/certificates.html
 msgid ""
@@ -21285,14 +21285,14 @@ msgid ""
 "title is too long to be displayed well."
 msgstr ""
 " 과정의 공식 제목이 너무 길어서 잘 표시되지 않는 경우 "
-" 인증서에 사용할 강좌 제목을 지정하십시오."
+" 수료증에 사용할 강좌 제목을 지정하십시오."
 
 #: cms/templates/certificates.html
 msgid ""
 "For verified certificates, specify between one and four signatories and "
 "upload the associated images."
 msgstr ""
-" 확인된 인증서의 경우 1~4명의 서명자를 지정하고 "
+" 인증된 수료증의 경우 1~4명의 서명자를 지정하고 "
 " 관련 이미지를 업로드하십시오."
 
 #: cms/templates/certificates.html
@@ -21301,7 +21301,7 @@ msgid ""
 "right corner of the form and select {em_start}Edit{em_end} or the delete "
 "icon."
 msgstr ""
-" 인증서가 활성화되기 전에 인증서를 수정하거나 삭제하려면 양식의 오른쪽 상단에 "
+" 수료증이 활성화되기 전에 수료증을 수정하거나 삭제하려면 양식의 오른쪽 상단에 "
 " 마우스를 올려놓고 {em_start} 수정 {em_end} 또는 삭제 아이콘을 "
 " 선택합니다."
 
@@ -21310,12 +21310,12 @@ msgid ""
 "To view a sample certificate, choose a course mode and select "
 "{em_start}Preview Certificate{em_end}."
 msgstr ""
-" 샘플 인증서를 보려면 코스 모드를 선택하고 {em_start} "
-" 인증서 미리보기 {em_end}를 선택하십시오."
+" 샘플 수료증을 보려면 코스 모드를 선택하고 {em_start} "
+" 수료증 미리보기 {em_end}를 선택하십시오."
 
 #: cms/templates/certificates.html
 msgid "Issuing Certificates to Learners"
-msgstr " 학습자에게 인증서 발행 "
+msgstr " 학습자에게 수료증 발행 "
 
 #: cms/templates/certificates.html
 msgid ""
@@ -21323,9 +21323,9 @@ msgid ""
 "Staff or Admin role selects {em_start}Activate{em_end}. Only course team "
 "members with these roles can edit or delete an activated certificate."
 msgstr ""
-" 코스 인증서 발급을 시작하기 위해 직원 또는 관리자 역할을 가진 코스 팀원이 "
+" 코스 수료증을 발급을 시작하기 위해 직원 또는 관리자 역할을 가진 코스 팀원이 "
 "{em_start} 활성화 {em_end}를 선택합니다. 이러한 역할을 가진 "
-" 과정 팀원만 활성화된 인증서를 편집하거나 삭제할 수 있습니다."
+" 과정 팀원만 활성화된 수료증을 편집하거나 삭제할 수 있습니다."
 
 #: cms/templates/certificates.html
 msgid ""
@@ -21333,8 +21333,8 @@ msgid ""
 "learners who have already earned certificates will no longer be able to "
 "access them."
 msgstr ""
-"코스 시작 후 {em_start} 인증서를 삭제하지 {em_end} 않습니다. "
-" 이미 인증서를 얻은 학습자는 더 이상 해당 인증서에 액세스 "
+"코스 시작 후 {em_start} 수료증을 삭제하지 {em_end} 않습니다. "
+" 이미 수료증을 얻은 학습자도 더 이상 해당 수료증을 액세스 "
 " 할 수 없습니다."
 
 #: cms/templates/certificates.html
@@ -23413,7 +23413,7 @@ msgstr "{studio_name}에 로그인하기 위한 필요 정보"
 msgid ""
 "This will be used in public discussions with your courses and in our edX101 "
 "support forums"
-msgstr "edX101 지원 게시판이나, 강좌 게시판 등에서 나를 나타내는 아이디입니다."
+msgstr "SmartLearn101 지원 게시판이나, 강좌 게시판 등에서 나를 나타내는 아이디입니다."
 
 #: cms/templates/register.html
 msgid "Your Location"
@@ -23477,7 +23477,7 @@ msgid ""
 "running an online course. Additionally, we're always here to help, just drop"
 " us a note."
 msgstr ""
-"물론입니다. 동영상 촬영에서 연습문제 만들기, 온라인 강좌 운영 기초까지  몇 가지 모범 사례를 설명하기 위해 온라인 강좌 edX101을"
+"물론입니다. 동영상 촬영에서 연습문제 만들기, 온라인 강좌 운영 기초까지  몇 가지 모범 사례를 설명하기 위해 온라인 강좌 SmartLearn101을"
 " 만들었습니다. 또한, 항상 도와드릴 준비가 되어 있으니 메모를 남겨주세요."
 
 #: cms/templates/settings.html
@@ -23636,7 +23636,7 @@ msgstr "강좌 종료 시간"
 
 #: cms/templates/settings.html
 msgid "Certificates Available Date"
-msgstr "사용 가능한 인증서 날짜"
+msgstr "수료증 발급 날짜"
 
 #: cms/templates/settings.html
 msgid "By default, 48 hours after course end date"
@@ -23664,7 +23664,7 @@ msgstr " 마지막 날에 학생들이 등록할 수 있습니다."
 
 #: cms/templates/settings.html
 msgid "Contact your edX partner manager to update these settings."
-msgstr " 이 설정을 업데이트하려면 edX 파트너 관리자에게 문의하십시오."
+msgstr " 이 설정을 업데이트하려면 SmartLearn 파트너 관리자에게 문의하십시오."
 
 #: cms/templates/settings.html
 msgid "Enrollment End Time"
@@ -24354,7 +24354,7 @@ msgstr " 게시 과정을 강제로 실행하는데 필요한 데이터입니다
 
 #: cms/templates/maintenance/_force_publish_course.html
 msgid "course-v1:edX+DemoX+Demo_Course"
-msgstr " course-v1:edX+DemoX+Demo_Course "
+msgstr " course-v1:SmartLearn+DemoX+Demo_Course "
 
 #: cms/templates/maintenance/_force_publish_course.html
 msgid "Reset values"
@@ -24425,8 +24425,8 @@ msgid ""
 "EdX, Open edX, Studio, and the edX and Open edX logos are registered "
 "trademarks or trademarks of {link_start}edX Inc.{link_end}"
 msgstr ""
-"EdX, Open edX, Studio, and the edX and Open edX 로고는 "
-"{link_start}edX Inc.의 등록 상표 또는 상표입니다.{link_end}"
+"SmartLearn 및 로고는 "
+"{link_start}SmartLearn Inc.의 등록 상표 또는 상표입니다.{link_end}"
 
 #: cms/templates/widgets/header.html
 msgid "Current Course:"
@@ -24522,7 +24522,7 @@ msgstr " Open edX Portal에 액세스하십시오 "
 
 #: cms/templates/widgets/sock_links.html
 msgid "Open edX Portal"
-msgstr " 열린 edX 포털 "
+msgstr " 열린 SmartLearn 포털 "
 
 #: cms/templates/widgets/user_dropdown.html
 msgid "Currently signed in as:"
@@ -24530,7 +24530,7 @@ msgstr "현재 로그인된 사용자이름:"
 
 #: cms/templates/widgets/user_dropdown.html
 msgid "Maintenance"
-msgstr "유지"
+msgstr "유지 보수"
 
 #: wiki/apps.py
 msgid "Wiki notifications"

@@ -3340,10 +3340,10 @@ msgid ""
 "these for your records before proceeding with deletion, follow the "
 "instructions for {htmlStart}printing or downloading a certificate{htmlEnd}."
 msgstr ""
-"또한 확인 된 인증서 및 MicroMasters 인증서와 같은 기타 프로그램 자격 증명에 대한 "
+"또한 인증된 수료증 및 MicroMasters 인증서와 같은 기타 프로그램 자격 증명에 대한 "
 "액세스 권한을 잃을 수도 있습니다. 삭제를 진행하기 전에"
 "귀하의 기록을 위해 이들 사본을 만들고 싶다면, "
-"{htmlStart}인증서 인쇄 또는 다운로드 {htmlEnd}에 대한 안내를 따르십시오."
+"{htmlStart}수료증 인쇄 또는 다운로드 {htmlEnd}에 대한 안내를 따르십시오."
 
 #: common/static/bundles/StudentAccountDeletion.js
 #: common/static/bundles/StudentAccountDeletionInitializer.js
@@ -3380,7 +3380,7 @@ msgid ""
 msgstr ""
 "{strongStart} 경고 : 계정 삭제가 영구적입니다.{strongEnd}"
 "진행하기 전에 위의 내용을 주의 깊게 읽으십시오. 이것은 되돌릴 수 없는 작업이며"
-"edX.{strongEnd}에서 더 이상 동일한 이메일을 사용할 수 없게 됩니다."
+"SmartLearn.{strongEnd}에서 더 이상 동일한 이메일을 사용할 수 없게 됩니다."
 "{strongStart}"
 
 #: common/static/bundles/StudentAccountDeletion.js
@@ -3398,7 +3398,7 @@ msgid ""
 "that is deleted."
 msgstr ""
 "참고 : 계정 및 개인 정보 삭제는 영구적이며 취소 할 수 없습니다."
-"EdX는 귀하의 계정이나 삭제 된 데이터를 "
+"SmartLearn은 귀하의 계정이나 삭제 된 데이터를 "
 "복구 할 수 없습니다."
 
 #: common/static/bundles/StudentAccountDeletion.js
@@ -3411,9 +3411,9 @@ msgid ""
 "sites offered by MIT Open Learning, Wharton Executive Education, and Harvard"
 " Medical School."
 msgstr ""
-"계정이 삭제되면 app, edx.org 또는 edX에서 호스팅하는 "
+"계정이 삭제되면 app, smartlearn.kr 또는 SmartLearn에서 호스팅하는 "
 "다른 사이트에서 강의를 수강 할 수 없습니다. 여기에는 "
-"고용주 또는 대학의 시스템에서 edx.org에 액세스하고 MIT Open Learning, "
+"고용주 또는 대학의 시스템에서 smartlearn.kr에 액세스하고 MIT Open Learning, "
 "Wharton Executive Education 및 하버드 의과 대학에서 제공하는 개인 사이트에 액세스 "
 "할 수 있습니다."
 
@@ -3467,7 +3467,7 @@ msgid ""
 "your account or the data that is deleted."
 msgstr ""
 "\"내 계정 삭제\"를 선택했습니다. 계정 및 개인 데이터 삭제는 "
-"구적이며 취소 할 수 없습니다. EdX는 귀하의 계정이나 "
+"구적이며 취소 할 수 없습니다. SmartLearn은 귀하의 계정이나 "
 "삭제 된 데이터를 복구 할 수 없습니다."
 
 #: common/static/bundles/StudentAccountDeletion.js
@@ -3480,9 +3480,9 @@ msgid ""
 " sites offered by MIT Open Learning, Wharton Executive Education, and "
 "Harvard Medical School."
 msgstr ""
-"진행하면 edX 응용 프로그램, edx.org 또는 edX에서 호스팅하는 다른 사이트에서 "
+"진행하면 SmartLearn 응용 프로그램, smartlearn.kr 또는 SmartLearn에서 호스팅하는 다른 사이트에서 "
 "이 계정을 사용하여 수업을 들을 수 없습니다. 여기에는 "
-"고용주 또는 대학의 시스템에서 edx.org에 액세스하고 "
+"고용주 또는 대학의 시스템에서 smartlearn.kr에 액세스하고 "
 "MIT Open Learning, Wharton Executive Education 및 하버드 의과 대학에서 제공하는 개인 사이트에"
 " 액세스 할 수 있습니다."
 
@@ -3506,7 +3506,7 @@ msgstr "네, 삭제합니다."
 #: common/static/bundles/StudentAccountDeletionInitializer.js
 #: lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
 msgid "We're sorry to see you go! Your account will be deleted shortly."
-msgstr "떠나는게 슬퍼요. 귀하의 계정은 곧 삭제됩니다."
+msgstr "보내드리게 되어 유감입니다. 귀하의 계정은 곧 삭제됩니다."
 
 #: common/static/bundles/StudentAccountDeletion.js
 #: common/static/bundles/StudentAccountDeletionInitializer.js
@@ -4439,7 +4439,7 @@ msgid ""
 "now. Click Cancel to stay on this page (you must log in again to save your "
 "work)."
 msgstr ""
-"edX 계정에서 로그아웃 되었습니다. 확인을 클릭하여 지금 다시 로그인하십시오."
+"SmartLearn 계정에서 로그아웃 되었습니다. 확인을 클릭하여 지금 다시 로그인하십시오."
 "이 페이지에 머물려면 취소를 클릭하십시오 (작업을 저장하려면 다시 "
 "로그인 해야합니다)."
 
@@ -4559,12 +4559,12 @@ msgid ""
 "Certificate of <%= user %> has already been invalidated. Please check your "
 "spelling and retry."
 msgstr ""
-"<%= user %>의 인증서가 이미 무효화되었습니다. 철자를 확인하고 "
+"<%= user %>의 수료증이 이미 무효화되었습니다. 철자를 확인하고 "
 "다시 시도하십시오."
 
 #: lms/static/js/certificates/views/certificate_invalidation_view.js
 msgid "Certificate has been successfully invalidated for <%= user %>."
-msgstr "인증서가 <%= user %>에 대해 무효화되었습니다."
+msgstr "수료증이 <%= user %>에 대해 무효화되었습니다."
 
 #: lms/static/js/certificates/views/certificate_invalidation_view.js
 #: lms/static/js/certificates/views/certificate_whitelist.js
@@ -4577,7 +4577,7 @@ msgid ""
 "The certificate for this learner has been re-validated and the system is re-"
 "running the grade for this learner."
 msgstr ""
-"이 학습자의 인증서는 재확인되었으며 시스템은 이 학습자의 "
+"이 학습자의 수료증은 재확인되었으며 시스템은 이 학습자의 "
 "성적을 다시 실행합니다."
 
 #: lms/static/js/certificates/views/certificate_invalidation_view.js
@@ -4585,19 +4585,19 @@ msgid ""
 "Could not find Certificate Invalidation in the list. Please refresh the page"
 " and try again"
 msgstr ""
-"목록에서 인증서 무효화를 찾을 수 없습니다. 페이지를 새로고침 "
+"목록에서 수료증 무효화를 찾을 수 없습니다. 페이지를 새로고침 "
 "하십시오."
 
 #: lms/static/js/certificates/views/certificate_whitelist.js
 msgid "Student Removed from certificate white list successfully."
-msgstr "학생 인증서가 화이트리스트에서 성공적으로 제거되었습니다."
+msgstr "학생이 수료증 화이트리스트에서 성공적으로 제거되었습니다."
 
 #: lms/static/js/certificates/views/certificate_whitelist.js
 msgid ""
 "Could not find Certificate Exception in white list. Please refresh the page "
 "and try again"
 msgstr ""
-"화이트리스트에서 인증서 예외를 찾을 수 없습니다. 페이지를 새로고침하고 다시"
+"화이트리스트에서 수료증 예외를 찾을 수 없습니다. 페이지를 새로고침하고 다시"
 " 시도하십시오."
 
 #: lms/static/js/certificates/views/certificate_whitelist_editor.js
@@ -4610,7 +4610,7 @@ msgid ""
 "Generate Exception Certificate below to send the certificate."
 msgstr ""
 "<%= user %>이 (가) 예외 목록에 추가되었습니다."
-"아래 예외 인증서 생성을 클릭하여 인증서를 보내십시오."
+"아래 예외적 수료증 생성을 클릭하여 수료증을 보내십시오."
 
 #: lms/static/js/course_survey.js
 msgid "There has been an error processing your survey."
@@ -4996,7 +4996,7 @@ msgstr ""
 "이 과정은 검증 된 트랙 학습자를 위해 자동 코호트를 사용합니다. 동질 그룹을 "
 "사용 중지 할 수 없으며 '{verifiedCohortName}'이라는 수동 동질 집단의 "
 "이름을 바꿀 수 없습니다. 확인 된 트랙 동질 그룹의 구성을 변경하려면 "
-"edX 파트너 관리자에게 문의하십시오."
+"SmartLearn 파트너 관리자에게 문의하십시오."
 
 #: lms/static/js/groups/views/verified_track_settings_notification.js
 msgid ""
@@ -5034,11 +5034,11 @@ msgstr "강좌 이수증을 발급하는 동안 오류가 발생했습니다. �
 
 #: lms/static/js/instructor_dashboard/certificates.js
 msgid "Start regenerating certificates for students in this course?"
-msgstr "이 과정의 학생들을위한 인증서 재생성을 시작 하시겠습니까?"
+msgstr "이 과정의 학생들을위한 수료증 재생성을 시작 하시겠습니까?"
 
 #: lms/static/js/instructor_dashboard/certificates.js
 msgid "Error while regenerating certificates. Please try again."
-msgstr "인증서를 다시 생성하는 동안 오류가 발생했습니다. 다시 시도하십시오."
+msgstr "수료증을 다시 생성하는 동안 오류가 발생했습니다. 다시 시도하십시오."
 
 #: lms/static/js/instructor_dashboard/data_download.js
 msgid "Loading data..."
@@ -5046,7 +5046,7 @@ msgstr "데이터로드 중 ..."
 
 #: lms/static/js/instructor_dashboard/data_download.js
 msgid "Error getting issued certificates list."
-msgstr "발급 된 인증서 목록을 가져 오는 중 오류가 발생했습니다."
+msgstr "발급 된 수료증 목록을 가져 오는 중 오류가 발생했습니다."
 
 #: lms/static/js/instructor_dashboard/data_download.js
 msgid "Error generating proctored exam results. Please try again."
@@ -5875,7 +5875,7 @@ msgid ""
 "administrator or {link_start}edX Support{link_end} for help."
 msgstr ""
 "프로필 설정은 {enterprise_name}에 의해 관리됩니다. 관리자에게 "
-"도움을 요청하거나 {link_start}edX 지원 {link_end}에 문의하십시오."
+"도움을 요청하거나 {link_start}SmartLearn 지원 {link_end}에 문의하십시오."
 
 #: lms/static/js/student_account/views/account_settings_factory.js
 msgid "Email Address (Sign In)"
@@ -5897,7 +5897,7 @@ msgid ""
 "The name that is used for ID verification and that appears on your "
 "certificates."
 msgstr ""
-"ID 확인에 사용되며 인증서에 표시되는 "
+"ID 확인에 사용되며 수료증에 표시되는 "
 "이름입니다."
 
 #: lms/static/js/student_account/views/account_settings_factory.js
@@ -5995,7 +5995,7 @@ msgid ""
 "Optionally, link your personal accounts to the social media icons on your "
 "edX profile."
 msgstr ""
-"원하는 경우 개인 계정을 edX 프로필의 소셜 미디어 아이콘에 "
+"원하는 경우 개인 계정을 SmartLearn 프로필의 소셜 미디어 아이콘에 "
 "연결하십시오."
 
 #: lms/static/js/student_account/views/account_settings_factory.js
@@ -6464,11 +6464,11 @@ msgstr "프로필"
 
 #: cms/static/js/certificates/collections/certificates.js
 msgid "Could not parse certificate JSON. %(message)s"
-msgstr "인증서 JSON을 구문 분석하지 못했습니다. %(message)s"
+msgstr "수료증 JSON을 구문 분석하지 못했습니다. %(message)s"
 
 #: cms/static/js/certificates/models/certificate.js
 msgid "Certificate name is required."
-msgstr "인증서 이름은 필수입니다."
+msgstr "수료증 이름은 필수입니다."
 
 #: cms/static/js/certificates/models/certificate.js
 msgid "Signatory field(s) has invalid data."
@@ -6476,19 +6476,19 @@ msgstr "서명란 입력란에 잘못된 데이터가 있습니다."
 
 #: cms/static/js/certificates/views/certificate_details.js
 msgid "Edit this certificate?"
-msgstr "이 인증서를 수정 하시겠습니까?"
+msgstr "이 수료증을 수정 하시겠습니까?"
 
 #: cms/static/js/certificates/views/certificate_details.js
 msgid ""
 "This certificate has already been activated and is live. Are you sure you "
 "want to continue editing?"
 msgstr ""
-"이 인증서는 이미 활성화되어 라이브 상태입니다."
+"이 수료증은 이미 활성화되어 라이브 상태입니다."
 "수정을 계속 하시겠습니까?"
 
 #: cms/static/js/certificates/views/certificate_details.js
 msgid "Yes, allow edits to the active Certificate"
-msgstr "예, 활성 인증서를 편집 할 수 있습니다."
+msgstr "예, 활성 수료증을 편집 할 수 있습니다."
 
 #. Translators: This field pertains to the custom label for a certificate.
 #. Translators: this refers to a collection of certificates.
@@ -6499,13 +6499,13 @@ msgstr "증명서"
 
 #: cms/static/js/certificates/views/certificates_list.js
 msgid "Set up your certificate"
-msgstr "인증서 설정"
+msgstr "수료증 설정"
 
 #. Translators: This line refers to the initial state of the form when no data
 #. has been inserted
 #: cms/static/js/certificates/views/certificates_list.js
 msgid "You have not created any certificates yet."
-msgstr "아직 인증서를 만들지 않았습니다."
+msgstr "아직 수료증을 만들지 않았습니다."
 
 #: cms/static/js/certificates/views/signatory_editor.js
 msgid "Delete \"<%= signatoryName %>\" from the list of signatories?"
@@ -6664,7 +6664,7 @@ msgstr "등록 종료일은 코스 종료일 이후 일 수 없습니다."
 
 #: cms/static/js/models/settings/course_details.js
 msgid "The certificate available date must be later than the course end date."
-msgstr "인증서 유효 날짜는 코스 종료 날짜보다 늦어 야합니다."
+msgstr "유료증 발급 날짜는 코스 종료 날짜보다 이후이어야 합니다."
 
 #: cms/static/js/models/settings/course_details.js
 msgid "Key should only contain letters, numbers, _, or -"
@@ -7829,7 +7829,7 @@ msgstr "마지막 업데이트"
 
 #: lms/djangoapps/support/static/support/templates/certificates_results.underscore
 msgid "Download the user's certificate"
-msgstr "사용자 인증서 다운로드"
+msgstr "사용자 수료증 다운로드"
 
 #: lms/djangoapps/support/static/support/templates/certificates_results.underscore
 msgid "Not available"
@@ -7841,7 +7841,7 @@ msgstr "재 생성"
 
 #: lms/djangoapps/support/static/support/templates/certificates_results.underscore
 msgid "Regenerate the user's certificate"
-msgstr " 사용자의 인증서를 다시 생성하십시오. "
+msgstr " 사용자의 수료증을 다시 생성합니다. "
 
 #: lms/djangoapps/support/static/support/templates/certificates_results.underscore
 msgid "Generate"
@@ -7849,7 +7849,7 @@ msgstr "생성"
 
 #: lms/djangoapps/support/static/support/templates/certificates_results.underscore
 msgid "Generate the user's certificate"
-msgstr "사용자 인증서 생성"
+msgstr "사용자 수료증 생성"
 
 #: lms/djangoapps/support/static/support/templates/enrollment-modal.underscore
 msgid "Current enrollment mode:"
@@ -8381,7 +8381,7 @@ msgid ""
 "To invalidate a certificate for a particular learner, add the username or "
 "email address below."
 msgstr ""
-" 특정 학습자의 인증서를 무효화하려면 아래에 사용자 이름 또는 전자 메일 "
+" 특정 학습자의 수료증을 무효화하려면 아래에 사용자 이름 또는 전자 메일 "
 " 주소를 추가하십시오."
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-invalidation.underscore
@@ -8390,7 +8390,7 @@ msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-invalidation.underscore
 msgid "Invalidate Certificate"
-msgstr "인증서 무효화"
+msgstr "수료증 무효화"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-invalidation.underscore
 msgid "Student"
@@ -8435,11 +8435,11 @@ msgstr " 무료 문자 메모 "
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
 msgid "Generate Exception Certificates"
-msgstr " 예외 인증서 생성 "
+msgstr " 예외 수료증 생성 "
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
 msgid "All users on the Exception list who do not yet have a certificate"
-msgstr " 예외 목록에 아직 인증서가없는 모든 사용자 "
+msgstr " 예외 목록중 아직 수료증이 없는 모든 사용자 "
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
 msgid "All users on the Exception list"
@@ -8455,7 +8455,7 @@ msgstr "예외 허용"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
 msgid "Certificate Generated"
-msgstr "인증서 생성"
+msgstr "수료증 생성됨"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
 msgid "Remove from List"
@@ -8686,11 +8686,11 @@ msgstr "유효한"
 #: lms/templates/learner_dashboard/certificate_status.underscore
 #: lms/templates/learner_dashboard/upgrade_message.underscore
 msgid "Certificate Status:"
-msgstr "인증서 상태:"
+msgstr "수료증 상태:"
 
 #: lms/templates/learner_dashboard/certificate_status.underscore
 msgid "Certificate Purchased"
-msgstr "구입한 인증서"
+msgstr "구입한 수료증"
 
 #: lms/templates/learner_dashboard/course_card.underscore
 msgid "Change or Leave Session"
@@ -8818,12 +8818,12 @@ msgstr "%(programName)s 홈페이지"
 
 #: lms/templates/learner_dashboard/program_details_sidebar.underscore
 msgid "Your {program} Certificate"
-msgstr "{program} 인증서"
+msgstr "{program} 수료증"
 
 #: lms/templates/learner_dashboard/program_details_sidebar.underscore
 #, python-format
 msgid "Open the certificate you earned for the %(title)s program."
-msgstr " %(title)s 프로그램에 대해 얻은 인증서를 엽니 다."
+msgstr " %(title)s 프로그램에 대해 얻은 수료증을 엽니 다."
 
 #: lms/templates/learner_dashboard/program_details_sidebar.underscore
 msgid "Program Record"
@@ -8870,7 +8870,7 @@ msgid ""
 "To complete the program, you must earn a verified certificate for each "
 "course."
 msgstr ""
-" 프로그램을 완료하려면 각 과정에 대해 확인 된 인증서를 "
+" 프로그램을 완료하려면 각각의 과정에 대해 인증된 수료증을 "
 " 받아야합니다."
 
 #: lms/templates/learner_dashboard/program_details_view.underscore
@@ -8913,7 +8913,7 @@ msgstr "{organization}\\'s 로고"
 
 #: lms/templates/learner_dashboard/upgrade_message.underscore
 msgid "Needs verified certificate "
-msgstr " 확인된 인증서가 필요합니다. "
+msgstr " 확인된 수료증이 필요합니다. "
 
 #: lms/templates/learner_dashboard/upgrade_message.underscore
 msgid "Upgrade to Verified"
@@ -8976,7 +8976,7 @@ msgstr " 기관 / 캠퍼스 자격증 명 등록 "
 
 #: lms/templates/student_account/institution_register.underscore
 msgid "Register through edX"
-msgstr " edX를 통해 등록 "
+msgstr " SmartLearn을 통해 등록 "
 
 #: lms/templates/student_account/login.underscore
 msgid "First time here?"
@@ -8998,7 +8998,7 @@ msgstr " 학습을 계속하려면 로그인하십시오. "
 msgid ""
 "You already have an edX account with your {enterprise_name} email address."
 msgstr ""
-" {enterprise_name} 이메일 주소가있는 edX 계정이 이미 있습니다."
+" {enterprise_name} 이메일 주소가있는 SmartLearn 계정이 이미 있습니다."
 
 #: lms/templates/student_account/login.underscore
 msgid ""
@@ -9133,7 +9133,7 @@ msgid ""
 "submit photos for verification again."
 msgstr ""
 " 사진을 제출해 주셔서 감사합니다. 우리는 곧 그들을 검토 할 것입니다. "
-" 이제 인증 된 인증서를 제공하는 모든 %(platformName)s 코스에 등록 할 수 있습니다."
+" 이제 인증된 수료증을 제공하는 모든 %(platformName)s 코스에 등록 할 수 있습니다."
 " 검증은 1 년 동안 유효합니다. 1 년 후에 다시 확인을 "
 " 위해 사진을 제출해야합니다."
 
@@ -9394,7 +9394,7 @@ msgid ""
 "Certificate."
 msgstr ""
 " 다음 항목을 사용할 수 없더라도 지금 지불 할 수 있지만 "
-" 확인된 인증서를 받을 수있는 자격을 얻으려면 {date}까지 "
+" 인증된 수료증을 받을 수있는 자격을 얻으려면 {date}까지 "
 " 인증해야합니다."
 
 #: lms/templates/verify_student/make_payment_step.underscore
@@ -9423,7 +9423,7 @@ msgid ""
 "you will need to have these to qualify to earn a Verified Certificate."
 msgstr ""
 " 다음 항목을 사용할 수 없더라도 지금 지불 할 수 있지만 "
-" 검증된 인증서를 획득하려면 자격이 필요합니다."
+" 인증된 수료증을 획득하려면 자격이 필요합니다."
 
 #: lms/templates/verify_student/make_payment_step.underscore
 msgid "Government-Issued Photo ID"
@@ -9461,13 +9461,13 @@ msgstr " 계정이 활성화되지 않음 "
 
 #: lms/templates/verify_student/make_payment_step_ab_testing.underscore
 msgid "Upgrade to a Verified Certificate for {courseName}"
-msgstr " {courseName}의 확인된 인증서로 업그레이드하십시오."
+msgstr " {courseName}의 인증과정으로 업그레이드하십시오."
 
 #: lms/templates/verify_student/make_payment_step_ab_testing.underscore
 msgid ""
 "Before you upgrade to a certificate track, you must activate your account."
 msgstr ""
-" 인증서 트랙으로 업그레이드하기 전에 계정을 활성화해야합니다."
+" 인증 과정으로 업그레이드하기 전에 계정을 활성화해야합니다."
 
 #: lms/templates/verify_student/make_payment_step_ab_testing.underscore
 msgid "Check your email for an activation message."
@@ -9475,21 +9475,21 @@ msgstr " 이메일에서 활성화 메시지를 확인하십시오."
 
 #: lms/templates/verify_student/make_payment_step_ab_testing.underscore
 msgid "Professional Certificate for {courseName}"
-msgstr " {courseName}의 전문 인증서"
+msgstr " {courseName}의 전문과정 수료증"
 
 #: lms/templates/verify_student/make_payment_step_ab_testing.underscore
 msgid "Verified Certificate for {courseName}"
-msgstr " {courseName}의 확인 된 인증서"
+msgstr " {courseName}의 인증과정 수료증"
 
 #: lms/templates/verify_student/make_payment_step_ab_testing.underscore
 msgid ""
 "To receive a certificate, you must also verify your identity before {date}."
 msgstr ""
-" 인증서를 받으려면 {date} 이전에 신원을 확인해야합니다."
+" 수료증을 받으려면 {date} 이전에 신원을 확인해야합니다."
 
 #: lms/templates/verify_student/make_payment_step_ab_testing.underscore
 msgid "To receive a certificate, you must also verify your identity."
-msgstr " 인증서를 받으려면 신원을 확인해야합니다. "
+msgstr " 수료증을 받으려면 신원을 확인해야합니다. "
 
 #: lms/templates/verify_student/make_payment_step_ab_testing.underscore
 msgid ""
@@ -9726,8 +9726,8 @@ msgid ""
 "Backpack account. Complete the following steps to add your certificate to "
 "Backpack."
 msgstr ""
-" Mozilla Backpack에서 인증서를 공유하려면 먼저 Backpack "
-" 계정이 있어야합니다. 배낭에 인증서를 추가하려면 다음 단계를 "
+" Mozilla Backpack에서 수료증을 공유하려면 먼저 Backpack "
+" 계정이 있어야합니다. 배낭에 수료증을 추가하려면 다음 단계를 "
 " 완료하십시오."
 
 #: openedx/features/learner_profile/static/learner_profile/templates/share_modal.underscore
@@ -9918,7 +9918,7 @@ msgstr "ID"
 #: cms/templates/js/certificate-details.underscore
 #: cms/templates/js/certificate-editor.underscore
 msgid "Certificate Details"
-msgstr " 인증서 세부 정보 "
+msgstr " 수료증 세부 정보 "
 
 #: cms/templates/js/certificate-details.underscore
 #: cms/templates/js/certificate-editor.underscore
@@ -9941,7 +9941,7 @@ msgstr "코스 번호 재설정"
 #: cms/templates/js/certificate-details.underscore
 #: cms/templates/js/certificate-editor.underscore
 msgid "Certificate Signatories"
-msgstr " 인증서 서명자 "
+msgstr " 수료증 서명자 "
 
 #: cms/templates/js/certificate-details.underscore
 #: cms/templates/js/certificate-editor.underscore
@@ -9951,24 +9951,24 @@ msgid ""
 " ensure the certificate will print correctly on one page."
 msgstr ""
 " 서명자는 4 명 이하로 하는것이 좋습니다. 서명자를 "
-" 추가하는 경우 인쇄보기에서 인증서를 미리보기 하셔서 "
-" 인증서가 한 페이지에 올바르게 인쇄되는지 확인하실 수 있습니다."
+" 추가하는 경우 인쇄보기에서 수료증을 미리보기 하셔서 "
+" 수료증이 한 페이지에 올바르게 인쇄되는지 확인하실 수 있습니다."
 
 #: cms/templates/js/certificate-editor.underscore
 msgid "Certificate Information"
-msgstr " 인증서 정보 "
+msgstr " 수료증 정보 "
 
 #: cms/templates/js/certificate-editor.underscore
 msgid "Certificate Name"
-msgstr "인증서명"
+msgstr "수료명"
 
 #: cms/templates/js/certificate-editor.underscore
 msgid "Name of the certificate"
-msgstr " 인증서 이름 "
+msgstr " 수료증 이름 "
 
 #: cms/templates/js/certificate-editor.underscore
 msgid "Description of the certificate"
-msgstr "인증서 설명"
+msgstr "수료증 설명"
 
 #: cms/templates/js/certificate-editor.underscore
 msgid "Course title"
@@ -9979,7 +9979,7 @@ msgid ""
 "Specify an alternative to the official course title to display on "
 "certificates. Leave blank to use the official course title."
 msgstr ""
-" 인증서에 표시 할 공식 코스 제목에 대한 대안을 지정하십시오. "
+" 수료증에 표시 할 공식 코스 제목에 대한 대안을 지정하십시오. "
 " 공식 코스 제목을 사용하려면 비워 둡니다."
 
 #: cms/templates/js/certificate-editor.underscore
@@ -9988,7 +9988,7 @@ msgstr " 추가 서명자 추가"
 
 #: cms/templates/js/certificate-editor.underscore
 msgid "(Add signatories for a certificate)"
-msgstr " (인증서 서명자 추가)"
+msgstr " (수료증 서명자 추가)"
 
 #: cms/templates/js/certificate-web-preview.underscore
 msgid "Choose mode"
@@ -9996,7 +9996,7 @@ msgstr "모드 선택"
 
 #: cms/templates/js/certificate-web-preview.underscore
 msgid "Preview Certificate"
-msgstr " 인증서 미리보기 "
+msgstr " 수료증 미리보기 "
 
 #: cms/templates/js/certificate-web-preview.underscore
 msgid "Activate"
@@ -10981,7 +10981,7 @@ msgstr "서명 이미지"
 
 #: cms/templates/js/signatory-editor.underscore
 msgid "Certificate Signatory Configuration"
-msgstr " 인증서 서명 구성 "
+msgstr " 수료증 서명 구성 "
 
 #: cms/templates/js/signatory-editor.underscore
 msgid "Name "
@@ -10993,7 +10993,7 @@ msgstr "서명자 이름"
 
 #: cms/templates/js/signatory-editor.underscore
 msgid "The name of this signatory as it should appear on certificates."
-msgstr "이 서명자의 이름은 인증서에 표시되어야 합니다."
+msgstr "이 서명자의 이름은 수료증에 표시되어야 합니다."
 
 #: cms/templates/js/signatory-editor.underscore
 msgid "Title "
@@ -11008,7 +11008,7 @@ msgid ""
 "Titles more than 100 characters may prevent students from printing their "
 "certificate on a single page."
 msgstr ""
-" 100 자 이상의 제목은 학생들이 한 페이지에 자신의 인증서를 인쇄하지 "
+" 100 자 이상의 제목은 학생들이 한 페이지에 자신의 수료증을 인쇄하지 "
 "못하게 할 수 있습니다."
 
 #: cms/templates/js/signatory-editor.underscore
@@ -11024,8 +11024,8 @@ msgid ""
 "The organization that this signatory belongs to, as it should appear on "
 "certificates."
 msgstr ""
-"이 서명자가 속한 조직으로 인증서에 "
-"표시되어야합니다."
+"이 서명자가 속한 조직으로 수료증에 "
+"표시됩니다."
 
 #: cms/templates/js/signatory-editor.underscore
 msgid "Path to Signature Image"
@@ -11384,7 +11384,7 @@ msgid ""
 "transcript, you can download, edit, and re-upload the existing transcript. "
 "If you want to replace this transcript, upload a new .srt transcript file."
 msgstr ""
-"EdX에는이 비디오에 대한 시간 기록이 있습니다. "
+"SmartLearn에는 이 비디오에 대한 시간 기록이 있습니다. "
 "이 사본을 편집하려면 기존 사본을 다운로드, 편집하고 다시 업로드하십시오."
 "이 사본을 바꾸려면 새 .srt 사본 파일을 업로드하십시오."
 
@@ -11409,7 +11409,7 @@ msgstr " 편집을 위해 대본 다운로드 "
 
 #: cms/templates/js/video/transcripts/messages/transcripts-import.underscore
 msgid "No EdX Timed Transcript"
-msgstr " EdX 시간 기록이 없음"
+msgstr " SmartLearn 시간 기록이 없음"
 
 #: cms/templates/js/video/transcripts/messages/transcripts-import.underscore
 msgid ""
@@ -11417,7 +11417,7 @@ msgid ""
 " transcript on YouTube. You can import the YouTube transcript or upload your"
 " own .srt transcript file."
 msgstr ""
-"EdX에는 스튜디오에 이 비디오에 대한 시간 기록이 없지만 YouTube에 사본이 있습니다. "
+"SmartLearn에는 스튜디오에 이 비디오에 대한 시간 기록이 없지만 YouTube에 사본이 있습니다. "
 " YouTube 스크립트를 가져오거나 자신의 .srt 스크립트 파일을 업로드"
 " 할 수 있습니다."
 
@@ -11434,7 +11434,7 @@ msgid ""
 "EdX doesn\\'t have a timed transcript for this video. Please upload an .srt "
 "file."
 msgstr ""
-"EdX는이 비디오에 대한 시간 기록을 가지고 있지 않습니다. .srt 파일을 "
+"SmartLearn에는 이 비디오에 대한 시간 기록을 가지고 있지 않습니다. .srt 파일을 "
 "업로드하십시오."
 
 #: cms/templates/js/video/transcripts/messages/transcripts-replace.underscore
@@ -11442,16 +11442,16 @@ msgid ""
 "The timed transcript for this video on edX is out of date, but YouTube has a"
 " current timed transcript for this video."
 msgstr ""
-" edX에서 이 비디오에 대한 시간 기록이 오래되었지만 YouTube에서 이 비디오에 "
+" SmartLearn에서 이 비디오에 대한 시간 기록이 오래되었지만 YouTube에서 이 비디오에 "
 " 대한 현재 시간 기록을 가지고 있습니다."
 
 #: cms/templates/js/video/transcripts/messages/transcripts-replace.underscore
 msgid "Do you want to replace the edX transcript with the YouTube transcript?"
-msgstr " edX 사본을 YouTube 사본으로 바꾸시겠습니까?"
+msgstr " SmartLearn 자막을 YouTube 자막으로 바꾸시겠습니까?"
 
 #: cms/templates/js/video/transcripts/messages/transcripts-replace.underscore
 msgid "Yes, replace the edX transcript with the YouTube transcript"
-msgstr " 예, edX 대본을 YouTube 대본으로 대체하십시오. "
+msgstr " 예, SmartLearn 자막을 YouTube 자막으로 대체하십시오. "
 
 #: cms/templates/js/video/transcripts/messages/transcripts-uploaded.underscore
 msgid "Timed Transcript Uploaded Successfully"
@@ -11463,7 +11463,7 @@ msgid ""
 "transcript, upload a new .srt transcript file. If you want to edit this "
 "transcript, you can download, edit, and re-upload the existing transcript."
 msgstr ""
-"EdX에는이 비디오에 대한 시간 기록이 있습니다. 이 사본을 바꾸려면 "
+"SmartLearn에는 이 비디오에 대한 시간 기록이 있습니다. 이 사본을 바꾸려면 "
 "새 .srt 사본 파일을 업로드하십시오. 이 사본을 편집하려면 "
 "기존 사본을 다운로드하고 편집하고 다시 업로드하십시오."
 
