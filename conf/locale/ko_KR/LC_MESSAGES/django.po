@@ -704,7 +704,7 @@ msgstr "{platform_name} {course_name}의 인증과정 수료증"
 #: common/djangoapps/student/models.py
 #, python-brace-format
 msgid "{platform_name} Professional Certificate for {course_name}"
-msgstr "{course_name}의 {platform_name} 전문과정 수료증"
+msgstr "{course_name}의 {platform_name} 전문가과정 수료증"
 
 #: common/djangoapps/student/models.py
 msgid ""
@@ -18064,7 +18064,7 @@ msgstr "청강"
 
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
 msgid "Professional"
-msgstr "전문과정"
+msgstr "전문가과정"
 
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
 msgid "Basic Course Information"
