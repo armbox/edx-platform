@@ -3,51 +3,103 @@ metadata:
     display_name: overview
 
 data: |
-    <section class="about">
-      <h2>About This Course</h2>
-      <p>Include your long course description here. The long course description should contain 150-400 words.</p>
+    <h2>강좌 소개</h2>
 
-      <p>This is paragraph 2 of the long course description. Add more paragraphs as needed. Make sure to enclose them in paragraph tags.</p>
-    </section>
+    <p>강좌 소개에 대한 설명을 입력합니다.</p>
 
-    <section class="prerequisites">
-      <h2>Requirements</h2>
-      <p>Add information about the skills and knowledge students need to take this course.</p>
-    </section>
+    <p>
+        <br>
+    </p>
 
-    <section class="course-staff">
-      <h2>Course Staff</h2>
-      <article class="teacher">
-        <div class="teacher-image">
-          <img src="/static/images/placeholder-faculty.png" align="left" style="margin:0 20 px 0" alt="Course Staff Image #1">
+    <h2>강좌 목차</h2>
+
+    <table style="width: 100%;">
+        <thead>
+        <tr>
+            <th colspan="2" style="text-align: center;">주차</th>
+            <th style="text-align: center;">주차</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td rowspan="3" style="width: 9.771%; text-align: center; vertical-align: top;">1</td>
+            <td rowspan="3" style="width: 40%;">주차 제목</td>
+            <td style="width: 50.0000%;">소주제 1</td>
+        </tr>
+        <tr>
+            <td style="width: 50.0000%;">소주제 2</td>
+        </tr>
+        <tr>
+            <td>소주제 3</td>
+        </tr>
+        <tr>
+            <td rowspan="2" style="text-align: center;">2</td>
+            <td rowspan="2">주차 제목</td>
+            <td>소주제 1</td>
+        </tr>
+        <tr>
+            <td>
+                <br>
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="2">
+                <div data-empty="true" style="text-align: center;">3</div>
+            </td>
+            <td rowspan="2">주차 제목</td>
+            <td>소주제 1</td>
+        </tr>
+        <tr>
+            <td>
+                <br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <br>
+            </td>
+            <td>
+                <br>
+            </td>
+            <td>
+                <br>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <p>
+        <br>
+    </p>
+
+    <h2>교수자</h2>
+    <article class="teacher">
+        <div class="teacher-image"><img src="" width="80" height="80" alt="Teacher Image" class="fr-fic fr-dii"></div>
+        <div class="biography">
+
+        <h3>이름</h3>
+
+        <p>연혁1</p>
+
+        <p>연혁2</p>
         </div>
+    </article>
 
-        <h3>Staff Member #1</h3>
-        <p>Biography of instructor/staff member #1</p>
-      </article>
+    <p>
+        <br>
+    </p>
 
-      <article class="teacher">
-        <div class="teacher-image">
-          <img src="/static/images/placeholder-faculty.png" align="left" style="margin:0 20 px 0" alt="Course Staff Image #2">
+    <h2>조교</h2>
+    <article class="teacher">
+        <div class="teacher-image"><img src="" width="80" height="80" alt="Teacher Image" class="fr-fic fr-dii"></div>
+        <div class="biography">
+
+        <h3>이름</h3>
+
+        <p>연혁1</p>
         </div>
+    </article>
 
-        <h3>Staff Member #2</h3>
-        <p>Biography of instructor/staff member #2</p>
-      </article>
-    </section>
-
-    <section class="faq">
-      <section class="responses">
-        <h2>Frequently Asked Questions</h2>
-        <article class="response">
-          <h3>What web browser should I use?</h3>
-          <p>The Open edX platform works best with current versions of Chrome, Edge, Firefox, Internet Explorer, or Safari.</p>
-          <p>See our <a href="https://edx.readthedocs.org/projects/open-edx-learner-guide/en/latest/front_matter/browsers.html">list of supported browsers</a> for the most up-to-date information.</p>
-        </article>
-
-        <article class="response">
-          <h3>Question #2</h3>
-          <p>Your answer would be displayed here.</p>
-        </article>
-      </section>
-    </section>
+    <p>
+        <br>
+    </p>
