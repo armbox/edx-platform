@@ -6087,7 +6087,7 @@ msgstr "강좌 계획"
 #: lms/templates/peer_grading/peer_grading.html
 #: lms/templates/ux/reference/bootstrap/course-skeleton.html
 msgid "Progress"
-msgstr "진도"
+msgstr "성취"
 
 #: cms/templates/textbooks.html cms/templates/widgets/header.html
 msgid "Textbooks"
@@ -16218,7 +16218,7 @@ msgstr " {}에 시작합니다."
 
 #: lms/templates/courseware/progress.html
 msgid "{course_number} Progress"
-msgstr "{course_number} 진도"
+msgstr "{course_number} 성취"
 
 #: lms/templates/courseware/progress.html
 msgid "View Grading in studio"
