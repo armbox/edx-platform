@@ -160,7 +160,15 @@ define(['jquery', 'underscore', 'backbone', 'gettext', 'js/views/modals/base_mod
                 var self = this,
                     editorView = this.editorView,
                     xblockInfo = this.xblockInfo,
-                    data = editorView.getXBlockFieldData();
+                    data;
+                try {
+                  data = editorView.getXBlockFieldData();
+                } catch (e) {
+                  console.warn(`${e.name}: ${e.message}`);
+                  if (e.message && e.message.startsWith('Invalid XML:')) {
+                    alert(e.message);
+                  }
+                }
                 event.preventDefault();
                 if (data) {
                     ViewUtils.runOperationShowingMessage(gettext('Saving'),
