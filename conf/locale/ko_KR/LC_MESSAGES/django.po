@@ -23660,7 +23660,7 @@ msgstr "등록 종료일"
 
 #: cms/templates/settings.html
 msgid "Last day students can enroll."
-msgstr " 마지막 날에 학생들이 등록할 수 있습니다."
+msgstr " 학생들이 등록할 수 있는 마지막날."
 
 #: cms/templates/settings.html
 msgid "Contact your edX partner manager to update these settings."
@@ -23684,7 +23684,7 @@ msgid ""
 " that are taught in a specific language. It is also used to localize the "
 "'From:' field in bulk emails."
 msgstr ""
-" 여기에서 코스 언어를 확인하십시오. 이것은 사용자가 특정 언어로 진행되는 "
+" 코스의 언어를 지정하세요, 사용자가 특정 언어로 진행되는 "
 " 강좌를 찾는 것을 돕기 위해 사용됩니다. 대량 이메일의 '보낸 사람 :'입력란을 "
 " 현지화하는데도 사용됩니다."
 
@@ -23738,7 +23738,7 @@ msgstr "강좌에 대한 짧은 소개"
 msgid ""
 "Appears on the course catalog page when students roll over the course name. "
 "Limit to ~150 characters"
-msgstr "학습자가 강좌명을 눌러보면 강좌 목록에 나타납니다. 150자 이내로 작성해야 합니다."
+msgstr "학습자가 강좌 목록에서 강좌명에 커서를 올렸을때 나타납니다. 150자 이내로 작성해야 합니다."
 
 #: cms/templates/settings.html
 msgid "Course Overview"
@@ -23753,8 +23753,8 @@ msgid ""
 "Introductions, prerequisites, FAQs that are used on {a_link_start}your "
 "course summary page{a_link_end} (formatted in HTML)"
 msgstr ""
-" 소개, 필수 조건, {a_link_start} 코스 요약 페이지 {a_link_end} "
-"(HTML 형식)에 사용되는 FAQ "
+" 소개, 선행과목, FAQ 등 {a_link_start} 코스 요약 페이지 {a_link_end} "
+"(HTML 형식)에 사용되는 내용"
 
 #: cms/templates/settings.html
 msgid "Course About Sidebar HTML"
@@ -23910,7 +23910,7 @@ msgstr "주간 학습 권장 시간"
 
 #: cms/templates/settings.html
 msgid "Time spent on all course work"
-msgstr "주별 학습에 투자하길 권장하는 시간"
+msgstr "학습에 투자하길 권장하는 시간(매주)"
 
 #: cms/templates/settings.html
 msgid "Prerequisite Course"
