@@ -60,6 +60,7 @@ def signin_user(request):
         ),
         'third_party_auth_error': third_party_auth_error
     }
+    context['uses_bootstrap'] = True
 
     return render_to_response('login.html', context)
 
