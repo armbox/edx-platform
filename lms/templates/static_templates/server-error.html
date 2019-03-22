@@ -3,10 +3,13 @@
 <%!
 from django.utils.translation import ugettext as _
 from openedx.core.djangolib.markup import HTML, Text
+import smartlearn.send_msg
 %>
 <%inherit file="../main.html" />
 
 <main id="main" aria-label="Content" tabindex="-1">
+    % if smartlearn.send_msg.zalert("error 500 : "+ request.build_absolute_uri() ):
+    % endif
     <section class="outside-app">
         <h1>
             <%block name="pageheader">
