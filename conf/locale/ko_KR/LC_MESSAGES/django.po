@@ -5512,13 +5512,13 @@ msgstr "{platform_name} 실적 정보"
 #. for the certificate
 #: lms/djangoapps/certificates/views/webview.py
 msgid "Issued On:"
-msgstr "발급일:"
+msgstr "발급일"
 
 #. Translators:  The Certificate ID Number is an alphanumeric value unique to
 #. each individual certificate
 #: lms/djangoapps/certificates/views/webview.py
 msgid "Certificate ID Number"
-msgstr " 수료증 ID 번호 "
+msgstr "인증번호"
 
 #: lms/djangoapps/certificates/views/webview.py
 #: lms/templates/certificates/invalid.html
