@@ -47,7 +47,7 @@ import third_party_auth
 from third_party_auth import pipeline, provider
 from third_party_auth.saml import SAP_SUCCESSFACTORS_SAML_KEY
 from util.db import outer_atomic
-
+import smartlearn.auth
 
 log = logging.getLogger("edx.student")
 AUDIT_LOG = logging.getLogger("audit")
@@ -177,7 +177,7 @@ def create_account_with_params(request, params):
         user, do_external_auth, running_pipeline, third_party_provider,
     )
 
-    if skip_email:
+    if skip_email or smartlearn.auth.skip_email(params):
         registration.activate()
     else:
         compose_and_send_activation_email(user, profile, registration)

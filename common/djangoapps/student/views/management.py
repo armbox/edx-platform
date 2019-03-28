@@ -186,6 +186,7 @@ def index(request, extra_context=None, user=AnonymousUser()):
 
     # TODO: Course Listing Plugin required
     context['journal_info'] = get_journals_context(request)
+    context['uses_bootstrap'] = True
 
     return render_to_response('index.html', context)
 
