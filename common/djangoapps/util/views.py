@@ -116,7 +116,7 @@ def jsonable_server_error(request, template_name='500.html'):
         return server_error(request, template_name=template_name)
 
 
-def handle_500(template_path, context=None, test_func=None):
+def handle_500(template_path, context={}, test_func=None):
     """
     Decorator for view specific 500 error handling.
     Custom handling will be skipped only if test_func is passed and it returns False
@@ -153,6 +153,8 @@ def handle_500(template_path, context=None, test_func=None):
                     #   1. test_func is None (meaning nothing to test)
                     #   2. or test_func(request) returns True
                     log.exception("Error in django view.")
+                    context['uses_bootstrap'] = True
+
                     return render_to_response(template_path, context)
                 else:
                     # Do not show custom 500 error when test fails
