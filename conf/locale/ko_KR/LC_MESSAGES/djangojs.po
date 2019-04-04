@@ -10442,7 +10442,7 @@ msgid ""
 "The number of assignments of this type that will be dropped. The lowest "
 "scoring assignments are dropped first."
 msgstr ""
-" 삭제 될이 유형의 배정 수입니다. 최저 점수 부여 "
+" 삭제 될 이 유형의 배정 수입니다. 최저 점수 부여 "
 " 과제가 먼저 삭제됩니다."
 
 #: cms/templates/js/course_info_handouts.underscore
