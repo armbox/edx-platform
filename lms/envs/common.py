@@ -3019,6 +3019,8 @@ ACCOUNT_VISIBILITY_CONFIGURATION = {
         "username",
         "email",
         "is_active",
+        "is_staff",
+        "is_superuser",
         "bio",
         "country",
         "date_joined",
