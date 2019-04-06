@@ -6087,7 +6087,7 @@ msgstr "강좌 계획"
 #: lms/templates/peer_grading/peer_grading.html
 #: lms/templates/ux/reference/bootstrap/course-skeleton.html
 msgid "Progress"
-msgstr "성취"
+msgstr "진도"
 
 #: cms/templates/textbooks.html cms/templates/widgets/header.html
 msgid "Textbooks"
