@@ -5636,7 +5636,7 @@ msgstr "요청자"
 #. appears after this
 #: lms/static/js/instructor_dashboard/util.js
 msgid "Submitted"
-msgstr "제출했습니다."
+msgstr "요청시간"
 
 #. Translators: The length of a task (eg, sending email) in seconds appears
 #. this
