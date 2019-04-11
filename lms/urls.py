@@ -155,11 +155,6 @@ if settings.FEATURES.get('ENABLE_OPENBADGES'):
         url(r'^api/badges/v1/', include('badges.api.urls', app_name='badges', namespace='badges_api')),
     ]
 
-urlpatterns += (
-  url(r'^react-lms/',
-    include('react_lms.urls', namespace='react-lms')),
-)
-
 urlpatterns += [
     url(r'^openassessment/fileupload/', include('openassessment.fileupload.urls')),
 ]
