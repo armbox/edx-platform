@@ -11601,7 +11601,7 @@ msgstr ""
 #: lms/templates/api_admin/terms_of_service.html
 #: openedx/features/course_experience/templates/course_experience/course-updates-fragment.html
 msgid "Updates"
-msgstr "업데이트"
+msgstr "공지사항"
 
 #: openedx/features/course_experience/plugins.py
 #: openedx/features/course_experience/templates/course_experience/course-reviews-fragment.html
@@ -15976,7 +15976,7 @@ msgstr "보여주기"
 
 #: lms/templates/courseware/course_updates.html
 msgid "Show Earlier Course Updates"
-msgstr " 이전 코스 업데이트 표시 "
+msgstr " 이전 코스 공지사항 표시 "
 
 #: lms/templates/courseware/courses.html
 msgid "List of Courses"
@@ -16076,11 +16076,11 @@ msgstr "코스 다시 시작"
 
 #: lms/templates/courseware/info.html
 msgid "View Updates in Studio"
-msgstr " 스튜디오에서 업데이트보기 "
+msgstr " 스튜디오에서 공지사항 보기 "
 
 #: lms/templates/courseware/info.html
 msgid "Course Updates and News"
-msgstr " 코스 업데이트와 뉴스 "
+msgstr " 코스 공지사항과 뉴스 "
 
 #: lms/templates/courseware/info.html
 msgid "Handout Navigation"
