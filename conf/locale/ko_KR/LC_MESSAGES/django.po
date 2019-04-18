@@ -5924,7 +5924,7 @@ msgstr " 이 코스는 {course_end_time}에 {time_remaining_string}(으)로 끝�
 
 #: lms/djangoapps/courseware/date_summary.py
 msgid "Certificate Available"
-msgstr " 수료증이 발급 되었습니다."
+msgstr " 수료증 발급일"
 
 #: lms/djangoapps/courseware/date_summary.py
 msgid "Day certificates will become available for passing verified learners."
