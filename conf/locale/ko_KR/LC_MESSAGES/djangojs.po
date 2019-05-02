@@ -8054,7 +8054,7 @@ msgstr "모두 확장"
 
 #: lms/templates/ccx/schedule.underscore
 msgid "Collapse All"
-msgstr "모든 축소"
+msgstr "모두 축소"
 
 #: lms/templates/ccx/schedule.underscore
 msgid "Start Date"
