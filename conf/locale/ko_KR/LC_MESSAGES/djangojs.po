@@ -6415,8 +6415,8 @@ msgid ""
 "Tell other learners a little about yourself: where you live, what your "
 "interests are, why you're taking courses, or what you hope to learn."
 msgstr ""
-"다른 학습자에게 자신에 대해 조금 이야기하십시오 : 당신이 살고있는 곳, 관심사, "
-"코스를 가져가는 이유 또는 배우고 자하는 바를 알려주세요."
+"다른 학습자에게 자신에 대해 조금 알려주세요 : 당신이 살고있는 곳, 관심사, "
+"코스를 수강하는 이유 또는 배우고자 하는 바를 알려주세요."
 
 #: openedx/features/learner_profile/static/learner_profile/js/views/badge_list_container.js
 msgid "Accomplishments Pagination"
