@@ -118,7 +118,7 @@ msgstr ""
 #: lms/djangoapps/discussion/templates/discussion/discussion_profile_page.html
 #: lms/templates/ux/reference/bootstrap/course-skeleton.html
 msgid "Discussion"
-msgstr "토론"
+msgstr "Q&A"
 
 #: cms/djangoapps/contentstore/views/component.py
 #: lms/djangoapps/class_dashboard/dashboard_data.py
@@ -7404,7 +7404,7 @@ msgstr "코호트"
 #: lms/djangoapps/instructor/views/instructor_dashboard.py
 #: lms/djangoapps/discussion/templates/discussion/discussion_board_fragment.html
 msgid "Discussions"
-msgstr "토론"
+msgstr "Q&A"
 
 #: lms/templates/ccx/coach_dashboard.html
 msgid "Student Admin"
@@ -20887,7 +20887,7 @@ msgstr "{course_mode} 수료증"
 
 #: openedx/features/learner_profile/templates/learner_profile/learner-achievements-fragment.html
 msgid "You haven't earned any certificates yet."
-msgstr " 아직 수료증을 받지 못했습니다."
+msgstr "아직 받은 수료증이 없습니다."
 
 #: openedx/features/learner_profile/templates/learner_profile/learner-achievements-fragment.html
 #: themes/edx.org/lms/templates/dashboard.html

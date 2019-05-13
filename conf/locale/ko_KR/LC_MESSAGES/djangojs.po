@@ -7587,7 +7587,7 @@ msgstr "소식 업데이트"
 
 #: common/static/common/templates/discussion/thread-list-item.underscore
 msgid "discussion"
-msgstr "토론"
+msgstr "Q&A"
 
 #: common/static/common/templates/discussion/thread-list-item.underscore
 msgid "answered question"
@@ -7713,7 +7713,7 @@ msgstr "질문"
 
 #: common/static/common/templates/discussion/thread-type.underscore
 msgid "Discussion"
-msgstr "토론"
+msgstr "Q&A"
 
 #: common/static/common/templates/discussion/thread.underscore
 msgid "Add a Response"
@@ -9702,7 +9702,7 @@ msgstr " 당신이 다음 성취하려는 것은 무엇입니까?"
 
 #: openedx/features/learner_profile/static/learner_profile/templates/badge_placeholder.underscore
 msgid "Start working toward your next learning goal."
-msgstr " 다음 학습 목표를 향해 일하기 시작하십시오."
+msgstr " 다음 학습 목표를 향해 노력하세요."
 
 #: openedx/features/learner_profile/static/learner_profile/templates/badge_placeholder.underscore
 msgid "Find a course"
