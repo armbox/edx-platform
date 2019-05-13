@@ -10202,7 +10202,7 @@ msgstr " 라이브 콘텐츠에 대한 게시되지 않은 변경 사항 "
 
 #: cms/templates/js/course-outline.underscore
 msgid "Unpublished units will not be released"
-msgstr " 미공개 유닛는 공개되지 않습니다. "
+msgstr " 미공개 유닛은 공개되지 않습니다. "
 
 #: cms/templates/js/course-outline.underscore
 msgid "Unpublished changes to content that will release in the future"
