@@ -3649,7 +3649,7 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/html_module.py
 msgid "Editor"
-msgstr "편집자"
+msgstr "편집기"
 
 #: common/lib/xmodule/xmodule/html_module.py
 msgid "Visual"

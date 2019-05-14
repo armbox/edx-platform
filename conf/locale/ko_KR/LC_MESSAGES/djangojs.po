@@ -965,7 +965,7 @@ msgstr "번역 업로드"
 
 #: cms/static/js/views/xblock_editor.js common/static/bundles/commons.js
 msgid "Editor"
-msgstr "편집자"
+msgstr "편집기"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-editor.underscore
 msgid "Settings"
