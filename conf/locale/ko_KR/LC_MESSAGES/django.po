@@ -25673,3 +25673,7 @@ msgstr "Copyright@2019 포항공과대학교. ALL RIGHTS RESERVED."
 #: lms/templates/footer.html
 msgid "Student-Centered Learning Platform"
 msgstr "자기주도적 학습플랫폼"
+
+#: lms/templates/header/navbar-logo-header.html
+msgid "Admin Console"
+msgstr "관리자 콘솔"
