@@ -25675,5 +25675,5 @@ msgid "Student-Centered Learning Platform"
 msgstr "자기주도적 학습플랫폼"
 
 #: lms/templates/header/navbar-logo-header.html
-msgid "Admin Console"
+msgid "admin"
 msgstr "관리자 콘솔"

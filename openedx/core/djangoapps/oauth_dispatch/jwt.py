@@ -116,6 +116,13 @@ def _create_jwt(
         'filters': filters or [],
         'is_restricted': is_restricted,
     }
+    try:
+        from openedx.core.djangoapps.user_api.accounts.image_helpers import get_profile_image_urls_for_user
+        urls = get_profile_image_urls_for_user(user)
+        payload.update({ 'profile_image': { 'image_url_medium': urls['medium'] }, })
+    except:
+        pass
+
     payload.update(additional_claims or {})
     _update_from_additional_handlers(payload, user, scopes)
     return _encode_and_sign(payload, use_asymmetric_key, secret)
