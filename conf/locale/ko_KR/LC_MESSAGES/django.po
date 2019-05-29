@@ -25677,3 +25677,7 @@ msgstr "자기주도적 학습플랫폼"
 #: lms/templates/header/navbar-logo-header.html
 msgid "admin"
 msgstr "관리자 콘솔"
+
+#: lms/templates/header/navbar-logo-header.html
+msgid "Program"
+msgstr "프로그램"
