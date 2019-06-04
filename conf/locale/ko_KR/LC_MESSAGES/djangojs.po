@@ -6452,7 +6452,7 @@ msgstr "{username}의 프로필 이미지"
 
 #: openedx/features/learner_profile/static/learner_profile/js/views/learner_profile_view.js
 msgid "About Me"
-msgstr "나에 대해서"
+msgstr "내 소개"
 
 #: openedx/features/learner_profile/static/learner_profile/js/views/learner_profile_view.js
 msgid "Accomplishments"
