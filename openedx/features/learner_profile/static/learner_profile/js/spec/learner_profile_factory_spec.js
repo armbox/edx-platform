@@ -43,7 +43,7 @@ define(
                     profile_image_remove_url: Helpers.IMAGE_REMOVE_API_URL,
                     default_visibility: 'all_users',
                     platform_name: 'edX',
-                    find_courses_url: '/courses/',
+                    find_courses_url: '/',
                     account_settings_data: Helpers.createAccountSettingsData(options),
                     preferences_data: Helpers.createUserPreferencesData()
                 });

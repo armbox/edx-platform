@@ -6408,7 +6408,7 @@ msgstr "언어 추가"
 
 #: openedx/features/learner_profile/static/learner_profile/js/learner_profile_factory.js
 msgid "About me"
-msgstr "나에 대해서"
+msgstr "내 소개"
 
 #: openedx/features/learner_profile/static/learner_profile/js/learner_profile_factory.js
 msgid ""
