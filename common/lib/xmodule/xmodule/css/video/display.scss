@@ -27,17 +27,17 @@ $cool-dark: rgb(79, 89, 93); // UXPL cool dark
 .video {
   @include clearfix();
 
-  background: rgb(245, 245, 245); // UXPL grayscale x-back
+  //background: rgba(0, 0, 0, 0.95); // UXPL grayscale x-back
   display: block;
-  margin: 0 -12px;
-  padding: 12px;
-  border-radius: 5px;
-  outline: none;
+  margin: 0;
+  padding:0;
+  border-radius: 0;
+  border:solid 1px $border-color;
 
   &:focus,
   &:active,
   &:hover {
-    border: 0;
+    //border: 0;
   }
 
   &.is-initialized {

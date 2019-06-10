@@ -213,10 +213,12 @@ div.problem {
 
     display: inline-block;
     clear: both;
-    margin-bottom: ($baseline/2);
-    border: 2px solid $gray-l4;
-    border-radius: 3px;
-    padding: ($baseline/2);
+    //margin-bottom: ($baseline/2);
+    //border: 2px solid $gray-l4;
+    //border-radius: 3px;
+    border:0;
+    border-radius: 4px;
+    padding: ($baseline/4);
     width: 100%;
 
     &::after {
@@ -224,48 +226,52 @@ div.problem {
     }
 
     &:hover {
-      border: 2px solid $blue;
+      //border: 2px solid $blue;
+      background: #f4f4f4;
     }
 
     &.choicegroup_correct {
       @include status-icon($correct, $checkmark-icon);
 
-      border: 2px solid $correct;
+      //border: 2px solid $correct;
+      background: #c3f055;
 
       // keep green for correct answers on hover.
       &:hover {
-        border-color: $correct;
+        //border-color: $correct;
       }
     }
 
     &.choicegroup_partially-correct {
       @include status-icon($partially-correct, $asterisk-icon);
 
-      border: 2px solid $partially-correct;
+      //border: 2px solid $partially-correct;
+      background: #ffd278;
 
       // keep green for correct answers on hover.
       &:hover {
-        border-color: $partially-correct;
+        //border-color: $partially-correct;
       }
     }
 
     &.choicegroup_incorrect {
       @include status-icon($incorrect, $cross-icon);
 
-      border: 2px solid $incorrect;
+      //border: 2px solid $incorrect;
+      background: #ffaa96;
 
       // keep red for incorrect answers on hover.
       &:hover {
-        border-color: $incorrect;
+        //border-color: $incorrect;
       }
     }
 
     &.choicegroup_submitted {
-      border: 2px solid $submitted;
-
+      //border: 2px solid $submitted;
+      background: #b4d7f5;
       // keep blue for submitted answers on hover.
       &:hover {
-        border-color: $submitted;
+        //border-color: $submitted;
       }
     }
   }
@@ -282,7 +288,39 @@ div.problem {
 
   input[type="radio"],
   input[type="checkbox"] {
-    @include margin(($baseline/4) ($baseline/2) ($baseline/4) ($baseline/4));
+    //@include margin(($baseline/4) ($baseline/2) ($baseline/4) ($baseline/4));
+    width: 20px;
+    height: 20px;
+    position: relative;
+    visibility: hidden;
+    
+    &::before {
+      content: " ";
+      vertical-align:middle;
+      background:none;
+      display: inline-block;
+      border:solid 2px #ddd;
+      width: 20px;
+      height: 20px;
+      border-radius: 22px;
+      visibility: visible;
+      cursor:pointer;
+    }
+
+    &:checked {
+      &::after {
+        content: " ";
+        background:#0f82e6;   
+        display:inline-block;
+        width: 10px;
+        height:10px;
+        border-radius: 6px;
+        position: absolute;
+        top: 6px;
+        left: 5px;
+        visibility: visible;
+      }
+    }
   }
 }
 
