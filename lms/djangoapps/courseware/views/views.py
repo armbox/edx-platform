@@ -72,7 +72,7 @@ from lms.djangoapps.grades.course_grade_factory import CourseGradeFactory
 from lms.djangoapps.instructor.enrollment import uses_shib
 from lms.djangoapps.instructor.views.api import require_global_staff
 from lms.djangoapps.verify_student.services import IDVerificationService
-from openedx.core.djangoapps.catalog.utils import get_programs, get_programs_with_type
+from openedx.core.djangoapps.catalog.utils import get_programs, get_programs_with_type, get_course_run_details
 from openedx.core.djangoapps.certificates import api as auto_certs_api
 from openedx.core.djangoapps.content.course_overviews.models import CourseOverview
 from openedx.core.djangoapps.credit.api import (
@@ -770,6 +770,14 @@ def course_about(request, course_id):
         course = get_course_with_access(request.user, permission, course_key)
         course_details = CourseDetails.populate(course)
         modes = CourseMode.modes_for_course_dict(course_key)
+        
+        try:
+            details = get_course_run_details(course_key, ['instructors', 'staff'])
+            instructors = details.get('instructors', [])
+            staff = details.get('staff', [])
+        except:
+            instructors = []
+            staff = []
 
         if configuration_helpers.get_value('ENABLE_MKTG_SITE', settings.FEATURES.get('ENABLE_MKTG_SITE', False)):
             return redirect(reverse(course_home_url_name(course.id), args=[text_type(course.id)]))
@@ -886,6 +894,8 @@ def course_about(request, course_id):
             'course_image_urls': overview.image_urls,
             'reviews_fragment_view': reviews_fragment_view,
             'sidebar_html_enabled': sidebar_html_enabled,
+            'instructors': instructors,
+            'staff': staff,
         }
         context['uses_bootstrap'] = True
 
