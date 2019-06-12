@@ -7347,7 +7347,7 @@ msgstr " 쿠폰 id가 있는 쿠폰 ({coupon_id})이 성공적으로 업데이�
 
 #: lms/djangoapps/instructor/views/instructor_dashboard.py
 msgid "Instructor"
-msgstr "강사"
+msgstr "교수자"
 
 #: lms/djangoapps/instructor/views/instructor_dashboard.py
 #, python-brace-format
