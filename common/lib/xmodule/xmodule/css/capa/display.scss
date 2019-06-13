@@ -79,6 +79,12 @@ h2 {
   }
 }
 
+h3 {
+  &.problem-header{
+    font-size: 1.1em;
+  }
+}
+
 .explanation-title {
   font-weight: bold;
 }
