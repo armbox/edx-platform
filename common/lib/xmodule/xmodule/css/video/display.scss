@@ -32,7 +32,6 @@ $cool-dark: rgb(79, 89, 93); // UXPL cool dark
   margin: 0;
   padding:0;
   border-radius: 0;
-  border:solid 1px $border-color;
 
   &:focus,
   &:active,
@@ -749,10 +748,7 @@ $cool-dark: rgb(79, 89, 93); // UXPL cool dark
     padding: 0;
     font-size: 14px;
     visibility: visible;
-
-    a {
-      color: #0074b5;
-    }
+    padding: 1rem;
 
     .subtitles-menu {
       height: 100%;
@@ -763,19 +759,31 @@ $cool-dark: rgb(79, 89, 93); // UXPL cool dark
       li {
         @extend %ui-fake-link;
 
-        margin-bottom: 8px;
+        margin-bottom: 0.8rem;
         border: 0;
         padding: 0;
-        color: #0074b5; // AA compliant
+        color: white; // AA compliant
         line-height: lh();
 
         span {
           display: block;
         }
 
+        &.spacing{
+          margin: 2rem 0;
+          background: rgba(255,255,255,0.2);
+          padding: $baseline / 5;
+          text-align: center;
+          
+          a{
+            color: #888;
+            font-size: 0.85rem;
+          }
+        }
+
         &.current {
-          color: #333;
-          font-weight: 700;
+          color: #28dcff;
+          //font-weight: 700;
         }
 
         &.focused {
@@ -793,11 +801,7 @@ $cool-dark: rgb(79, 89, 93); // UXPL cool dark
         }
 
         &.spacing:last-of-type {
-          position: relative;
-
           .transcript-end {
-            position: absolute;
-            bottom: 0;
           }
         }
       }

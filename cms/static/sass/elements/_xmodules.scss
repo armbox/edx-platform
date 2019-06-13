@@ -22,19 +22,6 @@
 .xmodule_VideoModule {
   // display mode
   &.xblock-student_view {
-    background: rgba(0, 0, 0, 0.95);
-    overflow: hidden;
-  
-    >h3.hd-2{
-      color: white;
-      font-size: 1.3rem;
-      padding: $baseline / 2;
-  
-      &:hover{
-        box-shadow: 0 5px 8px rgba(0, 0, 0, 0.25);
-      }
-    }
-
     .video-tracks {
       .a11y-menu-container {
         .a11y-menu-list {

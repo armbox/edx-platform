@@ -218,7 +218,7 @@ div.problem {
     //border-radius: 3px;
     border:0;
     border-radius: 2rem;
-    padding: 6px 12px;
+    padding: 6px 12px 6px ($baseline*1.9);
     width: unset;
 
     &::after {
@@ -234,7 +234,7 @@ div.problem {
       @include status-icon($correct, $checkmark-icon);
 
       //border: 2px solid $correct;
-      background: #c3f055;
+      background: #cdf078;
 
       // keep green for correct answers on hover.
       &:hover {
@@ -296,10 +296,10 @@ div.problem {
     
     &::before {
       content: " ";
-      vertical-align:middle;
-      background:none;
+      vertical-align: middle;
+      background: white;
       display: inline-block;
-      border:solid 2px #ddd;
+      border: solid 2px #ddd;
       width: 20px;
       height: 20px;
       border-radius: 22px;
@@ -331,8 +331,8 @@ div.problem {
     @extend %choicegroup-base;
 
     label {
-      @include padding($baseline/2);
-      @include padding-left($baseline*1.9);
+      //@include padding($baseline/2);
+      //include padding-left($baseline*1.9);
 
       position: relative;
       font-size: $base-font-size;

@@ -142,6 +142,23 @@ html.video-fullscreen {
       &.xblock-student_view-vertical {
         max-width: $text-width-readability-max;
       }
+
+      &.xmodule_VideoModule{
+      background: rgba(0, 0, 0, 0.95);
+      border: solid 1px $border-color;
+      overflow: hidden;
+    
+        >h3.hd-2{
+          color: white;
+          font-size: 1.3rem;
+          padding: $baseline / 2;
+          border: solid 1px #444;
+      
+          &:hover{
+            box-shadow: 0 5px 8px rgba(0, 0, 0, 0.25);
+          }
+        }
+      }
     }
 
     h1 {

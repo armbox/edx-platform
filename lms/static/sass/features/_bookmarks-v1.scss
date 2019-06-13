@@ -39,25 +39,30 @@ $bookmarked-icon: "\f02e"; // .fa-bookmark
 // Rules for bookmark icon shown on each sequence nav item
 .course-content {
   .bookmark-icon.bookmarked {
-    @include right($baseline / 4);
-
     top: -3px;
     position: absolute;
   }
 
   // Rules for bookmark button's different styles
   .bookmark-button-wrapper {
-    margin-bottom: ($baseline * 1.5);
+    @include right($baseline * 0.4);
+    //margin-bottom: ($baseline * 1.5);
+    display: inline-block;
 
     @extend %ui-print-excluded;
   }
 
   .bookmark-button {
+    .bookmark-text{
+      display: none;
+    }
+
     &::before {
-      @include padding-right($baseline / 4);
+      //
 
       content: $bookmark-icon;
       font-family: FontAwesome;
+      font-size: 1.2rem;
     }
 
     &.bookmarked {
