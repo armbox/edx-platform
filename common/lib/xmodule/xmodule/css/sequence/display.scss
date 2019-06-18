@@ -74,6 +74,65 @@ $seq-nav-height: 50px;
     display: none;
   }
 
+  @include media-breakpoint-up(md) {
+    width: 50px;
+    margin: 0;
+    height: 0;
+    position: sticky;
+    top: 30%;
+    justify-content: flex-start;
+
+    .sequence-nav-button{
+      overflow-x: unset;
+      white-space: unset;
+      padding: unset;
+      line-height: unset;
+      font-size: unset;
+      border: 0;
+      background: none;
+
+      &:hover,
+      &:focus
+      &:active
+      &.active{
+        border-bottom: 0;
+        background: #f4f4f4;
+      }
+
+      &.button-previous{
+        order: 1
+      }
+      &.button-next{
+        order: 3
+      }
+      
+      .sequence-nav-button-label{
+        display: none;
+      }
+    }
+
+    #sequence-list{
+      flex-flow: column;
+      order: 2;
+      border-radius: 26px;
+      height: 180px;
+
+      li {
+        height: 50px;
+        border-radius: 50%;
+        margin: 5px;
+        border: solid 1px $border-color;
+        background: none;
+
+        button.active,
+        button:active{
+          background: #eaefef;
+          border: solid 1px $border-color;
+        }  
+      }
+    }
+  }
+
   .sequence-list-wrapper {
     @extend %ui-depth2;
 
@@ -81,29 +140,10 @@ $seq-nav-height: 50px;
     height: 100%;
     flex-grow: 1;
 
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-up(sm) {
       white-space: nowrap;
       overflow-x: scroll;
     }
-
-    @include media-breakpoint-up(md) {
-      width: 50px;
-      border-radius: 26px;
-
-      .sequence-nav-button {
-        display: none;
-      }
-
-      .sequence-nav button.active{
-        background: #eaefef;
-        border: solid 1px $border-color;
-      }
-
-      .sequence-list{
-        flex-flow: column;
-      }
-    }
-
   }
 
   ol {
@@ -245,22 +285,22 @@ $seq-nav-height: 50px;
   white-space: nowrap;
   overflow-x: hidden;
 
-  @include media-breakpoint-up(md) {
-    min-width: 120px;
-    max-width: 200px;
-    text-overflow: ellipsis;
+  // @include media-breakpoint-up(md) {
+  //   min-width: 120px;
+  //   max-width: 200px;
+  //   text-overflow: ellipsis;
 
-    span:not(:last-child) {
-      @include padding-right($baseline / 2);
-    }
-  }
+  //   span:not(:last-child) {
+  //     @include padding-right($baseline / 2);
+  //   }
+  // }
 
   .sequence-nav-button-label {
     display: none;
 
-    @include media-breakpoint-up(md) {
-      display: inline;
-    }
+    // @include media-breakpoint-up(md) {
+    //   display: inline;
+    // }
   }
 
   &.button-previous {
@@ -302,19 +342,14 @@ $seq-nav-height: 50px;
   margin: lh(2) auto;
   display: flex;
   justify-content: center;
-
+  bottom: 0;
   
   @include media-breakpoint-up(md) {
-    position: fixed;
-    bottom: 12px;
-    width: 1280px;
-    justify-content: space-between;
+    display: none;
   }
 
   .sequence-nav-button {
     position: relative;
-    min-width: 120px;
-    max-width: 200px;
     text-overflow: ellipsis;
     
     span{
