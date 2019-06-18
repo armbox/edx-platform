@@ -570,9 +570,12 @@ def get_video_transcript_content(edx_video_id, language_code):
         A dict containing transcript's file name and its sjson content.
     """
     transcript = None
-    edx_video_id = clean_video_id(edx_video_id)
-    if edxval_api and edx_video_id:
-        transcript = edxval_api.get_video_transcript_data(edx_video_id, language_code)
+    try:
+        edx_video_id = clean_video_id(edx_video_id)
+        if edxval_api and edx_video_id:
+            transcript = edxval_api.get_video_transcript_data(edx_video_id, language_code)
+    except:
+        pass
 
     return transcript
 
