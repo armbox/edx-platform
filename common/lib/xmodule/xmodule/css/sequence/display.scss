@@ -56,7 +56,6 @@ $seq-nav-height: 50px;
   font-weight: inherit;
 }
 
-
 // ====================
 
 .sequence-nav {
@@ -77,9 +76,9 @@ $seq-nav-height: 50px;
   @include media-breakpoint-up(md) {
     width: 50px;
     margin: 0;
-    height: 0;
+    height: unset;
     position: sticky;
-    top: 30%;
+    float: left;
     justify-content: flex-start;
     flex-flow: column;
 
