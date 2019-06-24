@@ -81,6 +81,7 @@ $seq-nav-height: 50px;
     position: sticky;
     top: 30%;
     justify-content: flex-start;
+    flex-flow: column;
 
     .sequence-nav-button{
       overflow-x: unset;
@@ -111,24 +112,29 @@ $seq-nav-height: 50px;
       }
     }
 
-    #sequence-list{
-      flex-flow: column;
-      order: 2;
-      border-radius: 26px;
-      height: 180px;
+  .sequence-list-wrapper{
+    height: unset;
+    order: 2;
 
-      li {
-        height: 50px;
-        border-radius: 50%;
-        margin: 5px;
-        border: solid 1px $border-color;
-        background: none;
+      #sequence-list{
+        flex-flow: column;
+        border-radius: 26px;
 
-        button.active,
-        button:active{
-          background: #eaefef;
+        li {
+          height: 50px;
+          width: 50px;
+          border-radius: 50%;
+          margin: 5px;
           border: solid 1px $border-color;
-        }  
+          background: none;
+
+          button.active,
+          button:active{
+            background: #eaefef;
+            border: solid 1px $border-color;
+            border-radius: 50%;
+          }  
+        }
       }
     }
   }
@@ -140,7 +146,7 @@ $seq-nav-height: 50px;
     height: 100%;
     flex-grow: 1;
 
-    @include media-breakpoint-up(sm) {
+    @include media-breakpoint-down(md) {
       white-space: nowrap;
       overflow-x: scroll;
     }
