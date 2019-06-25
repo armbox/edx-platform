@@ -81,6 +81,7 @@ $seq-nav-height: 50px;
     float: left;
     justify-content: flex-start;
     flex-flow: column;
+    top: 30%;
 
     .sequence-nav-button{
       overflow-x: unset;
@@ -91,19 +92,11 @@ $seq-nav-height: 50px;
       border: 0;
       background: none;
 
-      &:hover,
-      &:focus
-      &:active
-      &.active{
-        border-bottom: 0;
-        background: #f4f4f4;
-      }
-
       &.button-previous{
-        order: 1
+        display: none;
       }
       &.button-next{
-        order: 3
+        display: none;
       }
       
       .sequence-nav-button-label{
@@ -127,12 +120,24 @@ $seq-nav-height: 50px;
           border: solid 1px $border-color;
           background: none;
 
-          button.active,
-          button:active{
-            background: #eaefef;
-            border: solid 1px $border-color;
-            border-radius: 50%;
-          }  
+          button{
+            border-bottom-style: none;
+            box-sizing: unset;
+
+            &:hover,
+            &:focus{
+              border-bottom: 0;
+              background-color:unset;
+              background: #f4f4f4;
+            }
+
+            &.active,
+            &:active{
+              background: #eaefef;
+              border: solid 1px $border-color;
+              border-radius: 50%;
+            }
+          }
         }
       }
     }
@@ -350,12 +355,14 @@ $seq-nav-height: 50px;
   bottom: 0;
   
   @include media-breakpoint-up(md) {
-    display: none;
   }
 
   .sequence-nav-button {
     position: relative;
     text-overflow: ellipsis;
+    max-width: unset;
+    border: 0;
+    padding: $baseline*0.8;
     
     span{
       color: #999;
