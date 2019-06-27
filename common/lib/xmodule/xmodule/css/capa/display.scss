@@ -1030,7 +1030,7 @@ div.problem .action {
     }
 
     .icon {
-      margin-bottom: $baseline / 10;
+      margin-right: $baseline / 5;
       //display: block;
     }
 
@@ -1040,14 +1040,13 @@ div.problem .action {
   }
 
   .submit-attempt-container {
-    padding-bottom: $baseline;
     flex-grow: 1;
     display: inherit;
     align-items: baseline;
+    justify-content: space-between;
 
     @media (max-width: $bp-screen-lg) {
       max-width: 100%;
-      padding-bottom: $baseline;
     }
 
     .submit {
@@ -1059,7 +1058,7 @@ div.problem .action {
       &.btn-primary, 
       &.btn-brand{
         border: $border-color;
-        backface-visibility: none;
+        background: none;
         color: #444;
         padding: ($baseline / 5) ($baseline*0.6);
         font-size: 0.9rem;
@@ -1072,7 +1071,7 @@ div.problem .action {
 
     //margin-top: $baseline / 2;
     display: inline-block;
-    color: $gray-d1;
+    color: #999;
     font-size: $small-font-size;
     float: right;
     -webkit-font-smoothing: antialiased;
