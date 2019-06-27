@@ -74,7 +74,6 @@ $seq-nav-height: 50px;
   }
 
   @include media-breakpoint-up(md) {
-    width: 50px;
     margin: 0;
     height: unset;
     position: sticky;
@@ -107,34 +106,35 @@ $seq-nav-height: 50px;
   .sequence-list-wrapper{
     height: unset;
     order: 2;
+    overflow: unset;
 
       #sequence-list{
         flex-flow: column;
-        border-radius: 26px;
 
         li {
-          height: 50px;
-          width: 50px;
-          border-radius: 50%;
-          margin: 5px;
-          border: solid 1px $border-color;
-          background: none;
+          border: 0;
 
-          button{
-            border-bottom-style: none;
-            box-sizing: unset;
+          button{ 
+            border-radius: 50%;
+            height: 45px;
+            width: 45px;
+            border-radius: 50%;
+            margin: 5px;
+            background: none;
+            box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+            background: white;
 
             &:hover,
             &:focus{
               border-bottom: 0;
-              background-color:unset;
-              background: #f4f4f4;
+              border-radius: 50%;
+              background-color: rgba(0, 0, 0, 0.15);
             }
 
             &.active,
             &:active{
-              background: #eaefef;
-              border: solid 1px $border-color;
+              background: #f4f4f4;
+              border: solid 1px #ccc;
               border-radius: 50%;
             }
           }
@@ -187,6 +187,11 @@ $seq-nav-height: 50px;
         border-bottom-style: solid;
         box-sizing: border-box;
         overflow: visible; // for tooltip - IE11 uses 'hidden' by default if width/height is specified
+
+
+        @include media-breakpoint-up(md) {
+          height: 100%;
+        }
 
         .icon {
           display: inline-block;
@@ -348,7 +353,7 @@ $seq-nav-height: 50px;
 
 .sequence-bottom {
   position: relative;
-  height: 45px;
+  //height: 45px;
   margin: lh(2) auto;
   display: flex;
   justify-content: center;
@@ -363,6 +368,7 @@ $seq-nav-height: 50px;
     max-width: unset;
     border: 0;
     padding: $baseline*0.8;
+    background-color: none;
     
     span{
       color: #999;
@@ -378,8 +384,11 @@ $seq-nav-height: 50px;
 
     @include media-breakpoint-up(md) {
       border: 0;
-      &.active{
-        border: 0;
+      &:hover{
+        padding-top: 0;
+        border-bottom: 0;
+        background-color: none;
+        color: theme-color("inverse");
       }
     }
   }
