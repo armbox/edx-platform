@@ -1015,22 +1015,35 @@ div.problem .action {
   .problem-action-btn {
     @include margin-right($baseline / 5);
 
-    max-width: 110px;
+    //max-width: 110px;
+    padding: 4px 12px;
+
+    &:hover,
+    &:focus{
+      border: 0;
+      background-color: #f4f4f4;
+    }
+
+    &.active,
+    &:active{
+      background-color: #eaefef;
+    }
 
     .icon {
       margin-bottom: $baseline / 10;
-      display: block;
+      //display: block;
     }
 
     @media print {
       display: none;
     }
-
   }
 
   .submit-attempt-container {
     padding-bottom: $baseline;
     flex-grow: 1;
+    display: inherit;
+    align-items: baseline;
 
     @media (max-width: $bp-screen-lg) {
       max-width: 100%;
@@ -1042,18 +1055,29 @@ div.problem .action {
       @include float(left);
 
       white-space: nowrap;
+
+      &.btn-primary, 
+      &.btn-brand{
+        border: $border-color;
+        backface-visibility: none;
+        color: $text-color;
+        padding: ($baseline / 5) ($baseline*0.6);
+        font-size: 0.9rem;
+      }
     }
   }
 
   .submission-feedback {
     @include margin-right($baseline / 2);
 
-    margin-top: $baseline / 2;
+    //margin-top: $baseline / 2;
     display: inline-block;
     color: $gray-d1;
-    font-size: $medium-font-size;
+    font-size: $small-font-size;
+    float: right;
     -webkit-font-smoothing: antialiased;
-    vertical-align: middle;
+    //vertical-align: middle;
+    text-decoration: underline;
   }
 }
 
