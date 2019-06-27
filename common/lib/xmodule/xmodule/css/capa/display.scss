@@ -1060,7 +1060,7 @@ div.problem .action {
       &.btn-brand{
         border: $border-color;
         backface-visibility: none;
-        color: $text-color;
+        color: #444;
         padding: ($baseline / 5) ($baseline*0.6);
         font-size: 0.9rem;
       }
