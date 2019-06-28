@@ -2,7 +2,7 @@ $seq-nav-border-color: $border-color !default;
 $seq-nav-hover-color: rgb(245, 245, 245) !default;
 $seq-nav-link-color: $link-color !default;
 $seq-nav-icon-color: rgb(10, 10, 10) !default;
-$seq-nav-icon-color-muted: rgb(90, 90, 90) !default;
+$seq-nav-icon-color-muted: rgb(140, 140, 140) !default;
 $seq-nav-tooltip-color: rgb(51, 51, 51) !default;
 $seq-nav-height: 50px;
 
@@ -68,18 +68,18 @@ $seq-nav-height: 50px;
   height: $seq-nav-height;
   display: flex;
   justify-content: center;
+  align-items: center;
 
   @media print {
     display: none;
   }
 
   @include media-breakpoint-up(md) {
-    margin: 0;
+    margin-top: 20px;
     height: unset;
     position: sticky;
     float: left;
     justify-content: flex-start;
-    align-items: center; 
     flex-flow: column;
     top: 30%;
     width: 70px;
@@ -106,35 +106,6 @@ $seq-nav-height: 50px;
 
         li {
           border: 0;
-        }
-
-        button{ 
-          border-radius: 50%;
-          height: 45px;
-          width: 45px;
-          border-radius: 50%;
-          margin: 5px;
-          background: none;
-          background: #f4f4f4;
-          border: solid 1px #ccc;
-          
-          span {
-          color:#999;
-          }
-
-          &:hover,
-          &:focus{
-            border-bottom: 0;
-            border-radius: 50%;
-          }
-
-          &.active,
-          &:active{
-            border: solid 1px #ccc;
-            border-radius: 50%;
-            background-color: rgba(0, 0, 0, 0.15);
-            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05) inset;
-          }
         }
       }
     }
@@ -164,9 +135,12 @@ $seq-nav-height: 50px;
       box-sizing: border-box;
       min-width: 40px;
       flex-grow: 1;
-      border-color: $seq-nav-border-color;
-      border-width: 1px;
-      border-top-style: solid;
+      //border-color: $seq-nav-border-color;
+      //border-width: 1px;
+      //border-top-style: solid;
+      display: inherit;
+      justify-content: center;
+      align-items: center;
 
       &:not(:last-child) {
         @include border-right-style(solid);
@@ -176,22 +150,41 @@ $seq-nav-height: 50px;
         @extend %ui-fake-link;
         @extend %ui-clear-button;
 
-        width: 100%;
-        height: ($seq-nav-height - 1);
+        width: 80%;
+        height: unset;
         position: relative;
         margin: 0;
-        padding: 0;
+        padding: 8px 12px;
+        border-radius: 1.5rem;
         display: block;
         text-align: center;
-        border-color: $seq-nav-border-color;
-        border-width: 1px;
-        border-bottom-style: solid;
         box-sizing: border-box;
         overflow: visible; // for tooltip - IE11 uses 'hidden' by default if width/height is specified
 
-
         @include media-breakpoint-up(md) {
-          height: 100%;
+          border-radius: 50%;
+          height: 45px;
+          width: 45px;
+          border-radius: 50%;
+          margin: 5px;
+          padding: 0;
+          background: none;
+          background: #f4f4f4;
+          border: solid 1px #ccc;
+          
+          &:hover,
+          &:focus{
+            border-bottom: 0;
+            border-radius: 50%;
+          }
+
+          &.active,
+          &:active{
+            border: solid 1px #ccc;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.15);
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05) inset;
+          }
         }
 
         .icon {
@@ -287,17 +280,15 @@ $seq-nav-height: 50px;
 
   display: block;
   top: 0;
-  min-width: 40px;
-  max-width: 40px;
-  height: 100%;
+  width: 40px;
+  height: 40px;
+  border-radius: 2rem;
   text-shadow: none; // overrides default button text-shadow
   background: none;  // overrides default button gradient
-  background-color: theme-color("inverse");
-  border-color: $seq-nav-border-color;
   box-shadow: none;
   font-size: inherit;
   font-weight: normal;
-  padding: 0;
+  padding: 8px 12px;
   white-space: nowrap;
   overflow-x: hidden;
 
@@ -363,6 +354,7 @@ $seq-nav-height: 50px;
 
   @include media-breakpoint-up(md) {
     margin-left: 70px;
+    border-bottom-right-radius: 0.4rem;
   }
   
   .sequence-nav-button {
@@ -372,7 +364,8 @@ $seq-nav-height: 50px;
     border: 0;
     padding: 0 ($baseline * 0.8);
     background: none;
-
+    width: unset;
+    
     @include media-breakpoint-up(md) {
       &.focused,
       &:hover{
@@ -412,24 +405,19 @@ $seq-nav-height: 50px;
   &:hover,
   &:active,
   &.active {
-    padding-top: 2px;
-    //background-color: theme-color("primary");
+    background-color: #b4d7f5;
 
     .icon {
-      color: theme-color("inverse");
+      color: $seq-nav-icon-color-muted;
     }
 
-    @include media-breakpoint-up(sm) {
-      // border-bottom: 3px solid $seq-nav-link-color;
-      // background-color: theme-color("inverse");
+    // @include media-breakpoint-up(sm) {
+    //   border-bottom: 3px solid $seq-nav-link-color;
+    //   background-color: theme-color("inverse");
 
-      .icon {
-        color: $seq-nav-icon-color;
-      }
-    }
-
-    @include media-breakpoint-up(md) {
-      padding-top: 0;
-    }
+    //   .icon {
+    //     color: $seq-nav-icon-color;
+    //   }
+    // }
   }
 }

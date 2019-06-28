@@ -83,6 +83,7 @@ h3 {
   &.problem-header{
     font-size: 1.2em;
     margin-bottom: $baseline / 4;
+    margin-top: $baseline / 2;
   }
 }
 
@@ -1058,10 +1059,18 @@ div.problem .action {
       &.btn-primary, 
       &.btn-brand{
         border: solid 1px $border-color;
-        background-color: none;
+        background-color: white;
         color: #444;
         padding: ($baseline / 5) ($baseline*0.6);
         font-size: 0.9rem;
+        border-radius: 1rem;
+
+        &:hover,
+        &:focus{
+          background-color: #0f82e6;
+          color: white;
+          box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+        }
       }
     }
   }
@@ -1158,6 +1167,8 @@ div.problem {
     line-height: $base-line-height;
     background: #f4f4f4;
     border-radius: ($baseline / 5);
+    margin-bottom: ($baseline / 2);
+    border: solid 1px $border-color;
 
     // &.success {
     //   @include notification-by-type($success);
@@ -1196,6 +1207,7 @@ div.problem {
 
     .icon {
       @include float(left);
+      @include margin-right( $baseline / 2);
 
       position: relative;
       top: $baseline / 5;
@@ -1203,7 +1215,7 @@ div.problem {
 
     .notification-message {
       display: inline-block;
-      width: flex-grid(7,10);
+      //width: flex-grid(7,10);
       // Make notification tall enough that when the "Review" button is displayed,
       // the notification does not grow in height.
       margin-bottom: 8px;

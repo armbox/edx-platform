@@ -168,6 +168,19 @@
     }
   }
 
+  .xmodule_HtmlModule p{
+    a{
+      padding: 3px;
+      border-bottom: dashed 1px #bbb;
+
+      &:hover,
+      &:focus{
+        background-color: #f4f4f4;
+        border-radius: 4px;
+      }
+    }
+  }
+
   // CASE: xblocks video
   .xmodule_VideoModule .xblock-license {
     border: 0;
