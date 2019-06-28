@@ -992,7 +992,7 @@ div.problem {
 // +Problem - Actions
 // ====================
 div.problem .action {
-  margin-top: $baseline;
+  margin-bottom: $baseline / 2;
   min-height: $baseline;
   width: 100%;
   display: flex;
@@ -1057,8 +1057,8 @@ div.problem .action {
 
       &.btn-primary, 
       &.btn-brand{
-        border: $border-color;
-        background: none;
+        border: solid 1px $border-color;
+        background-color: none;
         color: #444;
         padding: ($baseline / 5) ($baseline*0.6);
         font-size: 0.9rem;
@@ -1153,32 +1153,34 @@ div.problem {
   .notification {
     @include float(left);
 
-    margin-top: $baseline / 2;
-    padding: ($baseline / 2.5) ($baseline / 2) ($baseline / 5) ($baseline / 2);
+    margin-top: 0;
+    padding: ($baseline / 2) ($baseline) ($baseline / 5);
     line-height: $base-line-height;
+    background: #f4f4f4;
+    border-radius: ($baseline / 5);
 
-    &.success {
-      @include notification-by-type($success);
-    }
+    // &.success {
+    //   @include notification-by-type($success);
+    // }
 
-    &.error {
-      @include notification-by-type($danger);
-    }
+    // &.error {
+    //   @include notification-by-type($danger);
+    // }
 
-    &.warning {
-      @include notification-by-type($warning);
-    }
+    // &.warning {
+    //   @include notification-by-type($warning);
+    // }
 
-    &.general {
-      @include notification-by-type($general-color-accent);
-    }
+    // &.general {
+    //   @include notification-by-type($general-color-accent);
+    // }
 
     &.problem-hint {
       border: 1px solid $uxpl-gray-background;
       border-radius: 6px;
 
       .icon {
-        @include margin-right(3 * $baseline / 4);
+        @include margin-right( $baseline / 2);
 
         color: $uxpl-gray-dark;
       }

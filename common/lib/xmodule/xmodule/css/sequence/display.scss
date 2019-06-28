@@ -83,9 +83,6 @@ $seq-nav-height: 50px;
     flex-flow: column;
     top: 30%;
     width: 70px;
-    border-right: solid 1px $border-color;
-    border-top-left-radius: 0.4rem;
-    border-bottom-left-radius: 0.4rem;
 
     .sequence-nav-button{
       overflow-x: unset;
@@ -95,7 +92,7 @@ $seq-nav-height: 50px;
       font-size: unset;
       border: 0;
       background: none;
-      transform: rotate(90);
+      transform: rotate(90deg);
       color: #999;
 
       .sequence-nav-button-label{
@@ -119,6 +116,7 @@ $seq-nav-height: 50px;
           margin: 5px;
           background: none;
           background: #f4f4f4;
+          border: solid 1px #ccc;
           
           span {
           color:#999;
@@ -135,7 +133,7 @@ $seq-nav-height: 50px;
             border: solid 1px #ccc;
             border-radius: 50%;
             background-color: rgba(0, 0, 0, 0.15);
-            box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05) inset;
           }
         }
       }
@@ -357,10 +355,15 @@ $seq-nav-height: 50px;
 .sequence-bottom {
   position: relative;
   //height: 45px;
-  margin: lh(2) auto;
+  padding: lh(2);
   display: flex;
   justify-content: center;
   bottom: 0;
+  background: white;
+
+  @include media-breakpoint-up(md) {
+    margin-left: 70px;
+  }
   
   .sequence-nav-button {
     position: relative;
