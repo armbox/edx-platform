@@ -69,6 +69,7 @@ $seq-nav-height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-bottom: solid 1px $border-color;
 
   @media print {
     display: none;
@@ -81,8 +82,9 @@ $seq-nav-height: 50px;
     float: left;
     justify-content: flex-start;
     flex-flow: column;
-    top: 30%;
+    top: 25%;
     width: 70px;
+    border-bottom: 0;
 
     .sequence-nav-button{
       overflow-x: unset;
@@ -115,7 +117,6 @@ $seq-nav-height: 50px;
     @extend %ui-depth2;
 
     position: relative;
-    height: 100%;
     flex-grow: 1;
     white-space: nowrap;
 
@@ -142,9 +143,9 @@ $seq-nav-height: 50px;
       justify-content: center;
       align-items: center;
 
-      &:not(:last-child) {
-        @include border-right-style(solid);
-      }
+      // &:not(:last-child) {
+      //   @include border-right-style(solid);
+      // }
 
       button {
         @extend %ui-fake-link;
@@ -196,6 +197,8 @@ $seq-nav-height: 50px;
 
         .fa-bookmark {
           color: $seq-nav-link-color;
+          top: -2px;
+          right: 1px;
         }
 
         //video
@@ -244,6 +247,11 @@ $seq-nav-height: 50px;
           white-space: pre;
           pointer-events: none;
 
+          @include media-breakpoint-up(md) {
+            right: unset;
+            left: 0;
+          }
+
           &:empty {
             background: none;
 
@@ -264,6 +272,12 @@ $seq-nav-height: 50px;
             position: absolute;
             top: -5px;
             width: 10px;
+
+            
+          @include media-breakpoint-up(md) {
+            right: unset;
+            left: 18px;
+          }
           }
         }
       }
@@ -291,6 +305,7 @@ $seq-nav-height: 50px;
   padding: 8px 12px;
   white-space: nowrap;
   overflow-x: hidden;
+  border: 0;
 
   // @include media-breakpoint-up(md) {
   //   min-width: 120px;
@@ -312,26 +327,10 @@ $seq-nav-height: 50px;
 
   &.button-previous {
     order: -999;
-
-    @include media-breakpoint-up(md) {
-      @include left(0);
-      @include border-top-left-radius(3px);
-      @include border-top-right-radius(0);
-      @include border-bottom-right-radius(0);
-      @include border-bottom-left-radius(3px);
-    }
   }
 
   &.button-next {
     order: 999;
-
-    @include media-breakpoint-up(md) {
-      @include right(0);
-      @include border-top-left-radius(0);
-      @include border-top-right-radius(3px);
-      @include border-bottom-right-radius(3px);
-      @include border-bottom-left-radius(0);
-    }
   }
 
   &.disabled {
