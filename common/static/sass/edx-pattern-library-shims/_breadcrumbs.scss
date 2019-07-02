@@ -4,9 +4,6 @@
 // Mirrors styles from the Pattern Library
 
 .breadcrumbs {
-  font-size: font-size(small);
-  line-height: line-height(small);
-
   .nav-item {
     @include margin-left($baseline/4);
 
@@ -32,11 +29,15 @@
     &.nav-item-course {
       max-width: none;
       font-size: 1.5rem;
+      line-height: 1;
     }
 
     a,
     a:visited {
-      color: theme-color("primary");
+      color: #999;
+      font-size: font-size(small);
+      line-height: line-height(small);
+    
     }
 
     a:hover {
