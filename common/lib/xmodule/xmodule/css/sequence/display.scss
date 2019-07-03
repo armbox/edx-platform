@@ -180,8 +180,6 @@ $seq-nav-height: 50px;
           background: #f4f4f4;
           border: solid 1px #ccc;
         
-          &:hover,
-          &:focus,
           &.active,
           &:active{
             border-bottom: 0;
@@ -313,7 +311,8 @@ $seq-nav-height: 50px;
   white-space: nowrap;
   overflow-x: hidden;
   border: 0;
-
+  color: #888;
+  
   // @include media-breakpoint-up(md) {
   //   min-width: 120px;
   //   max-width: 200px;
@@ -371,7 +370,7 @@ $seq-nav-height: 50px;
     padding: 0 ($baseline * 0.8);
     background: none;
     width: unset;
-        
+
     span{
       color: #888;
     }
@@ -381,8 +380,6 @@ $seq-nav-height: 50px;
       &:hover{
         padding-top: 0;
         border-bottom: 0;
-        background: none;
-        color: theme-color("inverse");
       }
     }
 
@@ -396,7 +393,6 @@ $seq-nav-height: 50px;
   }
 }
 
-
   #seq_content {
   &:focus,
   &:active {
@@ -408,10 +404,8 @@ $seq-nav-height: 50px;
 .sequence-nav-button,
 .sequence-nav button {
   &.focused,
-  &:hover,
-  &:active,
-  &.active {
-    background-color: #b4d7f5;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.1);
 
     span{
       color: rgb(60, 60, 60);
