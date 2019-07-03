@@ -83,6 +83,7 @@ h3 {
   &.problem-header{
     font-size: 1.15em;
     line-height: 1.5;
+    word-break: keep-all;
     margin-bottom: $baseline / 4;
     margin-top: $baseline / 2;
 
