@@ -312,7 +312,7 @@ $seq-nav-height: 50px;
   overflow-x: hidden;
   border: 0;
   color: #888;
-  
+
   // @include media-breakpoint-up(md) {
   //   min-width: 120px;
   //   max-width: 200px;
@@ -403,6 +403,9 @@ $seq-nav-height: 50px;
 // hover and active states
 .sequence-nav-button,
 .sequence-nav button {
+  
+  &.active,
+  &:active,
   &.focused,
   &:hover {
     background-color: rgba(0, 0, 0, 0.1);
