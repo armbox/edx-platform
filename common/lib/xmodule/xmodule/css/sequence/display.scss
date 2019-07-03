@@ -2,7 +2,7 @@ $seq-nav-border-color: $border-color !default;
 $seq-nav-hover-color: rgb(245, 245, 245) !default;
 $seq-nav-link-color: $link-color !default;
 $seq-nav-icon-color: rgb(10, 10, 10) !default;
-$seq-nav-icon-color-muted: rgb(90, 90, 90) !default;
+$seq-nav-icon-color-muted: rgb(140, 140, 140)!default;
 $seq-nav-tooltip-color: rgb(51, 51, 51) !default;
 $seq-nav-height: 50px;
 
@@ -56,7 +56,6 @@ $seq-nav-height: 50px;
   font-weight: inherit;
 }
 
-
 // ====================
 
 .sequence-nav {
@@ -65,45 +64,69 @@ $seq-nav-height: 50px;
   margin: 0 auto $baseline;
   position: relative;
   border-bottom: none;
-  z-index: 0;
+  z-index: 2;
   height: $seq-nav-height;
   display: flex;
   justify-content: center;
+  align-items: center;
+  border-bottom: solid 1px $border-color;
 
   @media print {
     display: none;
+  }
+
+  @include media-breakpoint-up(md) {
+    margin-top: 20px;
+    height: unset;
+    position: sticky;
+    float: left;
+    justify-content: flex-start;
+    flex-flow: column;
+    top: 25%;
+    width: 70px;
+    border-bottom: 0;
+
+    .sequence-nav-button{
+      overflow-x: unset;
+      white-space: unset;
+      padding: unset;
+      line-height: unset;
+      font-size: unset;
+      border: 0;
+      background: none;
+      transform: rotate(90deg);
+      z-index: 1;
+
+      .sequence-nav-button-label{
+        display: none;
+      }
+    }
+
+  .sequence-list-wrapper{
+      #sequence-list{
+        flex-flow: column;
+
+        li {
+          border: 0;
+        }
+      }
+    }
   }
 
   .sequence-list-wrapper {
     @extend %ui-depth2;
 
     position: relative;
-    height: 100%;
     flex-grow: 1;
-
-    @include media-breakpoint-down(md) {
-      white-space: nowrap;
-      overflow-x: scroll;
-    }
+    white-space: nowrap;
 
     @include media-breakpoint-up(md) {
-      width: 50px;
-      border-radius: 26px;
-
-      .sequence-nav-button {
-        display: none;
-      }
-
-      .sequence-nav button.active{
-        background: #eaefef;
-        border: solid 1px $border-color;
-      }
-
-      .sequence-list{
-        flex-flow: column;
-      }
+      //overflow-x: scroll;
+      height: unset;
+      order: 2;
+      overflow: unset;
+      flex-grow: unset;
     }
-
   }
 
   ol {
@@ -113,28 +136,29 @@ $seq-nav-height: 50px;
       box-sizing: border-box;
       min-width: 40px;
       flex-grow: 1;
-      border-color: $seq-nav-border-color;
-      border-width: 1px;
-      border-top-style: solid;
+      //border-color: $seq-nav-border-color;
+      //border-width: 1px;
+      //border-top-style: solid;
+      display: inherit;
+      justify-content: center;
+      align-items: center;
 
-      &:not(:last-child) {
-        @include border-right-style(solid);
-      }
+      // &:not(:last-child) {
+      //   @include border-right-style(solid);
+      // }
 
       button {
         @extend %ui-fake-link;
         @extend %ui-clear-button;
 
-        width: 100%;
-        height: ($seq-nav-height - 1);
+        width: 80%;
+        height: unset;
         position: relative;
         margin: 0;
-        padding: 0;
+        padding: 8px 12px;
+        border-radius: 1.5rem;
         display: block;
         text-align: center;
-        border-color: $seq-nav-border-color;
-        border-width: 1px;
-        border-bottom-style: solid;
         box-sizing: border-box;
         overflow: visible; // for tooltip - IE11 uses 'hidden' by default if width/height is specified
 
@@ -142,11 +166,44 @@ $seq-nav-height: 50px;
           display: inline-block;
           line-height: 100%; // This matches the height of the <a> its within (the parent) to get vertical centering.
           font-size: 110%;
-          color: $seq-nav-icon-color-muted;
+          color: #888;
+        }
+
+        @include media-breakpoint-up(md) {
+          border-radius: 50%;
+          height: 45px;
+          width: 45px;
+          border-radius: 50%;
+          margin: 5px;
+          padding: 0;
+          background: none;
+          background: #f4f4f4;
+          border: solid 1px #ccc;
+        
+          &.active,
+          &:active{
+            border-bottom: 0;
+            border: solid 1px #ccc;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.15);
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05) inset;
+            
+            .icon{
+              color: rgb(60, 60, 60);
+            }
+          }
         }
 
         .fa-bookmark {
           color: $seq-nav-link-color;
+          font-size: 0.95rem;
+          top: 12px;
+          right: unset;
+
+          @include media-breakpoint-up(md) {
+            top: -2px;
+            right: 1px;
+          }
         }
 
         //video
@@ -195,6 +252,11 @@ $seq-nav-height: 50px;
           white-space: pre;
           pointer-events: none;
 
+          @include media-breakpoint-up(md) {
+            right: unset;
+            left: 0;
+          }
+
           &:empty {
             background: none;
 
@@ -215,6 +277,12 @@ $seq-nav-height: 50px;
             position: absolute;
             top: -5px;
             width: 10px;
+
+            
+          @include media-breakpoint-up(md) {
+            right: unset;
+            left: 18px;
+          }
           }
         }
       }
@@ -231,60 +299,44 @@ $seq-nav-height: 50px;
 
   display: block;
   top: 0;
-  min-width: 40px;
-  max-width: 40px;
-  height: 100%;
+  width: 40px;
+  height: 40px;
+  border-radius: 2rem;
   text-shadow: none; // overrides default button text-shadow
   background: none;  // overrides default button gradient
-  background-color: theme-color("inverse");
-  border-color: $seq-nav-border-color;
   box-shadow: none;
   font-size: inherit;
   font-weight: normal;
-  padding: 0;
+  padding: 8px 12px;
   white-space: nowrap;
   overflow-x: hidden;
+  border: 0;
+  color: #888;
+  
+  // @include media-breakpoint-up(md) {
+  //   min-width: 120px;
+  //   max-width: 200px;
+  //   text-overflow: ellipsis;
 
-  @include media-breakpoint-up(md) {
-    min-width: 120px;
-    max-width: 200px;
-    text-overflow: ellipsis;
-
-    span:not(:last-child) {
-      @include padding-right($baseline / 2);
-    }
-  }
+  //   span:not(:last-child) {
+  //     @include padding-right($baseline / 2);
+  //   }
+  // }
 
   .sequence-nav-button-label {
     display: none;
 
-    @include media-breakpoint-up(md) {
-      display: inline;
-    }
+    // @include media-breakpoint-up(md) {
+    //   display: inline;
+    // }
   }
 
   &.button-previous {
     order: -999;
-
-    @include media-breakpoint-up(md) {
-      @include left(0);
-      @include border-top-left-radius(3px);
-      @include border-top-right-radius(0);
-      @include border-bottom-right-radius(0);
-      @include border-bottom-left-radius(3px);
-    }
   }
 
   &.button-next {
     order: 999;
-
-    @include media-breakpoint-up(md) {
-      @include right(0);
-      @include border-top-left-radius(0);
-      @include border-top-right-radius(3px);
-      @include border-bottom-right-radius(3px);
-      @include border-bottom-left-radius(0);
-    }
   }
 
   &.disabled {
@@ -298,27 +350,37 @@ $seq-nav-height: 50px;
 
 .sequence-bottom {
   position: relative;
-  height: 45px;
-  margin: lh(2) auto;
+  //height: 45px;
+  padding: lh(2);
   display: flex;
   justify-content: center;
+  bottom: 0;
+  background: white;
 
-  
   @include media-breakpoint-up(md) {
-    position: fixed;
-    bottom: 12px;
-    width: 1280px;
-    justify-content: space-between;
+    margin-left: 70px;
+    border-bottom-right-radius: 0.4rem;
   }
-
+  
   .sequence-nav-button {
     position: relative;
-    min-width: 120px;
-    max-width: 200px;
     text-overflow: ellipsis;
-    
+    max-width: unset;
+    border: 0;
+    padding: 0 ($baseline * 0.8);
+    background: none;
+    width: unset;
+
     span{
-      color: #999;
+      color: #888;
+    }
+
+    @include media-breakpoint-up(md) {
+      &.focused,
+      &:hover{
+        padding-top: 0;
+        border-bottom: 0;
+      }
     }
 
     &:last-of-type {
@@ -328,16 +390,8 @@ $seq-nav-height: 50px;
     @media print {
       display: none;
     }
-
-    @include media-breakpoint-up(md) {
-      border: 0;
-      &.active{
-        border: 0;
-      }
-    }
   }
 }
-
 
   #seq_content {
   &:focus,
@@ -350,23 +404,20 @@ $seq-nav-height: 50px;
 .sequence-nav-button,
 .sequence-nav button {
   &.focused,
-  &:hover,
-  &:active,
-  &.active {
-    padding-top: 2px;
-    background-color: theme-color("primary");
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.1);
 
-    .icon {
-      color: theme-color("inverse");
+    span{
+      color: rgb(60, 60, 60);
     }
 
-    @include media-breakpoint-up(sm) {
-      border-bottom: 3px solid $seq-nav-link-color;
-      background-color: theme-color("inverse");
+    // @include media-breakpoint-up(sm) {
+    //   border-bottom: 3px solid $seq-nav-link-color;
+    //   background-color: theme-color("inverse");
 
-      .icon {
-        color: $seq-nav-icon-color;
-      }
-    }
+    //   .icon {
+    //     color: $seq-nav-icon-color;
+    //   }
+    // }
   }
 }
