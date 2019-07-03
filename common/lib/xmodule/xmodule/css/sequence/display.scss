@@ -1,8 +1,8 @@
 $seq-nav-border-color: $border-color !default;
 $seq-nav-hover-color: rgb(245, 245, 245) !default;
 $seq-nav-link-color: $link-color !default;
-$seq-nav-icon-color: rgb(140, 140, 140) !default;
-$seq-nav-icon-color-muted: rgb(10, 10, 10)!default;
+$seq-nav-icon-color: rgb(10, 10, 10) !default;
+$seq-nav-icon-color-muted: rgb(140, 140, 140)!default;
 $seq-nav-tooltip-color: rgb(51, 51, 51) !default;
 $seq-nav-height: 50px;
 
@@ -162,6 +162,13 @@ $seq-nav-height: 50px;
         box-sizing: border-box;
         overflow: visible; // for tooltip - IE11 uses 'hidden' by default if width/height is specified
 
+        .icon {
+          display: inline-block;
+          line-height: 100%; // This matches the height of the <a> its within (the parent) to get vertical centering.
+          font-size: 110%;
+          color: #888;
+        }
+
         @include media-breakpoint-up(md) {
           border-radius: 50%;
           height: 45px;
@@ -172,33 +179,33 @@ $seq-nav-height: 50px;
           background: none;
           background: #f4f4f4;
           border: solid 1px #ccc;
-          
+        
           &:hover,
-          &:focus{
-            border-bottom: 0;
-            border-radius: 50%;
-          }
-
+          &:focus,
           &.active,
           &:active{
+            border-bottom: 0;
             border: solid 1px #ccc;
             border-radius: 50%;
             background-color: rgba(0, 0, 0, 0.15);
             box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05) inset;
+            
+            .icon{
+              color: rgb(60, 60, 60);
+            }
           }
-        }
-
-        .icon {
-          display: inline-block;
-          line-height: 100%; // This matches the height of the <a> its within (the parent) to get vertical centering.
-          font-size: 110%;
-          color: $seq-nav-icon-color;
         }
 
         .fa-bookmark {
           color: $seq-nav-link-color;
-          top: -2px;
-          right: 1px;
+          font-size: 0.95rem;
+          top: 12px;
+          right: unset;
+
+          @include media-breakpoint-up(md) {
+            top: -2px;
+            right: 1px;
+          }
         }
 
         //video
@@ -364,7 +371,11 @@ $seq-nav-height: 50px;
     padding: 0 ($baseline * 0.8);
     background: none;
     width: unset;
-    
+        
+    span{
+      color: #888;
+    }
+
     @include media-breakpoint-up(md) {
       &.focused,
       &:hover{
@@ -373,10 +384,6 @@ $seq-nav-height: 50px;
         background: none;
         color: theme-color("inverse");
       }
-    }
-    
-    span{
-      color: #999;
     }
 
     &:last-of-type {
@@ -406,8 +413,8 @@ $seq-nav-height: 50px;
   &.active {
     background-color: #b4d7f5;
 
-    .icon {
-      color: $seq-nav-icon-color;
+    span{
+      color: rgb(60, 60, 60);
     }
 
     // @include media-breakpoint-up(sm) {

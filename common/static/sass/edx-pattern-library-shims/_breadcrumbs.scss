@@ -8,6 +8,8 @@
     @include margin-left($baseline/4);
 
     display: inline-block;
+    font-size: 0.85rem;
+    color: #888;
 
     @include media-breakpoint-down(lg) {
       max-width: 240px;
@@ -22,22 +24,24 @@
 
     @include media-breakpoint-down(xs) {
       &:not(:first-child) {
-        max-width: 60px;
+        max-width: 100px;
       }
     }
 
     &.nav-item-course {
       max-width: none;
-      font-size: 1.5rem;
-      line-height: 1;
+    }
+
+    &.nav-item-sequence{
+      color: #888;
+      font-weight: 600;
     }
 
     a,
     a:visited {
-      color: #999;
-      font-size: font-size(small);
-      line-height: line-height(small);
-    
+      color: #888;
+      font-size: 0.85rem;
+      line-height: 1;
     }
 
     a:hover {
@@ -54,7 +58,7 @@
     }
 
     display: inline-block;
-    color: $body-color;
+    color: #888;
 
     @include rtl {
       @include transform(rotateY(180deg));

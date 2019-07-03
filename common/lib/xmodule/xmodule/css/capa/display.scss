@@ -1064,6 +1064,10 @@ div.problem .action {
         padding: ($baseline / 5) ($baseline*0.6);
         font-size: 0.9rem;
         border-radius: 1rem;
+        
+        &:disabled{
+          background-color: #f4f4f4;
+        }
 
         &:hover,
         &:focus{
