@@ -759,7 +759,7 @@ $cool-dark: rgb(79, 89, 93); // UXPL cool dark
       li {
         @extend %ui-fake-link;
 
-        margin-bottom: 0.8rem;
+        margin: 1rem 0;
         border: 0;
         padding: 0;
         color: white; // AA compliant
@@ -770,10 +770,11 @@ $cool-dark: rgb(79, 89, 93); // UXPL cool dark
         }
 
         &.spacing{
-          margin: 2rem 0;
           background: rgba(255,255,255,0.2);
-          padding: $baseline / 5;
+          padding: ($baseline / 5) ($baseline * 0.6);
           text-align: center;
+          display: inline;
+          border-radius: 1rem;
           
           a{
             color: #888;
