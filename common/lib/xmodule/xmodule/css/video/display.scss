@@ -27,16 +27,17 @@ $cool-dark: rgb(79, 89, 93); // UXPL cool dark
 .video {
   @include clearfix();
 
-  //background: rgba(0, 0, 0, 0.95); // UXPL grayscale x-back
+  background: rgb(245, 245, 245); // UXPL grayscale x-back
   display: block;
-  margin: 0;
-  padding:0;
-  border-radius: 0;
+  margin: 0 -12px;
+  padding: 12px;
+  border-radius: 5px;
+  outline: none;
 
   &:focus,
   &:active,
   &:hover {
-    //border: 0;
+    border: 0;
   }
 
   &.is-initialized {
@@ -152,11 +153,9 @@ $cool-dark: rgb(79, 89, 93); // UXPL cool dark
 
     &:hover {
       .btn-play {
-        color: theme-color("primary");
-      }
-
-      .btn-play::after {
-        background: theme-color("inverse");
+        opacity: unset;
+        color: rgb(14, 166, 236);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
       }
     }
 
@@ -199,10 +198,10 @@ $cool-dark: rgb(79, 89, 93); // UXPL cool dark
       top: 46%;
       left: 50%;
       font-size: 4em;
+      opacity: 0.7;
       cursor: pointer;
 
       &::after {
-        background: $white;
         position: absolute;
         width: 50%;
         height: 50%;
@@ -748,7 +747,10 @@ $cool-dark: rgb(79, 89, 93); // UXPL cool dark
     padding: 0;
     font-size: 14px;
     visibility: visible;
-    padding: 1rem;
+
+    a {
+      color: #0074b5;
+    }
 
     .subtitles-menu {
       height: 100%;
@@ -759,31 +761,19 @@ $cool-dark: rgb(79, 89, 93); // UXPL cool dark
       li {
         @extend %ui-fake-link;
 
-        margin-bottom: 0.8rem;
+        margin-bottom: 8px;
         border: 0;
         padding: 0;
-        color: white; // AA compliant
+        color: #0074b5; // AA compliant
         line-height: lh();
 
         span {
           display: block;
         }
 
-        &.spacing{
-          margin: 2rem 0;
-          background: rgba(255,255,255,0.2);
-          padding: $baseline / 5;
-          text-align: center;
-          
-          a{
-            color: #888;
-            font-size: 0.85rem;
-          }
-        }
-
         &.current {
-          color: #28dcff;
-          //font-weight: 700;
+          color: #333;
+          font-weight: 700;
         }
 
         &.focused {
@@ -801,7 +791,11 @@ $cool-dark: rgb(79, 89, 93); // UXPL cool dark
         }
 
         &.spacing:last-of-type {
+          position: relative;
+
           .transcript-end {
+            position: absolute;
+            bottom: 0;
           }
         }
       }
