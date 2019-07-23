@@ -53,13 +53,8 @@ $bookmarked-icon: "\f02e"; // .fa-bookmark
   }
 
   .bookmark-button {
-    .bookmark-text{
-      display: none;
-    }
-
+    
     &::before {
-      //
-
       content: $bookmark-icon;
       font-family: FontAwesome;
       font-size: 1.2rem;

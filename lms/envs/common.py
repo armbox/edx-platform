@@ -3174,6 +3174,14 @@ NOTIFICATION_EMAIL_CSS = "templates/credit_notifications/credit_notification.css
 NOTIFICATION_EMAIL_EDX_LOGO = "templates/credit_notifications/edx-logo-header.png"
 
 
+# http://chibisov.github.io/drf-extensions/docs/
+REST_FRAMEWORK_EXTENSIONS = {
+    'DEFAULT_CACHE_ERRORS': False,
+    'DEFAULT_CACHE_RESPONSE_TIMEOUT': None,
+    'DEFAULT_LIST_CACHE_KEY_FUNC': 'smartlearn.cache.timestamped_list_key_constructor',
+    'DEFAULT_OBJECT_CACHE_KEY_FUNC': 'smartlearn.cache.timestamped_object_key_constructor',
+}
+
 ################################ Settings for JWTs ################################
 
 JWT_AUTH = {

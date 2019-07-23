@@ -27,24 +27,25 @@
 
   .msg-content {
     .title {
-      @extend %t-title5;
-      @extend %t-weight4;
-
-      margin-bottom: ($baseline/4);
+      font-size: 1rem;
+      //margin-bottom: ($baseline/4);
+      line-height: 1;
       color: inherit;
       text-transform: none;
       letter-spacing: 0;
     }
 
     .copy {
-      @extend %t-copy-sub1;
+      //@extend %t-copy-sub1;
 
       color: inherit;
+      font-size: 0.85rem;
 
       p { // nasty reset
-        @extend %t-copy-sub1;
+        //@extend %t-copy-sub1;
 
         color: inherit;
+        font-size: 0.85rem;
       }
     }
   }

@@ -231,14 +231,14 @@ class CourseGradeReport(object):
         Returns a list of all applicable column headers for this grade report.
         """
         return (
-            ["Student ID", "Email", "Username", "RealName"] +
+            ["Student ID", "Email", "Username", "RealName", "Last Login"] +
             self._grades_header(context) +
             (['Cohort Name'] if context.cohorts_enabled else []) +
             [u'Experiment Group ({})'.format(partition.name) for partition in context.course_experiments] +
             (['Team Name'] if context.teams_enabled else []) +
             ['Enrollment Track', 'Verification Status'] +
             ['Certificate Eligible', 'Certificate Delivered', 'Certificate Type'] +
-            ['Enrollment Status']
+            ['Enrollment Status', 'Enrollment Date']
         )
 
     def _error_headers(self):
@@ -487,15 +487,20 @@ class CourseGradeReport(object):
                     error_rows.append([user.id, user.username, text_type(error)])
                 else:
                     profile = UserProfile.objects.get(user=user)
+
+                    last_login = user.last_login.strftime("%Y-%m-%d %H:%M") if user.last_login else 'N/A'
+                    enrollment = user.courseenrollment_set.get(course_id=context.course_id)
+                    enrolled = enrollment.created.strftime("%Y-%m-%d %H:%M") if enrollment else 'N/A'
+
                     success_rows.append(
-                        [user.id, user.email, user.username, profile.name] +
+                        [user.id, user.email, user.username, profile.name, last_login] +
                         self._user_grades(course_grade, context) +
                         self._user_cohort_group_names(user, context) +
                         self._user_experiment_group_names(user, context) +
                         self._user_team_names(user, bulk_context.teams) +
                         self._user_verification_mode(user, context, bulk_context.enrollments) +
                         self._user_certificate_info(user, context, course_grade, bulk_context.certs) +
-                        [_user_enrollment_status(user, context.course_id)]
+                        [_user_enrollment_status(user, context.course_id), enrolled]
                     )
             return success_rows, error_rows
 
