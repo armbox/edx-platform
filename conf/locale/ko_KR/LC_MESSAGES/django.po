@@ -1430,7 +1430,7 @@ msgid "The file must end with the extension '{file_types}'."
 msgid_plural ""
 "The file must end with one of the following extensions: '{file_types}'."
 msgstr[0] "파일은 '{file_types}' 확장자로 끝나야합니다."
-"파일은 다음 확장자 중 하나로 끝나야 합니다 : '{file_types}'"
+msgstr[1] "파일은 다음 확장자 중 하나로 끝나야 합니다 : '{file_types}'"
 
 #: common/djangoapps/util/file.py
 #, python-brace-format
@@ -1469,7 +1469,7 @@ msgstr "잘못된 비밀번호"
 msgid "at least %(min_length)d character"
 msgid_plural "at least %(min_length)d characters"
 msgstr[0] "적어도 %(min_length)d 문자"
-"최소 %(min_length)d자 이상"
+msgstr[1] "최소 %(min_length)d자 이상"
 
 #: common/djangoapps/util/password_policy_validators.py
 #, python-format
@@ -1480,7 +1480,7 @@ msgid_plural ""
 "This password is too long. It must contain no more than %(max_length)d "
 "characters."
 msgstr[0] "이 암호는 너무 깁니다. %(max_length)d 문자를 초과해서는 안됩니다."
-"이 암호는 너무 깁니다. %(max_length)d 문자를 초과해서는 안됩니다."
+msgstr[1] "이 암호는 너무 깁니다. %(max_length)d 문자를 초과해서는 안됩니다."
 
 #: common/djangoapps/util/password_policy_validators.py
 #, python-format
@@ -1488,49 +1488,49 @@ msgid "Your password must contain no more than %(max_length)d character."
 msgid_plural ""
 "Your password must contain no more than %(max_length)d characters."
 msgstr[0] " 암호는 %(max_length)d문자를 초과해서는 안됩니다."
-" 암호에는 %(max_length)d 자를 초과 할 수 없습니다."
+msgstr[1] " 암호에는 %(max_length)d 자를 초과 할 수 없습니다."
 
 #: common/djangoapps/util/password_policy_validators.py
 #, python-format
 msgid "This password must contain at least %(min_alphabetic)d letter."
 msgid_plural "This password must contain at least %(min_alphabetic)d letters."
 msgstr[0] " 이 암호는 적어도 %(min_alphabetic)d 개의 문자를 포함해야 합니다."
-" 이 암호는 최소 %(min_alphabetic)d자를 포함해야 합니다."
+msgstr[1] " 이 암호는 최소 %(min_alphabetic)d자를 포함해야 합니다."
 
 #: common/djangoapps/util/password_policy_validators.py
 #, python-format
 msgid "Your password must contain at least %(min_alphabetic)d letter."
 msgid_plural "Your password must contain at least %(min_alphabetic)d letters."
 msgstr[0] " 비밀번호에는 최소 %(min_alphabetic)d 자의 문자가 포함되어야 합니다."
-" 비밀번호에는 최소 %(min_alphabetic)d 자를 포함해야 합니다"
+msgstr[1] " 비밀번호에는 최소 %(min_alphabetic)d 자를 포함해야 합니다"
 
 #: common/djangoapps/util/password_policy_validators.py
 #, python-format
 msgid "%(num)d letter"
 msgid_plural "%(num)d letters"
 msgstr[0] "%(num)d 글자"
-"%(num)d 글자"
+msgstr[1] "%(num)d 글자"
 
 #: common/djangoapps/util/password_policy_validators.py
 #, python-format
 msgid "This password must contain at least %(min_numeric)d number."
 msgid_plural "This password must contain at least %(min_numeric)d numbers."
 msgstr[0] "이 암호는 최소한 %(min_numeric)d 개의 숫자를 포함해야 합니다."
-"이 암호는 적어도 %(min_numeric)d 개의 숫자를 포함해야 합니다."
+msgstr[1] "이 암호는 적어도 %(min_numeric)d 개의 숫자를 포함해야 합니다."
 
 #: common/djangoapps/util/password_policy_validators.py
 #, python-format
 msgid "Your password must contain at least %(min_numeric)d number."
 msgid_plural "Your password must contain at least %(min_numeric)d numbers."
 msgstr[0] "비밀번호에는 최소 %(min_numeric)d 개의 숫자가 포함되어야 합니다."
-"비밀번호에는 최소 %(min_numeric)d 개의 숫자가 포함되어야 합니다."
+msgstr[1] "비밀번호에는 최소 %(min_numeric)d 개의 숫자가 포함되어야 합니다."
 
 #: common/djangoapps/util/password_policy_validators.py
 #, python-format
 msgid "%(num)d number"
 msgid_plural "%(num)d numbers"
 msgstr[0] "%(num)d 숫자"
-"%(num)d 숫자"
+msgstr[1] "%(num)d 숫자"
 
 #: common/djangoapps/util/password_policy_validators.py
 #, python-format
@@ -1538,7 +1538,7 @@ msgid "This password must contain at least %(min_upper)d uppercase letter."
 msgid_plural ""
 "This password must contain at least %(min_upper)d uppercase letters."
 msgstr[0] " 이 암호는 적어도 %(min_upper)d대문자를 포함해야 합니다."
-" 이 암호는 적어도 %(min_upper)d 개의 대문자를 포함해야 합니다."
+msgstr[1] " 이 암호는 적어도 %(min_upper)d 개의 대문자를 포함해야 합니다."
 
 #: common/djangoapps/util/password_policy_validators.py
 #, python-format
@@ -1546,14 +1546,14 @@ msgid "Your password must contain at least %(min_upper)d uppercase letter."
 msgid_plural ""
 "Your password must contain at least %(min_upper)d uppercase letters."
 msgstr[0] " 암호는 적어도 %(min_upper)d 대문자를 포함해야 합니다."
-" 암호는 적어도 %(min_upper)d 개의 대문자를 포함해야 합니다."
+msgstr[1] " 암호는 적어도 %(min_upper)d 개의 대문자를 포함해야 합니다."
 
 #: common/djangoapps/util/password_policy_validators.py
 #, python-format
 msgid "%(num)d uppercase letter"
 msgid_plural "%(num)d uppercase letters"
 msgstr[0] "%(num)d 대문자"
-"%(num)d 대문자"
+msgstr[1] "%(num)d 대문자"
 
 #: common/djangoapps/util/password_policy_validators.py
 #, python-format
@@ -1561,7 +1561,7 @@ msgid "This password must contain at least %(min_lower)d lowercase letter."
 msgid_plural ""
 "This password must contain at least %(min_lower)d lowercase letters."
 msgstr[0] " 이 암호는 최소한 %(min_lower)d 개의 소문자를 포함해야 합니다."
-" 이 암호는 최소한 %(min_lower)d 개의 소문자를 포함해야 합니다."
+msgstr[1] " 이 암호는 최소한 %(min_lower)d 개의 소문자를 포함해야 합니다."
 
 #: common/djangoapps/util/password_policy_validators.py
 #, python-format
@@ -1569,14 +1569,14 @@ msgid "Your password must contain at least %(min_lower)d lowercase letter."
 msgid_plural ""
 "Your password must contain at least %(min_lower)d lowercase letters."
 msgstr[0] " 암호에는 적어도 %(min_lower)d 소문자가 있어야합니다."
-" 암호는 최소한 %(min_lower)d개의 소문자를 포함해야합니다."
+msgstr[1] " 암호는 최소한 %(min_lower)d개의 소문자를 포함해야합니다."
 
 #: common/djangoapps/util/password_policy_validators.py
 #, python-format
 msgid "%(num)d lowercase letter"
 msgid_plural "%(num)d lowercase letters"
 msgstr[0] "%(num)d 소문자"
-"%(num)d 소문자"
+msgstr[1] "%(num)d 소문자"
 
 #: common/djangoapps/util/password_policy_validators.py
 #, python-format
@@ -1585,7 +1585,7 @@ msgid ""
 msgid_plural ""
 "This password must contain at least %(min_punctuation)d punctuation marks."
 msgstr[0] " 이 암호는 최소한 %(min_punctuation)d개의 구두점을 포함해야 합니다."
-" 이 암호는 최소한 %(min_punctuation)d개의 구두점을 포함해야 합니다."
+msgstr[1] " 이 암호는 최소한 %(min_punctuation)d개의 구두점을 포함해야 합니다."
 
 #: common/djangoapps/util/password_policy_validators.py
 #, python-format
@@ -1594,35 +1594,35 @@ msgid ""
 msgid_plural ""
 "Your password must contain at least %(min_punctuation)d punctuation marks."
 msgstr[0] " 암호에는 %(min_punctuation)d 문장 부호가 포함되어야 합니다."
-" 암호에는 %(min_punctuation)d 개의 문장 부호가 포함되어야 합니다."
+msgstr[1] " 암호에는 %(min_punctuation)d 개의 문장 부호가 포함되어야 합니다."
 
 #: common/djangoapps/util/password_policy_validators.py
 #, python-format
 msgid "%(num)d punctuation mark"
 msgid_plural "%(num)d punctuation marks"
 msgstr[0] "%(num)d 문장 부호"
-"%(num)d 문장 부호"
+msgstr[1] "%(num)d 문장 부호"
 
 #: common/djangoapps/util/password_policy_validators.py
 #, python-format
 msgid "This password must contain at least %(min_symbol)d symbol."
 msgid_plural "This password must contain at least %(min_symbol)d symbols."
 msgstr[0] " 이 암호는 적어도 %(min_symbol)d 기호를 포함해야 합니다."
-" 이 암호는 최소한 %(min_symbol)d 개의 기호를 포함해야 합니다."
+msgstr[1] " 이 암호는 최소한 %(min_symbol)d 개의 기호를 포함해야 합니다."
 
 #: common/djangoapps/util/password_policy_validators.py
 #, python-format
 msgid "Your password must contain at least %(min_symbol)d symbol."
 msgid_plural "Your password must contain at least %(min_symbol)d symbols."
 msgstr[0] " 암호는 최소한 %(min_symbol)d 기호를 포함해야 합니다."
-" 비밀번호에는 적어도 %(min_symbol)d 개의 기호가 포함되어야 합니다."
+msgstr[1] " 비밀번호에는 적어도 %(min_symbol)d 개의 기호가 포함되어야 합니다."
 
 #: common/djangoapps/util/password_policy_validators.py
 #, python-format
 msgid "%(num)d symbol"
 msgid_plural "%(num)d symbols"
 msgstr[0] "%(num)d 기호"
-"%(num)d 기호"
+msgstr[1] "%(num)d 기호"
 
 #: common/djangoapps/xblock_django/admin.py
 msgid ""
@@ -2409,21 +2409,21 @@ msgstr ""
 msgid "Incorrect ({progress} point)"
 msgid_plural "Incorrect ({progress} points)"
 msgstr[0] " 틀림 ({progress} 점)"
-" 틀림 ({progress} 점)"
+msgstr[1] " 틀림 ({progress} 점)"
 
 #: common/lib/xmodule/xmodule/capa_base.py
 #, python-brace-format
 msgid "Correct ({progress} point)"
 msgid_plural "Correct ({progress} points)"
 msgstr[0] " 맞음 ({progress} 점)"
-" 맞음({progress} 점)"
+msgstr[1] " 맞음({progress} 점)"
 
 #: common/lib/xmodule/xmodule/capa_base.py
 #, python-brace-format
 msgid "Partially correct ({progress} point)"
 msgid_plural "Partially correct ({progress} points)"
 msgstr[0] "부분적으로 맞음 ({progress} 점)"
-" 부분적으로 맞음 ({progress} 점)"
+msgstr[1] " 부분적으로 맞음 ({progress} 점)"
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "Partially Correct"
@@ -2462,21 +2462,21 @@ msgstr ""
 msgid "{num_hour} hour"
 msgid_plural "{num_hour} hours"
 msgstr[0] "{num_hour} 시간"
-"{num_hour} 시간"
+msgstr[1] "{num_hour} 시간"
 
 #: common/lib/xmodule/xmodule/capa_base.py
 #, python-brace-format
 msgid "{num_minute} minute"
 msgid_plural "{num_minute} minutes"
 msgstr[0] "{num_minute} 분"
-"{num_minute} 분"
+msgstr[1] "{num_minute} 분"
 
 #: common/lib/xmodule/xmodule/capa_base.py
 #, python-brace-format
 msgid "{num_second} second"
 msgid_plural "{num_second} seconds"
 msgstr[0] "{num_second} 초"
-"{num_second} 초"
+msgstr[1] "{num_second} 초"
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "Problem needs to be reset prior to save."
@@ -3770,14 +3770,14 @@ msgstr " 다른 문제 유형을 선택하십시오."
 msgid "The specified library is configured to fetch {count} problem, "
 msgid_plural "The specified library is configured to fetch {count} problems, "
 msgstr[0] " 지정된 라이브러리가 {count}문제를 가져오도록 구성되었습니다."
-" 지정된 라이브러리가 {count}개의 문제를 가져오도록 구성되었습니다."
+msgstr[1] " 지정된 라이브러리가 {count}개의 문제를 가져오도록 구성되었습니다."
 
 #: common/lib/xmodule/xmodule/library_content_module.py
 #, python-brace-format
 msgid "but there is only {actual} matching problem."
 msgid_plural "but there are only {actual} matching problems."
 msgstr[0] " 하지만 {actual}일치하는 문제 만 있습니다."
-" 하지만 {actual}일치하는 문제 만 있습니다."
+msgstr[1] " 하지만 {actual}일치하는 문제 만 있습니다."
 
 #: common/lib/xmodule/xmodule/library_content_module.py
 msgid "Edit the library configuration."
@@ -4542,7 +4542,7 @@ msgid "There is no transcript file associated with the {lang} language."
 msgid_plural ""
 "There are no transcript files associated with the {lang} languages."
 msgstr[0] " {lang} 언어와 관련된 스크립트 파일이 없습니다."
-" {lang} 언어와 관련된 스크립트 파일이 없습니다."
+msgstr[1] " {lang} 언어와 관련된 스크립트 파일이 없습니다."
 
 #: common/lib/xmodule/xmodule/video_module/video_module.py
 msgid ""
@@ -13502,7 +13502,7 @@ msgstr " 이제 과정을 {i_start}{user_name}{i_end}(으)로 보고 있습니�
 #: lms/templates/problem.html
 msgid "You have used {num_used} of {num_total} attempt"
 msgid_plural "You have used {num_used} of {num_total} attempts"
-msgstr[0] " {num_total}회 {num_total}회 사용했습니다. "
+msgstr[0] " {num_used}회/{num_total}회 사용했습니다. "
 
 #: lms/templates/problem.html
 msgid ""

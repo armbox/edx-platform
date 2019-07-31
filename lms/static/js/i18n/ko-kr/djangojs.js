@@ -39,10 +39,10 @@
     "%(comments_count)s %(span_sr_open)scomments (%(unread_comments_count)s unread comments)%(span_close)s": "%(comments_count)s %(span_sr_open)scomments (%(unread_comments_count)s  unread comments)%(span_close)s ", 
     "%(download_link_start)sDownload this image (right-click or option-click, save as)%(link_end)s and then %(upload_link_start)supload%(link_end)s it to your backpack.</li>": "%(download_link_start)s \uc774\ubbf8\uc9c0\ub97c \ub2e4\uc6b4\ub85c\ub4dc(\uc624\ub978\ucabd \ud074\ub9ad \ub610\ub294 \uc635\uc158 \ud074\ub9ad, \ub2e4\ub978 \uc774\ub984\uc73c\ub85c \uc800\uc7a5) %(link_end)s \uadf8\ub7f0 \ub2e4\uc74c %(upload_link_start)supload", 
     "%(earned)s/%(possible)s point (graded)": [
-      "%(earned)s/%(possible) \ud3ec\uc778\ud2b8 (\ub4f1\uae09)%(earned)s/%(possible)s \uc810 (\ub4f1\uae09)"
+      "%(earned)s/%(possible)s \ud3ec\uc778\ud2b8 (\ud3c9\uac00\ub428)"
     ], 
     "%(earned)s/%(possible)s point (ungraded)": [
-      "%(earned)s/%(possible)s \uc810\uc218 (\ube44\ud3c9\uac00)%(earned)s/%(possible)s \uc810\uc218 (\ube44\ud3c9\uac00)"
+      "%(earned)s/%(possible)s \uc810\uc218 (\ube44\ud3c9\uac00)"
     ], 
     "%(errorCount)s error found in form.": [
       "%(errorCount)s \uc624\ub958\uac00 \uc591\uc2dd\uc5d0\uc11c \ubc1c\uacac\ub418\uc5c8\uc2b5\ub2c8\ub2e4."
@@ -50,17 +50,17 @@
     "%(field)s can only contain up to %(count)d characters.": "%(field)s \ub294 \ucd5c\ub300 %(count)d \ubb38\uc790\uae4c\uc9c0 \ud3ec\ud568 \ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4.", 
     "%(field)s must have at least %(count)d characters.": "%(field)s \ub294 \uc801\uc5b4\ub3c4 %(count)d \uac1c\uc758 \ubb38\uc790\ub97c \uac00\uc838\uc57c\ud569\ub2c8\ub2e4.", 
     "%(memberCount)s / %(maxMemberCount)s Member": [
-      "%(memberCount)s / %(maxMemberCount)s \uba64\ubc84%(memberCount)s / %(maxMemberCount)s \uba64\ubc84"
+      "%(memberCount)s / %(maxMemberCount)s \uba64\ubc84"
     ], 
     "%(new_item_message)s": "%(new_item_message)s", 
     "%(num_points)s point possible (graded)": [
-      "%(num_points)s \uc810 \uac00\ub2a5 (\ucc44\uc810)%(num_points)s \uc810 \uac00\ub2a5 (\ucc44\uc810)"
+      "%(num_points)s \uc810 \uac00\ub2a5 (\ucc44\uc810)"
     ], 
     "%(num_points)s point possible (graded, results hidden)": [
-      "%(num_points)s \uc810 \uac00\ub2a5 (\ucc44\uc810, \uacb0\uacfc \uc228\uae40)%(num_points)s \uc810 \uac00\ub2a5 (\ucc44\uc810, \uacb0\uacfc \uc228\uae40)"
+      "%(num_points)s \uc810 \uac00\ub2a5 (\ucc44\uc810, \uacb0\uacfc \uc228\uae40)"
     ], 
     "%(num_points)s point possible (ungraded)": [
-      "%(num_points)s \uc810 \uac00\ub2a5 (\ube44\ud3c9\uac00)%(num_points)s \uc810 \uac00\ub2a5 (\ube44\ud3c9\uac00)"
+      "%(num_points)s \uc810 \uac00\ub2a5 (\ube44\ud3c9\uac00)"
     ], 
     "%(num_points)s point possible (ungraded, results hidden)": [
       "%(num_points)s \uc810 \uac00\ub2a5 (\ud3c9\uac00 \uc5c6\uc74c, \uacb0\uacfc \uc228\uae40)"
@@ -83,13 +83,13 @@
     ], 
     "%(type)s Component Template Menu": "%(type)s \uad6c\uc131 \uc694\uc18c \ud15c\ud50c\ub9bf \uba54\ub274 ", 
     "%(value)s hour": [
-      "%(value)s hour%(value)s hours"
+      "%(value)s hour"
     ], 
     "%(value)s minute": [
-      "%(value)s minute%(value)s minutes"
+      "%(value)s minute"
     ], 
     "%(value)s second": [
-      "%(value)s second%(value)s seconds"
+      "%(value)s second"
     ], 
     "%d day": [
       "%d \uc77c"
@@ -117,7 +117,7 @@
     "(Self-paced) Starts {start}": "(Self-paced) \uc2dc\uc791 {start}", 
     "(Staff)": "(\uc9c1\uc6d0)", 
     "(contains %(student_count)s student)": [
-      "(%(student_count)s \ud559\uc0dd \ud3ec\ud568)(%(student_count)s \ud559\uc0dd \ud3ec\ud568)"
+      "(%(student_count)s \ud559\uc0dd \ud3ec\ud568)"
     ], 
     "(optional)": "(\uc120\ud0dd \uacfc\ubaa9)", 
     "(required)": "(\ud544\uc218)", 
@@ -465,7 +465,7 @@
     "Contact Us": "\uc5f0\ub77d\ucc98", 
     "Contains staff only content": " \uc9c1\uc6d0 \uc804\uc6a9 \ucee8\ud150\uce20\uac00 \ub4e4\uc5b4 \uc788\uc2b5\ub2c8\ub2e4. ", 
     "Contains {count} group": [
-      "{count}  \uadf8\ub8f9 \ud3ec\ud568{count} \uadf8\ub8f9 \ud3ec\ud568"
+      "{count}  \uadf8\ub8f9 \ud3ec\ud568"
     ], 
     "Content Group ID": " \ucf58\ud150\uce20 \uadf8\ub8f9 ID ", 
     "Content Group Name": " \ucf58\ud150\uce20 \uadf8\ub8f9 \uc774\ub984 ", 
@@ -494,7 +494,7 @@
     "Country of residence": "\uac70\uc8fc \uad6d\uac00", 
     "Country or Region of Residence": "\uac70\uc8fc \uad6d\uac00 \ub610\ub294 \uc9c0\uc5ed", 
     "Course": [
-      "\ucf54\uc2a4\ucf54\uc2a4"
+      "\ucf54\uc2a4"
     ], 
     "Course Credit Requirements": "\uacfc\uc815 \ud559\uc810 \uc694\uac74", 
     "Course End": "\ucf54\uc2a4 \uc885\ub8cc", 
@@ -1023,7 +1023,7 @@
     "Load more": "\ub354 \ubcf4\uae30 ", 
     "Load next {numResponses} responses": "\ub2e4\uc74c {numResponses} \uc751\ub2f5 \ub85c\ub4dc", 
     "Load next {num_items} result": [
-      " \ub2e4\uc74c {num_items} \uac1c\uc758 \uacb0\uacfc\ub85c\ub4dc  \ub2e4\uc74c {num_items} \uac1c\uc758 \uacb0\uacfc\ub85c\ub4dc "
+      " \ub2e4\uc74c {num_items} \uac1c\uc758 \uacb0\uacfc\ub85c\ub4dc "
     ], 
     "Loading": "\ub85c\ub529", 
     "Loading content": "\ucf58\ud150\uce20 \ub85c\ub529\uc911", 
@@ -1469,7 +1469,7 @@
     "Show All": "\ubaa8\ub450 \ubcf4\uae30", 
     "Show Annotations": "\ud2b9\uc218 \ud6a8\uacfc \ud45c\uc2dc", 
     "Show Comment (%(num_comments)s)": [
-      "\ub313\uae00 \ud45c\uc2dc (%(num_comments)s)\ub313\uae00 \ud45c\uc2dc (%(num_comments)s)"
+      "\ub313\uae00 \ud45c\uc2dc (%(num_comments)s)"
     ], 
     "Show Deprecated Settings": "\uc0ac\uc6a9\ub418\uc9c0 \uc54a\ub294 \uc124\uc815 \ud45c\uc2dc", 
     "Show Discussion": "\uac8c\uc2dc\ud310  \ubcf4\uae30", 
@@ -1485,7 +1485,8 @@
     "Show transcripts ({transcriptCount})": "\uc131\uc801\ud45c \ubcf4\uc5ec\uc8fc\uae30 ({transcriptCount})", 
     "Showing all responses": "\ubaa8\ub4e0 \ub2f5\ubcc0 \ubcf4\uc5ec\uc8fc\uae30", 
     "Showing first response": [
-      "\uccab \ubc88\uc9f8 \uc751\ub2f5 \ud45c\uc2dc \uccab \ubc88\uc9f8 {numResponses} \uc751\ub2f5 \ud45c\uc2dc "
+      "\uccab \ubc88\uc9f8 \uc751\ub2f5 \ud45c\uc2dc", 
+      " \uccab \ubc88\uc9f8 {numResponses} \uc751\ub2f5 \ud45c\uc2dc "
     ], 
     "Showing results for \"{searchString}\"": "\"{searchString}\" \uacb0\uacfc \ud45c\uc2dc", 
     "Showing {currentItemRange} out of {totalItemsCount}, filtered by {assetType}, sorted by {sortName} ascending": "{totalItemsCount} \uc911 {assetType}\uc5d0 \uc758\ud574 \ud544\ud130\ub9c1 \ub418\uace0 {sortName} \uc624\ub984\ucc28\uc21c\uc73c\ub85c \uc815\ub82c \ub41c {currentItemRange} \ud45c\uc2dc", 
@@ -1717,7 +1718,8 @@
     "There was an error retrieving preview results for this catalog. Please check that your query is correct and try again.": "\uc774 \uce74\ud0c8\ub85c\uadf8\uc5d0 \ub300\ud55c \ubbf8\ub9ac\ubcf4\uae30 \uacb0\uacfc\ub97c \uac00\uc838 \uc624\ub294 \uc911\uc5d0 \uc624\ub958\uac00 \ubc1c\uc0dd\ud588\uc2b5\ub2c8\ub2e4.  \uac80\uc0c9\uc5b4\uac00 \uc62c\ubc14\ub978\uc9c0 \ud655\uc778\ud558\uace0 \ub2e4\uc2dc \uc2dc\ub3c4\ud558\uc2ed\uc2dc\uc624.", 
     "There was an error updating your goal.": "\ubaa9\ud45c\ub97c \uc5c5\ub370\uc774\ud2b8\ud558\ub294 \uc911\uc5d0 \uc624\ub958\uac00 \ubc1c\uc0dd\ud588\uc2b5\ub2c8\ub2e4.", 
     "There was an error when trying to add learners:": [
-      "\ud559\uc2b5\uc790\ub97c \ucd94\uac00\ud558\ub824\uace0 \ud560 \ub54c \uc624\ub958\uac00 \ubc1c\uc0dd\ud588\uc2b5\ub2c8\ub2e4:{numErrors} \uc774 \ucf54\ud638\ud2b8\uc5d0 \ud559\uc2b5\uc790\ub97c \ucd94\uac00 \ud560 \uc218 \uc5c6\uc5c8\uc2b5\ub2c8\ub2e4."
+      "\ud559\uc2b5\uc790\ub97c \ucd94\uac00\ud558\ub824\uace0 \ud560 \ub54c \uc624\ub958\uac00 \ubc1c\uc0dd\ud588\uc2b5\ub2c8\ub2e4:", 
+      "{numErrors} \uc774 \ucf54\ud638\ud2b8\uc5d0 \ud559\uc2b5\uc790\ub97c \ucd94\uac00 \ud560 \uc218 \uc5c6\uc5c8\uc2b5\ub2c8\ub2e4."
     ], 
     "There was an error while importing the new course to our database.": "\uc0c8 \uacfc\uc815\uc744 \ub370\uc774\ud130\ubca0\uc774\uc2a4\ub85c \uac00\uc838 \uc624\ub294 \uc911\uc5d0 \uc624\ub958\uac00 \ubc1c\uc0dd\ud588\uc2b5\ub2c8\ub2e4.", 
     "There was an error while importing the new library to our database.": "\ub370\uc774\ud130\ubca0\uc774\uc2a4\uc5d0 \uc0c8 \ub77c\uc774\ube0c\ub7ec\ub9ac\ub97c \uac00\uc838 \uc624\ub294 \uc911\uc5d0 \uc624\ub958\uac00 \ubc1c\uc0dd\ud588\uc2b5\ub2c8\ub2e4.", 
@@ -1954,7 +1956,7 @@
     "Use your webcam to take a photo of your face. We will match this photo with the photo on your ID.": " \uc6f9\ucea0\uc744 \uc0ac\uc6a9\ud558\uc5ec \uc5bc\uad74 \uc0ac\uc9c4\uc744 \ucc0d\uc73c\uc2ed\uc2dc\uc624. \uc774 \uc0ac\uc9c4\uacfc ID\uc758  \uc0ac\uc9c4\uc774 \uc77c\uce58\ud569\ub2c8\ub2e4.", 
     "Used": "\uc0ac\uc6a9", 
     "Used in {count} location": [
-      "{count} \uc704\uce58\uc5d0 \uc0ac\uc6a9\ub428{count} \uc704\uce58\uc5d0 \uc0ac\uc6a9\ub428"
+      "{count} \uc704\uce58\uc5d0 \uc0ac\uc6a9\ub428"
     ], 
     "User Email": "\uc0ac\uc6a9\uc790 \uc774\uba54\uc77c", 
     "Username": "\uc544\uc774\ub514", 
@@ -2295,16 +2297,16 @@
       "{numMoved} \ud559\uc2b5\uc790\uac00 {prevCohort}\uc5d0\uc11c"
     ], 
     "{numPreassigned} learner was pre-assigned for this cohort. This learner will automatically be added to the cohort when they enroll in the course.": [
-      "{numPreassigned} learner\uac00 \uc774 \ucf54\ud638\ud2b8\uc5d0 \uc0ac\uc804 \ud560\ub2f9\ub418\uc5c8\uc2b5\ub2c8\ub2e4. \uc774 \ud559\uc2b5\uc790\ub294 \ucf54\uc2a4\uc5d0 \ub4f1\ub85d \ud560 \ub54c \uc790\ub3d9\uc73c\ub85c \ucf54\ud638\ud2b8\uc5d0 \ucd94\uac00\ub429\ub2c8\ub2e4.\uc218\uac15\uc790\ub294 \uc774 \ucf54\ud638\ud2b8\uc5d0 \uc0ac\uc804 \ud560\ub2f9\ub418\uc5c8\uc2b5\ub2c8\ub2e4. \uc774 \ud559\uc2b5\uc790\ub294 \ucf54\uc2a4\uc5d0 \ub4f1\ub85d \ud560 \ub54c \uc790\ub3d9\uc73c\ub85c \ucf54\ud638\ud2b8\uc5d0 \ucd94\uac00\ub429\ub2c8\ub2e4."
+      "{numPreassigned} learner\uac00 \uc774 \ucf54\ud638\ud2b8\uc5d0 \uc0ac\uc804 \ud560\ub2f9\ub418\uc5c8\uc2b5\ub2c8\ub2e4. \uc774 \ud559\uc2b5\uc790\ub294 \ucf54\uc2a4\uc5d0 \ub4f1\ub85d \ud560 \ub54c \uc790\ub3d9\uc73c\ub85c \ucf54\ud638\ud2b8\uc5d0 \ucd94\uac00\ub429\ub2c8\ub2e4."
     ], 
     "{numPresent} learner was already in the cohort": [
       "{numPresent} learner\uac00 \uc774\ubbf8 \ucf54\ud638\ud2b8\uc5d0 \uc788\uc5c8\uc2b5\ub2c8\ub2e4. "
     ], 
     "{numResponses} other response": [
-      "{numResponses} \uac1c\uc758 \ub2e4\ub978 \uc751\ub2f5{numResponses} \uac1c\uc758 \ub2e4\ub978 \uc751\ub2f5"
+      "{numResponses} \uac1c\uc758 \ub2e4\ub978 \uc751\ub2f5"
     ], 
     "{numResponses} response": [
-      "{numResponses} \uc751\ub2f5{numResponses} \uc751\ub2f5"
+      "{numResponses} \uc751\ub2f5"
     ], 
     "{numUsersAdded} learner has been added to this cohort. ": [
       "{numUsersAdded} learner\uac00 (\uac00)\uc774 \uc9d1\ub2e8\uc5d0 \ucd94\uac00\ub418\uc5c8\uc2b5\ub2c8\ub2e4."
@@ -2324,7 +2326,7 @@
     "{strongStart}Warning: Account deletion is permanent.{strongEnd} Please read the above carefully before proceeding. This is an irreversible action, and {strongStart}you will no longer be able to use the same email on edX.{strongEnd}": "{strongStart} \uacbd\uace0 : \uacc4\uc815 \uc0ad\uc81c\uac00 \uc601\uad6c\uc801\uc785\ub2c8\ub2e4.{strongEnd}\uc9c4\ud589\ud558\uae30 \uc804\uc5d0 \uc704\uc758 \ub0b4\uc6a9\uc744 \uc8fc\uc758 \uae4a\uac8c \uc77d\uc73c\uc2ed\uc2dc\uc624. \uc774\uac83\uc740 \ub418\ub3cc\ub9b4 \uc218 \uc5c6\ub294 \uc791\uc5c5\uc774\uba70SmartLearn.{strongEnd}\uc5d0\uc11c \ub354 \uc774\uc0c1 \ub3d9\uc77c\ud55c \uc774\uba54\uc77c\uc744 \uc0ac\uc6a9\ud560 \uc218 \uc5c6\uac8c \ub429\ub2c8\ub2e4.{strongStart}", 
     "{totalItems} total": "{totalItems} \ud569\uacc4", 
     "{total_results} result": [
-      "{total_results} \uc758 \uacb0\uacfc{total_results} \uc758 \uacb0\uacfc"
+      "{total_results} \uc758 \uacb0\uacfc"
     ], 
     "{transcriptClientTitle}_{transcriptLanguageCode}.{fileExtension}": "{transcriptClientTitle}_{transcriptLanguageCode}.{fileExtension}", 
     "{type} Progress": "{type} \uc9c4\ud589 \uc0c1\ud669", 

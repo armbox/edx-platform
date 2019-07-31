@@ -1065,7 +1065,6 @@ msgstr "특수 효과에 대한 회신"
 msgid "%(num_points)s point possible (graded, results hidden)"
 msgid_plural "%(num_points)s points possible (graded, results hidden)"
 msgstr[0] "%(num_points)s 점 가능 (채점, 결과 숨김)"
-"%(num_points)s 점 가능 (채점, 결과 숨김)"
 
 #. Translators: %(num_points)s is the number of points possible (examples: 1,
 #. 3, 10).;
@@ -1082,7 +1081,6 @@ msgstr[0] "%(num_points)s 점 가능 (평가 없음, 결과 숨김)"
 msgid "%(num_points)s point possible (graded)"
 msgid_plural "%(num_points)s points possible (graded)"
 msgstr[0] "%(num_points)s 점 가능 (채점)"
-"%(num_points)s 점 가능 (채점)"
 
 #. Translators: %(num_points)s is the number of points possible (examples: 1,
 #. 3, 10).;
@@ -1091,7 +1089,6 @@ msgstr[0] "%(num_points)s 점 가능 (채점)"
 msgid "%(num_points)s point possible (ungraded)"
 msgid_plural "%(num_points)s points possible (ungraded)"
 msgstr[0] "%(num_points)s 점 가능 (비평가)"
-"%(num_points)s 점 가능 (비평가)"
 
 #. Translators: %(earned)s is the number of points earned. %(possible)s is the
 #. total number of points (examples: 0/1, 1/1, 2/3, 5/10). The total number of
@@ -1101,8 +1098,7 @@ msgstr[0] "%(num_points)s 점 가능 (비평가)"
 #: common/static/bundles/CapaModule.js
 msgid "%(earned)s/%(possible)s point (graded)"
 msgid_plural "%(earned)s/%(possible)s points (graded)"
-msgstr[0] "%(earned)s/%(possible) 포인트 (등급)"
-"%(earned)s/%(possible)s 점 (등급)"
+msgstr[0] "%(earned)s/%(possible)s 포인트 (평가됨)"
 
 #. Translators: %(earned)s is the number of points earned. %(possible)s is the
 #. total number of points (examples: 0/1, 1/1, 2/3, 5/10). The total number of
@@ -1113,7 +1109,6 @@ msgstr[0] "%(earned)s/%(possible) 포인트 (등급)"
 msgid "%(earned)s/%(possible)s point (ungraded)"
 msgid_plural "%(earned)s/%(possible)s points (ungraded)"
 msgstr[0] "%(earned)s/%(possible)s 점수 (비평가)"
-"%(earned)s/%(possible)s 점수 (비평가)"
 
 #: common/lib/xmodule/xmodule/js/src/capa/display.js
 #: common/static/bundles/CapaModule.js
@@ -2822,21 +2817,18 @@ msgstr "동영상 위치"
 msgid "%(value)s hour"
 msgid_plural "%(value)s hours"
 msgstr[0] "%(value)s hour"
-"%(value)s hours"
 
 #: common/lib/xmodule/xmodule/js/src/video/06_video_progress_slider.js
 #: common/static/bundles/VideoModule.js
 msgid "%(value)s minute"
 msgid_plural "%(value)s minutes"
 msgstr[0] "%(value)s minute"
-"%(value)s minutes"
 
 #: common/lib/xmodule/xmodule/js/src/video/06_video_progress_slider.js
 #: common/static/bundles/VideoModule.js
 msgid "%(value)s second"
 msgid_plural "%(value)s seconds"
 msgstr[0] "%(value)s second"
-"%(value)s seconds"
 
 #: common/lib/xmodule/xmodule/js/src/video/07_video_volume_control.js
 #: common/static/bundles/VideoModule.js
@@ -3748,13 +3740,11 @@ msgstr "추가 응답을 로드 할 수 없습니다. 페이지를 새로 고친
 msgid "{numResponses} other response"
 msgid_plural "{numResponses} other responses"
 msgstr[0] "{numResponses} 개의 다른 응답"
-"{numResponses} 개의 다른 응답"
 
 #: common/static/common/js/discussion/views/discussion_thread_view.js
 msgid "{numResponses} response"
 msgid_plural "{numResponses} responses"
 msgstr[0] "{numResponses} 응답"
-"{numResponses} 응답"
 
 #: common/static/common/js/discussion/views/discussion_thread_view.js
 msgid "Showing all responses"
@@ -3764,7 +3754,7 @@ msgstr "모든 답변 보여주기"
 msgid "Showing first response"
 msgid_plural "Showing first {numResponses} responses"
 msgstr[0] "첫 번째 응답 표시"
-" 첫 번째 {numResponses} 응답 표시 "
+msgstr[1] " 첫 번째 {numResponses} 응답 표시 "
 
 #: common/static/common/js/discussion/views/discussion_thread_view.js
 msgid "Load all responses"
@@ -4129,7 +4119,6 @@ msgstr "이 팀은 다 찼습니다."
 msgid "%(memberCount)s / %(maxMemberCount)s Member"
 msgid_plural "%(memberCount)s / %(maxMemberCount)s Members"
 msgstr[0] "%(memberCount)s / %(maxMemberCount)s 멤버"
-"%(memberCount)s / %(maxMemberCount)s 멤버"
 
 #: lms/djangoapps/teams/static/teams/js/views/teams.js
 msgid "All teams"
@@ -4902,8 +4891,6 @@ msgid_plural ""
 "will automatically be added to the cohort when they enroll in the course."
 msgstr[0] "{numPreassigned} learner가 이 코호트에 사전 할당되었습니다. 이 학습자는 "
 "코스에 등록 할 때 자동으로 코호트에 추가됩니다."
-"수강자는 이 코호트에 사전 할당되었습니다. 이 학습자는 "
-"코스에 등록 할 때 자동으로 코호트에 추가됩니다."
 
 #: lms/static/js/groups/views/cohort_editor.js
 msgid "Unknown username: {user}"
@@ -4917,7 +4904,7 @@ msgstr "유효하지 않은 이메일 주소 : {email}"
 msgid "There was an error when trying to add learners:"
 msgid_plural "{numErrors} learners could not be added to this cohort:"
 msgstr[0] "학습자를 추가하려고 할 때 오류가 발생했습니다:"
-"{numErrors} 이 코호트에 학습자를 추가 할 수 없었습니다."
+msgstr[1] "{numErrors} 이 코호트에 학습자를 추가 할 수 없었습니다."
 
 #: lms/static/js/groups/views/cohort_editor.js
 msgid "View all errors"
@@ -6372,7 +6359,6 @@ msgstr "전체 점수"
 msgid "{total_results} result"
 msgid_plural "{total_results} results"
 msgstr[0] "{total_results} 의 결과"
-"{total_results} 의 결과"
 
 #: openedx/features/learner_profile/static/learner_profile/js/learner_profile_factory.js
 msgid "Profile Visibility:"
@@ -6929,7 +6915,6 @@ msgstr "내보내기에 오류가 발생했습니다."
 msgid "Contains {count} group"
 msgid_plural "Contains {count} groups"
 msgstr[0] "{count}  그룹 포함"
-"{count} 그룹 포함"
 
 #: cms/static/js/views/group_configuration_details.js
 #: cms/static/js/views/partition_group_details.js
@@ -6945,7 +6930,6 @@ msgstr "사용하지 않음"
 msgid "Used in {count} location"
 msgid_plural "Used in {count} locations"
 msgstr[0] "{count} 위치에 사용됨"
-"{count} 위치에 사용됨"
 
 #. Translators: this refers to a collection of groups.
 #: cms/static/js/views/group_configuration_item.js
@@ -7661,7 +7645,6 @@ msgstr "승인 %(time_ago)s "
 msgid "Show Comment (%(num_comments)s)"
 msgid_plural "Show Comments (%(num_comments)s)"
 msgstr[0] "댓글 표시 (%(num_comments)s)"
-"댓글 표시 (%(num_comments)s)"
 
 #: common/static/common/templates/discussion/thread-response.underscore
 msgid "Add a comment"
@@ -8590,7 +8573,6 @@ msgstr " Create a content group"
 msgid "(contains %(student_count)s student)"
 msgid_plural "(contains %(student_count)s students)"
 msgstr[0] "(%(student_count)s 학생 포함)"
-"(%(student_count)s 학생 포함)"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-group-header.underscore
 msgid ""
@@ -8801,7 +8783,6 @@ msgstr " 새 프로그램 탐색 "
 msgid "Course"
 msgid_plural "Courses"
 msgstr[0] "코스"
-"코스"
 
 #: lms/templates/learner_dashboard/program_card.underscore
 msgid "Completed"
@@ -9675,7 +9656,6 @@ msgstr ""
 msgid "Load next {num_items} result"
 msgid_plural "Load next {num_items} results"
 msgstr[0] " 다음 {num_items} 개의 결과로드 "
-" 다음 {num_items} 개의 결과로드 "
 
 #: openedx/features/course_search/static/course_search/templates/course_search_results.underscore
 #: openedx/features/course_search/static/course_search/templates/dashboard_search_results.underscore
