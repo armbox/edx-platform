@@ -13502,7 +13502,7 @@ msgstr " 이제 과정을 {i_start}{user_name}{i_end}(으)로 보고 있습니�
 #: lms/templates/problem.html
 msgid "You have used {num_used} of {num_total} attempt"
 msgid_plural "You have used {num_used} of {num_total} attempts"
-msgstr[0] " {num_used}회/{num_total}회 사용했습니다. "
+msgstr[0] " {num_used}/{num_total} 회 사용했습니다. "
 
 #: lms/templates/problem.html
 msgid ""

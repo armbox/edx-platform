@@ -39,10 +39,10 @@
     "%(comments_count)s %(span_sr_open)scomments (%(unread_comments_count)s unread comments)%(span_close)s": "%(comments_count)s %(span_sr_open)scomments (%(unread_comments_count)s  unread comments)%(span_close)s ", 
     "%(download_link_start)sDownload this image (right-click or option-click, save as)%(link_end)s and then %(upload_link_start)supload%(link_end)s it to your backpack.</li>": "%(download_link_start)s \uc774\ubbf8\uc9c0\ub97c \ub2e4\uc6b4\ub85c\ub4dc(\uc624\ub978\ucabd \ud074\ub9ad \ub610\ub294 \uc635\uc158 \ud074\ub9ad, \ub2e4\ub978 \uc774\ub984\uc73c\ub85c \uc800\uc7a5) %(link_end)s \uadf8\ub7f0 \ub2e4\uc74c %(upload_link_start)supload", 
     "%(earned)s/%(possible)s point (graded)": [
-      "%(earned)s/%(possible)s \ud3ec\uc778\ud2b8 (\ud3c9\uac00\ub428)"
+      "%(earned)s/%(possible)s \ud3ec\uc778\ud2b8 (\ud3c9\uac00 \ud56d\ubaa9)"
     ], 
     "%(earned)s/%(possible)s point (ungraded)": [
-      "%(earned)s/%(possible)s \uc810\uc218 (\ube44\ud3c9\uac00)"
+      "%(earned)s/%(possible)s \uc810\uc218 (\ube44\ud3c9\uac00 \ud56d\ubaa9)"
     ], 
     "%(errorCount)s error found in form.": [
       "%(errorCount)s \uc624\ub958\uac00 \uc591\uc2dd\uc5d0\uc11c \ubc1c\uacac\ub418\uc5c8\uc2b5\ub2c8\ub2e4."
@@ -54,16 +54,16 @@
     ], 
     "%(new_item_message)s": "%(new_item_message)s", 
     "%(num_points)s point possible (graded)": [
-      "%(num_points)s \uc810 \uac00\ub2a5 (\ucc44\uc810)"
+      "%(num_points)s \uc810 \uac00\ub2a5 (\ud3c9\uac00 \ud56d\ubaa9)"
     ], 
     "%(num_points)s point possible (graded, results hidden)": [
-      "%(num_points)s \uc810 \uac00\ub2a5 (\ucc44\uc810, \uacb0\uacfc \uc228\uae40)"
+      "%(num_points)s \uc810 \uac00\ub2a5 (\ud3c9\uac00 \ud56d\ubaa9, \uacb0\uacfc \uc228\uae40)"
     ], 
     "%(num_points)s point possible (ungraded)": [
-      "%(num_points)s \uc810 \uac00\ub2a5 (\ube44\ud3c9\uac00)"
+      "%(num_points)s \uc810 \uac00\ub2a5 (\ube44\ud3c9\uac00 \ud56d\ubaa9)"
     ], 
     "%(num_points)s point possible (ungraded, results hidden)": [
-      "%(num_points)s \uc810 \uac00\ub2a5 (\ud3c9\uac00 \uc5c6\uc74c, \uacb0\uacfc \uc228\uae40)"
+      "%(num_points)s \uc810 \uac00\ub2a5 (\ube44\ud3c9\uac00 \ud56d\ubaa9, \uacb0\uacfc \uc228\uae40)"
     ], 
     "%(num_questions)s question": [
       "%(num_questions)s\uac1c"
