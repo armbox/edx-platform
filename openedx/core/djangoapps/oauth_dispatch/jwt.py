@@ -161,7 +161,7 @@ def _create_jwt(
                 _update_from_additional_handlers(payload, user, scopes)
                 jwt = _encode_and_sign(payload, use_asymmetric_key, secret)
                 session = EdxRestApiClient(base_url, jwt=jwt)
-                result = getattr(session, 'api-smartlearn/users' + user.username).get()
+                result = getattr(session, 'api-smartlearn/users/' + user.username).get()
                 if 'profile_image' not in result:
                     cache.set(cache_key, SENTINEL_NO_RESULT)
                 else:
