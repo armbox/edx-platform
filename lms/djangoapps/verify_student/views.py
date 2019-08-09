@@ -434,6 +434,7 @@ class PayAndVerifyView(View):
             'nav_hidden': True,
             'is_ab_testing': 'begin-flow' in request.path,
         }
+        context['uses_bootstrap'] = True
 
         return render_to_response("verify_student/pay_and_verify.html", context)
 
