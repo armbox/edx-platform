@@ -1,14 +1,44 @@
 """Utilities for working with ID tokens."""
 import json
+import hashlib
+import six
 from time import time
 
 from django.conf import settings
+from django.core.cache import cache
 from jwkest import jwk
 from jwkest.jws import JWS
 
 from edx_django_utils.monitoring import set_custom_metric
+from edx_rest_api_client.client import EdxRestApiClient
 from openedx.core.djangoapps.oauth_dispatch.toggles import ENFORCE_JWT_SCOPES
 from student.models import UserProfile, anonymous_id_for_user
+
+SENTINEL_NO_RESULT = ()
+
+
+def get_cache_key(**kwargs):
+  """
+  Get MD5 encoded cache key for given arguments.
+
+  Here is the format of key before MD5 encryption.
+      key1:value1__key2:value2 ...
+
+  Example:
+      >>> get_cache_key(site_domain="example.com", resource="enterprise-learner")
+      # Here is key format for above call
+      # "site_domain:example.com__resource:enterprise-learner"
+      a54349175618ff1659dee0978e3149ca
+
+  Arguments:
+      **kwargs: Key word arguments that need to be present in cache key.
+
+  Returns:
+       An MD5 encoded key uniquely identified by the key word arguments.
+  """
+  key = '__'.join(['{}:{}'.format(item, value) for item, value in six.iteritems(kwargs)])
+
+  return hashlib.md5(key).hexdigest()
 
 
 def create_jwt_for_user(user, secret=None, aud=None, additional_claims=None):
@@ -116,12 +146,37 @@ def _create_jwt(
         'filters': filters or [],
         'is_restricted': is_restricted,
     }
-    try:
-        from openedx.core.djangoapps.user_api.accounts.image_helpers import get_profile_image_urls_for_user
-        urls = get_profile_image_urls_for_user(user)
-        payload.update({ 'profile_image': { 'image_url_medium': urls['medium'] }, })
-    except:
-        pass
+
+    if settings.SERVICE_VARIANT == 'cms':
+        cache_key = get_cache_key(username=user.username, resource='cms')
+        cache_profile = cache.get(cache_key)
+
+        if cache_profile is SENTINEL_NO_RESULT:
+            pass
+        elif cache_profile:
+            payload.update(cache_profile)
+        else:
+            try:
+                base_url = settings.LMS_ROOT_URL
+                _update_from_additional_handlers(payload, user, scopes)
+                jwt = _encode_and_sign(payload, use_asymmetric_key, secret)
+                session = EdxRestApiClient(base_url, jwt=jwt)
+                result = getattr(session, 'api-smartlearn/users' + user.username).get()
+                if 'profile_image' not in result:
+                    cache.set(cache_key, SENTINEL_NO_RESULT)
+                else:
+                    cache_value = { 'profile_image': { 'image_url_medium': result['profile_image']['image_url_medium'] } }
+                    cache.set(cache_key, cache_value)
+                    payload.update(cache_value)
+            except:
+                pass
+    else:
+        try:
+            from openedx.core.djangoapps.user_api.accounts.image_helpers import get_profile_image_urls_for_user
+            urls = get_profile_image_urls_for_user(user)
+            payload.update({ 'profile_image': { 'image_url_medium': urls['medium'] }, })
+        except:
+            pass
 
     payload.update(additional_claims or {})
     _update_from_additional_handlers(payload, user, scopes)
