@@ -39,10 +39,10 @@
     "%(comments_count)s %(span_sr_open)scomments (%(unread_comments_count)s unread comments)%(span_close)s": "%(comments_count)s %(span_sr_open)scomments (%(unread_comments_count)s  unread comments)%(span_close)s ", 
     "%(download_link_start)sDownload this image (right-click or option-click, save as)%(link_end)s and then %(upload_link_start)supload%(link_end)s it to your backpack.</li>": "%(download_link_start)s \uc774\ubbf8\uc9c0\ub97c \ub2e4\uc6b4\ub85c\ub4dc(\uc624\ub978\ucabd \ud074\ub9ad \ub610\ub294 \uc635\uc158 \ud074\ub9ad, \ub2e4\ub978 \uc774\ub984\uc73c\ub85c \uc800\uc7a5) %(link_end)s \uadf8\ub7f0 \ub2e4\uc74c %(upload_link_start)supload", 
     "%(earned)s/%(possible)s point (graded)": [
-      "%(earned)s/%(possible)s \ud3ec\uc778\ud2b8 (\ud3c9\uac00 \ud56d\ubaa9)"
+      "%(earned)s/%(possible)s \uc810 (\ud3c9\uac00 \ud56d\ubaa9)"
     ], 
     "%(earned)s/%(possible)s point (ungraded)": [
-      "%(earned)s/%(possible)s \uc810\uc218 (\ube44\ud3c9\uac00 \ud56d\ubaa9)"
+      "%(earned)s/%(possible)s \uc810 (\ube44\ud3c9\uac00 \ud56d\ubaa9)"
     ], 
     "%(errorCount)s error found in form.": [
       "%(errorCount)s \uc624\ub958\uac00 \uc591\uc2dd\uc5d0\uc11c \ubc1c\uacac\ub418\uc5c8\uc2b5\ub2c8\ub2e4."
@@ -2205,7 +2205,7 @@
     "delete group": "\uadf8\ub8f9 \uc0ad\uc81c", 
     "details about the failure": " \uc2e4\ud328\uc5d0 \ub300\ud55c \uc138\ubd80 \uc815\ubcf4 ", 
     "discussion": "Q&A", 
-    "discussion posted %(time_ago)s by %(author)s": "\ud1a0\ub860 \uac8c\uc2dc %(time_ago)s %(author)s ", 
+    "discussion posted %(time_ago)s by %(author)s": "\ub4f1\ub85d\uc77c: %(time_ago)s  \uac8c\uc2dc\uc790: %(author)s", 
     "dragging": "\ub9c8\uc6b0\uc2a4\ub85c \ub04c\uace0 \uc624\uae30", 
     "dragging out of slider": "\uc2ac\ub77c\uc774\ub354 \ub2f9\uae30\uae30", 
     "dropped in slider": "\uc2ac\ub77c\uc774\ub354\uc5d0 \ub5a8\uc5b4\ud2b8\ub838\uc2b5\ub2c8\ub2e4.", 
@@ -2252,7 +2252,7 @@
     "price": "\uac00\uaca9", 
     "provide the title/name of the chapter that will be used in navigating": " \ub124\ube44\uac8c\uc774\uc158\uc5d0 \uc0ac\uc6a9\ub420 \uc7a5\uc758 \uc81c\ubaa9 / \uc774\ub984\uc744 \uc81c\uacf5\ud558\uc2ed\uc2dc\uc624. ", 
     "provide the title/name of the text book as you would like your students to see it": " \ud559\uc0dd\ub4e4\uc774 \uadf8\uac83\uc744 \ubcf4\uae38 \uc6d0\ud560 \ub54c \ud14d\uc2a4\ud2b8 \ubd81\uc758 \uc81c\ubaa9 / \uc774\ub984\uc744  \uc81c\uacf5\ud558\uc2ed\uc2dc\uc624. ", 
-    "question posted %(time_ago)s by %(author)s": "\uc9c8\ubb38\uc744 %(time_ago)s \uc529 %(author)s \uc5d0 \uac8c\uc2dc\ud568", 
+    "question posted %(time_ago)s by %(author)s": "\ub4f1\ub85d\uc77c: %(time_ago)s  \uac8c\uc2dc\uc790: %(author)s", 
     "remove": "\uc81c\uac70", 
     "remove all": "\ubaa8\ub450 \uc81c\uac70", 
     "second": "\ucd08", 
