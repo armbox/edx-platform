@@ -7653,12 +7653,12 @@ msgstr "의견을 추가"
 #: common/static/common/templates/discussion/thread-show.underscore
 #, python-format
 msgid "discussion posted %(time_ago)s by %(author)s"
-msgstr "토론 게시 %(time_ago)s %(author)s "
+msgstr "등록일: %(time_ago)s  게시자: %(author)s"
 
 #: common/static/common/templates/discussion/thread-show.underscore
 #, python-format
 msgid "question posted %(time_ago)s by %(author)s"
-msgstr "질문을 %(time_ago)s 씩 %(author)s 에 게시함"
+msgstr "등록일: %(time_ago)s  게시자: %(author)s"
 
 #: common/static/common/templates/discussion/thread-show.underscore
 msgid "Closed"
