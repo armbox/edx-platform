@@ -13,6 +13,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse
 from django.shortcuts import redirect
+from django.utils import timezone
 from django.utils.translation import ugettext as _
 from django.views.decorators.csrf import ensure_csrf_cookie
 from edx_django_utils import monitoring as monitoring_utils
@@ -40,6 +41,7 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
 from openedx.core.djangoapps.util.maintenance_banner import add_maintenance_banner
 from openedx.core.djangoapps.waffle_utils import WaffleFlag, WaffleFlagNamespace
 from openedx.core.djangolib.markup import HTML, Text
+from openedx.features.course_duration_limits.access import AuditExpiredError
 from openedx.features.enterprise_support.api import get_dashboard_consent_notification
 from openedx.features.journals.api import journals_enabled
 from shoppingcart.api import order_history
@@ -56,6 +58,7 @@ from util.milestones_helpers import get_pre_requisite_courses_not_completed
 from xmodule.modulestore.django import modulestore
 
 log = logging.getLogger("edx.student")
+MIN_DURATION = datetime.timedelta(weeks=1)
 
 
 def get_org_black_and_whitelist_for_site():
@@ -651,6 +654,15 @@ def student_dashboard(request):
         enrollment.course_id: has_access(request.user, 'load', enrollment.course_overview)
         for enrollment in course_enrollments
     }
+
+    for enrollment in course_enrollments:
+        try:
+            expired_date = enrollment.course_overview.end + MIN_DURATION
+            if not enrollment.course_overview.end or expired_date > timezone.now():
+                continue
+            show_courseware_links_for[enrollment.course_id] = AuditExpiredError(request.user, enrollment.course_overview, expired_date)
+        except:
+            pass
 
     # Find programs associated with course runs being displayed. This information
     # is passed in the template context to allow rendering of program-related
