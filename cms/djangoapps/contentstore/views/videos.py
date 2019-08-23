@@ -540,9 +540,22 @@ def _get_index_videos(course):
 
         return values
 
-    return [
+    videos = [
         _get_values(video) for video in _get_videos(course)
     ]
+
+    try:
+        bucket = storage_service_bucket()
+        for video in videos:
+            try:
+                path = bucket.get_key('eduxprocessed/' + video['edx_video_id'])
+                video['download_url'] = path.generate_url(expires_in=3600)
+            except:
+                pass
+    except:
+        pass
+
+    return videos
 
 
 def get_all_transcript_languages():

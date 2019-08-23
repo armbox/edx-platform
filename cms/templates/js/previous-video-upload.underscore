@@ -2,7 +2,15 @@
     <% if (videoImageUploadEnabled) { %>
     <div class="video-col thumbnail-col"></div>
     <% } %>
-    <div class="video-col name-col"><%- client_video_id %></div>
+    <div class="video-col name-col">
+    <% if (download_url) { %>
+        <a href="<%- download_url %>" download="<%- client_video_id %>">
+          <%- client_video_id %>
+        </a>
+    <% } else { %>
+        <%- client_video_id %>
+    <% } %>
+    </div>
     <div class="video-col date-col"><%- created %></div>
     <div class="video-col video-id-col"><%- edx_video_id %></div>
     <div class="video-col transcripts-col"></div>
