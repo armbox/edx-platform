@@ -16,6 +16,8 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.staticfiles.storage import staticfiles_storage
 from django.urls import reverse
 from django.http import HttpResponse, HttpResponseNotFound
+from django.shortcuts import redirect
+from django.utils.encoding import smart_str
 from django.utils.translation import ugettext as _
 from django.utils.translation import ugettext_noop
 from django.views.decorators.http import require_GET, require_http_methods, require_POST
@@ -28,6 +30,7 @@ from edxval.api import (
     get_transcript_credentials_state_for_org,
     get_transcript_preferences,
     get_videos_for_course,
+    get_video_info,
     remove_transcript_preferences,
     remove_video_for_course,
     update_video_image,
@@ -212,6 +215,22 @@ def video_images_handler(request, course_key_string, edx_video_id=None):
         )
 
     return JsonResponse({'image_url': image_url})
+
+
+@login_required
+@require_GET
+def video_download_handler(request, edx_video_id=None):
+    try:
+        video = get_video_info(edx_video_id)
+        bucket = storage_service_bucket()
+        path = bucket.get_key('eduxprocessed/' + edx_video_id)
+        response = redirect(path.generate_url(expires_in=600))
+        response["Content-Disposition"] = rfc6266_parser.build_header(
+            video['client_video_id']
+        )
+        return response
+    except:
+        return HttpResponseNotFound()
 
 
 def validate_transcript_preferences(provider, cielo24_fidelity, cielo24_turnaround,
@@ -540,22 +559,9 @@ def _get_index_videos(course):
 
         return values
 
-    videos = [
+    return [
         _get_values(video) for video in _get_videos(course)
     ]
-
-    try:
-        bucket = storage_service_bucket()
-        for video in videos:
-            try:
-                path = bucket.get_key('eduxprocessed/' + video['edx_video_id'])
-                video['download_url'] = path.generate_url(expires_in=3600)
-            except:
-                pass
-    except:
-        pass
-
-    return videos
 
 
 def get_all_transcript_languages():
