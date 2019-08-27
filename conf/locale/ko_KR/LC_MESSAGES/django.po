@@ -16964,52 +16964,52 @@ msgstr ""
 #: lms/templates/dashboard/_entitlement_reason_survey.html
 #: lms/templates/dashboard/_reason_survey.html
 msgid "I just wanted to browse the material"
-msgstr " 자료를 찾아보고 싶었습니다. "
+msgstr "서비스 내용을 확인만 하려고 가입했습니다"
 
 #: lms/templates/dashboard/_entitlement_reason_survey.html
 #: lms/templates/dashboard/_reason_survey.html
 msgid "This won't help me reach my goals"
-msgstr " 내 목표에 도달하는데 도움이 되지 않습니다. "
+msgstr "강좌의 내용이 학습 목표를 도달하는데 도움이 되지 않음"
 
 #: lms/templates/dashboard/_entitlement_reason_survey.html
 #: lms/templates/dashboard/_reason_survey.html
 msgid "I don't have the time"
-msgstr " 나는 시간이 없습니다. "
+msgstr "학습 시간 부족"
 
 #: lms/templates/dashboard/_entitlement_reason_survey.html
 #: lms/templates/dashboard/_reason_survey.html
 msgid "I don't have the academic or language prerequisites"
-msgstr " 나는 학업이나 언어 필수 조건이 없습니다. "
+msgstr "강좌를 이수하기 위한 기본 지식이 부족함"
 
 #: lms/templates/dashboard/_entitlement_reason_survey.html
 #: lms/templates/dashboard/_reason_survey.html
 msgid "I don't have enough support"
-msgstr " 충분한 지원이 없습니다. "
+msgstr "강좌 운영자로부터 강좌 이수를 위한 적정한 도움을 받지 못함"
 
 #: lms/templates/dashboard/_entitlement_reason_survey.html
 #: lms/templates/dashboard/_reason_survey.html
 msgid "I am not happy with the quality of the content"
-msgstr " 콘텐츠의 품질에 만족하지 않습니다."
+msgstr "강좌 콘텐츠 품질 불만족"
 
 #: lms/templates/dashboard/_entitlement_reason_survey.html
 #: lms/templates/dashboard/_reason_survey.html
 msgid "The course material was too hard"
-msgstr " 과정 자료가 너무 어려웠습니다. "
+msgstr "강좌 난이도가 너무 높음"
 
 #: lms/templates/dashboard/_entitlement_reason_survey.html
 #: lms/templates/dashboard/_reason_survey.html
 msgid "The course material was too easy"
-msgstr " 과정 자료가 너무 쉬웠다. "
+msgstr "강좌 난이도가 너무 낮음"
 
 #: lms/templates/dashboard/_entitlement_reason_survey.html
 #: lms/templates/dashboard/_reason_survey.html
 msgid "Something was broken"
-msgstr "뭔가 고장이 났습니다."
+msgstr "학습 시스템이 학습하기에 불편함"
 
 #: lms/templates/dashboard/_entitlement_reason_survey.html
 #: lms/templates/dashboard/_reason_survey.html
 msgid "Other"
-msgstr "다른것"
+msgstr "기타 "
 
 #: lms/templates/dashboard/_entitlement_reason_survey.html
 #: lms/templates/dashboard/_reason_survey.html
