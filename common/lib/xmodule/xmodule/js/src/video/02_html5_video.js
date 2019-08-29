@@ -224,6 +224,7 @@ function(_) {
         };
 
         Player.prototype.destroy = function() {
+            document.removeEventListener('keydown', this.onKeyHandler, false);
             this.video.removeEventListener('loadedmetadata', this.onLoadedMetadata, false);
             this.video.removeEventListener('play', this.onPlay, false);
             this.video.removeEventListener('playing', this.onPlaying, false);
@@ -278,6 +279,21 @@ function(_) {
             this.callStateChangeCallback();
         };
 
+        Player.prototype.onKeyHandler = function(e) {
+            var PlayerState = HTML5Video.PlayerState;
+
+            if (e.key === ' ') {
+                e.preventDefault();
+                if (this.playerState === PlayerState.PLAYING) {
+                    this.playerState = PlayerState.PAUSED;
+                    this.pauseVideo();
+                } else {
+                    this.playerState = PlayerState.PLAYING;
+                    this.playVideo();
+                }
+            }
+        };
+
         Player.prototype.init = function(el, config) {
             var isTouch = window.onTouchBasedDevice() || '',
                 events = ['loadstart', 'progress', 'suspend', 'abort', 'error',
@@ -307,7 +323,7 @@ function(_) {
             // determine what the video is currently doing.
             this.playerState = HTML5Video.PlayerState.UNSTARTED;
 
-            _.bindAll(this, 'onLoadedMetadata', 'onPlay', 'onPlaying', 'onPause', 'onEnded');
+            _.bindAll(this, 'onLoadedMetadata', 'onPlay', 'onPlaying', 'onPause', 'onEnded', 'onKeyHandler');
 
             // Attach a 'click' event on the <video> element. It will cause the
             // video to pause/play.
@@ -354,6 +370,7 @@ function(_) {
             this.video.addEventListener('playing', this.onPlaying, false);
             this.video.addEventListener('pause', this.onPause, false);
             this.video.addEventListener('ended', this.onEnded, false);
+            document.addEventListener('keydown', this.onKeyHandler, false);
 
             if (/iP(hone|od)/i.test(isTouch[0])) {
                 this.videoEl.prop('controls', true);
