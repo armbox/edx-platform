@@ -372,9 +372,9 @@ function(_) {
             this.video.addEventListener('ended', this.onEnded, false);
             document.addEventListener('keydown', this.onKeyHandler, false);
 
-            if (/iP(hone|od)/i.test(isTouch[0])) {
-                this.videoEl.prop('controls', true);
-            }
+            // if (/iP(hone|od)/i.test(isTouch[0])) {
+            //     this.videoEl.prop('controls', true);
+            // }
 
             // Set video poster
             if (this.config.poster) {

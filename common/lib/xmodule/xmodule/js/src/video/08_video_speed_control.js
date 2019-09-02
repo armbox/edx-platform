@@ -19,7 +19,8 @@
 
         _.bindAll(this, 'onSetSpeed', 'onRenderSpeed', 'clickLinkHandler',
             'keyDownLinkHandler', 'mouseEnterHandler', 'mouseLeaveHandler',
-            'clickMenuHandler', 'keyDownMenuHandler', 'destroy'
+            'clickMenuHandler', 'keyDownMenuHandler', 'destroy',
+            'openMenu', 'closeMenu', 'touchHandler',
         );
         this.state = state;
         this.state.videoSpeedControl = this;
@@ -55,7 +56,8 @@
                 mouseenter: this.mouseEnterHandler,
                 mouseleave: this.mouseLeaveHandler,
                 click: this.clickMenuHandler,
-                keydown: this.keyDownMenuHandler
+                keydown: this.keyDownMenuHandler,
+                touchstart: this.touchHandler,
             });
 
             this.state.el.off({
@@ -137,20 +139,29 @@
          * mousemove, etc.).
          */
         bindHandlers: function() {
-            // Attach various events handlers to the speed menu button.
-            this.el.on({
-                mouseenter: this.mouseEnterHandler,
-                mouseleave: this.mouseLeaveHandler,
-                click: this.openMenu,
-                keydown: this.keyDownMenuHandler
-            });
-
-            // Attach click and keydown event handlers to the individual speed
-            // entries.
-            this.speedsContainer.on({
-                click: this.clickLinkHandler,
-                keydown: this.keyDownLinkHandler
-            }, '.speed-option');
+            if (!this.state.isTouch) {
+                // Attach various events handlers to the speed menu button.
+                this.el.on({
+                    mouseenter: this.mouseEnterHandler,
+                    mouseleave: this.mouseLeaveHandler,
+                    click: this.openMenu,
+                    keydown: this.keyDownMenuHandler
+                });
+    
+                // Attach click and keydown event handlers to the individual speed
+                // entries.
+                this.speedsContainer.on({
+                    click: this.clickLinkHandler,
+                    keydown: this.keyDownLinkHandler
+                }, '.speed-option');
+            } else {
+                this.el.on({
+                    touchstart: this.touchHandler,
+                });
+                this.speedsContainer.on({
+                    touchstart: this.clickLinkHandler,
+                }, '.speed-option');
+            }
 
             this.state.el.on({
                 'speed:set': this.onSetSpeed,
@@ -183,7 +194,7 @@
                 isTouch = state.isTouch,
                 video = document.createElement('video');
 
-            return !isTouch || (isHtml5 && !Boolean(video.playbackRate));
+            return !isTouch || (isHtml5 /*&& !Boolean(video.playbackRate)*/);
         },
 
         /**
@@ -191,6 +202,7 @@
          * @param {boolean} [bindEvent] Click event will be attached on window.
          */
         openMenu: function(bindEvent) {
+            this.isOpened = true;
             // When speed entries have focus, the menu stays open on
             // mouseleave. A clickHandler is added to the window
             // element to have clicks close the menu when they happen
@@ -210,6 +222,7 @@
          * @param {boolean} [unBindEvent] Click event will be detached from window.
          */
         closeMenu: function(unBindEvent) {
+            this.isOpened = false;
             // Remove the previously added clickHandler from window element.
             if (unBindEvent) {
                 $(window).off('click.speedMenu');
@@ -409,6 +422,16 @@
             }
 
             return true;
+        },
+
+        touchHandler: function(event) {
+          if (this.isOpened) {
+            this.closeMenu();
+          } else {
+            this.openMenu();
+          }
+
+          return false;
         }
     };
 

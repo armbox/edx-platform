@@ -1847,6 +1847,8 @@ WEBPACK_LOADER = {
     }
 }
 WEBPACK_CONFIG_PATH = 'webpack.prod.config.js'
+# for debugging
+# WEBPACK_CONFIG_PATH = 'webpack.dev.config.js'
 
 ########################## DJANGO DEBUG TOOLBAR ###############################
 
