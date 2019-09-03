@@ -16959,7 +16959,7 @@ msgstr "선택한 {provider_name} 계정은 이미 다른 {platform_name} 계정
 msgid ""
 "We're sorry to see you go! Please share your main reason for unenrolling."
 msgstr ""
-" 배웅 못 해줘서 죄송합니다! 등록 취소 사유를 공유하십시오."
+"수강신청 취소 사유를 공유해 주시면 감사하겠습니다."
 
 #: lms/templates/dashboard/_entitlement_reason_survey.html
 #: lms/templates/dashboard/_reason_survey.html
