@@ -9245,7 +9245,7 @@ msgstr " %(course_name)s에 대한 베타 테스트에 초대되었습니다. "
 #: lms/templates/instructor/edx_ace/allowedenroll/email/body.html
 #, python-format
 msgid "You have been invited to %(course_name)s"
-msgstr " %(course_name)s에 초대되었습니다. "
+msgstr " %(course_name)s 강좌에 초대되었습니다. "
 
 #: lms/templates/instructor/edx_ace/allowedenroll/email/body.html
 #: lms/templates/instructor/edx_ace/allowedenroll/email/body.txt
@@ -9254,8 +9254,8 @@ msgid ""
 "You have been invited to join %(course_name)s at %(site_name)s by a member "
 "of the course staff."
 msgstr ""
-" 코스 스태프의 구성원이 %(site_name)s의 %(course_name)s에"
-" 가입하도록 초대되었습니다."
+"강좌 운영팀이 귀하를 %(site_name)s의 %(course_name)s 강좌의 수강생으로"
+"등록하였습니다."
 
 #: lms/templates/instructor/edx_ace/allowedenroll/email/body.html
 msgid "To access this course click on the button below and login:"
@@ -9271,8 +9271,8 @@ msgid ""
 "Please finish your registration and fill out the registration form making "
 "sure to use %(email_address)s in the Email field:"
 msgstr ""
-" 등록을 마치고 이메일 필드에 %(email_address)s를"
-" 사용하여 등록 양식을 작성하십시오 :"
+"우선 %(email_address)s 이메일 계정을 사용하여 회원가입을"
+" 해 주시기 바랍니다."
 
 #: lms/templates/instructor/edx_ace/allowedenroll/email/body.html
 msgid "Finish Your Registration"
@@ -9285,16 +9285,16 @@ msgid ""
 "Once you have registered and activated your account, you will see "
 "%(course_name)s listed on your dashboard."
 msgstr ""
-" 계정을 등록하고 활성화하면 대시 보드에"
-"%(course_name)s이 표시됩니다."
+"회원가입을 하고 계정을 활성화하면 귀하의 대시보드에 "
+"%(course_name)s 강좌가 표시되어 바로 학습을 시작하실 수 있습니다.."
 
 #: lms/templates/instructor/edx_ace/allowedenroll/email/body.html
 msgid ""
 "Once you have registered and activated your account, you will be able to "
 "access this course:"
 msgstr ""
-" 계정을 등록하고 활성화하면 이 과정에 액세스"
-" 할 수 있습니다."
+"회원가입을 하고 계정을 활성화하면 이 과정에 접근"
+" 하실수 있습니다."
 
 #: lms/templates/instructor/edx_ace/allowedenroll/email/body.html
 #: lms/templates/instructor/edx_ace/allowedenroll/email/body.txt
