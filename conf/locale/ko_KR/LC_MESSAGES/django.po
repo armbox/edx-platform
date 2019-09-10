@@ -6099,7 +6099,7 @@ msgid ""
 "You are not signed in. To see additional course content, {sign_in_link} or "
 "{register_link}, and enroll in this course."
 msgstr ""
-" 로그인하지 않았습니다. 추가 코스 내용을 보시려면 {sign_in_link} 또는 {register_link}을(를)"
+" 로그인하지 않았습니다. 추가 코스 내용을 보시려면 {sign_in_link} 또는 {register_link} 을(를)"
 " 등록하시고 이 코스에 등록하십시오."
 
 #: lms/djangoapps/courseware/views/index.py
@@ -6187,7 +6187,7 @@ msgstr " 수료증이 있습니다."
 #: lms/djangoapps/courseware/views/views.py
 #, python-brace-format
 msgid "To see course content, {sign_in_link} or {register_link}."
-msgstr " 강좌 내용을 보려면 {sign_in_link} 또는 {register_link}하십시오."
+msgstr " 강좌 내용을 보려면 {sign_in_link} 또는 {register_link} 하십시오."
 
 #: lms/djangoapps/courseware/views/views.py
 #, python-brace-format
@@ -11548,7 +11548,7 @@ msgid ""
 "{register_link}, and enroll in this course."
 msgstr ""
 " 로그인하지 않았습니다. 토론 내용을 보거나 {sign_in_link} 또는 "
-"{register_link}을 보고 이 강좌에 등록하십시오."
+"{register_link} 을 보고 이 강좌에 등록하십시오."
 
 #: openedx/features/content_type_gating/partitions.py
 msgid "Feature-based Enrollments"
@@ -11611,7 +11611,7 @@ msgstr "리뷰"
 #: openedx/features/course_experience/views/course_home_messages.py
 #, python-brace-format
 msgid "{sign_in_link} or {register_link} and then enroll in this course."
-msgstr "{sign_in_link} 또는 {register_link}을 다운로드한 다음 이 코스에 등록하십시오."
+msgstr "{sign_in_link} 또는 {register_link} 후 이 코스에 등록하십시오."
 
 #: lms/templates/header/navbar-not-authenticated.html
 #: lms/templates/navigation/navbar-not-authenticated.html
