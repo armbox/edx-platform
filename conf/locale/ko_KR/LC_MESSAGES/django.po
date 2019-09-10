@@ -9223,14 +9223,14 @@ msgstr ""
 #: lms/templates/instructor/edx_ace/enrollenrolled/email/body.txt
 #, python-format
 msgid "To start accessing course materials, please visit %(course_url)s"
-msgstr " 강좌 자료를 이용하려면 %(course_url)s를 방문하십시오. "
+msgstr " 강좌 자료를 이용하려면 %(course_url)s 를 방문하십시오. "
 
 #: lms/templates/instructor/edx_ace/addbetatester/email/body.txt
 #, python-format
 msgid ""
 "Visit %(course_about_url)s to enroll in this course and begin the beta test."
 msgstr ""
-" 이 과정에 등록하고 베타 테스트를 시작하려면 %(course_about_url)s을 방문하십시오."
+" 이 과정에 등록하고 베타 테스트를 시작하려면 %(course_about_url)s 을 방문하십시오."
 
 #: lms/templates/instructor/edx_ace/addbetatester/email/body.txt
 #, python-format
@@ -9309,7 +9309,7 @@ msgstr "학생들에게,"
 #: lms/templates/instructor/edx_ace/allowedenroll/email/body.txt
 #, python-format
 msgid "To access this course visit %(course_url)s and login."
-msgstr " 이 코스에 액세스하려면 %(course_url)s를 방문하여 로그인하십시오."
+msgstr " 이 코스에 액세스하려면 %(course_url)s 를 방문하여 로그인하십시오."
 
 #: lms/templates/instructor/edx_ace/allowedenroll/email/body.txt
 #, python-format
@@ -9317,7 +9317,7 @@ msgid ""
 "To access this course visit %(course_about_url)s and register for this "
 "course."
 msgstr ""
-" 이 코스를 이용하려면 %(course_about_url)s을 방문하여 이 코스에"
+" 이 코스를 이용하려면 %(course_about_url)s 을 방문하여 이 코스에"
 " 등록하십시오."
 
 #: lms/templates/instructor/edx_ace/allowedenroll/email/body.txt
@@ -9327,7 +9327,7 @@ msgid ""
 "the registration form making sure to use %(email_address)s in the Email "
 "field."
 msgstr ""
-" 등록을 마치려면 %(registration_url)s을 방문하여 이메일 필드에"
+" 등록을 마치려면 %(registration_url)s 을 방문하여 이메일 필드에"
 " %(email_address)s를 사용하여 등록 양식을 "
 " 작성하십시오."
 
@@ -9337,7 +9337,7 @@ msgid ""
 "Once you have registered and activated your account, visit "
 "%(course_about_url)s to join this course."
 msgstr ""
-" 계정을 등록하고 활성화한 후 %(course_about_url)s를 "
+" 계정을 등록하고 활성화한 후 %(course_about_url)s 를 "
 " 방문하여 이 과정에 참여하십시오."
 
 #: lms/templates/instructor/edx_ace/allowedenroll/email/subject.txt
