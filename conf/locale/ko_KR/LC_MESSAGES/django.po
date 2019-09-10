@@ -3068,7 +3068,7 @@ msgid ""
 "certificates are generated, enter early_no_info."
 msgstr ""
 "end, early_with_info 또는 early_no_info를 입력하십시오. "
-"수료증을 생성한 후 통과 한 학생은 대시 보드에서 수료증에 대한"
+"수료증을 생성한 후 통과 한 학생은 대쉬보드에서 수료증에 대한"
 "링크를보고 통과하지 못한 학생은 채점 구성에 대한 정보를 볼 수 있습니다. "
 "본값은 end입니다. 코스 종료 날짜 이후 모든 학생에게 이 수료증 정보를 표시합니다."
 "수료증이 생성되는 즉시 모든 학생에게 이 수료증 정보를 표시하려면 "
@@ -3382,7 +3382,7 @@ msgid ""
 "sites can link to. URLs must be fully qualified. For example: "
 "http://www.edx.org/course/Introduction-to-MOOCs-ITM001"
 msgstr ""
-"대시 보드 소셜 공유 및 맞춤 코스 URL이 활성화된 경우 소셜 미디어 사이트가 "
+"대쉬보드 소셜 공유 및 맞춤 코스 URL이 활성화된 경우 소셜 미디어 사이트가 "
 " 연결할 수있는 URL (코스 정보 페이지의 URL과 같은)를 제공할 수 있습니다."
 " URL은 정규화 된 것이어야합니다."
 "예 : https://www.smartlearn.kr/course/Introduction-to-MOOCs-ITM001"
@@ -3513,7 +3513,7 @@ msgid ""
 "Bypass the course home tab when students arrive from the dashboard, sending "
 "them directly to course content."
 msgstr ""
-" 학생들이 대시 보드에서 도착했을 때 코스 홈 탭을 건너 뛰고"
+" 학생들이 대쉬보드에서 도착했을 때 코스 홈 탭을 건너 뛰고"
 " 코스 내용에 직접 전송하십시오."
 
 #: common/lib/xmodule/xmodule/course_module.py
@@ -5788,7 +5788,7 @@ msgid ""
 "If your course does not appear on your dashboard, contact "
 "{payment_support_link}."
 msgstr ""
-" 코스가 대시 보드에 표시되지 않으면 {payment_support_link}에"
+" 코스가 대쉬보드에 표시되지 않으면 {payment_support_link}에"
 " 문의하십시오."
 
 #: lms/djangoapps/course_goals/models.py
@@ -6149,7 +6149,7 @@ msgid ""
 "link to it will appear here and on your Dashboard when it is ready."
 msgstr ""
 " 수료증을 생성 중입니다. 코스에서 계속공부 할 수 "
-" 있으며 코스 링크가 준비되면 여기와 대시 보드에 나타납니다."
+" 있으며 코스 링크가 준비되면 여기와 대쉬보드에 나타납니다."
 
 #: lms/djangoapps/courseware/views/views.py
 msgid "Your certificate has been invalidated"
@@ -8032,7 +8032,7 @@ msgstr "코스 등록: {course_name}"
 msgid ""
 "Please visit your {link_start}dashboard{link_end} to see your new course."
 msgstr ""
-" 새 과정을 보려면 {link_start} 대시 보드 {link_end}를 방문하십시오."
+" 새 과정을 보려면 {link_start} 대쉬보드 {link_end}를 방문하십시오."
 
 #: lms/djangoapps/shoppingcart/models.py
 #, python-brace-format
@@ -9200,7 +9200,7 @@ msgstr "방문 %(site_name)s"
 msgid ""
 "This email was automatically sent from %(site_name)s to %(email_address)s"
 msgstr ""
-" 이 이메일은 %(site_name)s에서 %(email_address)s(으)로 자동 전송되었습니다."
+" 이 이메일은 %(site_name)s에서 자동 전송되었습니다."
 
 #: lms/templates/instructor/edx_ace/addbetatester/email/body.txt
 #: lms/templates/instructor/edx_ace/enrolledunenroll/email/body.txt
@@ -9285,7 +9285,7 @@ msgid ""
 "Once you have registered and activated your account, you will see "
 "%(course_name)s listed on your dashboard."
 msgstr ""
-"회원가입을 하고 계정을 활성화하면 귀하의 대시보드에 "
+"회원가입을 하고 계정을 활성화하면 귀하의 대쉬보드에 "
 "%(course_name)s 강좌가 표시되어 바로 학습을 시작하실 수 있습니다.."
 
 #: lms/templates/instructor/edx_ace/allowedenroll/email/body.html
@@ -9385,7 +9385,7 @@ msgid ""
 " dashboard."
 msgstr ""
 "코스 스태프 멤버가 %(site_name)s에서 %(course_name)s을(를) 등록 취소했습니다."
-" 이 과정은 더 이상 %(site_name)s대시 보드에 표시되지 "
+" 이 과정은 더 이상 %(site_name)s 의 대쉬보드에 표시되지 "
 " 않습니다."
 
 #: lms/templates/instructor/edx_ace/enrolledunenroll/email/body.html
@@ -9401,7 +9401,7 @@ msgstr " 귀하의 다른 코스는 영향을 받지 않았습니다."
 #: lms/templates/instructor/edx_ace/enrollenrolled/email/body.txt
 #, python-format
 msgid "This email was automatically sent from %(site_name)s to %(full_name)s"
-msgstr " 이 이메일은 %(site_name)s에서 %(full_name)s(으)로 자동 전송되었습니다."
+msgstr " 이 이메일은 %(site_name)s에서 자동 전송되었습니다."
 
 #: lms/templates/instructor/edx_ace/enrollenrolled/email/body.html
 #, python-format
@@ -9411,7 +9411,7 @@ msgid ""
 "                "
 msgstr ""
 "\n"
-" %(course_name)s에 등록되었습니다.\n "
+" %(course_name)s 강좌에 수강생으로 등록되었습니다.\n "
 
 #: lms/templates/instructor/edx_ace/enrollenrolled/email/body.html
 #: lms/templates/instructor/edx_ace/enrollenrolled/email/body.txt
@@ -9421,8 +9421,8 @@ msgid ""
 "the course staff. This course will now appear on your %(site_name)s "
 "dashboard."
 msgstr ""
-" 강좌 운영진이 %(site_name)s의 %(course_name)s에 등록시켰습니다."
-" 이 과정은 %(site_name)s 대시 보드에서 "
+" %(site_name)s의 강좌 운영팀이 귀하를 %(course_name)s 강좌에 수강생으로 등록하였습니다."
+" 이 강좌는 %(site_name)s 의 대쉬보드에서 "
 " 찾아볼 수 있습니다.."
 
 #: lms/templates/instructor/edx_ace/enrollenrolled/email/body.html
@@ -9450,7 +9450,7 @@ msgid ""
 "This course will remain on your dashboard, but you will no longer be part of"
 " the beta testing group."
 msgstr ""
-" 이 과정은 대시 보드에 남아 있지만 더 이상 "
+" 이 과정은 대쉬보드에 남아 있지만 더 이상 "
 " 베타 테스트 그룹에 속하지 않습니다."
 
 #: lms/templates/instructor/edx_ace/removebetatester/email/body.txt
@@ -9461,7 +9461,7 @@ msgid ""
 "but you will no longer be part of the beta testing group."
 msgstr ""
 " 코스 스탭이 %(site_name)s의 %(course_name)s베타 테스터로 제거되었습니다."
-" 이 과정은 대시 보드에 남아 있지만 더 이상 "
+" 이 과정은 대쉬보드에 남아 있지만 더 이상 "
 " 베타 테스트 그룹에 속하지 않습니다."
 
 #: lms/templates/instructor/edx_ace/removebetatester/email/subject.txt
@@ -11370,7 +11370,7 @@ msgid ""
 "your dashboard."
 msgstr ""
 " {platform_name} 사용자 이름과 비밀번호를 사용하여 아래 {platform_name}에 로그인한 "
-" 다음 대시 보드에서 {platform_name} 계정과 {provider_name}을 "
+" 다음 대쉬보드에서 {platform_name} 계정과 {provider_name}을 "
 " 연결하십시오."
 
 #: openedx/core/djangoapps/user_authn/views/login.py
@@ -11733,7 +11733,7 @@ msgid ""
 "The groups in this configuration can be mapped to cohorts in the Instructor "
 "Dashboard."
 msgstr ""
-" 이 구성의 그룹은 강사 대시 보드의 코호트에 매핑 될 수 "
+" 이 구성의 그룹은 강사 대쉬보드의 코호트에 매핑 될 수 "
 " 있습니다."
 
 #: cms/templates/group_configurations.html
@@ -12870,7 +12870,7 @@ msgstr "모든 강좌 보기"
 #: lms/templates/header/user_dropdown.html
 #: themes/edx.org/lms/templates/dashboard.html
 msgid "Dashboard"
-msgstr "대시보드"
+msgstr "대쉬보드"
 
 #: lms/templates/dashboard.html themes/edx.org/lms/templates/dashboard.html
 msgid "You are not enrolled in any courses yet."
@@ -12955,7 +12955,7 @@ msgstr "이메일 변경 성공"
 
 #: lms/templates/email_change_successful.html
 msgid "You should see your new email in your {link_start}dashboard{link_end}."
-msgstr " {link_start}대시보드{link_end}에서 새로운 이메일을 볼 수 있습니다."
+msgstr " {link_start}대쉬보드{link_end}에서 새로운 이메일을 볼 수 있습니다."
 
 #: lms/templates/email_exists.html
 msgid "An account with the new e-mail address already exists."
@@ -13799,7 +13799,7 @@ msgid ""
 "{dashboard_link_start}return to your dashboard{link_end}."
 msgstr ""
 " {platform_name}에서 포럼 알림 이메일을 다시 사용하도록 설정했습니다."
-"{dashboard_link_start} 대시 보드로 돌아갈 수 있습니다 {link_end}."
+"{dashboard_link_start} 대쉬보드로 돌아갈 수 있습니다 {link_end}."
 
 #: lms/templates/seq_module.html
 msgid "Important!"
@@ -13983,7 +13983,7 @@ msgstr "다음 페이지"
 #: lms/templates/sysadmin_dashboard.html
 #: lms/templates/sysadmin_dashboard_gitlogs.html
 msgid "Sysadmin Dashboard"
-msgstr "시스템관리자 상대시보드"
+msgstr "시스템관리자 대쉬보드"
 
 #: lms/templates/sysadmin_dashboard.html
 #: lms/templates/sysadmin_dashboard_gitlogs.html
@@ -14029,7 +14029,7 @@ msgstr "외부 인증맵  점검/수리"
 msgid ""
 "Go to each individual course's Instructor dashboard to manage course "
 "enrollment."
-msgstr "각 과정의 교수자 대시보드로가서 강좌등록을 관리하세요"
+msgstr "각 과정의 교수자 대쉬보드로가서 강좌등록을 관리하세요"
 
 #: lms/templates/sysadmin_dashboard.html
 msgid "Manage course staff and instructors"
@@ -14148,12 +14148,12 @@ msgid ""
 " not mean to do this, {undo_link_start}you can re-subscribe{link_end}."
 msgstr ""
 " {platform_name}의 포럼 알림 이메일을 더 이상받지 않습니다."
-"{dashboard_link_start} 대시 보드로 돌아갈 수 있습니다 {link_end}."
+"{dashboard_link_start} 대쉬보드로 돌아갈 수 있습니다 {link_end}."
 " 이렇게 하지 않으려면 {undo_link_start}에 다시 구독할 수 있습니다 {link_end}."
 
 #: lms/templates/user_dropdown.html lms/templates/header/user_dropdown.html
 msgid "Dashboard for:"
-msgstr "대시보드:"
+msgstr "대쉬보드:"
 
 #: lms/templates/user_dropdown.html
 msgid "More options"
@@ -15274,7 +15274,7 @@ msgstr "결과"
 
 #: lms/templates/ccx/coach_dashboard.html
 msgid "CCX Coach Dashboard"
-msgstr "CCX 코치 대시보드"
+msgstr "CCX 코치 대쉬보드"
 
 #: lms/templates/ccx/coach_dashboard.html
 msgid "Name your CCX"
@@ -16258,7 +16258,7 @@ msgid ""
 "{a_start}Go to your dashboard{a_end} to purchase course credit."
 msgstr ""
 "{student_name}, 본 과정에서 학점 인정 요건을 충족했습니다."
-"{a_start} 대시 보드 {a_end}(으)로 이동하여 코스 크레딧을 구매하십시오."
+"{a_start} 대쉬보드 {a_end}(으)로 이동하여 코스 크레딧을 구매하십시오."
 
 #: lms/templates/courseware/progress.html
 msgid "{student_name}, you have not yet met the requirements for credit."
@@ -16425,7 +16425,7 @@ msgid ""
 "dashboard{link_end} and clicking the {bold_start}Get Credit{bold_end} button"
 " below the course title."
 msgstr ""
-" {link_start} {platform_name} 대시 보드 {link_end}로 이동한 후 "
+" {link_start} {platform_name} 대쉬보드 {link_end}로 이동한 후 "
 " 코스 제목 아래 {bold_start} 크레딧 받기 {bold_end} 버튼을 클릭하여 "
 " 크레딧을 구매하십시오."
 
@@ -16436,7 +16436,7 @@ msgid ""
 "request an official academic transcript at the institution that granted the "
 "credit."
 msgstr ""
-" 지불이 완료되면 대시 보드로 돌아가서 코스 제목 아래의 {bold_start} "
+" 지불이 완료되면 대쉬보드로 돌아가서 코스 제목 아래의 {bold_start} "
 " 크레딧 요청 {bold_end} 버튼을 클릭하면 크레딧을 "
 " 부여한 기관에서 공식 성적 증명서를 요청할 수 "
 " 있습니다."
@@ -16722,7 +16722,7 @@ msgid ""
 "You will see a message on your dashboard when the verification process is "
 "complete (usually within 1-2 days)."
 msgstr ""
-" 확인 프로세스가 완료되면 대시 보드에 메시지가 표시됩니다."
+" 확인 프로세스가 완료되면 대쉬보드에 메시지가 표시됩니다."
 "(일반적으로 1-2 일 이내)"
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
@@ -16736,7 +16736,7 @@ msgid ""
 "1-2 days)."
 msgstr ""
 " 재 검증 정보를 제출하셨습니다. 확인 프로세스가 "
-" 완료되면 대시 보드에 메시지가 표시됩니다."
+" 완료되면 대쉬보드에 메시지가 표시됩니다."
 "(일반적으로 1-2 일 이내)"
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
@@ -17024,7 +17024,7 @@ msgstr " 등록 취소 된 사용자 : "
 #: lms/templates/dashboard/_entitlement_reason_survey.html
 #: lms/templates/dashboard/_reason_survey.html
 msgid "Return To Dashboard"
-msgstr " 대시 보드로 돌아가기 "
+msgstr " 대쉬보드로 돌아가기 "
 
 #: lms/templates/dashboard/_entitlement_reason_survey.html
 #: lms/templates/dashboard/_reason_survey.html
@@ -17356,7 +17356,7 @@ msgstr "(3) 수강신청 확인 페이지에서, '수강신청 코드 활성화'
 msgid ""
 "(4) You should be able to click on 'view course' button or see your course "
 "on your student dashboard at {url}"
-msgstr "(4) '강좌 보기' 버튼을 클릭하거나 혹은 {url}의 학습자 대시보드에서 강좌를 볼 수 있어야합니다. "
+msgstr "(4) '강좌 보기' 버튼을 클릭하거나 혹은 {url}의 학습자 대쉬보드에서 강좌를 볼 수 있어야합니다. "
 
 #: lms/templates/emails/business_order_confirmation_email.txt
 msgid ""
@@ -17477,7 +17477,7 @@ msgid ""
 msgstr ""
 " 귀하의 정보가 접수되었으며 ID 확인 절차가 시작되었습니다."
 " 며칠 이내에 본인 확인이 성공적이었는지를 확인하는 "
-" 이메일을 확인합니다. 대시 보드에서 확인 프로세스의 "
+" 이메일을 확인합니다. 대쉬보드에서 확인 프로세스의 "
 " 상태를 확인할 수도 있습니다."
 
 #: lms/templates/emails/registration_codes_sale_email.txt
@@ -17534,7 +17534,7 @@ msgstr "첨부된 CSV 파일에서 가져온 HTML 링크"
 msgid ""
 "After you enroll, you can see the course on your student dashboard. You can "
 "see course materials after the course start date."
-msgstr "수강신청 후, 학습자 대시보드에서 강좌명을 볼 수 있습니다. 강좌 개강일 후에 강좌의 자료를 볼 수 있습니다.  "
+msgstr "수강신청 후, 학습자 대쉬보드에서 강좌명을 볼 수 있습니다. 강좌 개강일 후에 강좌의 자료를 볼 수 있습니다.  "
 
 #. Translators: please translate the text inside [[ ]]. This is meant as a
 #. template for course teams to use.
@@ -18863,7 +18863,7 @@ msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/instructor_dashboard_2.html
 msgid "Instructor Dashboard"
-msgstr "교수자 대시보드"
+msgstr "교수자 대쉬보드"
 
 #: lms/templates/instructor/instructor_dashboard_2/instructor_dashboard_2.html
 msgid "View Course in Studio"
@@ -19961,7 +19961,7 @@ msgstr "구매해 주셔서 감사드립니다!"
 #: lms/templates/shoppingcart/receipt.html
 #: lms/templates/shoppingcart/registration_code_redemption.html
 msgid "View Dashboard"
-msgstr "대시보드로 바로가기"
+msgstr "대쉬보드로 바로가기"
 
 #: lms/templates/shoppingcart/receipt.html
 msgid ""
@@ -20117,7 +20117,7 @@ msgid ""
 "Check your {link_start}course dashboard{link_end} to see if you're enrolled "
 "in the course, or contact your company's administrator."
 msgstr ""
-"이미 사용된 등록 코드를 입력 하셨습니다. {link_start}대시보드{link_end}에서 강좌가 이미 등록되어 있는지 확인하시고,"
+"이미 사용된 등록 코드를 입력 하셨습니다. {link_start}대쉬보드{link_end}에서 강좌가 이미 등록되어 있는지 확인하시고,"
 "강좌가 보이지 않는다면 smartlearn-info@postech.ac.kr으로 문의 바랍니다."
 
 #: lms/templates/shoppingcart/registration_code_receipt.html
@@ -20132,7 +20132,7 @@ msgstr "강좌 등록이 정상적으로 완료되었습니다."
 msgid ""
 "You're already enrolled for this course. Visit your "
 "{link_start}dashboard{link_end} to see the course."
-msgstr "해당 강좌에 이미 등록하셨습니다. {link_start}대시보드{link_end}에서 강좌를 확인해 보세요."
+msgstr "해당 강좌에 이미 등록하셨습니다. {link_start}대쉬보드{link_end}에서 강좌를 확인해 보세요."
 
 #: lms/templates/shoppingcart/registration_code_receipt.html
 msgid "The course you are enrolling for is full."
@@ -20424,7 +20424,7 @@ msgstr "다음의 필수 항목을 입력하지 않았습니다. "
 
 #: lms/templates/survey/survey.html
 msgid "Cancel and Return to Dashboard"
-msgstr "취소 및 대시보드로 돌아가기"
+msgstr "취소 및 대쉬보드로 돌아가기"
 
 #: lms/templates/survey/survey.html
 msgid "Why do I need to complete this information?"
@@ -20549,7 +20549,7 @@ msgid ""
 "You have already submitted your verification information. You will see a "
 "message on your dashboard when the verification process is complete (usually"
 " within 1-2 days)."
-msgstr "귀하는 이미 인증 정보를 제출했습니다. 인증 절차가 완료되면 (보통 1-2일 안에 완료) 대시보드에서 메시지를 볼 것입니다."
+msgstr "귀하는 이미 인증 정보를 제출했습니다. 인증 절차가 완료되면 (보통 1-2일 안에 완료) 대쉬보드에서 메시지를 볼 것입니다."
 
 #: lms/templates/verify_student/reverify_not_allowed.html
 msgid "You cannot verify your identity at this time."
@@ -20557,7 +20557,7 @@ msgstr "현재 신분을 인증할 수 없습니다."
 
 #: lms/templates/verify_student/reverify_not_allowed.html
 msgid "Return to Your Dashboard"
-msgstr "대시보드로 돌아 가기"
+msgstr "대쉬보드로 돌아 가기"
 
 #: lms/templates/widgets/cookie-consent.html
 msgid ""
@@ -20817,7 +20817,7 @@ msgstr " 액세스 길이 "
 
 #: openedx/features/journals/templates/journals/learner_dashboard/journal_dashboard.html
 msgid "Journal Dashboard"
-msgstr "저널 대시 보드"
+msgstr "저널 대쉬보드"
 
 #: openedx/features/journals/templates/journals/learner_dashboard/journal_dashboard.html
 msgid "{journal_title} Cover Image"
@@ -21926,7 +21926,7 @@ msgid ""
 " still having problems accessing things, please feel free to "
 "{link_start}contact {studio_name} support{link_end} for further help."
 msgstr ""
-"죄송합니다.  {studio_name}페이지를 찾을 수 없습니다. {studio_name}대시보드로 돌아가서 다시 시도하세요. 도움이 "
+"죄송합니다.  {studio_name}페이지를 찾을 수 없습니다. {studio_name}대쉬보드로 돌아가서 다시 시도하세요. 도움이 "
 "필요하시면 {link_start}{studio_name}지원 연락처{link_end}로 연락하세요."
 
 #: cms/templates/error.html
@@ -21941,12 +21941,12 @@ msgid ""
 "please feel free to {link_start}contact {studio_name} support{link_end} for "
 "further help."
 msgstr ""
-"죄송합니다.  요청을 처리하는 동안 서버에 문제가 발생했습니다. {studio_name} 대시보드로 돌아가거나 다시 요청을 시도 할 수 "
+"죄송합니다.  요청을 처리하는 동안 서버에 문제가 발생했습니다. {studio_name} 대쉬보드로 돌아가거나 다시 요청을 시도 할 수 "
 "있습니다. 문제가 계속 발생하면, {link_start}{studio_name} 지원 연락처 {link_end}로 연락하세요."
 
 #: cms/templates/error.html
 msgid "Back to dashboard"
-msgstr "대시보드로 돌아가기"
+msgstr "대쉬보드로 돌아가기"
 
 #: cms/templates/export.html
 msgid "Library Export"
@@ -24362,7 +24362,7 @@ msgstr "값 재설정"
 
 #: cms/templates/maintenance/base.html cms/templates/maintenance/index.html
 msgid "Maintenance Dashboard"
-msgstr " 유지 보수 대시 보드 "
+msgstr " 유지 보수 대쉬보드 "
 
 #: cms/templates/registration/activation_complete.html
 msgid "Thanks for activating your account."
@@ -24374,7 +24374,7 @@ msgstr " 이 계정은 이미 활성화되었습니다."
 
 #: cms/templates/registration/activation_complete.html
 msgid "Visit your {link_start}dashboard{link_end} to see your courses."
-msgstr " 내 코스를 보려면 {link_start} 대시 보드 {link_end}를 방문하세요."
+msgstr " 내 코스를 보려면 {link_start} 대쉬보드 {link_end}를 방문하세요."
 
 #: cms/templates/registration/activation_complete.html
 msgid "You can now {link_start}sign in{link_end}."
