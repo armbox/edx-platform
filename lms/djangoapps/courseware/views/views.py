@@ -5,7 +5,7 @@ import json
 import logging
 import urllib
 from collections import OrderedDict, namedtuple
-from datetime import datetime
+from datetime import datetime, timedelta
 
 from django.conf import settings
 from django.contrib.auth.decorators import login_required
@@ -17,6 +17,7 @@ from django.db.models import Q
 from django.http import Http404, HttpResponse, HttpResponseBadRequest, HttpResponseForbidden
 from django.shortcuts import redirect
 from django.template.context_processors import csrf
+from django.utils import timezone
 from django.utils.decorators import method_decorator
 from django.utils.http import urlquote_plus
 from django.utils.text import slugify
@@ -111,6 +112,7 @@ from ..entrance_exams import user_can_skip_entrance_exam
 from ..module_render import get_module, get_module_by_usage_id, get_module_for_descriptor
 
 log = logging.getLogger("edx.courseware")
+MIN_DURATION = timedelta(weeks=1)
 
 
 # Only display the requirements on learner dashboard for
@@ -751,6 +753,22 @@ class EnrollStaffView(View):
         return redirect(reverse('about_course', args=[text_type(course_key)]))
 
 
+def check_course_expired(course):
+    """
+    Check if the course expired.
+    """
+
+    try:
+        expiration_date = course.end + MIN_DURATION
+    except:
+        expiration_date = None
+
+    if expiration_date and timezone.now() > expiration_date:
+        return True
+
+    return False
+
+
 @ensure_csrf_cookie
 @ensure_valid_course_key
 @cache_if_anonymous()
@@ -795,7 +813,7 @@ def course_about(request, course_id):
         show_courseware_link = bool(
             (
                 has_access(request.user, 'load', course)
-            ) or settings.FEATURES.get('ENABLE_LMS_MIGRATION')
+            ) and not check_course_expired(course)
         )
 
         # Note: this is a flow for payment for course registration, not the Verified Certificate flow.
