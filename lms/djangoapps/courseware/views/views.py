@@ -753,17 +753,20 @@ class EnrollStaffView(View):
         return redirect(reverse('about_course', args=[text_type(course_key)]))
 
 
-def check_course_expired(course):
+def is_show_courseware_link(user, course):
     """
     Check if the course expired.
     """
+
+    if not has_access(user, 'load', course):
+        return False
 
     try:
         expiration_date = course.end + MIN_DURATION
     except:
         expiration_date = None
 
-    if expiration_date and timezone.now() > expiration_date:
+    if not expiration_date or expiration_date > timezone.now():
         return True
 
     return False
@@ -810,11 +813,7 @@ def course_about(request, course_id):
         else:
             course_target = reverse('about_course', args=[text_type(course.id)])
 
-        show_courseware_link = bool(
-            (
-                has_access(request.user, 'load', course)
-            ) and not check_course_expired(course)
-        )
+        show_courseware_link = is_show_courseware_link(request.user, course)
 
         # Note: this is a flow for payment for course registration, not the Verified Certificate flow.
         in_cart = False

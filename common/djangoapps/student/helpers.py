@@ -20,8 +20,11 @@ from pytz import UTC
 from six import iteritems, text_type
 import third_party_auth
 from course_modes.models import CourseMode
+from courseware.courses import get_course_by_id
+from courseware.views.views import _get_cert_data
 from lms.djangoapps.certificates.api import (
     get_certificate_url,
+    get_active_web_certificate,
     has_html_certificates_enabled
 )
 from lms.djangoapps.certificates.models import (
@@ -38,6 +41,7 @@ from openedx.core.djangoapps.theming import helpers as theming_helpers
 from openedx.core.djangoapps.theming.helpers import get_themes, get_current_site
 from openedx.core.djangoapps.user_authn.utils import is_safe_login_or_logout_redirect
 from student.models import (
+    CourseEnrollment,
     LinkedInAddToProfileConfiguration,
     PasswordHistory,
     Registration,
@@ -474,6 +478,8 @@ def _cert_info(user, course_overview, cert_status):
         CertificateStatuses.audit_passing: 'auditing',
         CertificateStatuses.audit_notpassing: 'auditing',
         CertificateStatuses.unverified: 'unverified',
+        CertificateStatuses.requesting: 'requesting',
+        CertificateStatuses.unavailable: 'unavailable',
     }
 
     certificate_earned_but_not_available_status = 'certificate_earned_but_not_available'
@@ -489,6 +495,15 @@ def _cert_info(user, course_overview, cert_status):
         return default_info
 
     status = template_state.get(cert_status['status'], default_status)
+    course = get_course_by_id(course_overview.id)
+
+    if status == 'unavailable' and get_active_web_certificate(course):
+        enrollment_mode, _ = CourseEnrollment.enrollment_mode_for_user(user, course_overview.id)
+        course_grade = CourseGradeFactory().read(user, course, create_if_needed=False)
+        certificate_data = _get_cert_data(user, course, enrollment_mode, course_grade)
+        if certificate_data.cert_status == 'requesting':
+            status = 'requesting'
+
     is_hidden_status = status in ('unavailable', 'processing', 'generating', 'notpassing', 'auditing')
 
     if (
@@ -554,10 +569,10 @@ def _cert_info(user, course_overview, cert_status):
                     cert_status['download_url']
                 )
 
-    if status in {'generating', 'downloadable', 'notpassing', 'restricted', 'auditing', 'unverified'}:
+    if status in {'generating', 'downloadable', 'notpassing', 'restricted', 'auditing', 'unverified', 'requesting'}:
         cert_grade_percent = -1
         persisted_grade_percent = -1
-        persisted_grade = CourseGradeFactory().read(user, course=course_overview, create_if_needed=False)
+        persisted_grade = CourseGradeFactory().read(user, course, create_if_needed=(status == 'requesting'))
         if persisted_grade is not None:
             persisted_grade_percent = persisted_grade.percent
 
