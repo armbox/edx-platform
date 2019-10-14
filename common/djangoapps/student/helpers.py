@@ -7,6 +7,7 @@ import mimetypes
 import urllib
 import urlparse
 from datetime import datetime
+from collections import namedtuple
 
 from django.conf import settings
 from django.core.exceptions import PermissionDenied
@@ -21,11 +22,13 @@ from six import iteritems, text_type
 import third_party_auth
 from course_modes.models import CourseMode
 from courseware.courses import get_course_by_id
-from courseware.views.views import _get_cert_data
 from lms.djangoapps.certificates.api import (
+    certificate_downloadable_status,
+    cert_generation_enabled,
     get_certificate_url,
     get_active_web_certificate,
-    has_html_certificates_enabled
+    has_html_certificates_enabled,
+    is_certificate_invalid,
 )
 from lms.djangoapps.certificates.models import (
     CertificateStatuses,
@@ -35,7 +38,10 @@ from lms.djangoapps.grades.course_grade_factory import CourseGradeFactory
 from lms.djangoapps.verify_student.models import VerificationDeadline
 from lms.djangoapps.verify_student.services import IDVerificationService
 from lms.djangoapps.verify_student.utils import is_verification_expiring_soon, verification_for_datetime
-from openedx.core.djangoapps.certificates.api import certificates_viewable_for_course
+from openedx.core.djangoapps.certificates.api import (
+    can_show_certificate_message,
+    certificates_viewable_for_course,
+)
 from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
 from openedx.core.djangoapps.theming import helpers as theming_helpers
 from openedx.core.djangoapps.theming.helpers import get_themes, get_current_site
@@ -68,6 +74,64 @@ DISABLE_UNENROLL_CERT_STATES = [
     'downloadable',
 ]
 USERNAME_EXISTS_MSG_FMT = _("An account with the Public Username '{username}' already exists.")
+
+CertData = namedtuple(
+    "CertData", ["cert_status", "title", "msg", "download_url", "cert_web_view_url"]
+)
+
+AUDIT_PASSING_CERT_DATA = CertData(
+    CertificateStatuses.audit_passing,
+    _('Your enrollment: Audit track'),
+    _('You are enrolled in the audit track for this course. The audit track does not include a certificate.'),
+    download_url=None,
+    cert_web_view_url=None
+)
+
+HONOR_PASSING_CERT_DATA = CertData(
+    CertificateStatuses.honor_passing,
+    _('Your enrollment: Honor track'),
+    _('You are enrolled in the honor track for this course. The honor track does not include a certificate.'),
+    download_url=None,
+    cert_web_view_url=None
+)
+
+GENERATING_CERT_DATA = CertData(
+    CertificateStatuses.generating,
+    _("We're working on it..."),
+    _(
+        "We're creating your certificate. You can keep working in your courses and a link "
+        "to it will appear here and on your Dashboard when it is ready."
+    ),
+    download_url=None,
+    cert_web_view_url=None
+)
+
+INVALID_CERT_DATA = CertData(
+    CertificateStatuses.invalidated,
+    _('Your certificate has been invalidated'),
+    _('Please contact your course team if you have any questions.'),
+    download_url=None,
+    cert_web_view_url=None
+)
+
+REQUESTING_CERT_DATA = CertData(
+    CertificateStatuses.requesting,
+    _('Congratulations, you qualified for a certificate!'),
+    _("You've earned a certificate for this course."),
+    download_url=None,
+    cert_web_view_url=None
+)
+
+UNVERIFIED_CERT_DATA = CertData(
+    CertificateStatuses.unverified,
+    _('Certificate unavailable'),
+    _(
+        'You have not received a certificate because you do not have a current {platform_name} '
+        'verified identity.'
+    ).format(platform_name=configuration_helpers.get_value('PLATFORM_NAME', settings.PLATFORM_NAME)),
+    download_url=None,
+    cert_web_view_url=None
+)
 
 
 log = logging.getLogger(__name__)
@@ -458,6 +522,59 @@ def cert_info(user, course_overview):
         course_overview,
         certificate_status_for_student(user, course_overview.id)
     )
+
+
+def _downloadable_cert_data(download_url=None, cert_web_view_url=None):
+    return CertData(
+        CertificateStatuses.downloadable,
+        _('Your certificate is available'),
+        _("You've earned a certificate for this course."),
+        download_url=download_url,
+        cert_web_view_url=cert_web_view_url
+    )
+
+
+def _certificate_message(student, course, enrollment_mode):
+    if is_certificate_invalid(student, course.id):
+        return INVALID_CERT_DATA
+
+    cert_downloadable_status = certificate_downloadable_status(student, course.id)
+
+    if cert_downloadable_status['is_generating']:
+        return GENERATING_CERT_DATA
+
+    if cert_downloadable_status['is_unverified']:
+        return UNVERIFIED_CERT_DATA
+
+    if cert_downloadable_status['is_downloadable']:
+        return _downloadable_cert_data()
+
+    return REQUESTING_CERT_DATA
+
+
+def _get_cert_data(student, course, enrollment_mode, course_grade=None):
+    """Returns students course certificate related data.
+
+    Arguments:
+        student (User): Student for whom certificate to retrieve.
+        course (Course): Course object for which certificate data to retrieve.
+        enrollment_mode (String): Course mode in which student is enrolled.
+        course_grade (CourseGrade): Student's course grade record.
+
+    Returns:
+        returns dict if course certificate is available else None.
+    """
+    if not CourseMode.is_eligible_for_certificate(enrollment_mode):
+        return AUDIT_PASSING_CERT_DATA if enrollment_mode == CourseMode.AUDIT else HONOR_PASSING_CERT_DATA
+
+    certificates_enabled_for_course = cert_generation_enabled(course.id)
+    if course_grade is None:
+        course_grade = CourseGradeFactory().read(student, course)
+
+    if not can_show_certificate_message(course, student, course_grade, certificates_enabled_for_course):
+        return
+
+    return _certificate_message(student, course, enrollment_mode)
 
 
 def _cert_info(user, course_overview, cert_status):

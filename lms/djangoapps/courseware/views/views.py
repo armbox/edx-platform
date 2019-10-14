@@ -5,7 +5,7 @@ import json
 import logging
 import urllib
 from collections import OrderedDict, namedtuple
-from datetime import datetime, timedelta
+from datetime import datetime
 
 from django.conf import settings
 from django.contrib.auth.decorators import login_required
@@ -17,7 +17,6 @@ from django.db.models import Q
 from django.http import Http404, HttpResponse, HttpResponseBadRequest, HttpResponseForbidden
 from django.shortcuts import redirect
 from django.template.context_processors import csrf
-from django.utils import timezone
 from django.utils.decorators import method_decorator
 from django.utils.http import urlquote_plus
 from django.utils.text import slugify
@@ -98,6 +97,7 @@ from openedx.features.enterprise_support.api import data_sharing_consent_require
 from openedx.features.journals.api import get_journals_context
 from shoppingcart.utils import is_shopping_cart_enabled
 from student.models import CourseEnrollment, UserTestGroup
+from student.views.dashboard import is_show_courseware_link
 from track import segment
 from util.cache import cache, cache_if_anonymous
 from util.db import outer_atomic
@@ -112,7 +112,6 @@ from ..entrance_exams import user_can_skip_entrance_exam
 from ..module_render import get_module, get_module_by_usage_id, get_module_for_descriptor
 
 log = logging.getLogger("edx.courseware")
-MIN_DURATION = timedelta(weeks=1)
 
 
 # Only display the requirements on learner dashboard for
@@ -751,25 +750,6 @@ class EnrollStaffView(View):
 
         # In any other case redirect to the course about page.
         return redirect(reverse('about_course', args=[text_type(course_key)]))
-
-
-def is_show_courseware_link(user, course):
-    """
-    Check if the course expired.
-    """
-
-    if not has_access(user, 'load', course):
-        return False
-
-    try:
-        expiration_date = course.end + MIN_DURATION
-    except:
-        expiration_date = None
-
-    if not expiration_date or expiration_date > timezone.now():
-        return True
-
-    return False
 
 
 @ensure_csrf_cookie

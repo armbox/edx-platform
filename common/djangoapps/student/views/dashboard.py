@@ -13,6 +13,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse
 from django.shortcuts import redirect
+from django.utils import timezone
 from django.utils.translation import ugettext as _
 from django.views.decorators.csrf import ensure_csrf_cookie
 from edx_django_utils import monitoring as monitoring_utils
@@ -24,7 +25,6 @@ import track.views
 from bulk_email.models import BulkEmailFlag, Optout  # pylint: disable=import-error
 from course_modes.models import CourseMode
 from courseware.access import has_access
-from courseware.views.views import is_show_courseware_link
 from edxmako.shortcuts import render_to_response, render_to_string
 from entitlements.models import CourseEntitlement
 from lms.djangoapps.commerce.utils import EcommerceService  # pylint: disable=import-error
@@ -58,6 +58,7 @@ from util.milestones_helpers import get_pre_requisite_courses_not_completed
 from xmodule.modulestore.django import modulestore
 
 log = logging.getLogger("edx.student")
+MIN_DURATION = datetime.timedelta(weeks=1)
 
 
 def get_org_black_and_whitelist_for_site():
@@ -530,6 +531,25 @@ def _get_urls_for_resume_buttons(user, enrollments):
             url_to_block = ''
         resume_button_urls.append(url_to_block)
     return resume_button_urls
+
+
+def is_show_courseware_link(user, course):
+    """
+    Check if the course expired.
+    """
+
+    if not has_access(user, 'load', course):
+        return False
+
+    try:
+        expiration_date = course.end + MIN_DURATION
+    except:
+        expiration_date = None
+
+    if not expiration_date or expiration_date > timezone.now():
+        return True
+
+    return False
 
 
 @login_required
