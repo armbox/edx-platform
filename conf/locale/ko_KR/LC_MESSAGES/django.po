@@ -2719,7 +2719,7 @@ msgstr ""
 msgid ""
 "Enter the name of the course as it should appear in the edX.org course list."
 msgstr ""
-" 코스 이름을 smartlearn.kr 코스 목록에 표시할 때 입력하십시오."
+" 코스 이름을 smartlearn.io 코스 목록에 표시할 때 입력하십시오."
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Course Display Name"
@@ -2843,7 +2843,7 @@ msgid ""
 "Enter true or false. If true, the course appears in the list of new courses "
 "on edx.org, and a New! badge temporarily appears next to the course image."
 msgstr ""
-" true 또는 false를 입력하십시오. true이면 코스가 smartlearn.kr의 새로운 코스 목록에 나타나고 "
+" true 또는 false를 입력하십시오. true이면 코스가 smartlearn.io의 새로운 코스 목록에 나타나고 "
 " New! 코스 이미지 옆에 배지가 일시적으로 나타납니다."
 
 #: common/lib/xmodule/xmodule/course_module.py
@@ -2866,7 +2866,7 @@ msgstr " 비디오 업로드 자격 증명 "
 msgid ""
 "Enter the unique identifier for your course's video files provided by edX."
 msgstr ""
-" smartlearn.kr에서 제공한 코스 비디오 파일의 고유 식별자를 입력하십시오."
+" smartlearn.io에서 제공한 코스 비디오 파일의 고유 식별자를 입력하십시오."
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Course Not Graded"
@@ -3385,7 +3385,7 @@ msgstr ""
 "대쉬보드 소셜 공유 및 맞춤 코스 URL이 활성화된 경우 소셜 미디어 사이트가 "
 " 연결할 수있는 URL (코스 정보 페이지의 URL과 같은)를 제공할 수 있습니다."
 " URL은 정규화 된 것이어야합니다."
-"예 : https://www.smartlearn.kr/course/Introduction-to-MOOCs-ITM001"
+"예 : https://www.smartlearn.io/course/Introduction-to-MOOCs-ITM001"
 
 #: cms/templates/settings.html
 msgid "Course Language"
@@ -5071,7 +5071,7 @@ msgstr " 입력 구문을 확인하십시오."
 
 #: lms/djangoapps/branding/api.py
 msgid "Take free online courses at edX.org"
-msgstr " smartlearn.kr에서 무료 온라인 수업 받기 "
+msgstr " smartlearn.io에서 무료 온라인 수업 받기 "
 
 #. Translators: 'EdX', 'edX', and 'Open edX' are trademarks of 'edX Inc.'.
 #. Please do not translate any of these trademarks and company names.
@@ -6679,7 +6679,7 @@ msgid ""
 "e.g. https://courses.edx.org."
 msgstr ""
 " 선택적 lms URL 스키마 + 콘텐츠 라이브러리에 대한 URL을 구성하는 데 사용되는 호스트"
-"(예 : https://courses.smartlearn.kr.)"
+"(예 : https://smartlearn.io.)"
 
 #: lms/djangoapps/email_marketing/models.py
 msgid ""
@@ -11712,7 +11712,7 @@ msgid ""
 "Remember when you enrolled in %(course_name)s, and other courses on edX.org?"
 " We do, and we’re glad to have you! Come see what everyone is learning."
 msgstr ""
-" %(course_name)s에 등록한 날짜와 smartlearn.kr의 다른 강좌를 기억하십니까?"
+" %(course_name)s에 등록한 날짜와 smartlearn.io의 다른 강좌를 기억하십니까?"
 " 우리는 당신을 갖게되어서 기쁩니다! 모두가 배우고 있는 것을 보아라."
 
 #: themes/red-theme/lms/templates/schedules/edx_ace/recurringnudge_day3/email/body.txt
@@ -11721,7 +11721,7 @@ msgid ""
 "Remember when you enrolled in %(course_name)s on edX.org? We do, and we’re "
 "glad to have you! Come see what everyone is learning."
 msgstr ""
-" smartlearn.kr의 %(course_name)s에 등록했을 때 기억하십니까?"
+" smartlearn.io의 %(course_name)s에 등록했을 때 기억하십니까?"
 " 우리는 당신과 함꼐 하게 되어서 기쁩니다! 와서, 모두가 배우고 있는 것을 보세요."
 
 #: cms/djangoapps/api/v1/serializers/course_runs.py
@@ -17772,7 +17772,7 @@ msgid ""
 "your identity on edx.org so you can start working toward completing your edX"
 " course."
 msgstr ""
-" 신청서가 승인되면 smartlearn.kr에서 본인 확인을 위한 지침을 "
+" 신청서가 승인되면 smartlearn.io에서 본인 확인을 위한 지침을 "
 " 제공하므로 SmartLearn 과정을 수료하기 시작할 수 "
 " 있습니다."
 
