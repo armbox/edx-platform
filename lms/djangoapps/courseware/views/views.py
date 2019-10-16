@@ -97,7 +97,6 @@ from openedx.features.enterprise_support.api import data_sharing_consent_require
 from openedx.features.journals.api import get_journals_context
 from shoppingcart.utils import is_shopping_cart_enabled
 from student.models import CourseEnrollment, UserTestGroup
-from student.views.dashboard import is_show_courseware_link
 from track import segment
 from util.cache import cache, cache_if_anonymous
 from util.db import outer_atomic
@@ -793,7 +792,11 @@ def course_about(request, course_id):
         else:
             course_target = reverse('about_course', args=[text_type(course.id)])
 
-        show_courseware_link = is_show_courseware_link(request.user, course)
+        show_courseware_link = bool(
+            (
+                has_access(request.user, 'load', course)
+            ) or settings.FEATURES.get('ENABLE_LMS_MIGRATION')
+        )
 
         # Note: this is a flow for payment for course registration, not the Verified Certificate flow.
         in_cart = False

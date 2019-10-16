@@ -59,39 +59,20 @@ def get_user_course_expiration_date(user, course):
       - If course fields are missing, default course access duration to MIN_DURATION.
     """
 
-    access_duration = MIN_DURATION
-
     if not CourseMode.verified_mode_for_course(course.id):
         return None
 
     CourseEnrollment = apps.get_model('student.CourseEnrollment')
     enrollment = CourseEnrollment.get_enrollment(user, course.id)
-    if enrollment is None or enrollment.mode != 'audit':
+    if enrollment is None or enrollment.mode != 'audit' or course.end is None:
         return None
 
     # if the user is a beta tester their access should not expire
     if CourseBetaTesterRole(course.id).has_user(user):
         return None
 
-    try:
-        # Content availability date is equivalent to max(enrollment date, course start date)
-        # for most people. Using the schedule date will provide flexibility to deal with
-        # more complex business rules in the future.
-        content_availability_date = enrollment.schedule.start
-    except CourseEnrollment.schedule.RelatedObjectDoesNotExist:
-        content_availability_date = max(enrollment.created, course.start)
-
-    # The user course expiration date is the content availability date
-    # plus the weeks_to_complete field from course-discovery.
-    discovery_course_details = get_course_run_details(course.id, ['weeks_to_complete'])
-    expected_weeks = discovery_course_details.get('weeks_to_complete')
-    if expected_weeks:
-        access_duration = timedelta(weeks=expected_weeks)
-
-    # Course access duration is bounded by the min and max duration.
-    access_duration = max(MIN_DURATION, min(MAX_DURATION, access_duration))
-
-    return content_availability_date + access_duration
+    # course.end + 1 week
+    return course.end + timedelta(weeks=1)
 
 
 def check_course_expired(user, course):

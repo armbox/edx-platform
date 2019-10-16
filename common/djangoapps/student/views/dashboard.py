@@ -13,7 +13,6 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse
 from django.shortcuts import redirect
-from django.utils import timezone
 from django.utils.translation import ugettext as _
 from django.views.decorators.csrf import ensure_csrf_cookie
 from edx_django_utils import monitoring as monitoring_utils
@@ -58,7 +57,6 @@ from util.milestones_helpers import get_pre_requisite_courses_not_completed
 from xmodule.modulestore.django import modulestore
 
 log = logging.getLogger("edx.student")
-MIN_DURATION = datetime.timedelta(weeks=1)
 
 
 def get_org_black_and_whitelist_for_site():
@@ -533,25 +531,6 @@ def _get_urls_for_resume_buttons(user, enrollments):
     return resume_button_urls
 
 
-def is_show_courseware_link(user, course):
-    """
-    Check if the course expired.
-    """
-
-    if not has_access(user, 'load', course):
-        return False
-
-    try:
-        expiration_date = course.end + MIN_DURATION
-    except:
-        expiration_date = None
-
-    if not expiration_date or expiration_date > timezone.now():
-        return True
-
-    return False
-
-
 @login_required
 @ensure_csrf_cookie
 @add_maintenance_banner
@@ -670,7 +649,7 @@ def student_dashboard(request):
         errored_courses = modulestore().get_errored_courses()
 
     show_courseware_links_for = {
-        enrollment.course_id: is_show_courseware_link(request.user, enrollment.course_overview)
+        enrollment.course_id: has_access(request.user, 'load', enrollment.course_overview)
         for enrollment in course_enrollments
     }
 

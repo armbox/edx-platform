@@ -618,7 +618,7 @@ def _cert_info(user, course_overview, cert_status):
         enrollment_mode, _ = CourseEnrollment.enrollment_mode_for_user(user, course_overview.id)
         course_grade = CourseGradeFactory().read(user, course, create_if_needed=False)
         certificate_data = _get_cert_data(user, course, enrollment_mode, course_grade)
-        if certificate_data.cert_status == 'requesting':
+        if certificate_data and certificate_data.cert_status == 'requesting':
             status = 'requesting'
 
     is_hidden_status = status in ('unavailable', 'processing', 'generating', 'notpassing', 'auditing')
