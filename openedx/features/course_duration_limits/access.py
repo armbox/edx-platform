@@ -59,12 +59,7 @@ def get_user_course_expiration_date(user, course):
       - If course fields are missing, default course access duration to MIN_DURATION.
     """
 
-    if not CourseMode.verified_mode_for_course(course.id):
-        return None
-
-    CourseEnrollment = apps.get_model('student.CourseEnrollment')
-    enrollment = CourseEnrollment.get_enrollment(user, course.id)
-    if enrollment is None or enrollment.mode != 'audit' or course.end is None:
+    if course.end is None:
         return None
 
     # if the user is a beta tester their access should not expire
@@ -79,8 +74,8 @@ def check_course_expired(user, course):
     """
     Check if the course expired for the user.
     """
-    if not CourseDurationLimitConfig.enabled_for_enrollment(user=user, course_key=course.id):
-        return ACCESS_GRANTED
+    # if not CourseDurationLimitConfig.enabled_for_enrollment(user=user, course_key=course.id):
+    #     return ACCESS_GRANTED
 
     expiration_date = get_user_course_expiration_date(user, course)
     if expiration_date and timezone.now() > expiration_date:
