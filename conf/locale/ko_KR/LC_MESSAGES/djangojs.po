@@ -4646,14 +4646,14 @@ msgid ""
 "Are you sure you want to unenroll from the purchased course %(courseName)s "
 "(%(courseNumber)s)?"
 msgstr ""
-"구입 한 과정 %(courseName)s (%(courseNumber)s)에서 등록을 취소 "
+"구입 한 과정 %(courseName)s (%(courseNumber)s)의 등록을 취소 "
 "하시겠습니까?"
 
 #: lms/static/js/dashboard/legacy.js
 msgid ""
 "Are you sure you want to unenroll from %(courseName)s (%(courseNumber)s)?"
 msgstr ""
-"%(courseName)s (%(courseNumber)s)에서 등록을 취소 하시겠습니까?"
+"%(courseName)s (%(courseNumber)s)의 등록을 취소 하시겠습니까?"
 
 #: lms/static/js/dashboard/legacy.js
 msgid ""
@@ -4668,7 +4668,7 @@ msgid ""
 "Are you sure you want to unenroll from the verified %(certNameLong)s track "
 "of %(courseName)s (%(courseNumber)s)?"
 msgstr ""
-"인증 된 %(certNameLong)s 의 트랙에서 등록을 취소 하시겠습니까?"
+"인증 된 %(certNameLong)s 의 트랙의 등록을 취소 하시겠습니까?"
 "%(courseName)s (%(courseNumber)s) 중"
 
 #: lms/static/js/dashboard/legacy.js

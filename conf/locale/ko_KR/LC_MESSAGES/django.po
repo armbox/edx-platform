@@ -9350,7 +9350,7 @@ msgstr " %(course_name)s에 등록하도록 초대되었습니다. "
 #: lms/templates/instructor/edx_ace/enrolledunenroll/email/subject.txt
 #, python-format
 msgid "You have been unenrolled from %(course_name)s"
-msgstr " %(course_name)s에서 등록 취소되었습니다. "
+msgstr " %(course_name)s의 등록이 취소되었습니다. "
 
 #: lms/templates/instructor/edx_ace/allowedunenroll/email/body.html
 #: lms/templates/instructor/edx_ace/allowedunenroll/email/body.txt
@@ -9359,8 +9359,8 @@ msgid ""
 "You have been unenrolled from the course %(course_name)s by a member of the "
 "course staff. Please disregard the invitation previously sent."
 msgstr ""
-" 코스 직원이 코스 %(course_name)s에서 등록 취소되었습니다."
-" 이전에 전송된 초대장을 무시하십시오."
+" 코스 직원이 코스 %(course_name)s에 대한 등록을 취소하였습니다."
+" 이전에 전송된 초대장은 무시하시면 됩니다."
 
 #: lms/templates/instructor/edx_ace/allowedunenroll/email/body.txt
 msgid "Dear Student,"
@@ -16072,7 +16072,7 @@ msgstr " {course_title}에 오신 것을 환영합니다."
 #: lms/templates/dashboard/_dashboard_course_listing.html
 #: openedx/features/course_experience/templates/course_experience/course-home-fragment.html
 msgid "Resume Course"
-msgstr "코스 다시 시작"
+msgstr "학습하러가기"
 
 #: lms/templates/courseware/info.html
 msgid "View Updates in Studio"
@@ -17019,7 +17019,7 @@ msgstr " 등록 취소 사유를 말씀해 주셔서 감사합니다."
 #: lms/templates/dashboard/_entitlement_reason_survey.html
 #: lms/templates/dashboard/_reason_survey.html
 msgid "You are unenrolled from"
-msgstr " 등록 취소 된 사용자 : "
+msgstr " 등록 취소 강좌  : "
 
 #: lms/templates/dashboard/_entitlement_reason_survey.html
 #: lms/templates/dashboard/_reason_survey.html
