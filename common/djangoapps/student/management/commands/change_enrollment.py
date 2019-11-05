@@ -68,35 +68,48 @@ class Command(BaseCommand):
                             metavar='COURSE_ID',
                             dest='course_id',
                             required=True,
-                            help='Course id to use for transfer')
+                            help='Comma-separated list of Course id to use for transfer')
         parser.add_argument('-n', '--noop',
                             action='store_true',
                             help='Display what will be done but do not actually do anything')
 
     def handle(self, *args, **options):
-        try:
-            course_key = CourseKey.from_string(options['course_id'])
-        except InvalidKeyError:
-            raise CommandError('Invalid or non-existant course id {}'.format(options['course_id']))
-
         if not options['username'] and not options['email']:
-            raise CommandError('You must include usernames (-u) or emails (-e) to select users to update')
+            courses = options['course_id'].split(',')
 
-        enrollment_args = dict(
-            course_id=course_key,
-            mode=options['from_mode']
-        )
+            for course_id in courses:
+                try:
+                    course_key = CourseKey.from_string(course_id)
+                except InvalidKeyError:
+                    raise CommandError('Invalid or non-existant course id {}'.format(options['course_id']))
 
-        error_users = []
-        success_users = []
+                enrollment_args = dict(
+                    course_id=course_key,
+                    mode=options['from_mode']
+                )
 
-        if options['username']:
-            self.update_enrollments('username', enrollment_args, options, error_users, success_users)
+                self.update_courseenrollments(enrollment_args, options)
+        else:
+            try:
+                course_key = CourseKey.from_string(options['course_id'])
+            except InvalidKeyError:
+                raise CommandError('Invalid or non-existant course id {}'.format(options['course_id']))
 
-        if options['email']:
-            self.update_enrollments('email', enrollment_args, options, error_users, success_users)
+            enrollment_args = dict(
+                course_id=course_key,
+                mode=options['from_mode']
+            )
 
-        self.report(error_users, success_users)
+            error_users = []
+            success_users = []
+
+            if options['username']:
+                self.update_enrollments('username', enrollment_args, options, error_users, success_users)
+
+            if options['email']:
+                self.update_enrollments('email', enrollment_args, options, error_users, success_users)
+
+            self.report(error_users, success_users)
 
     def update_enrollments(self, identifier, enrollment_args, options, error_users, success_users, enrollment_attrs=None):
         """ Update enrollments for a specific user identifier (email or username). """
@@ -139,6 +152,34 @@ class Command(BaseCommand):
 
             success_users.append(identified_user)
             logger.info('Updated user [%s] to mode [%s]', identified_user, options['to_mode'])
+
+    def update_courseenrollments(self, enrollment_args, options):
+        try:
+            enrollments = CourseEnrollment.objects.filter(**enrollment_args)
+
+            enrollment_attrs = []
+            with transaction.atomic():
+                for enrollment in enrollments:
+                    enrollment.update_enrollment(mode=options['to_mode'])
+                    enrollment.save()
+                    if options['to_mode'] == 'credit':
+                        enrollment_attrs.append({
+                            'namespace': 'credit',
+                            'name': 'provider_id',
+                            'value': enrollment_args['course_id'].org,
+                        })
+                        CourseEnrollmentAttribute.add_enrollment_attr(enrollment=enrollment,
+                                                                      data_list=enrollment_attrs)
+
+                if options['noop']:
+                    raise RollbackException('Forced rollback.')
+
+        except RollbackException:
+            pass
+        except Exception as exception:  # pylint: disable=broad-except
+            pass
+
+        logger.info('Updated enrollments[%i] to mode [%s]', len(enrollments), options['to_mode'])
 
     def report(self, error_users, success_users):
         """ Log and overview of the results of the command. """
