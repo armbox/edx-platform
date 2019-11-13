@@ -59,7 +59,7 @@ def get_user_course_expiration_date(user, course):
       - If course fields are missing, default course access duration to MIN_DURATION.
     """
 
-    if course.end is None:
+    if user.is_staff or course.end is None:
         return None
 
     # if the user is a beta tester their access should not expire
