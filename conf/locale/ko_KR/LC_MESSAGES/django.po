@@ -11091,7 +11091,7 @@ msgid ""
 "Try again later."
 msgstr ""
 " 과도한 로그인 실패로 인해 이 계정이 일시적으로 잠겼습니다."
-" 나중에 다시 시도하십시오."
+" 20분 후에 다시 시도하십시오."
 
 #: lms/templates/provider_login.html
 msgid "Email or password is incorrect."
