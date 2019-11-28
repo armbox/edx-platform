@@ -9,13 +9,14 @@ mind, or whether to act, and in acting, to live."
 // VideoProgressSlider module.
     define(
 'video/06_video_progress_slider.js',
-[],
-function() {
+['underscore'],
+function(_) {
     var template = [
         '<div class="slider" role="application" title="',
         gettext('Video position. Press space to toggle playback'),
         '"></div>'
     ].join('');
+    var keyHandler = null;
 
     // VideoProgressSlider() function - what this module "exports".
     return function(state) {
@@ -59,11 +60,16 @@ function() {
     function destroy() {
         this.videoProgressSlider.el.removeAttr('tabindex').slider('destroy');
         this.el.off('destroy', this.videoProgressSlider.destroy);
+        if (keyHandler) {
+            document.removeEventListener('keydown', keyHandler, false);
+            keyHandler = null;
+        }
         delete this.videoProgressSlider;
     }
 
     function bindHandlers(state) {
-        state.videoProgressSlider.el.on('keypress', sliderToggle.bind(state));
+        keyHandler = _.throttle(onKeyHandler.bind(state), 300);
+        document.addEventListener('keydown', keyHandler, false);
         state.el.on('destroy', state.videoProgressSlider.destroy);
     }
     /* eslint-enable no-use-before-define */
@@ -354,10 +360,25 @@ function() {
     }
 
     // Toggle video playback when the spacebar is pushed.
-    function sliderToggle(e) {
-        if (e.which === 32) {
+    function onKeyHandler(e) {
+        var value = 0;
+        var step;
+        var isUnplayed = this.videoPlayer.isUnstarted() ||
+                         this.videoPlayer.isCued();
+
+        if (e.key === ' ' && !e.repeat) {
             e.preventDefault();
             this.videoCommands.execute('togglePlayback');
+        } else if (!isUnplayed && ['ArrowLeft', 'ArrowRight'].includes(e.key)) {
+            e.preventDefault();
+            e.stopPropagation();
+            step = e.key === 'ArrowLeft' ? -10 : 10;
+            value = e.repeat
+              ? this.videoProgressSlider.lastSeekValue + step
+              : this.videoPlayer.player.getCurrentTime() + step;
+
+            this.videoProgressSlider.slider.slider('value', value);
+            this.videoProgressSlider.onSlide(e, {value: value});
         }
     }
 });
