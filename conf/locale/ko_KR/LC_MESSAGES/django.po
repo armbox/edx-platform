@@ -12029,7 +12029,7 @@ msgid ""
 "Organization you selected does not exist in the system, you will need to add"
 " it to the system"
 msgstr ""
-" 계속하려면이 강좌를 조직에 연결해야합니다."
+" 계속하려면 이 강좌를 조직에 연결해야합니다."
 " 선택한 조직이 시스템에 존재하지 않으므로 "
 "시스템에 추가해야합니다."
 

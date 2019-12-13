@@ -826,7 +826,7 @@ def _create_or_rerun_course(request):
                     'course_key': unicode(new_course.id),
                 })
             except ValidationError as ex:
-                return JsonResponse({'error': text_type(ex)}, status=400)
+                return JsonResponse({'error': ex.message}, status=400)
     except DuplicateCourseError:
         return JsonResponse({
             'ErrMsg': _(
