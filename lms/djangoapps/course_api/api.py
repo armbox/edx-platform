@@ -84,4 +84,5 @@ def list_courses(request, username, org=None, filter_=None):
         List of `CourseOverview` objects representing the collection of courses.
     """
     user = get_effective_user(request.user, username)
+    org = org.split(',') if org is not None else ''
     return get_courses(user, org=org, filter_=filter_)
