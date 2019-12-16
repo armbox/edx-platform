@@ -8940,7 +8940,7 @@ msgstr " 로그인 또는 등록하는 다른 방법 표시 "
 
 #: lms/templates/student_account/institution_login.underscore
 msgid "Sign in with Institution/Campus Credentials"
-msgstr " 기관 / 캠퍼스 자격증 명으로 로그인 "
+msgstr "기관/학교 계정으로 로그인 "
 
 #: lms/templates/student_account/institution_login.underscore
 #: lms/templates/student_account/institution_register.underscore
@@ -9033,7 +9033,7 @@ msgstr "%(providerName)s로 로그인하십시오."
 #: lms/templates/student_account/login.underscore
 #: lms/templates/student_account/register.underscore
 msgid "Use my institution/campus credentials"
-msgstr " 내 기관 / 캠퍼스 자격 정보 사용 "
+msgstr "기관/학교 계정 사용"
 
 #: lms/templates/student_account/password_reset.underscore
 msgid "Password assistance"
