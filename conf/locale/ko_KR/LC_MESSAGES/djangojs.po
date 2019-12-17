@@ -8945,19 +8945,19 @@ msgstr "기관/학교 계정으로 로그인 "
 #: lms/templates/student_account/institution_login.underscore
 #: lms/templates/student_account/institution_register.underscore
 msgid "Choose your institution from the list below:"
-msgstr " 아래 목록에서 기관을 선택하십시오 :"
+msgstr "아래 목록에서 기관을 선택하십시오 :"
 
 #: lms/templates/student_account/institution_login.underscore
 msgid "Back to sign in"
-msgstr " 로그인으로 돌아 가기 "
+msgstr "로그인으로 돌아 가기"
 
 #: lms/templates/student_account/institution_register.underscore
 msgid "Register with Institution/Campus Credentials"
-msgstr " 기관 / 캠퍼스 자격증 명 등록 "
+msgstr "기관/학교 계정 등록"
 
 #: lms/templates/student_account/institution_register.underscore
 msgid "Register through edX"
-msgstr " SmartLearn을 통해 등록 "
+msgstr "SmartLearn을 통해 등록"
 
 #: lms/templates/student_account/login.underscore
 msgid "First time here?"
@@ -8965,15 +8965,15 @@ msgstr "처음이신가요?"
 
 #: lms/templates/student_account/login.underscore
 msgid "Create an Account."
-msgstr " 계정을 만드십시오."
+msgstr "계정을 만드십시오."
 
 #: lms/templates/student_account/login.underscore
 msgid "Sign in to continue learning as {email}"
-msgstr " {email}(으)로 학습을 계속하려면 로그인하십시오."
+msgstr "{email}(으)로 학습을 계속하려면 로그인하십시오."
 
 #: lms/templates/student_account/login.underscore
 msgid "Sign in to continue learning"
-msgstr " 학습을 계속하려면 로그인하십시오. "
+msgstr "학습을 계속하려면 로그인하십시오."
 
 #: lms/templates/student_account/login.underscore
 msgid ""
