@@ -6,6 +6,7 @@ from django.conf import settings
 from django.utils.translation import LANGUAGE_SESSION_KEY
 from django.utils.translation.trans_real import parse_accept_lang_header
 
+from openedx.core.djangoapps.site_configuration import helpers
 from openedx.core.djangoapps.lang_pref import COOKIE_DURATION, LANGUAGE_HEADER, LANGUAGE_KEY
 from openedx.core.djangoapps.user_api.errors import UserAPIInternalError, UserAPIRequestError
 from openedx.core.djangoapps.user_api.preferences.api import (
@@ -75,13 +76,13 @@ class LanguagePreferenceMiddleware(object):
                 response.set_cookie(
                     settings.LANGUAGE_COOKIE,
                     value=user_pref,
-                    domain=settings.SESSION_COOKIE_DOMAIN,
+                    domain=helpers.get_value('SESSION_COOKIE_DOMAIN'),
                     max_age=COOKIE_DURATION,
                 )
             else:
                 response.delete_cookie(
                     settings.LANGUAGE_COOKIE,
-                    domain=settings.SESSION_COOKIE_DOMAIN
+                    domain=helpers.get_value('SESSION_COOKIE_DOMAIN')
                 )
 
         return response

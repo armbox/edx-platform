@@ -17,6 +17,7 @@ import third_party_auth
 from course_modes.models import CourseMode
 from email_marketing.models import EmailMarketingConfiguration
 from lms.djangoapps.email_marketing.tasks import get_email_cookies_via_sailthru, update_user, update_user_email
+from openedx.core.djangoapps.site_configuration import helpers
 from openedx.core.djangoapps.user_authn.cookies import CREATE_LOGON_COOKIE
 from openedx.core.djangoapps.lang_pref import LANGUAGE_KEY
 from openedx.core.djangoapps.user_api.accounts.signals import USER_RETIRE_THIRD_PARTY_MAILINGS
@@ -114,7 +115,7 @@ def add_email_marketing_cookies(sender, response=None, user=None,
             'sailthru_hid',
             cookie,
             max_age=365 * 24 * 60 * 60,  # set for 1 year
-            domain=settings.SESSION_COOKIE_DOMAIN,
+            domain=helpers.get_value('SESSION_COOKIE_DOMAIN'),
             path='/',
         )
         log.info("sailthru_hid cookie:%s successfully retrieved for user %s", cookie, user.email)

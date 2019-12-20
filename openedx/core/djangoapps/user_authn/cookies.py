@@ -76,7 +76,7 @@ def delete_logged_in_cookies(response):
         response.delete_cookie(
             cookie_name.encode('utf-8'),
             path='/',
-            domain=settings.SESSION_COOKIE_DOMAIN
+            domain=configuration_helpers.get_value('SESSION_COOKIE_DOMAIN')
         )
 
     return response
@@ -84,9 +84,6 @@ def delete_logged_in_cookies(response):
 
 def standard_cookie_settings(request):
     """ Returns the common cookie settings (e.g. expiration time). """
-
-    session_cookie_domain = configuration_helpers.get_value('SESSION_COOKIE_DOMAIN')
-    domain = session_cookie_domain if session_cookie_domain else settings.SESSION_COOKIE_DOMAIN
 
     if request.session.get_expire_at_browser_close():
         max_age = None
@@ -99,7 +96,7 @@ def standard_cookie_settings(request):
     cookie_settings = {
         'max_age': max_age,
         'expires': expires,
-        'domain': domain,
+        'domain': configuration_helpers.get_value('SESSION_COOKIE_DOMAIN'),
         'path': '/',
         'httponly': None,
     }
