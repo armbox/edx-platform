@@ -115,7 +115,7 @@ def add_email_marketing_cookies(sender, response=None, user=None,
             'sailthru_hid',
             cookie,
             max_age=365 * 24 * 60 * 60,  # set for 1 year
-            domain=helpers.get_value('SESSION_COOKIE_DOMAIN'),
+            domain=helpers.get_value('SESSION_COOKIE_DOMAIN') or settings.SESSION_COOKIE_DOMAIN,
             path='/',
         )
         log.info("sailthru_hid cookie:%s successfully retrieved for user %s", cookie, user.email)

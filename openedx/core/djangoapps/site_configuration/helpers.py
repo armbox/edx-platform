@@ -70,12 +70,7 @@ def get_configuration_value(name, default=None):
         Configuration value for the given key or returns `None` if configuration is not enabled.
     """
     configuration = get_current_site_configuration()
-    try:
-        value = configuration.get_value(name, default) or getattr(settings, name)
-    except:
-        value = None
-
-    return value
+    return configuration.get_value(name, default)
 
 
 def get_configuration_dict(name, default=None):

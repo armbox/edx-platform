@@ -464,7 +464,7 @@ def _delete_cookie(response):
         settings.SESSION_COOKIE_NAME,
         max_age=0,
         expires='Thu, 01-Jan-1970 00:00:00 GMT',
-        domain=helpers.get_value('SESSION_COOKIE_DOMAIN'),
+        domain=helpers.get_value('SESSION_COOKIE_DOMAIN') or settings.SESSION_COOKIE_DOMAIN,
         secure=settings.SESSION_COOKIE_SECURE or None,
         httponly=settings.SESSION_COOKIE_HTTPONLY or None,
     )

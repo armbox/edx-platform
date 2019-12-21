@@ -76,13 +76,13 @@ class LanguagePreferenceMiddleware(object):
                 response.set_cookie(
                     settings.LANGUAGE_COOKIE,
                     value=user_pref,
-                    domain=helpers.get_value('SESSION_COOKIE_DOMAIN'),
+                    domain=helpers.get_value('SESSION_COOKIE_DOMAIN') or settings.SESSION_COOKIE_DOMAIN,
                     max_age=COOKIE_DURATION,
                 )
             else:
                 response.delete_cookie(
                     settings.LANGUAGE_COOKIE,
-                    domain=helpers.get_value('SESSION_COOKIE_DOMAIN')
+                    domain=helpers.get_value('SESSION_COOKIE_DOMAIN') or settings.SESSION_COOKIE_DOMAIN
                 )
 
         return response
