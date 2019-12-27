@@ -25681,3 +25681,7 @@ msgstr "관리자 콘솔"
 #: lms/templates/header/navbar-logo-header.html
 msgid "Program"
 msgstr "프로그램"
+
+#: lms/templates/login.html
+msgid "Sign in with Institution/Campus Credentials"
+msgstr "기관/학교 계정으로 로그인 "
