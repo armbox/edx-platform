@@ -190,7 +190,7 @@ py2neo==3.1.2
 pycontracts==1.7.1
 pycountry==1.20
 pycparser==2.19
-pycryptodome==3.4.7
+pycryptodome==3.9.4
 pycryptodomex==3.4.7
 pygments==2.2.0
 pygraphviz==1.1
