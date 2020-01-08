@@ -34,16 +34,14 @@
   @extend %layout;
 
   .logo {
-    display: block;
-
-    @include size(rem(100) auto);
-
+    display: inline-block;
     margin: 0 auto;
   }
 
   .logo-img {
     display: block;
     width: 100%;
+    object-fit: contain;
   }
 }
 
@@ -52,6 +50,7 @@
   @include span(12);
 
   margin: 0;
+  line-height: 0;
 }
 
 // banner
