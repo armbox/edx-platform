@@ -5888,6 +5888,17 @@ msgstr ""
 "이름입니다."
 
 #: lms/static/js/student_account/views/account_settings_factory.js
+#: openedx/features/learner_profile/static/learner_profile/js/learner_profile_factory.js
+msgid "Phone Number"
+msgstr "전화번호"
+
+#: lms/static/js/student_account/views/account_settings_factory.js
+msgid ""
+"The phone number that is only used for identification."
+msgstr ""
+"전화번호는 본인 확인을 위해서만 사용됩니다."
+
+#: lms/static/js/student_account/views/account_settings_factory.js
 msgid "Country or Region of Residence"
 msgstr "거주 국가 또는 지역"
 

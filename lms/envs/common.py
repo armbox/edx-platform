@@ -3029,6 +3029,7 @@ ACCOUNT_VISIBILITY_CONFIGURATION = {
         "language_proficiencies",
         "social_links",
         "name",
+        "phone",
         "gender",
         "goals",
         "year_of_birth",
