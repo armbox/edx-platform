@@ -3390,6 +3390,7 @@ ENTERPRISE_READONLY_ACCOUNT_FIELDS = [
     'name',
     'email',
     'country',
+    'phone',
 ]
 ENTERPRISE_CUSTOMER_COOKIE_NAME = 'enterprise_customer_uuid'
 BASE_COOKIE_DOMAIN = 'localhost'

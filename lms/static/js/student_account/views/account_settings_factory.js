@@ -34,7 +34,8 @@
                 showLoadingError, orderNumber, getUserField, userFields, timeZoneDropdownField, countryDropdownField,
                 emailFieldView, socialFields, accountDeletionFields, platformData,
                 aboutSectionMessageType, aboutSectionMessage, fullnameFieldView, countryFieldView,
-                fullNameFieldData, emailFieldData, countryFieldData, additionalFields, fieldItem;
+                fullNameFieldData, emailFieldData, countryFieldData, additionalFields, fieldItem,
+                phoneFieldData, phoneFieldView;
 
             $accountSettingsElement = $('.wrapper-account-settings');
 
@@ -99,6 +100,23 @@
                 };
             }
 
+            phoneFieldData = {
+                model: userAccountModel,
+                title: gettext('Phone Number'),
+                valueAttribute: 'phone',
+                helpMessage: gettext('The phone number that is only used for identification.'),  // eslint-disable-line max-len,
+                persistChanges: true
+            };
+            if (syncLearnerProfileData && enterpriseReadonlyAccountFields.fields.indexOf('phone') !== -1) {
+                phoneFieldView = {
+                    view: new AccountSettingsFieldViews.ReadonlyFieldView(phoneFieldData)
+                };
+            } else {
+                phoneFieldView = {
+                    view: new AccountSettingsFieldViews.TextFieldView(phoneFieldData)
+                };
+            }
+
             countryFieldData = {
                 model: userAccountModel,
                 required: true,
@@ -143,6 +161,7 @@
                         },
                         fullnameFieldView,
                         emailFieldView,
+                        phoneFieldView,
                         {
                             view: new AccountSettingsFieldViews.PasswordFieldView({
                                 model: userAccountModel,
