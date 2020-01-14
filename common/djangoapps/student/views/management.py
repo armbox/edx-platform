@@ -790,7 +790,8 @@ def password_reset_confirm_wrapper(request, uidb36=None, token=None):
     # convert old-style base36-encoded user id to base64
     uidb64 = uidb36_to_uidb64(uidb36)
     platform_name = {
-        "platform_name": configuration_helpers.get_value('platform_name', settings.PLATFORM_NAME)
+        "platform_name": configuration_helpers.get_value('platform_name', settings.PLATFORM_NAME),
+        "uses_bootstrap": True,
     }
     try:
         uid_int = base36_to_int(uidb36)

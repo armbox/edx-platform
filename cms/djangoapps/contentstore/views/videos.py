@@ -224,6 +224,8 @@ def video_download_handler(request, edx_video_id=None):
         video = get_video_info(edx_video_id)
         bucket = storage_service_bucket()
         path = bucket.get_key('eduxprocessed/' + edx_video_id)
+        if path is None:
+            path = bucket.get_key('upload/' + edx_video_id)
         response = redirect(path.generate_url(expires_in=600))
         response["Content-Disposition"] = rfc6266_parser.build_header(
             video['client_video_id']
