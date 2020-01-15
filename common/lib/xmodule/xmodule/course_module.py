@@ -862,6 +862,12 @@ class CourseFields(object):
         ),
         scope=Scope.settings
     )
+    attendance_check_enabled = Boolean(
+        display_name=_("Attendance Check Enabled"),
+        help=_("Activate attendance check for attendance assessment."),
+        default=False,
+        scope=Scope.settings,
+    )
 
 
 class CourseModule(CourseFields, SequenceModule):  # pylint: disable=abstract-method

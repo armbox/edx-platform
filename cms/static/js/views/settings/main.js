@@ -133,6 +133,11 @@ define(['js/views/validation', 'codemirror', 'underscore', 'jquery', 'jquery.ui'
                        this.$('#' + this.fieldToSelectorMap.entrance_exam_enabled).removeAttr('checked');
                        this.$('.div-grade-requirements').hide();
                    }
+                   if (this.model.get('attendance-check-enabled') == 'true') {
+                       this.$('#' + this.fieldToSelectorMap.attendance_check_enabled).attr('checked', this.model.get('attendance_check_enabled'));
+                   } else {
+                       this.$('#' + this.fieldToSelectorMap.attendance_check_enabled).removeAttr('checked');
+                   }
                    this.$('#' + this.fieldToSelectorMap.entrance_exam_minimum_score_pct).val(this.model.get('entrance_exam_minimum_score_pct'));
 
                    var selfPacedButton = this.$('#course-pace-self-paced'),
@@ -180,7 +185,8 @@ define(['js/views/validation', 'codemirror', 'underscore', 'jquery', 'jquery.ui'
                    course_settings_learning_fields: 'course-settings-learning-fields',
                    add_course_learning_info: 'add-course-learning-info',
                    add_course_instructor_info: 'add-course-instructor-info',
-                   course_learning_info: 'course-learning-info'
+                   course_learning_info: 'course-learning-info',
+                   attendance_check_enabled: 'attendance-check-enabled'
                },
 
                addLearningFields: function() {
@@ -306,6 +312,7 @@ define(['js/views/validation', 'codemirror', 'underscore', 'jquery', 'jquery.ui'
                    case 'course-duration':
                    case 'course-description':
                    case 'course-short-description':
+                   case 'attendance-check-enabled':
                        this.setField(event);
                        break;
                    default: // Everything else is handled by datepickers and CodeMirror.

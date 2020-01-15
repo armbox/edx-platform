@@ -73,6 +73,7 @@ class CourseDetails(object):
         self.self_paced = None
         self.learning_info = []
         self.instructor_info = []
+        self.attendance_check_enabled = ""
 
     @classmethod
     def fetch_about_attribute(cls, course_key, attribute):
@@ -125,6 +126,7 @@ class CourseDetails(object):
         course_details.license = getattr(course_descriptor, "license", "all-rights-reserved")
 
         course_details.intro_video = cls.fetch_youtube_video_id(course_key)
+        course_details.attendance_check_enabled = course_descriptor.attendance_check_enabled
 
         for attribute in ABOUT_ATTRIBUTES:
             value = cls.fetch_about_attribute(course_key, attribute)
@@ -274,6 +276,10 @@ class CourseDetails(object):
 
         if 'language' in jsondict and jsondict['language'] != descriptor.language:
             descriptor.language = jsondict['language']
+            dirty = True
+
+        if 'attendance_check_enabled' in jsondict:
+            descriptor.attendance_check_enabled = jsondict['attendance_check_enabled']
             dirty = True
 
         if (descriptor.can_toggle_course_pacing

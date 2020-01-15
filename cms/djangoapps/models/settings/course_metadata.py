@@ -60,6 +60,7 @@ class CourseMetadata(object):
         'chrome',
         'default_tab',
         'highlights_enabled_for_messaging',
+        'attendance_check_enabled',
     ]
 
     @classmethod

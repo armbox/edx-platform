@@ -25685,3 +25685,11 @@ msgstr "프로그램"
 #: lms/templates/login.html
 msgid "Sign in with Institution/Campus Credentials"
 msgstr "기관/학교 계정으로 로그인 "
+
+#: cms/templates/settings.html
+msgid "Attendance Check"
+msgstr "출석 체크"
+
+#: cms/templates/settings.html
+msgid "Activate attendance check for attendance assessment."
+msgstr "출석 평가를 위해서 출석 체크 기능을 활성화합니다."
