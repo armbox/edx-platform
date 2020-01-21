@@ -40,6 +40,7 @@ module.exports = Merge.smart({
         'js/factories/library': './cms/static/js/factories/library.js',
         'js/factories/xblock_validation': './cms/static/js/factories/xblock_validation.js',
         'js/factories/edit_tabs': './cms/static/js/factories/edit_tabs.js',
+        'js/factories/settings': './cms/static/js/factories/settings.js',
         'js/sock': './cms/static/js/sock.js',
 
         // LMS
@@ -80,7 +81,7 @@ module.exports = Merge.smart({
         XModuleShim: 'xmodule/js/src/xmodule.js',
 
         VerticalStudentView: './common/lib/xmodule/xmodule/assets/vertical/public/js/vertical_student_view.js',
-        commons : 'babel-polyfill',
+        commons : 'babel-polyfill'
     },
 
     output: {
@@ -331,7 +332,8 @@ module.exports = Merge.smart({
             // (I've tried every other suggestion solution on that page, this
             // was the only one that worked.)
             sinon: __dirname + '/node_modules/sinon/pkg/sinon.js',
-            hls: 'hls.js/dist/hls.js'
+            hls: 'hls.js/dist/hls.js',
+            'froala-editor': __dirname + '/node_modules/froala-editor/js/froala_editor.pkgd.min'
         },
         modules: [
             'cms/djangoapps/pipeline_js/js',

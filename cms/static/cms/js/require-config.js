@@ -140,8 +140,7 @@
                 // if youtube fails to load, fallback on a local file
                 // so that require doesn't fall over
                 'js/src/youtube_fallback'
-            ],
-            'froala-editor': '//cdn.jsdelivr.net/npm/froala-editor@2.9.3/js/froala_editor.pkgd.min'
+            ]
         },
         shim: {
             'gettext': {
@@ -341,9 +340,6 @@
                     'rangeslider', 'share-annotator', 'richText-annotator', 'reply-annotator',
                     'tags-annotator', 'flagging-annotator', 'grouping-annotator', 'diacritic-annotator',
                     'openseadragon', 'jquery-Watch', 'catch', 'handlebars', 'URI']
-            },
-            'froala-editor': {
-                deps: ['jquery']
             }
             // end of annotation tool files
         }

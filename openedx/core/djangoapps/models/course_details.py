@@ -28,6 +28,7 @@ ABOUT_ATTRIBUTES = [
     'entrance_exam_id',
     'entrance_exam_minimum_score_pct',
     'about_sidebar_html',
+    'attendance_check_enabled',
 ]
 
 
@@ -126,7 +127,6 @@ class CourseDetails(object):
         course_details.license = getattr(course_descriptor, "license", "all-rights-reserved")
 
         course_details.intro_video = cls.fetch_youtube_video_id(course_key)
-        course_details.attendance_check_enabled = course_descriptor.attendance_check_enabled
 
         for attribute in ABOUT_ATTRIBUTES:
             value = cls.fetch_about_attribute(course_key, attribute)

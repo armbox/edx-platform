@@ -75,7 +75,7 @@ define(['js/views/validation', 'codemirror', 'underscore', 'jquery', 'jquery.ui'
                },
 
                render: function() {
-        // Clear any image preview timeouts set in this.updateImagePreview
+                   // Clear any image preview timeouts set in this.updateImagePreview
                    clearTimeout(this.imageTimer);
 
                    DateUtils.setupDatePicker('start_date', this);
@@ -133,7 +133,7 @@ define(['js/views/validation', 'codemirror', 'underscore', 'jquery', 'jquery.ui'
                        this.$('#' + this.fieldToSelectorMap.entrance_exam_enabled).removeAttr('checked');
                        this.$('.div-grade-requirements').hide();
                    }
-                   if (this.model.get('attendance-check-enabled') == 'true') {
+                   if (this.model.get('attendance_check_enabled') == 'true') {
                        this.$('#' + this.fieldToSelectorMap.attendance_check_enabled).attr('checked', this.model.get('attendance_check_enabled'));
                    } else {
                        this.$('#' + this.fieldToSelectorMap.attendance_check_enabled).removeAttr('checked');

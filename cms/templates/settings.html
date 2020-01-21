@@ -38,8 +38,7 @@ CMS.URL.UPLOAD_ASSET = '${upload_asset_url | n, js_escaped_string}'
 </%block>
 
 <%block name="requirejs">
-  <%static:webpack entry="js/factories/settings">
-  require(["froala-editor"], function() {
+  require(["js/factories/settings", "froala-editor"], function() {
     SettingsFactory(
         "${details_url | n, js_escaped_string}",
         ${show_min_grade_warning | n, dump_js_escaped_json},
@@ -70,7 +69,6 @@ CMS.URL.UPLOAD_ASSET = '${upload_asset_url | n, js_escaped_string}'
       },
     });
   })
-  </%static:webpack>
 </%block>
 
 <%block name="content">
