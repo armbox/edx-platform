@@ -6,12 +6,14 @@ View for Courseware Index
 
 import logging
 import urllib
+import redis
 
+from datetime import datetime, timedelta
 from django.conf import settings
 from django.contrib.auth.models import User
 from django.contrib.auth.views import redirect_to_login
 from django.urls import reverse
-from django.http import Http404
+from django.http import Http404, QueryDict
 from django.template.context_processors import csrf
 from django.utils.decorators import method_decorator
 from django.utils.functional import cached_property
@@ -61,6 +63,7 @@ log = logging.getLogger("edx.courseware.views.index")
 
 TEMPLATE_IMPORTS = {'urllib': urllib}
 CONTENT_DEPTH = 2
+POOL = redis.ConnectionPool(host='edux-redis', port=6379, db=0)
 
 
 class CoursewareIndex(View):
@@ -148,6 +151,7 @@ class CoursewareIndex(View):
         """
         self._redirect_if_needed_to_pay_for_course()
         self._prefetch_and_bind_course(request)
+        self._redirect_if_needed_to_check_attendance()
 
         if self.course.has_children_at_depth(CONTENT_DEPTH):
             self._reset_section_to_exam_if_required()
@@ -239,6 +243,25 @@ class CoursewareIndex(View):
                 unicode(self.course_key),
             )
             raise CourseAccessRedirect(reverse('dashboard'))
+
+    def _redirect_if_needed_to_check_attendance(self):
+        """
+        Redirect to attendance page if the course is enabled to check attendance.
+        """
+
+        if self.request.user.is_authenticated and self.course.attendance_check_enabled:
+            key = 'attendance:{user_id}:{course_id}'.format(
+                user_id=self.request.user.username,
+                course_id=self.course_key,
+            )
+            r = redis.Redis(connection_pool=POOL)
+            if not r.get(key):
+                params = QueryDict(mutable=True)
+                params['redirect'] = self.request.path
+                raise CourseAccessRedirect('attendance/{course_id}?{params}'.format(
+                    course_id=self.course_key,
+                    params=params.urlencode()
+                ))
 
     def _reset_section_to_exam_if_required(self):
         """
