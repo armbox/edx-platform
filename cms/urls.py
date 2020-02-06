@@ -278,5 +278,10 @@ if settings.FEATURES.get('ENABLE_API_DOCS'):
         url(r'^api-docs/$', get_swagger_view(title='Studio API')),
     ]
 
+# edx-ora2
+urlpatterns += [
+    url(r'^openassessment/storage', include('openassessment.fileupload.urls')),
+]
+
 from openedx.core.djangoapps.plugins import constants as plugin_constants, plugin_urls
 urlpatterns.extend(plugin_urls.get_patterns(plugin_constants.ProjectType.CMS))

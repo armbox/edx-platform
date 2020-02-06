@@ -1050,4 +1050,9 @@ urlpatterns += [
     url(r'', include('csrf.urls')),
 ]
 
+# edx-ora2
+urlpatterns += [
+    url(r'^openassessment/storage', include('openassessment.fileupload.urls')),
+]
+
 urlpatterns.extend(plugin_urls.get_patterns(plugin_constants.ProjectType.LMS))
