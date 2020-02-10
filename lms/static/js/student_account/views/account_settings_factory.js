@@ -34,8 +34,8 @@
                 showLoadingError, orderNumber, getUserField, userFields, timeZoneDropdownField, countryDropdownField,
                 emailFieldView, socialFields, accountDeletionFields, platformData,
                 aboutSectionMessageType, aboutSectionMessage, fullnameFieldView, countryFieldView,
-                fullNameFieldData, emailFieldData, countryFieldData, additionalFields, fieldItem,
-                phoneFieldData, phoneFieldView;
+                fullNameFieldData, emailFieldData, countryFieldData, additionalFields, fieldItem;
+            // var phoneFieldData, phoneFieldView;
 
             $accountSettingsElement = $('.wrapper-account-settings');
 
@@ -100,6 +100,7 @@
                 };
             }
 
+            /*
             phoneFieldData = {
                 model: userAccountModel,
                 title: gettext('Phone Number'),
@@ -116,6 +117,7 @@
                     view: new AccountSettingsFieldViews.TextFieldView(phoneFieldData)
                 };
             }
+            */
 
             countryFieldData = {
                 model: userAccountModel,
@@ -161,7 +163,7 @@
                         },
                         fullnameFieldView,
                         emailFieldView,
-                        phoneFieldView,
+                        // phoneFieldView,
                         {
                             view: new AccountSettingsFieldViews.PasswordFieldView({
                                 model: userAccountModel,
