@@ -25693,3 +25693,7 @@ msgstr "출석 체크"
 #: cms/templates/settings.html
 msgid "Activate attendance check for attendance assessment."
 msgstr "출석 평가를 위해서 출석 체크 기능을 활성화합니다."
+
+#: lms/djangoapps/courseware/views/views.py
+msgid "Video Progress"
+msgstr "동영상 진도율"

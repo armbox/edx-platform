@@ -96,6 +96,7 @@ from openedx.features.course_experience.waffle import ENABLE_COURSE_ABOUT_SIDEBA
 from openedx.features.enterprise_support.api import data_sharing_consent_required
 from openedx.features.journals.api import get_journals_context
 from shoppingcart.utils import is_shopping_cart_enabled
+from smartlearn import get_course_video_progress
 from student.models import CourseEnrollment, UserTestGroup
 from track import segment
 from util.cache import cache, cache_if_anonymous
@@ -1012,6 +1013,7 @@ def _progress(request, course_key, student_id):
         'supports_preview_menu': True,
         'student': student,
         'credit_course_requirements': _credit_course_requirements(course_key, student),
+        'video_progress': "{}%".format(get_course_video_progress(student, course_key)),
     }
     if certs_api.get_active_web_certificate(course):
         context['certificate_data'] = _get_cert_data(student, course, enrollment_mode, course_grade)
