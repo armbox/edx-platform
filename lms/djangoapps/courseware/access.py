@@ -266,20 +266,20 @@ def _can_enroll_courselike(user, courselike):
 
     # check if user can register the course, smartlearn extension
     try:
-      if(enrollment_domain):
-        func = getattr(settings, enrollment_domain)
-        if(func):
-            reg_method_ok = False
-            log.warning("enrollment_domain function %s found.", enrollment_domain)
-            if(func(user)):
-                log.warning("enrollment_domain() returned true.")
-                reg_method_ok = True
+        if(enrollment_domain):
+            func = getattr(settings, enrollment_domain)
+            if(func):
+                reg_method_ok = False
+                log.warning("enrollment_domain function %s found.", enrollment_domain)
+                if(func(user)):
+                    log.warning("enrollment_domain() returned true.")
+                    reg_method_ok = True
+                else:
+                    log.warning("enrollment_domain() returned false.")
             else:
-                log.warning("enrollment_domain() returned false.")
-        else:
-            log.warning("enrollment_domain() function %s notfound", enrollment_domain)
+                log.warning("enrollment_domain() function %s notfound", enrollment_domain)
     except:
-      pass
+        pass
 
     # If the user appears in CourseEnrollmentAllowed paired with the given course key,
     # they may enroll, except if the CEA has already been used by a different user.
