@@ -30,7 +30,7 @@ from openedx.core.djangoapps.content.block_structure.api import get_course_in_ca
 from openedx.core.djangoapps.course_groups.cohorts import bulk_cache_cohorts, get_cohort, is_course_cohorted
 from openedx.core.djangoapps.user_api.course_tag.api import BulkCourseTags
 from openedx.core.djangoapps.waffle_utils import WaffleSwitchNamespace
-from smartlearn import get_course_video_progress
+from smartlearn import get_course_video_progress, get_course_attendance_count
 from student.models import CourseEnrollment, UserProfile
 from student.roles import BulkRoleCache
 from xmodule.modulestore.django import modulestore
@@ -232,7 +232,7 @@ class CourseGradeReport(object):
         Returns a list of all applicable column headers for this grade report.
         """
         return (
-            ["Student ID", "Email", "Username", "RealName", "Last Login", "Video Progress"] +
+            ["Student ID", "Email", "Username", "RealName", "Last Login", "Video Progress", "Attendance"] +
             self._grades_header(context) +
             (['Cohort Name'] if context.cohorts_enabled else []) +
             [u'Experiment Group ({})'.format(partition.name) for partition in context.course_experiments] +
@@ -477,6 +477,8 @@ class CourseGradeReport(object):
             bulk_context = _CourseGradeBulkContext(context, users)
 
             success_rows, error_rows = [], []
+            attendances = get_course_attendance_count(context.course)
+
             for user, course_grade, error in CourseGradeFactory().iter(
                 users,
                 course=context.course,
@@ -492,10 +494,10 @@ class CourseGradeReport(object):
                     last_login = user.last_login.strftime("%Y-%m-%d %H:%M") if user.last_login else 'N/A'
                     enrollment = user.courseenrollment_set.get(course_id=context.course_id)
                     enrolled = enrollment.created.strftime("%Y-%m-%d %H:%M") if enrollment else 'N/A'
-
+                    attendance = attendances.get(user.email, 0) if context.course.attendance_check_enabled else 'N/A'
                     success_rows.append(
                         [user.id, user.email, user.username, profile.name, last_login] +
-                        [get_course_video_progress(user, context.course_id)] +
+                        [get_course_video_progress(user, context.course_id), attendance] +
                         self._user_grades(course_grade, context) +
                         self._user_cohort_group_names(user, context) +
                         self._user_experiment_group_names(user, context) +

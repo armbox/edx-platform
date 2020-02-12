@@ -250,8 +250,8 @@ class CoursewareIndex(View):
         """
 
         if self.request.user.is_authenticated and self.course.attendance_check_enabled:
-            key = 'attendance:{user_id}:{course_id}'.format(
-                user_id=self.request.user.username,
+            key = 'attendance:{email}:{course_id}'.format(
+                email=self.request.user.email,
                 course_id=self.course_key,
             )
             r = redis.Redis(connection_pool=POOL)
