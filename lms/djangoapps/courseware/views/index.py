@@ -258,7 +258,7 @@ class CoursewareIndex(View):
             if not r.get(key):
                 params = QueryDict(mutable=True)
                 params['redirect'] = self.request.path
-                raise CourseAccessRedirect('attendance/{course_id}?{params}'.format(
+                raise CourseAccessRedirect('/attendance/{course_id}?{params}'.format(
                     course_id=self.course_key,
                     params=params.urlencode()
                 ))
