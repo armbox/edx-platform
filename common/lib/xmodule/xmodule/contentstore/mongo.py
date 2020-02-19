@@ -402,6 +402,12 @@ class MongoContentStore(ContentStore):
                     dest_course_key.make_asset_key(asset_key['category'], asset_key['name']).for_branch(None)
                 )
 
+            # try to remove the existed asset_id
+            try:
+                self.fs.delete(asset_id)
+            except:
+                pass
+
             self.fs.put(
                 source_content.read(),
                 _id=asset_id, filename=asset['filename'], content_type=asset['contentType'],
