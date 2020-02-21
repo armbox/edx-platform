@@ -3,7 +3,6 @@ Courseware views functions
 """
 import json
 import logging
-import math
 import urllib
 from collections import OrderedDict, namedtuple
 from datetime import datetime
@@ -31,6 +30,7 @@ from edx_django_utils.monitoring import set_custom_metrics_for_course_key
 from eventtracking import tracker
 from ipware.ip import get_ip
 from markupsafe import escape
+from numpy import around
 from opaque_keys import InvalidKeyError
 from opaque_keys.edx.keys import CourseKey, UsageKey
 from pytz import UTC
@@ -1004,7 +1004,7 @@ def _progress(request, course_key, student_id):
 
     register_course_expired_message(request, course)
     attended = get_course_attendance_count(course, student).get(student.email)
-    total_weeks = math.floor((course.start - course.end).days / 7) if course.start and course.end else 0
+    total_weeks = around((course.end - course.start).days / 7) if course.start and course.end else 0
     context = {
         'course': course,
         'courseware_summary': courseware_summary,
