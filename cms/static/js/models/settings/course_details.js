@@ -73,6 +73,9 @@ define(['backbone', 'underscore', 'gettext', 'js/models/validation_helpers', 'js
                     }
             // TODO check if key points to a real video using google's youtube api
                 }
+                if (newattrs.attendance_check_enabled && (!newattrs.start_date || !newattrs.end_date)) {
+                    errors.attendance_check_enabled = gettext('The course start date and end date must be assigned for attendance check.');
+                }
                 if (_.has(newattrs, 'entrance_exam_minimum_score_pct')) {
                     var range = {
                         min: 1,

@@ -13,6 +13,7 @@ from django.conf import settings
 from django.contrib.auth.models import User
 from django.contrib.auth.views import redirect_to_login
 from django.urls import reverse
+from django.utils import timezone
 from django.http import Http404, QueryDict
 from django.template.context_processors import csrf
 from django.utils.decorators import method_decorator
@@ -248,6 +249,15 @@ class CoursewareIndex(View):
         """
         Redirect to attendance page if the course is enabled to check attendance.
         """
+
+        # course start and end date sould be set.
+        if not self.course.start or not self.course.end:
+            return
+
+        # now should in course duration.
+        now = timezone.now()
+        if now < self.course.start or now > self.course.end:
+            return
 
         if self.request.user.is_authenticated and self.course.attendance_check_enabled:
             key = 'attendance:{email}:{course_id}'.format(

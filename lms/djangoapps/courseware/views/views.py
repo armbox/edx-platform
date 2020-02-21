@@ -3,6 +3,7 @@ Courseware views functions
 """
 import json
 import logging
+import math
 import urllib
 from collections import OrderedDict, namedtuple
 from datetime import datetime
@@ -96,7 +97,7 @@ from openedx.features.course_experience.waffle import ENABLE_COURSE_ABOUT_SIDEBA
 from openedx.features.enterprise_support.api import data_sharing_consent_required
 from openedx.features.journals.api import get_journals_context
 from shoppingcart.utils import is_shopping_cart_enabled
-from smartlearn import get_course_video_progress
+from smartlearn import get_course_video_progress, get_course_attendance_count
 from student.models import CourseEnrollment, UserTestGroup
 from track import segment
 from util.cache import cache, cache_if_anonymous
@@ -1002,7 +1003,8 @@ def _progress(request, course_key, student_id):
     enrollment_mode, _ = CourseEnrollment.enrollment_mode_for_user(student, course_key)
 
     register_course_expired_message(request, course)
-
+    attended = get_course_attendance_count(course, student).get(student.email)
+    total_weeks = math.floor((course.start - course.end).days / 7) if course.start and course.end else 0
     context = {
         'course': course,
         'courseware_summary': courseware_summary,
@@ -1014,6 +1016,7 @@ def _progress(request, course_key, student_id):
         'student': student,
         'credit_course_requirements': _credit_course_requirements(course_key, student),
         'video_progress': "{}%".format(get_course_video_progress(student, course_key)),
+        'attendance_status': "({0}/{1})".format(attended, total_weeks) if attended and total_weeks else None,
     }
     if certs_api.get_active_web_certificate(course):
         context['certificate_data'] = _get_cert_data(student, course, enrollment_mode, course_grade)

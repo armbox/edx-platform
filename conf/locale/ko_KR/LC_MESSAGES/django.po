@@ -25701,3 +25701,11 @@ msgstr "동영상 진도율"
 #: lms/djangoapps/courseware/views/views.py
 msgid "Attendance"
 msgstr "출석"
+
+#: lms/djangoapps/courseware/views/views.py
+msgid "Other Information"
+msgstr "기타 정보"
+
+#: lms/djangoapps/courseware/views/views.py
+msgid "Attendance Status"
+msgstr "출석 현황"

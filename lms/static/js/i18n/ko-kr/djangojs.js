@@ -1652,6 +1652,7 @@
     "The country that team members primarily identify with.": "\ud300 \uad6c\uc131\uc6d0\uc774 \uc8fc\ub85c \uc2dd\ubcc4\ud558\ub294 \uad6d\uac00\uc785\ub2c8\ub2e4.", 
     "The course end date must be later than the course start date.": "\ucf54\uc2a4 \uc885\ub8cc \ub0a0\uc9dc\ub294 \ucf54\uc2a4 \uc2dc\uc791 \ub0a0\uc9dc\ubcf4\ub2e4 \ub2a6\uc5b4\uc57c \ud569\ub2c8\ub2e4.", 
     "The course must have an assigned start date.": "\ucf54\uc2a4\uc5d0\ub294 \uc2dc\uc791 \ub0a0\uc9dc\uac00 \uc9c0\uc815\ub418\uc5b4\uc57c \ud569\ub2c8\ub2e4.", 
+    "The course start date and end date must be assigned for attendance check.": "\ucd9c\uc11d \uccb4\ud06c\ub97c \uc704\ud574\uc11c\ub294 \ucf54\uc2a4 \uc2dc\uc791 \ub0a0\uc9dc\uc640 \uc885\ub8cc \ub0a0\uc9dc\ub97c \uc9c0\uc815\ud574\uc57c \ud569\ub2c8\ub2e4.", 
     "The course start date must be later than the enrollment start date.": "\ucf54\uc2a4 \uc2dc\uc791\uc77c\uc740 \ub4f1\ub85d \uc2dc\uc791\uc77c\ubcf4\ub2e4 \ub2a6\uc5b4\uc57c \ud569\ub2c8\ub2e4.", 
     "The display of ungraded and checked out responses could not be loaded.": "\ud3c9\uac00\ub418\uc9c0 \uc54a\uace0, \uac00\uc838\uc628 \uc751\ub2f5\uc744 \ub85c\ub4dc\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4.", 
     "The email address you've provided isn't formatted correctly.": "\uc785\ub825\ud558\uc2e0 \uc774\uba54\uc77c \uc8fc\uc18c\uc758 \ud615\uc2dd\uc774 \uc62c\ubc14\ub974\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4.", 
