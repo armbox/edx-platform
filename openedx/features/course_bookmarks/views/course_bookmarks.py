@@ -55,6 +55,7 @@ class CourseBookmarksView(View):
             'bookmarks_fragment': bookmarks_fragment,
             'disable_courseware_js': True,
             'uses_pattern_library': True,
+            'uses_bootstrap': True,
         }
         return render_to_response('course_bookmarks/course-bookmarks.html', context)
 
@@ -77,6 +78,7 @@ class CourseBookmarksFragmentView(EdxFragmentView):
             'course': course,
             'bookmarks_api_url': reverse('bookmarks'),
             'language_preference': language,
+            'uses_bootstrap': True,
         }
         html = render_to_string('course_bookmarks/course-bookmarks-fragment.html', context)
         inline_js = render_to_string('course_bookmarks/course_bookmarks_js.template', context)
