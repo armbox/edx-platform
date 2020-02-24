@@ -252,11 +252,13 @@ class CoursewareIndex(View):
 
         # course start and end date sould be set.
         if not self.course.start or not self.course.end:
+            log.warning(u'Course start or end is not set.')
             return
 
         # now should in course duration.
         now = timezone.now()
         if now < self.course.start or now > self.course.end:
+            log.warning(u'It is not in course duration.')
             return
 
         if self.request.user.is_authenticated and self.course.attendance_check_enabled:
@@ -266,12 +268,15 @@ class CoursewareIndex(View):
             )
             r = redis.Redis(connection_pool=POOL)
             if not r.get(key):
+                log.warning(u'{key} not exist.'.format(key=key))
                 params = QueryDict(mutable=True)
                 params['redirect'] = self.request.path
                 raise CourseAccessRedirect('/attendance/check-in/{course_id}?{params}'.format(
                     course_id=self.course_key,
                     params=params.urlencode()
                 ))
+            else:
+                log.warning(u'{key} already exist.'.format(key=key))
 
     def _reset_section_to_exam_if_required(self):
         """
