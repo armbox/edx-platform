@@ -10022,7 +10022,7 @@ msgstr " Google Play 스토어에서 Android 앱 다운로드 "
 #: openedx/core/djangoapps/ace_common/templates/ace_common/edx_ace/common/base_body.html
 #: themes/red-theme/lms/templates/ace_common/edx_ace/common/base_body.html
 msgid "Our mailing address is"
-msgstr "메일 주소: "
+msgstr "메일 주소"
 
 #: openedx/core/djangoapps/ace_common/templates/ace_common/edx_ace/common/base_head.html
 msgid "edX Email"
@@ -23012,7 +23012,7 @@ msgstr ""
 
 #: cms/templates/index.html
 msgid "Archived Courses"
-msgstr "보관된 코스"
+msgstr "완료된 강좌"
 
 #: cms/templates/index.html
 msgid "Libraries"
