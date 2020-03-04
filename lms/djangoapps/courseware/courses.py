@@ -384,7 +384,7 @@ def get_course_date_blocks(course, user):
     block_classes = [
         CourseEndDate,
         CourseStartDate,
-        TodaysDate,
+        # TodaysDate,
         VerificationDeadlineDate,
         VerifiedUpgradeDeadlineDate,
     ]

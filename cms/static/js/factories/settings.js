@@ -4,7 +4,7 @@ import * as MainView from 'js/views/settings/main';
 import 'froala-editor';
 
 'use strict';
-export default function SettingsFactory(detailsUrl, showMinGradeWarning, showCertificateAvailableDate, froalaEditorKey) {
+export default function SettingsFactory(detailsUrl, showMinGradeWarning, showCertificateAvailableDate, froalaEditorKey, imageUploadURL) {
     var model;
     // highlighting labels when fields are focused in
     $('form :input')
@@ -67,56 +67,57 @@ export default function SettingsFactory(detailsUrl, showMinGradeWarning, showCer
       }
     })
     */
-   $.FroalaEditor.DefineIcon('dropdownStaff', {NAME: 'cog'});
-   $.FroalaEditor.RegisterCommand('dropdownStaff', {
-     title: 'Staff options',
-     type: 'dropdown',
-     focus: false,
-     undo: false,
-     refreshAfterCallback: true,
-     options: {
-       'init': '강의개요 초기화',
-       'add': '운영진 추가',
-       'remove': '운영진 삭제'
-     },
-     callback: function (cmd, val) {
-       var node = document.getSelection().anchorNode;
-       var selected = (node.nodeType === 3) ? node.parentNode : node;
-       var teacher = $(selected).closest('.teacher');
-       if (val === 'add') {
-         if (teacher.length > 0) {
-           $(document.getElementById('teacher-template').innerHTML).insertAfter(teacher);
-         } else {
-           this.html.insert($('#teacher-template').html())
-         }
-       } else if (val === 'remove' && teacher.length > 0) {
-         // remove staff
-         teacher.remove();
-       } else if (val === 'init') {
-         this.html.set(document.getElementById('course-overview-template').innerHTML);
-       }
-       this.undo.saveStep();
-       this.events.focus();
-     },
-   });
-   $('#course-overview').froalaEditor({
-     key: froalaEditorKey,
-     imageStyles: {
-       'rounded-circle': 'Circle',
-       'fr-rounded': 'Rounded',
-       'fr-bordered': 'Bordered',
-       'fr-shadow': 'Shadow',
-     },
-     toolbarButtons: [
-       'fullscreen', 'bold', 'italic', 'underline', 'strikeThrough', 'subscript', 'superscript', '|',
-       'fontFamily', 'fontSize', 'color', 'inlineClass', 'inlineStyle', 'paragraphStyle', 'lineHeight', '|', 'paragraphFormat', 'align', 'formatOL', 'formatUL', 'outdent', 'indent', 'quote', '|',
-       'insertLink', 'insertImage', 'insertTable', '|',
-       'emoticons', 'fontAwesome', 'specialCharacters', 'insertHR', 'selectAll', 'clearFormatting', '|',
-       'help', 'html', '|',
-       'undo', 'redo', '|',
-       'dropdownStaff', // 일단 제거: 'convertOverview',
-     ],
-   });
+    $.FroalaEditor.DefineIcon('dropdownStaff', {NAME: 'cog'});
+    $.FroalaEditor.RegisterCommand('dropdownStaff', {
+      title: 'Staff options',
+      type: 'dropdown',
+      focus: false,
+      undo: false,
+      refreshAfterCallback: true,
+      options: {
+        'init': '강의개요 초기화',
+        'add': '운영진 추가',
+        'remove': '운영진 삭제'
+      },
+      callback: function (cmd, val) {
+        var node = document.getSelection().anchorNode;
+        var selected = (node.nodeType === 3) ? node.parentNode : node;
+        var teacher = $(selected).closest('.teacher');
+        if (val === 'add') {
+          if (teacher.length > 0) {
+            $(document.getElementById('teacher-template').innerHTML).insertAfter(teacher);
+          } else {
+            this.html.insert($('#teacher-template').html())
+          }
+        } else if (val === 'remove' && teacher.length > 0) {
+          // remove staff
+          teacher.remove();
+        } else if (val === 'init') {
+          this.html.set(document.getElementById('course-overview-template').innerHTML);
+        }
+        this.undo.saveStep();
+        this.events.focus();
+      },
+    });
+    $('#course-overview').froalaEditor({
+      key: froalaEditorKey,
+      imageUploadURL,
+      imageStyles: {
+        'rounded-circle': 'Circle',
+        'fr-rounded': 'Rounded',
+        'fr-bordered': 'Bordered',
+        'fr-shadow': 'Shadow',
+      },
+      toolbarButtons: [
+        'fullscreen', 'bold', 'italic', 'underline', 'strikeThrough', 'subscript', 'superscript', '|',
+        'fontFamily', 'fontSize', 'color', 'inlineClass', 'inlineStyle', 'paragraphStyle', 'lineHeight', '|', 'paragraphFormat', 'align', 'formatOL', 'formatUL', 'outdent', 'indent', 'quote', '|',
+        'insertLink', 'insertImage', 'insertTable', '|',
+        'emoticons', 'fontAwesome', 'specialCharacters', 'insertHR', 'selectAll', 'clearFormatting', '|',
+        'help', 'html', '|',
+        'undo', 'redo', '|',
+        'dropdownStaff', // 일단 제거: 'convertOverview',
+      ],
+    });
 };
 
 export {SettingsFactory}

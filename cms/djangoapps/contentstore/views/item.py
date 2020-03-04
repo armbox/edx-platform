@@ -55,7 +55,7 @@ from openedx.core.lib.gating import api as gating_api
 from openedx.core.lib.xblock_utils import request_token, wrap_xblock
 from static_replace import replace_static_urls
 from student.auth import has_studio_read_access, has_studio_write_access
-from util.date_utils import get_default_time_display
+from util.date_utils import get_default_time_display, strftime_localized
 from util.json_request import JsonResponse, expect_json
 from util.milestones_helpers import is_entrance_exams_enabled
 from xblock_config.models import CourseEditLTIFieldsEnabledFlag
@@ -1133,7 +1133,7 @@ def create_xblock_info(xblock, data=None, metadata=None, include_ancestor_info=F
     else:
         visibility_state = None
     published = modulestore().has_published_version(xblock) if not is_library_block else None
-    published_on = get_default_time_display(xblock.published_on) if published and xblock.published_on else None
+    published_on = strftime_localized(xblock.published_on, '%Y.%m.%d %H:%M') if published and xblock.published_on else None
 
     # defining the default value 'True' for delete, duplicate, drag and add new child actions
     # in xblock_actions for each xblock.
@@ -1171,7 +1171,7 @@ def create_xblock_info(xblock, data=None, metadata=None, include_ancestor_info=F
     else:
         user_partitions = get_user_partition_info(xblock, course=course)
         xblock_info.update({
-            'edited_on': get_default_time_display(xblock.subtree_edited_on) if xblock.subtree_edited_on else None,
+            'edited_on': strftime_localized(xblock.subtree_edited_on, '%Y.%m.%d %H:%M') if xblock.subtree_edited_on else None,
             'published': published,
             'published_on': published_on,
             'studio_url': xblock_studio_url(xblock, parent_xblock),
@@ -1181,7 +1181,7 @@ def create_xblock_info(xblock, data=None, metadata=None, include_ancestor_info=F
             'has_explicit_staff_lock': xblock.fields['visible_to_staff_only'].is_set_on(xblock),
             'start': xblock.fields['start'].to_json(xblock.start),
             'graded': xblock.graded,
-            'due_date': get_default_time_display(xblock.due),
+            'due_date': strftime_localized(xblock.due, '%Y.%m.%d %H:%M') if xblock.due else None,
             'due': xblock.fields['due'].to_json(xblock.due),
             'format': xblock.format,
             'course_graders': [grader.get('type') for grader in graders],
@@ -1450,7 +1450,7 @@ def _get_release_date(xblock, user=None):
         xblock = _update_with_callback(xblock, user)
 
     # Treat DEFAULT_START_DATE as a magic number that means the release date has not been set
-    return get_default_time_display(xblock.start) if xblock.start != DEFAULT_START_DATE else None
+    return strftime_localized(xblock.start, '%Y.%m.%d %H:%M') if xblock.start != DEFAULT_START_DATE else None
 
 
 def _get_release_date_from(xblock):

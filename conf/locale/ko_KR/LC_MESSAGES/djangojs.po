@@ -2668,7 +2668,7 @@ msgid ""
 "SequenceModule. Please contact the course staff."
 msgstr ""
 "시퀀스 오류! 현재 SequenceModule에서 % (tab_name)로 이동할 수 없습니다."
-"코스 직원에게 문의하십시오."
+"코스 운영팀에게 문의하십시오."
 
 #: common/lib/xmodule/xmodule/js/src/sequence/display.js
 #: common/static/bundles/VerticalStudentView.js
@@ -5312,7 +5312,7 @@ msgstr "당신 자신"
 
 #: lms/static/js/instructor_dashboard/send_email.js
 msgid "Everyone who has staff privileges in this course"
-msgstr "이 강좌에 스태프 권한이 있는 모든 사람"
+msgstr "이 강좌에 운영팀 권한이 있는 모든 사람"
 
 #: lms/static/js/instructor_dashboard/send_email.js
 msgid "All learners who are enrolled in this course"
@@ -7054,7 +7054,7 @@ msgstr "아직 안됨"
 
 #: cms/static/js/views/modals/course_outline_modals.js
 msgid "All Learners and Staff"
-msgstr "모든 학습자와 직원"
+msgstr "모든 학습자와 운영팀"
 
 #: cms/static/js/views/modals/course_outline_modals.js
 msgid "Basic"
@@ -7538,7 +7538,7 @@ msgstr "(커뮤니티 TA)"
 
 #: common/static/common/templates/discussion/post-user-display.underscore
 msgid "(Staff)"
-msgstr "(직원)"
+msgstr "(운영팀)"
 
 #: common/static/common/templates/discussion/profile-thread.underscore
 #: common/static/common/templates/discussion/thread.underscore
@@ -8573,7 +8573,7 @@ msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
 msgid "Only the parent course staff of a CCX can create content groups."
-msgstr " CCX의 학부 과정 직원 만 콘텐츠 그룹을 만들 수 있습니다."
+msgstr " CCX의 학부 과정 운영팀만 콘텐츠 그룹을 만들 수 있습니다."
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
 msgid "Create a content group"
@@ -10185,7 +10185,7 @@ msgstr "선수 과목: %(prereq_display_name)s "
 
 #: cms/templates/js/course-outline.underscore
 msgid "Contains staff only content"
-msgstr " 직원 전용 컨텐츠가 들어 있습니다. "
+msgstr " 운영팀 전용 컨텐츠가 들어 있습니다. "
 
 #: cms/templates/js/course-outline.underscore
 msgid "Unpublished changes to live content"
@@ -10257,12 +10257,12 @@ msgstr " 릴리스 상태 :"
 #: cms/templates/js/publish-xblock.underscore
 #: cms/templates/js/xblock-outline.underscore
 msgid "Released:"
-msgstr "출시:"
+msgstr "게시됨:"
 
 #: cms/templates/js/course-outline.underscore
 #: cms/templates/js/publish-xblock.underscore
 msgid "Scheduled:"
-msgstr "스케쥴:"
+msgstr "예약됨:"
 
 #: cms/templates/js/course-outline.underscore
 #: cms/templates/js/highlights-editor.underscore
@@ -10790,7 +10790,7 @@ msgstr "게시되지 않음"
 #: cms/templates/js/publish-history.underscore
 #, python-format
 msgid "Last published %(last_published_date)s by %(publish_username)s"
-msgstr "최근 게시된 %(last_published_date)s by %(publish_username)s"
+msgstr "%(publish_username)s님이 %(last_published_date)s에 게시함"
 
 #: cms/templates/js/publish-history.underscore
 #: cms/templates/js/publish-xblock.underscore
@@ -10803,7 +10803,7 @@ msgstr "임시 보관함 (게시되지 않음)"
 
 #: cms/templates/js/publish-xblock.underscore
 msgid "Visible to Staff Only"
-msgstr "직원 전용보기"
+msgstr "운영팀 전용"
 
 #: cms/templates/js/publish-xblock.underscore
 msgid "Published and Live"
@@ -10819,7 +10819,7 @@ msgstr "초안 (게시되지 않은 변경 사항)"
 
 #: cms/templates/js/publish-xblock.underscore
 msgid "Release:"
-msgstr "해제:"
+msgstr "게시:"
 
 #: cms/templates/js/publish-xblock.underscore
 msgid "Publishing Status"
@@ -10830,21 +10830,21 @@ msgid ""
 "Draft saved on {lastSavedStart}{editedOn}{lastSavedEnd} by "
 "{editedByStart}{editedBy}{editedByEnd}"
 msgstr ""
-"{editedByStart}{editedByEnd}에 의해 {lastSavedStart}{editedOn}{lastSavedEnd}에 "
-"저장된 초안 {editedByEnd}"
+"{editedByStart}{editedBy}{editedByEnd}님이 {lastSavedStart}{editedOn}{lastSavedEnd}"
+"에 저장함"
 
 #: cms/templates/js/publish-xblock.underscore
 msgid ""
 "Last published {lastPublishedStart}{publishedOn}{lastPublishedEnd} by "
 "{publishedByStart}{publishedBy}{publishedByEnd}"
 msgstr ""
-" {publishedByStart}{publishedBy}{publishedByEnd}에 의해 "
-"{lastPublishedStart}{publishedOn}{lastPublishedEnd}"
+" {publishedByStart}{publishedBy}{publishedByEnd}님이 "
+"{lastPublishedStart}{publishedOn}{lastPublishedEnd}에 최종 게시함"
 
 #: cms/templates/js/publish-xblock.underscore
 #, python-format
 msgid "with %(release_date_from)s"
-msgstr "%(release_date_from)s와 함께"
+msgstr "%(release_date_from)s"
 
 #: cms/templates/js/publish-xblock.underscore
 msgid "Is Visible To:"
@@ -10856,25 +10856,25 @@ msgstr "표시 대상:"
 
 #: cms/templates/js/publish-xblock.underscore
 msgid "Staff Only"
-msgstr "직원만"
+msgstr "운영팀 전용"
 
 #: cms/templates/js/publish-xblock.underscore
 #, python-format
 msgid "with %(section_or_subsection)s"
-msgstr "%(section_or_subsection)s와 함께"
+msgstr "%(section_or_subsection)s"
 
 #: cms/templates/js/publish-xblock.underscore
 msgid "Staff and Learners"
-msgstr "직원 및 학습자"
+msgstr "운영팀과 학습자"
 
 #: cms/templates/js/publish-xblock.underscore
 #: cms/templates/js/staff-lock-editor.underscore
 msgid "Hide from learners"
-msgstr "학습자에게서 숨기기"
+msgstr "학습자에게 숨기기"
 
 #: cms/templates/js/publish-xblock.underscore
 msgid "Note: Do not hide graded assignments after they have been released."
-msgstr "참고: 채점 된 과제가 발표 된 후 숨기지 마십시오."
+msgstr "참고: 채점된 과제가 게시된 후 숨기지 마십시오."
 
 #: cms/templates/js/release-date-editor.underscore
 msgid "Release Date and Time"
