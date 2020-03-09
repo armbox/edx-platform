@@ -105,6 +105,7 @@ class CourseOverview(TimeStampedModel):
     eligible_for_financial_aid = BooleanField(default=True)
 
     language = TextField(null=True)
+    attendance_check_enabled = BooleanField(default=False)
 
     @classmethod
     def _create_or_update(cls, course):
@@ -195,6 +196,7 @@ class CourseOverview(TimeStampedModel):
         course_overview.effort = CourseDetails.fetch_about_attribute(course.id, 'effort')
         course_overview.course_video_url = CourseDetails.fetch_video_url(course.id)
         course_overview.self_paced = course.self_paced
+        course_overview.attendance_check_enabled = course.attendance_check_enabled
 
         if not CatalogIntegration.is_enabled():
             course_overview.language = course.language

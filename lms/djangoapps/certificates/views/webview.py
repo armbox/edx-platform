@@ -49,7 +49,7 @@ from student.models import LinkedInAddToProfileConfiguration
 from util import organizations_helpers as organization_api
 from util.date_utils import strftime_localized
 from util.views import handle_500
-
+from smartlearn import format_course_duration
 
 log = logging.getLogger(__name__)
 _ = translation.ugettext
@@ -239,6 +239,7 @@ def _update_course_context(request, context, course, course_key, platform_name):
     context['accomplishment_copy_course_name'] = accomplishment_copy_course_name
     course_number = course.display_coursenumber if course.display_coursenumber else course.number
     context['course_number'] = course_number
+    context['course_duration'] = format_course_duration(course) if course.start and course.end else ''
     if context['organization_long_name']:
         # Translators:  This text represents the description of course
         context['accomplishment_copy_course_description'] = _('a course of study offered by {partner_short_name}, '
