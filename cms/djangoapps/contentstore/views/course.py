@@ -70,7 +70,7 @@ from student import auth
 from student.auth import has_course_author_access, has_studio_read_access, has_studio_write_access
 from student.roles import CourseCreatorRole, CourseInstructorRole, CourseStaffRole, GlobalStaff, UserBasedRole
 from util.course import get_link_for_about_page
-from util.date_utils import get_default_time_display
+from util.date_utils import get_default_time_display, strftime_localized
 from util.json_request import JsonResponse, JsonResponseBadRequest, expect_json
 from util.milestones_helpers import (
     is_entrance_exams_enabled,
@@ -627,7 +627,7 @@ def course_index(request, course_key):
         locator_to_show = request.GET.get('show', None)
 
         course_release_date = (
-            get_default_time_display(course_module.start)
+            strftime_localized(course_module.start, '%Y.%m.%d %H:%M')
             if course_module.start != DEFAULT_START_DATE
             else _("Set Date")
         )

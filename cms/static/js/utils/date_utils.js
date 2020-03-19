@@ -15,13 +15,14 @@ function($, date, TriggerChangeEventOnEnter) {
             selectedTime = $(timepickerInput).timepicker('getTime');
         }
         if (selectedDate && selectedTime) {
-            return new Date(Date.UTC(
+            return new Date(
                 selectedDate.getFullYear(), selectedDate.getMonth(), selectedDate.getDate(),
                 selectedTime.getHours(), selectedTime.getMinutes()
-            ));
+            );
         } else if (selectedDate) {
-            return new Date(Date.UTC(
-                selectedDate.getFullYear(), selectedDate.getMonth(), selectedDate.getDate()));
+            return new Date(
+                selectedDate.getFullYear(), selectedDate.getMonth(), selectedDate.getDate()
+            );
         } else {
             return null;
         }
@@ -30,7 +31,7 @@ function($, date, TriggerChangeEventOnEnter) {
     function setDate(datepickerInput, timepickerInput, datetime) {
         // given a pair of inputs (datepicker and timepicker) and the date as an
         // ISO-formatted date string.
-        var parsedDatetime = Date.parse(datetime);
+        var parsedDatetime = new Date(datetime);
         if (parsedDatetime) {
             $(datepickerInput).datepicker('setDate', parsedDatetime);
             if (timepickerInput.length > 0) {
@@ -97,7 +98,7 @@ function($, date, TriggerChangeEventOnEnter) {
 
         // instrument as date and time pickers
         timefield.timepicker({timeFormat: 'H:i'});
-        datefield.datepicker();
+        datefield.datepicker({dateFormat: 'yy/mm/dd'});
 
         // Using the change event causes setfield to be triggered twice, but it is necessary
         // to pick up when the date is typed directly in the field.

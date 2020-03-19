@@ -218,12 +218,12 @@ define(['js/views/validation', 'codemirror', 'underscore', 'jquery', 'jquery.ui'
                        hours = now.getUTCHours(),
                        minutes = now.getUTCMinutes(),
                        currentTimeText = StringUtils.interpolate(
-                gettext('{hours}:{minutes} (current UTC time)'),
+                           gettext('{hours}:{minutes} (current UTC time)'),
                            {
                                hours: hours,
                                minutes: minutes
                            }
-            );
+                       );
 
                    $(e.currentTarget).attr('title', currentTimeText);
                },
