@@ -2604,7 +2604,7 @@ def export_matchup_csv(request, course_id):
     """
     report_type = _('matchup')
     course_key = CourseKey.from_string(course_id)
-    lms.djangoapps.instructor_task.api.submit_calculate_grades_csv(request, course_key)
+    lms.djangoapps.instructor_task.api.submit_export_matchup_csv(request, course_key)
     success_status = SUCCESS_MESSAGE_TEMPLATE.format(report_type=report_type)
 
     return JsonResponse({"status": success_status})

@@ -20,7 +20,7 @@ from courseware.courses import get_course_by_id
 from courseware.user_state_client import DjangoXBlockUserStateClient
 from instructor_analytics.basic import list_problem_responses
 from instructor_analytics.csvs import format_dictlist
-from lms.djangoapps.certificates.models import CertificateWhitelist, GeneratedCertificate, certificate_info_for_user
+from lms.djangoapps.certificates.models import GeneratedCertificate, CertificateStatuses, certificate_status
 from lms.djangoapps.grades.context import grading_context, grading_context_for_course
 from lms.djangoapps.grades.models import PersistentCourseGrade
 from lms.djangoapps.grades.course_grade_factory import CourseGradeFactory
@@ -45,21 +45,6 @@ WAFFLE_SWITCHES = WaffleSwitchNamespace(name=WAFFLE_NAMESPACE)
 OPTIMIZE_GET_LEARNERS_FOR_COURSE = 'optimize_get_learners_for_course'
 
 TASK_LOG = logging.getLogger('edx.celery.task')
-
-ENROLLED_IN_COURSE = 'enrolled'
-
-NOT_ENROLLED_IN_COURSE = 'unenrolled'
-
-
-def _user_enrollment_status(user, course_id):
-    """
-    Returns the enrollment activation status in the given course
-    for the given user.
-    """
-    enrollment_is_active = CourseEnrollment.enrollment_mode_for_user(user, course_id)[1]
-    if enrollment_is_active:
-        return ENROLLED_IN_COURSE
-    return NOT_ENROLLED_IN_COURSE
 
 
 def _flatten(iterable):
@@ -153,6 +138,24 @@ class _CourseMatchUpReportContext(object):
         return self.task_progress.update_task_state(extra_meta={'step': message})
 
 
+class _CourseGradeBulkContext(object):
+    def __init__(self, context, users):
+        self.certs = _CertificateBulkContext(context, users)
+        bulk_cache_cohorts(context.course_id, users)
+        BulkRoleCache.prefetch(users)
+        PersistentCourseGrade.prefetch(context.course_id, users)
+        BulkCourseTags.prefetch(context.course_id, users)
+
+
+class _CertificateBulkContext(object):
+    def __init__(self, context, users):
+        self.certificates_by_user = {
+            certificate.user.id: certificate
+            for certificate in
+            GeneratedCertificate.objects.filter(course_id=context.course_id, user__in=users)
+        }
+
+
 class CourseMatchUpReport(object):
     """
     Class to encapsulate functionality related to generating Grade Reports.
@@ -178,7 +181,7 @@ class CourseMatchUpReport(object):
         error_headers = self._error_headers()
         batched_rows = self._batched_rows(context)
 
-        context.update_status(u'Compiling grades')
+        context.update_status(u'Compiling matchup report')
         success_rows, error_rows = self._compile(context, batched_rows)
 
         context.update_status(u'Uploading matchup report')
@@ -191,14 +194,9 @@ class CourseMatchUpReport(object):
         Returns a list of all applicable column headers for this grade report.
         """
         return (
-            ["Student ID", "Email", "Username", "RealName", "Last Login", "Video Progress", "Attendance"] +
-            self._grades_header(context) +
-            (['Cohort Name'] if context.cohorts_enabled else []) +
-            [u'Experiment Group ({})'.format(partition.name) for partition in context.course_experiments] +
-            (['Team Name'] if context.teams_enabled else []) +
-            ['Enrollment Track', 'Verification Status'] +
-            ['Certificate Eligible', 'Certificate Delivered', 'Certificate Type'] +
-            ['Enrollment Status', 'Enrollment Date']
+            ["Name", "Matchup Account", "Gender", "Birth Year", "Email"] +
+            ["Enrolled", "Start", "End", "Video Progress"] +
+            ["Certificated", "Certificate ID"]
         )
 
     def _error_headers(self):
@@ -237,22 +235,10 @@ class CourseMatchUpReport(object):
         Creates and uploads a CSV for the given headers and rows.
         """
         date = datetime.now(UTC)
-        upload_csv_to_report_store([success_headers] + success_rows, 'grade_report', context.course_id, date)
+        upload_csv_to_report_store([success_headers] + success_rows, 'matchup_report', context.course_id, date)
         if len(error_rows) > 0:
             error_rows = [error_headers] + error_rows
-            upload_csv_to_report_store(error_rows, 'grade_report_err', context.course_id, date)
-
-    def _grades_header(self, context):
-        """
-        Returns the applicable grades-related headers for this report.
-        """
-        graded_assignments = context.graded_assignments
-        grades_header = ["Grade"]
-        for assignment_info in graded_assignments.itervalues():
-            if assignment_info['separate_subsection_avg_headers']:
-                grades_header.extend(assignment_info['subsection_headers'].itervalues())
-            grades_header.append(assignment_info['average_header'])
-        return grades_header
+            upload_csv_to_report_store(error_rows, 'matchup_report_err', context.course_id, date)
 
     def _batch_users(self, context):
         """
@@ -307,132 +293,28 @@ class CourseMatchUpReport(object):
         batch_users = users_for_course(context.course_id)
         return batch_users
 
-    def _user_grades(self, course_grade, context):
-        """
-        Returns a list of grade results for the given course_grade corresponding
-        to the headers for this report.
-        """
-        grade_results = []
-        for assignment_type, assignment_info in context.graded_assignments.iteritems():
-
-            subsection_grades, subsection_grades_results = self._user_subsection_grades(
-                course_grade,
-                assignment_info['subsection_headers'],
-            )
-            grade_results.extend(subsection_grades_results)
-
-            assignment_average = self._user_assignment_average(course_grade, subsection_grades, assignment_info)
-            if assignment_average is not None:
-                grade_results.append([assignment_average])
-
-        return [course_grade.percent] + _flatten(grade_results)
-
-    def _user_subsection_grades(self, course_grade, subsection_headers):
-        """
-        Returns a list of grade results for the given course_grade corresponding
-        to the headers for this report.
-        """
-        subsection_grades = []
-        grade_results = []
-        for subsection_location in subsection_headers:
-            subsection_grade = course_grade.subsection_grade(subsection_location)
-            if subsection_grade.attempted_graded:
-                grade_result = subsection_grade.percent_graded
-            else:
-                grade_result = u'Not Attempted'
-            grade_results.append([grade_result])
-            subsection_grades.append(subsection_grade)
-        return subsection_grades, grade_results
-
-    def _user_assignment_average(self, course_grade, subsection_grades, assignment_info):
-        if assignment_info['separate_subsection_avg_headers']:
-            if assignment_info['grader']:
-                if course_grade.attempted:
-                    subsection_breakdown = [
-                        {'percent': subsection_grade.percent_graded}
-                        for subsection_grade in subsection_grades
-                    ]
-                    assignment_average, _ = assignment_info['grader'].total_with_drops(subsection_breakdown)
-                else:
-                    assignment_average = 0.0
-                return assignment_average
-
-    def _user_cohort_group_names(self, user, context):
-        """
-        Returns a list of names of cohort groups in which the given user
-        belongs.
-        """
-        cohort_group_names = []
-        if context.cohorts_enabled:
-            group = get_cohort(user, context.course_id, assign=False, use_cached=True)
-            cohort_group_names.append(group.name if group else '')
-        return cohort_group_names
-
-    def _user_experiment_group_names(self, user, context):
-        """
-        Returns a list of names of course experiments in which the given user
-        belongs.
-        """
-        experiment_group_names = []
-        for partition in context.course_experiments:
-            group = PartitionService(context.course_id).get_group(user, partition, assign=False)
-            experiment_group_names.append(group.name if group else '')
-        return experiment_group_names
-
-    def _user_team_names(self, user, bulk_teams):
-        """
-        Returns a list of names of teams in which the given user belongs.
-        """
-        team_names = []
-        if bulk_teams.enabled:
-            team_names = [bulk_teams.teams_by_user.get(user.id, '')]
-        return team_names
-
-    def _user_verification_mode(self, user, context, bulk_enrollments):
-        """
-        Returns a list of enrollment-mode and verification-status for the
-        given user.
-        """
-        enrollment_mode = CourseEnrollment.enrollment_mode_for_user(user, context.course_id)[0]
-        verification_status = IDVerificationService.verification_status_for_user(
-            user,
-            enrollment_mode,
-            user_is_verified=user.id in bulk_enrollments.verified_users,
-        )
-        return [enrollment_mode, verification_status]
-
     def _user_certificate_info(self, user, context, course_grade, bulk_certs):
         """
         Returns the course certification information for the given user.
         """
-        is_whitelisted = user.id in bulk_certs.whitelisted_user_ids
-        certificate_info = certificate_info_for_user(
-            user,
-            context.course_id,
-            course_grade.letter_grade,
-            is_whitelisted,
-            bulk_certs.certificates_by_user.get(user.id),
-        )
-        TASK_LOG.info(
-            u'Student certificate eligibility: %s '
-            u'(user=%s, course_id=%s, grade_percent=%s letter_grade=%s gradecutoffs=%s, allow_certificate=%s, '
-            u'is_whitelisted=%s)',
-            certificate_info[0],
-            user,
-            context.course_id,
-            course_grade.percent,
-            course_grade.letter_grade,
-            context.course.grade_cutoffs,
-            user.profile.allow_certificate,
-            is_whitelisted,
-        )
-        return certificate_info
+        user_certificate = bulk_certs.certificates_by_user.get(user.id)
+        certificate_date = 'N/A'
+        certificate_id = 'N/A'
+        status = certificate_status(user_certificate)
+        certificate_generated = status['status'] == CertificateStatuses.downloadable
+
+        if certificate_generated:
+            certificate_date = user_certificate.created_date.strftime("%Y-%m-%d")
+            certificate_id = user_certificate.verify_uuid
+
+        return [certificate_date, certificate_id]
 
     def _rows_for_users(self, context, users):
         """
         Returns a list of rows for the given users for this report.
         """
         with modulestore().bulk_operations(context.course_id):
+            bulk_context = _CourseGradeBulkContext(context, users)
 
             success_rows, error_rows = [], []
             attendances = get_course_attendance_count(context.course)
@@ -449,17 +331,15 @@ class CourseMatchUpReport(object):
                 else:
                     profile = UserProfile.objects.get(user=user)
 
-                    last_login = user.last_login.strftime("%Y-%m-%d %H:%M") if user.last_login else 'N/A'
                     enrollment = user.courseenrollment_set.get(course_id=context.course_id)
-                    enrolled = enrollment.created.strftime("%Y-%m-%d %H:%M") if enrollment else 'N/A'
+                    enrolled = enrollment.created.strftime("%Y-%m-%d") if enrollment else 'N/A'
                     attendance = attendances.get(user.email, 0) if context.course.attendance_check_enabled else 'N/A'
+                    course_start = context.course.start.strftime("%Y-%m-%d") if context.course.start else 'N/A'
+                    course_end = context.course.end.strftime("%Y-%m-%d") if context.course.end else 'N/A'
                     success_rows.append(
-                        [user.id, user.email, user.username, profile.name, last_login] +
-                        [get_course_video_progress(user, context.course_id), attendance] +
-                        self._user_grades(course_grade, context) +
-                        self._user_cohort_group_names(user, context) +
-                        self._user_experiment_group_names(user, context) +
-                        [_user_enrollment_status(user, context.course_id), enrolled]
+                        [profile.name, profile.matchup_account, profile.gender, profile.year_of_birth, user.email] +
+                        [enrolled, course_start, course_end] +
+                        ["{}%".format(get_course_video_progress(user, context.course_id))] +
+                        self._user_certificate_info(user, context, course_grade, bulk_context.certs)
                     )
             return success_rows, error_rows
-

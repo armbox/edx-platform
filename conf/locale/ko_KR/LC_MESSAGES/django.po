@@ -25709,3 +25709,11 @@ msgstr "기타 정보"
 #: lms/djangoapps/courseware/views/views.py
 msgid "Attendance Status"
 msgstr "출석 현황"
+
+#: lms/templates/instructor/instructor_dashboard_2/data_download.html
+msgid "Generate Match-Up Report"
+msgstr "매치업 보고서 생성"
+
+#: lms/djangoapps/instructor/views/api.py
+msgid "matchup"
+msgstr "매치업"
