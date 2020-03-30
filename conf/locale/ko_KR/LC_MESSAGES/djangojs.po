@@ -5899,6 +5899,16 @@ msgstr ""
 "전화번호는 본인 확인을 위해서만 사용됩니다."
 
 #: lms/static/js/student_account/views/account_settings_factory.js
+msgid ""
+"For a matchup course, please register the matchup site(http://matchup.kr) and enter your membership number."
+msgstr ""
+"매치업 강좌 수강신청 할 경우 http://matchup.kr 매치업 사이트에 회원가입 후 회원번호를 필수 입력해 주세요."
+
+#: lms/static/js/student_account/views/account_settings_factory.js
+msgid "Match-Up Account"
+msgstr "매치업 회원번호"
+
+#: lms/static/js/student_account/views/account_settings_factory.js
 msgid "Country or Region of Residence"
 msgstr "거주 국가 또는 지역"
 

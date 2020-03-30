@@ -3030,6 +3030,7 @@ ACCOUNT_VISIBILITY_CONFIGURATION = {
         "social_links",
         "name",
         "phone",
+        "matchup_account",
         "gender",
         "goals",
         "year_of_birth",
@@ -3391,6 +3392,7 @@ ENTERPRISE_READONLY_ACCOUNT_FIELDS = [
     'email',
     'country',
     'phone',
+    'matchup_account',
 ]
 ENTERPRISE_CUSTOMER_COOKIE_NAME = 'enterprise_customer_uuid'
 BASE_COOKIE_DOMAIN = 'localhost'

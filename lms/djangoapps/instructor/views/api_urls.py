@@ -52,6 +52,7 @@ urlpatterns = [
     url(r'^list_report_downloads$', api.list_report_downloads, name='list_report_downloads'),
     url(r'calculate_grades_csv$', api.calculate_grades_csv, name='calculate_grades_csv'),
     url(r'problem_grade_report$', api.problem_grade_report, name='problem_grade_report'),
+    url(r'export_matchup_csv$', api.export_matchup_csv, name='export_matchup_csv'),
 
     # Financial Report downloads..
     url(r'^list_financial_report_downloads$', api.list_financial_report_downloads,

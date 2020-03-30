@@ -113,6 +113,7 @@ class UserReadOnlySerializer(serializers.Serializer):
             "language_proficiencies": None,
             "name": None,
             "phone": None,
+            "matchup_account": None,
             "gender": None,
             "goals": None,
             "year_of_birth": None,
@@ -138,6 +139,7 @@ class UserReadOnlySerializer(serializers.Serializer):
                     ).data,
                     "name": user_profile.name,
                     "phone": user_profile.phone,
+                    "matchup_account": user_profile.matchup_account,
                     "gender": AccountLegacyProfileSerializer.convert_empty_to_None(user_profile.gender),
                     "goals": user_profile.goals,
                     "year_of_birth": user_profile.year_of_birth,
@@ -203,7 +205,7 @@ class AccountLegacyProfileSerializer(serializers.HyperlinkedModelSerializer, Rea
         fields = (
             "name", "gender", "goals", "year_of_birth", "level_of_education", "country", "social_links",
             "mailing_address", "bio", "profile_image", "requires_parental_consent", "language_proficiencies",
-            "phone",
+            "phone", "matchup_account",
         )
         # Currently no read-only field, but keep this so view code doesn't need to know.
         read_only_fields = ()

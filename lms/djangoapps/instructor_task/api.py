@@ -35,6 +35,7 @@ from lms.djangoapps.instructor_task.tasks import (
     enrollment_report_features_csv,
     exec_summary_report_csv,
     export_ora2_data,
+    export_matchup_csv,
     generate_certificates,
     proctored_exam_results_csv,
     rescore_problem,
@@ -357,6 +358,18 @@ def submit_problem_grade_report(request, course_key):
     task_class = calculate_problem_grade_report
     task_input = {}
     task_key = ""
+    return submit_task(request, task_type, task_class, course_key, task_input, task_key)
+
+
+def submit_export_matchup_csv(request, course_key):
+    """
+    AlreadyRunningError is raised if the course's matchup report are already being updated.
+    """
+    task_type = 'matchup_course'
+    task_class = export_matchup_csv
+    task_input = {}
+    task_key = ""
+
     return submit_task(request, task_type, task_class, course_key, task_input, task_key)
 
 

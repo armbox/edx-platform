@@ -34,7 +34,8 @@
                 showLoadingError, orderNumber, getUserField, userFields, timeZoneDropdownField, countryDropdownField,
                 emailFieldView, socialFields, accountDeletionFields, platformData,
                 aboutSectionMessageType, aboutSectionMessage, fullnameFieldView, countryFieldView,
-                fullNameFieldData, emailFieldData, countryFieldData, additionalFields, fieldItem;
+                fullNameFieldData, emailFieldData, countryFieldData, additionalFields, fieldItem,
+                matchupFieldData, matchupFieldView;
             // var phoneFieldData, phoneFieldView;
 
             $accountSettingsElement = $('.wrapper-account-settings');
@@ -119,6 +120,23 @@
             }
             */
 
+            matchupFieldData = {
+                model: userAccountModel,
+                title: gettext('Match-Up Account'),
+                valueAttribute: 'matchup_account',
+                helpMessage: gettext('For a matchup course, please register the matchup site(http://matchup.kr) and enter your membership number.'),  // eslint-disable-line max-len,
+                persistChanges: true
+            };
+            if (syncLearnerProfileData && enterpriseReadonlyAccountFields.fields.indexOf('matchup_account') !== -1) {
+                matchupFieldView = {
+                    view: new AccountSettingsFieldViews.ReadonlyFieldView(matchupFieldData)
+                };
+            } else {
+                matchupFieldView = {
+                    view: new AccountSettingsFieldViews.TextFieldView(matchupFieldData)
+                };
+            }
+
             countryFieldData = {
                 model: userAccountModel,
                 required: true,
@@ -164,6 +182,7 @@
                         fullnameFieldView,
                         emailFieldView,
                         // phoneFieldView,
+                        matchupFieldView,
                         {
                             view: new AccountSettingsFieldViews.PasswordFieldView({
                                 model: userAccountModel,
