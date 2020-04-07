@@ -66,6 +66,8 @@ def account_settings_context(request):
     user = request.user
 
     year_of_birth_options = [(unicode(year), unicode(year)) for year in UserProfile.VALID_YEARS]
+    month_of_birth_options = [(unicode(month), unicode(month)) for month in UserProfile.VALID_MONTHS]
+    day_of_birth_options = [(unicode(day), unicode(day)) for day in UserProfile.VALID_DAYS]
     try:
         user_orders = get_user_orders(user)
     except:  # pylint: disable=bare-except
@@ -91,6 +93,10 @@ def account_settings_context(request):
                 'url': reverse('password_reset'),
             }, 'year_of_birth': {
                 'options': year_of_birth_options,
+            }, 'month_of_birth': {
+                'options': month_of_birth_options,
+            }, 'day_of_birth': {
+                'options': day_of_birth_options,
             }, 'preferred_language': {
                 'options': all_languages(),
             }, 'time_zone': {

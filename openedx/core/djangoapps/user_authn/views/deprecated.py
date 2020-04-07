@@ -91,6 +91,7 @@ def register_user(request, extra_context=None):
         ),
         'selected_provider': '',
         'username': '',
+        'matchup_account': '',
     }
 
     if extra_context is not None:

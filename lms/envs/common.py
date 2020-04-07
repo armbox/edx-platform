@@ -3034,6 +3034,8 @@ ACCOUNT_VISIBILITY_CONFIGURATION = {
         "gender",
         "goals",
         "year_of_birth",
+        "month_of_birth",
+        "day_of_birth",
         "level_of_education",
         "mailing_address",
         "requires_parental_consent",
@@ -3384,6 +3386,8 @@ ENTERPRISE_EXCLUDED_REGISTRATION_FIELDS = {
     'gender',
     'goals',
     'year_of_birth',
+    'month_of_birth',
+    'day_of_birth',
     'mailing_address',
 }
 ENTERPRISE_READONLY_ACCOUNT_FIELDS = [

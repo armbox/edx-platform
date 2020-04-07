@@ -11489,3 +11489,11 @@ msgstr " 현재 대본 사용 "
 #: cms/static/js/models/settings/course_details.js
 msgid "The course start date and end date must be assigned for attendance check."
 msgstr "출석 체크를 위해서는 코스 시작 날짜와 종료 날짜를 지정해야 합니다."
+
+#: lms/templates/register-form.html
+msgid "Month of Birth"
+msgstr "출생월"
+
+#: lms/templates/register-form.html
+msgid "Day of Birth"
+msgstr "출생일"

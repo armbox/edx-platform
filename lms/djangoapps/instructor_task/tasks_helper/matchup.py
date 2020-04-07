@@ -336,8 +336,11 @@ class CourseMatchUpReport(object):
                     attendance = attendances.get(user.email, 0) if context.course.attendance_check_enabled else 'N/A'
                     course_start = context.course.start.strftime("%Y-%m-%d") if context.course.start else 'N/A'
                     course_end = context.course.end.strftime("%Y-%m-%d") if context.course.end else 'N/A'
+                    month = profile.month_of_birth if profile.month_of_birth else 1
+                    day = profile.day_of_birth if profile.day_of_birth else 1
+                    birth = '{}-{:0>2}-{:0>2}'.format(profile.year_of_birth, month, day) if profile.year_of_birth else 'N/A'
                     success_rows.append(
-                        [profile.name, profile.matchup_account, profile.gender, profile.year_of_birth, user.email] +
+                        [profile.name, profile.matchup_account, profile.gender, birth, user.email] +
                         [enrolled, course_start, course_end] +
                         ["{}%".format(get_course_video_progress(user, context.course_id))] +
                         self._user_certificate_info(user, context, course_grade, bulk_context.certs)

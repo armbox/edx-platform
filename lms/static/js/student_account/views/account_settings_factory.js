@@ -261,6 +261,24 @@
                             })
                         },
                         {
+                            view: new AccountSettingsFieldViews.DropdownFieldView({
+                                model: userAccountModel,
+                                title: gettext('Month of Birth'),
+                                valueAttribute: 'month_of_birth',
+                                options: fieldsData.month_of_birth.options,
+                                persistChanges: true
+                            })
+                        },
+                        {
+                            view: new AccountSettingsFieldViews.DropdownFieldView({
+                                model: userAccountModel,
+                                title: gettext('Day of Birth'),
+                                valueAttribute: 'day_of_birth',
+                                options: fieldsData.day_of_birth.options,
+                                persistChanges: true
+                            })
+                        },
+                        {
                             view: new AccountSettingsFieldViews.LanguageProficienciesFieldView({
                                 model: userAccountModel,
                                 title: gettext('Preferred Language'),

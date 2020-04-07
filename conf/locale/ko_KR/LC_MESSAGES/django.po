@@ -25717,3 +25717,21 @@ msgstr "매치업 보고서 생성"
 #: lms/djangoapps/instructor/views/api.py
 msgid "matchup"
 msgstr "매치업"
+
+#: themes/edux/lms/templates/register-form.html
+msgid "Match-Up Account"
+msgstr "매치업 회원번호"
+
+#: themes/edux/lms/templates/register-form.html
+msgid ""
+"For a matchup course, please register the matchup site(http://matchup.kr) and enter your membership number."
+msgstr ""
+"매치업 강좌 수강신청 할 경우 http://matchup.kr 매치업 사이트에 회원가입 후 회원번호를 필수 입력해 주세요."
+
+#: lms/templates/register-form.html
+msgid "Month of Birth"
+msgstr "출생월"
+
+#: lms/templates/register-form.html
+msgid "Day of Birth"
+msgstr "출생일"
