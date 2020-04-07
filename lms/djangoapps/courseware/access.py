@@ -11,6 +11,8 @@ Note: The access control logic in this file does NOT check for enrollment in
   It is a wrapper around has_access that additionally checks for enrollment.
 """
 import logging
+import re
+
 from datetime import datetime
 
 from django.conf import settings
@@ -266,18 +268,22 @@ def _can_enroll_courselike(user, courselike):
 
     # check if user can register the course, smartlearn extension
     try:
-        if(enrollment_domain):
-            func = getattr(settings, enrollment_domain)
-            if(func):
-                reg_method_ok = False
-                log.warning("enrollment_domain function %s found.", enrollment_domain)
-                if(func(user)):
-                    log.warning("enrollment_domain() returned true.")
-                    reg_method_ok = True
-                else:
-                    log.warning("enrollment_domain() returned false.")
+        if enrollment_domain:
+            log.warning("enrollment_domain function %s found.", enrollment_domain)
+            if enrollment_domain.startswith('ALLOW_DOMAIN:'):
+                domains = [domain.lower() for domain in re.split('[, ]+', enrollment_domain[13:].strip())]
+                reg_method_ok = settings.ALLOW_DOMAIN(user, domains)
+            elif enrollment_domain.startswith('DISALLOW_DOMAIN:'):
+                domains = [domain.lower() for domain in re.split('[, ]+', enrollment_domain[16:].strip())]
+                reg_method_ok = settings.DISALLOW_DOMAIN(user, domains)
             else:
-                log.warning("enrollment_domain() function %s notfound", enrollment_domain)
+                func = getattr(settings, enrollment_domain)
+                reg_method_ok = func(user)
+
+            if reg_method_ok:
+                log.warning("enrollment_domain() returned true.")
+            else:
+                log.warning("enrollment_domain() returned false.")
     except:
         pass
 
