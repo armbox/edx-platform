@@ -270,12 +270,12 @@ def _can_enroll_courselike(user, courselike):
     try:
         if enrollment_domain:
             log.warning("enrollment_domain function %s found.", enrollment_domain)
-            if enrollment_domain.startswith('ALLOW_DOMAIN:'):
-                domains = [domain.lower() for domain in re.split('[, ]+', enrollment_domain[13:].strip())]
-                reg_method_ok = settings.ALLOW_DOMAIN(user, domains)
-            elif enrollment_domain.startswith('DISALLOW_DOMAIN:'):
-                domains = [domain.lower() for domain in re.split('[, ]+', enrollment_domain[16:].strip())]
-                reg_method_ok = settings.DISALLOW_DOMAIN(user, domains)
+            pattern = '(ALLOW_DOMAIN|DISALLOW_DOMAIN)\s*:\s*([^, ]+\s*(,\s*([^,]+))*)'
+            match = re.match(pattern, enrollment_domain)
+            if match:
+                func = getattr(settings, match.group(1))
+                domains = [domain.lower() for domain in re.split('[, ]+', match.group(2).strip())]
+                reg_method_ok = func(user, domains)
             else:
                 func = getattr(settings, enrollment_domain)
                 reg_method_ok = func(user)
