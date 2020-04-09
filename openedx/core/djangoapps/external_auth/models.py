@@ -11,6 +11,7 @@ file and check it in at the same time as your model changes. To do that,
 
 from django.contrib.auth.models import User
 from django.db import models
+from opaque_keys.edx.django.models import CourseKeyField
 
 
 class ExternalAuthMap(models.Model):
@@ -33,3 +34,22 @@ class ExternalAuthMap(models.Model):
 
     def __unicode__(self):
         return "[%s] = (%s / %s)" % (self.external_id, self.external_name, self.external_email)
+
+
+class EnrollEmailDomainMap(models.Model):
+    """
+    Model class for enroll policy for user email domain
+    """
+    class Meta(object):
+        app_label = "external_auth"
+
+    external_id = models.CharField(max_length=255, db_index=True)
+    domain = models.CharField(max_length=255, db_index=True)
+    disallow = models.BooleanField(default=False)
+
+    def __unicode__(self):
+        return "%s : %s : %s" % (
+            self.external_id, self.domain, self.disallow
+        )
+
+

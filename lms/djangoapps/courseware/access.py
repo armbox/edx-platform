@@ -45,7 +45,7 @@ from lms.djangoapps.ccx.custom_exception import CCXLocatorValidationException
 from lms.djangoapps.ccx.models import CustomCourseForEdX
 from mobile_api.models import IgnoreMobileAvailableFlagConfig
 from openedx.core.djangoapps.content.course_overviews.models import CourseOverview
-from openedx.core.djangoapps.external_auth.models import ExternalAuthMap
+from openedx.core.djangoapps.external_auth.models import ExternalAuthMap, EnrollEmailDomainMap
 from openedx.features.course_duration_limits.access import check_course_expired
 from student import auth
 from student.models import CourseEnrollmentAllowed
@@ -268,22 +268,12 @@ def _can_enroll_courselike(user, courselike):
 
     # check if user can register the course, smartlearn extension
     try:
-        if enrollment_domain:
+        if user is not None and user.is_authenticated and enrollment_domain:
             log.warning("enrollment_domain function %s found.", enrollment_domain)
-            pattern = '(ALLOW_DOMAIN|DISALLOW_DOMAIN)\s*:\s*([^, ]+\s*(,\s*([^,]+))*)'
-            match = re.match(pattern, enrollment_domain)
-            if match:
-                func = getattr(settings, match.group(1))
-                domains = [domain.lower() for domain in re.split('[, ]+', match.group(2).strip())]
-                reg_method_ok = func(user, domains)
-            else:
-                func = getattr(settings, enrollment_domain)
-                reg_method_ok = func(user)
-
-            if reg_method_ok:
-                log.warning("enrollment_domain() returned true.")
-            else:
-                log.warning("enrollment_domain() returned false.")
+            domain = user.email.split("@")[1]
+            found = EnrollEmailDomainMap.objects.filter(external_id=enrollment_domain, domain__iexact=domain).first()
+            reg_method_ok = not found.disallow
+            log.warning("reg_method_id = %s" % reg_method_ok)
     except:
         pass
 
