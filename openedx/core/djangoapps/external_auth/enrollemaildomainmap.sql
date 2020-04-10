@@ -1,0 +1,17 @@
+INSERT INTO `external_auth_enrollemaildomainmap` VALUES
+    (1, 'ISKTUSER', 'kt.com', 0),
+    (2, 'ISKTUSER', 'ktservice.co.kr', 0),
+    (3, 'ISKTUSER', 'initech.com', 0),
+    (4, 'ISKTUSER', 'playd.com', 0),
+    (5, 'ISKTUSER', 'mable-inc.com', 0),
+    (6, 'ISKTUSER', 'kttelecom.co.kr', 0),
+    (7, 'ISKTUSER', 'skylife.co.kr', 0),
+    (8, 'ISKTUSER', 'nasmedia.co.kr', 0),
+    (9, 'ISKTUSER', 'bccard.com', 0),
+    (10, 'ISRISTUSER', 'rist.re.kr', 0),
+    (11, 'ISLGEUSER', 'lge.com', 0),
+    (12, 'ISLDCCUSER', 'ldcc.co.kr', 0),
+    (13, 'ISPOSTECHUSER', 'postech.ac.kr', 0),
+    (14, 'ISKNUUSER', 'kangwon.ac.kr', 0),
+    (15, 'ISASSISTUSER', 'assist.ac.kr', 0),
+    (16, 'ISASSISTUSER', 'stud.assist.ac.kr', 0);
