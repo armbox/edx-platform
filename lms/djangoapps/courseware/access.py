@@ -271,8 +271,13 @@ def _can_enroll_courselike(user, courselike):
         if user is not None and user.is_authenticated and enrollment_domain:
             log.warning("enrollment_domain function %s found.", enrollment_domain)
             domain = user.email.split("@")[1]
-            found = EnrollEmailDomainMap.objects.filter(external_id=enrollment_domain, domain__iexact=domain).first()
-            reg_method_ok = not found.disallow
+            queryset = EnrollEmailDomainMap.objects.filter(external_id=enrollment_domain)
+            if queryset:
+                found = queryset.filter(domain__iexact=domain).first()
+                if found:
+                    reg_method_ok = not found.disallow
+                else:
+                    reg_method_ok = False
             log.warning("reg_method_id = %s" % reg_method_ok)
     except:
         pass
