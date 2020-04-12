@@ -259,7 +259,7 @@ class AccountCreationForm(forms.Form):
                         )
                 else:
                     required = field_value == "required"
-                    min_length = 1 if field_name in ("gender", "level_of_education") else 2
+                    min_length = 1 if field_name in ("gender", "level_of_education", "month_of_birth", "day_of_birth") else 2
                     error_message = error_message_dict.get(
                         field_name,
                         _("You are missing one or more required fields")
@@ -319,6 +319,28 @@ class AccountCreationForm(forms.Form):
         try:
             year_str = self.cleaned_data["year_of_birth"]
             return int(year_str) if year_str is not None else None
+        except ValueError:
+            return None
+
+    def clean_month_of_birth(self):
+        """
+        Parse month_of_birth to an integer, but just use None instead of raising
+        an error if it is malformed
+        """
+        try:
+            month_str = self.cleaned_data["month_of_birth"]
+            return int(month_str) if month_str is not None else None
+        except ValueError:
+            return None
+
+    def clean_day_of_birth(self):
+        """
+        Parse day_of_birth to an integer, but just use None instead of raising
+        an error if it is malformed
+        """
+        try:
+            day_str = self.cleaned_data["day_of_birth"]
+            return int(day_str) if day_str is not None else None
         except ValueError:
             return None
 
