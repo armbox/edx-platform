@@ -35,6 +35,7 @@ from lms.djangoapps.instructor_task.tasks_helper.enrollments import (
     upload_may_enroll_csv,
     upload_students_csv
 )
+from lms.djangoapps.instructor_task.tasks_helper.certificates import CourseCertificateReport
 from lms.djangoapps.instructor_task.tasks_helper.grades import CourseGradeReport, ProblemGradeReport, ProblemResponses
 from lms.djangoapps.instructor_task.tasks_helper.matchup import CourseMatchUpReport
 from lms.djangoapps.instructor_task.tasks_helper.misc import (
@@ -218,6 +219,22 @@ def export_matchup_csv(entry_id, xmodule_instance_args):
     )
 
     task_fn = partial(CourseMatchUpReport.generate, xmodule_instance_args)
+    return run_main_task(entry_id, task_fn, action_name)
+
+
+@task(base=BaseInstructorTask, routing_key=settings.GRADES_DOWNLOAD_ROUTING_KEY)
+def export_certificate_csv(entry_id, xmodule_instance_args):
+    """
+    Generate course certificate report and push the results to an S3 bucket for download.
+    """
+    # Translators: This is a past-tense verb that is inserted into task progress messages as {action}.
+    action_name = ugettext_noop('certificate')
+    TASK_LOG.info(
+        u"Task: %s, InstructorTask ID: %s, Task type: %s, Preparing for task execution",
+        xmodule_instance_args.get('task_id'), entry_id, action_name
+    )
+
+    task_fn = partial(CourseCertificateReport.generate, xmodule_instance_args)
     return run_main_task(entry_id, task_fn, action_name)
 
 

@@ -2610,6 +2610,24 @@ def export_matchup_csv(request, course_id):
     return JsonResponse({"status": success_status})
 
 
+@transaction.non_atomic_requests
+@require_POST
+@ensure_csrf_cookie
+@cache_control(no_cache=True, no_store=True, must_revalidate=True)
+@require_level('staff')
+@common_exceptions_400
+def export_certificate_csv(request, course_id):
+    """
+    AlreadyRunningError is raised if the course's certificate report are already being updated.
+    """
+    report_type = _('certificate')
+    course_key = CourseKey.from_string(course_id)
+    lms.djangoapps.instructor_task.api.submit_export_certificate_csv(request, course_key)
+    success_status = SUCCESS_MESSAGE_TEMPLATE.format(report_type=report_type)
+
+    return JsonResponse({"status": success_status})
+
+
 @require_POST
 @ensure_csrf_cookie
 @cache_control(no_cache=True, no_store=True, must_revalidate=True)

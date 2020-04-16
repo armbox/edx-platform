@@ -10,6 +10,7 @@ from time import time
 
 from django.contrib.auth import get_user_model
 from django.conf import settings
+from django.utils.translation import ugettext as _
 from lazy import lazy
 from opaque_keys.edx.keys import UsageKey
 from pytz import UTC
@@ -29,8 +30,7 @@ from lms.djangoapps.verify_student.services import IDVerificationService
 from openedx.core.djangoapps.content.block_structure.api import get_course_in_cache
 from openedx.core.djangoapps.course_groups.cohorts import bulk_cache_cohorts, get_cohort, is_course_cohorted
 from openedx.core.djangoapps.user_api.course_tag.api import BulkCourseTags
-from openedx.core.djangoapps.waffle_utils import WaffleSwitchNamespace
-from smartlearn import get_course_video_progress
+from smartlearn import get_course_video_progress, format_course_duration
 from student.models import CourseEnrollment, UserProfile
 from student.roles import BulkRoleCache
 from xmodule.modulestore.django import modulestore
@@ -40,10 +40,6 @@ from xmodule.split_test_module import get_split_user_partitions
 from .runner import TaskProgress
 from .utils import upload_csv_to_report_store
 
-WAFFLE_NAMESPACE = 'instructor_task'
-WAFFLE_SWITCHES = WaffleSwitchNamespace(name=WAFFLE_NAMESPACE)
-OPTIMIZE_GET_LEARNERS_FOR_COURSE = 'optimize_get_learners_for_course'
-
 TASK_LOG = logging.getLogger('edx.celery.task')
 
 
@@ -51,7 +47,7 @@ def _flatten(iterable):
     return list(chain.from_iterable(iterable))
 
 
-class _CourseMatchUpReportContext(object):
+class _CourseCertificateReportContext(object):
     """
     Internal class that provides a common context to use for a single grade
     report.  When a report is parallelized across multiple processes,
@@ -156,7 +152,7 @@ class _CertificateBulkContext(object):
         }
 
 
-class CourseMatchUpReport(object):
+class CourseCertificateReport(object):
     """
     Class to encapsulate functionality related to generating Grade Reports.
     """
@@ -169,34 +165,32 @@ class CourseMatchUpReport(object):
         Public method to generate a grade report.
         """
         with modulestore().bulk_operations(course_id):
-            context = _CourseMatchUpReportContext(_xmodule_instance_args, _entry_id, course_id, _task_input, action_name)
-            return CourseMatchUpReport()._generate(context)
+            context = _CourseCertificateReportContext(_xmodule_instance_args, _entry_id, course_id, _task_input, action_name)
+            return CourseCertificateReport()._generate(context)
 
     def _generate(self, context):
         """
         Internal method for generating a grade report for the given context.
         """
-        context.update_status(u'Starting matchup report')
+        context.update_status(u'Starting certificate report')
         success_headers = self._success_headers(context)
         error_headers = self._error_headers()
         batched_rows = self._batched_rows(context)
 
-        context.update_status(u'Compiling matchup report')
+        context.update_status(u'Compiling certificate report')
         success_rows, error_rows = self._compile(context, batched_rows)
 
-        context.update_status(u'Uploading matchup report')
+        context.update_status(u'Uploading certificate report')
         self._upload(context, success_headers, success_rows, error_headers, error_rows)
 
-        return context.update_status(u'Completed matchup report')
+        return context.update_status(u'Completed certificate report')
 
     def _success_headers(self, context):
         """
         Returns a list of all applicable column headers for this grade report.
         """
         return (
-            ["Name", "Matchup Account", "Gender", "Birth Year", "Email"] +
-            ["Enrolled", "Start", "End", "Video Progress"] +
-            ["Certificated", "Certificate ID"]
+            ["Course Name", "Course Duration", "Certificate Mode", "Name", "Certificate ID", "Email", "Certificate Date"]
         )
 
     def _error_headers(self):
@@ -235,10 +229,10 @@ class CourseMatchUpReport(object):
         Creates and uploads a CSV for the given headers and rows.
         """
         date = datetime.now(UTC)
-        upload_csv_to_report_store([success_headers] + success_rows, 'matchup_report', context.course_id, date)
+        upload_csv_to_report_store([success_headers] + success_rows, 'cert_report', context.course_id, date)
         if len(error_rows) > 0:
             error_rows = [error_headers] + error_rows
-            upload_csv_to_report_store(error_rows, 'matchup_report_err', context.course_id, date)
+            upload_csv_to_report_store(error_rows, 'cert_report_err', context.course_id, date)
 
     def _batch_users(self, context):
         """
@@ -253,43 +247,14 @@ class CourseMatchUpReport(object):
             Get all the enrolled users in a course.
 
             This method fetches & loads the enrolled user objects at once which may cause
-            out-of-memory errors in large courses. This method will be removed when
-            `OPTIMIZE_GET_LEARNERS_FOR_COURSE` waffle flag is removed.
+            out-of-memory errors in large courses.
             """
             users = CourseEnrollment.objects.users_enrolled_in(course_id, include_inactive=True)
             users = users.select_related('profile')
             return grouper(users)
 
-        def users_for_course_v2(course_id):
-            """
-            Get all the enrolled users in a course chunk by chunk.
-
-            This generator method fetches & loads the enrolled user objects on demand which in chunk
-            size defined. This method is a workaround to avoid out-of-memory errors.
-            """
-            filter_kwargs = {
-                'courseenrollment__course_id': course_id,
-            }
-
-            user_ids_list = get_user_model().objects.filter(**filter_kwargs).values_list('id', flat=True).order_by('id')
-            user_chunks = grouper(user_ids_list)
-            for user_ids in user_chunks:
-                user_ids = [user_id for user_id in user_ids if user_id is not None]
-                min_id = min(user_ids)
-                max_id = max(user_ids)
-                users = get_user_model().objects.filter(
-                    id__gte=min_id,
-                    id__lte=max_id,
-                    **filter_kwargs
-                ).select_related('profile')
-                yield users
-
         task_log_message = u'{}, Task type: {}'.format(context.task_info_string, context.action_name)
-        if WAFFLE_SWITCHES.is_enabled(OPTIMIZE_GET_LEARNERS_FOR_COURSE):
-            TASK_LOG.info(u'%s, Creating Course Grade with optimization', task_log_message)
-            return users_for_course_v2(context.course_id)
-
-        TASK_LOG.info(u'%s, Creating Course Grade without optimization', task_log_message)
+        TASK_LOG.info(u'%s, Creating Course Certificate', task_log_message)
         batch_users = users_for_course(context.course_id)
         return batch_users
 
@@ -298,16 +263,21 @@ class CourseMatchUpReport(object):
         Returns the course certification information for the given user.
         """
         user_certificate = bulk_certs.certificates_by_user.get(user.id)
-        certificate_date = 'N/A'
-        certificate_id = 'N/A'
         status = certificate_status(user_certificate)
         certificate_generated = status['status'] == CertificateStatuses.downloadable
 
         if certificate_generated:
             certificate_date = user_certificate.created_date.strftime("%Y-%m-%d")
             certificate_id = user_certificate.verify_uuid
+            certificate_mode = _(user_certificate.mode.title())
 
-        return [certificate_date, certificate_id]
+            return {
+                'mode': certificate_mode,
+                'id': certificate_id,
+                'date': certificate_date
+            }
+
+        return None
 
     def _rows_for_users(self, context, users):
         """
@@ -329,22 +299,11 @@ class CourseMatchUpReport(object):
                     error_rows.append([user.id, user.username, text_type(error)])
                 else:
                     profile = UserProfile.objects.get(user=user)
-
-                    enrollment = user.courseenrollment_set.get(course_id=context.course_id)
-                    enrolled = enrollment.created.strftime("%Y-%m-%d") if enrollment else 'N/A'
-                    course_start = context.course.start.strftime("%Y-%m-%d") if context.course.start else 'N/A'
-                    course_end = context.course.end.strftime("%Y-%m-%d") if context.course.end else 'N/A'
-                    if profile.year_of_birth and profile.month_of_birth and profile.day_of_birth:
-                        birth = '{}-{:0>2}-{:0>2}'.format(profile.year_of_birth, profile.month_of_birth, profile.day_of_birth)
-                    elif profile.year_of_birth:
-                        birth = '{}'.format(profile.year_of_birth)
-                    else:
-                        birth = 'N/A'
-
-                    success_rows.append(
-                        [profile.name, profile.matchup_account, profile.gender, birth, user.email] +
-                        [enrolled, course_start, course_end] +
-                        ["{}%".format(get_course_video_progress(user, context.course_id))] +
-                        self._user_certificate_info(user, context, course_grade, bulk_context.certs)
-                    )
+                    cert_info = self._user_certificate_info(user, context, course_grade, bulk_context.certs)
+                    if cert_info:
+                        course_duration = format_course_duration(context.course) if context.course.start and context.course.end else ''
+                        success_rows.append(
+                            [context.course.display_name, course_duration, cert_info['mode']] +
+                            [profile.name, cert_info['id'], user.email, cert_info['date']]
+                        )
             return success_rows, error_rows

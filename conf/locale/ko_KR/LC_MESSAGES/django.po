@@ -25735,3 +25735,11 @@ msgstr "출생월"
 #: lms/templates/register-form.html
 msgid "Day of Birth"
 msgstr "출생일"
+
+#: lms/templates/instructor/instructor_dashboard_2/data_download.html
+msgid "Generate Certificate Report"
+msgstr "수료증 보고서 생성"
+
+#: lms/djangoapps/instructor/views/api.py
+msgid "certificate"
+msgstr "수료증"
