@@ -277,7 +277,7 @@ def _can_enroll_courselike(user, courselike):
                 if found:
                     reg_method_ok = not found.disallow
                 else:
-                    reg_method_ok = False
+                    reg_method_ok = queryset[0].disallow
             log.warning("reg_method_id = %s" % reg_method_ok)
     except:
         pass
