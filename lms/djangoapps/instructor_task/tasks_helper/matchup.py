@@ -30,7 +30,7 @@ from openedx.core.djangoapps.content.block_structure.api import get_course_in_ca
 from openedx.core.djangoapps.course_groups.cohorts import bulk_cache_cohorts, get_cohort, is_course_cohorted
 from openedx.core.djangoapps.user_api.course_tag.api import BulkCourseTags
 from openedx.core.djangoapps.waffle_utils import WaffleSwitchNamespace
-from smartlearn import get_course_video_progress
+from smartlearn import get_course_video_progress, get_course_attendance_count
 from student.models import CourseEnrollment, UserProfile
 from student.roles import BulkRoleCache
 from xmodule.modulestore.django import modulestore
@@ -195,8 +195,8 @@ class CourseMatchUpReport(object):
         """
         return (
             ["Name", "Matchup Account", "Gender", "Birth Year", "Email"] +
-            ["Enrolled", "Start", "End", "Video Progress"] +
-            ["Certificated", "Certificate ID"]
+            ["Enrolled", "Start", "End", "Video Progress", "Attendance"] +
+            ["Grade", "Certificated", "Certificate ID"]
         )
 
     def _error_headers(self):
@@ -317,6 +317,7 @@ class CourseMatchUpReport(object):
             bulk_context = _CourseGradeBulkContext(context, users)
 
             success_rows, error_rows = [], []
+            attendances = get_course_attendance_count(context.course)
 
             for user, course_grade, error in CourseGradeFactory().iter(
                 users,
@@ -340,11 +341,13 @@ class CourseMatchUpReport(object):
                         birth = '{}'.format(profile.year_of_birth)
                     else:
                         birth = 'N/A'
+                    attendance = attendances.get(user.email, 0) if context.course.attendance_check_enabled else 'N/A'
 
                     success_rows.append(
                         [profile.name, profile.matchup_account, profile.gender, birth, user.email] +
                         [enrolled, course_start, course_end] +
-                        ["{}%".format(get_course_video_progress(user, context.course_id))] +
+                        ["{}%".format(get_course_video_progress(user, context.course_id)), attendance] +
+                        [course_grade.percent] +
                         self._user_certificate_info(user, context, course_grade, bulk_context.certs)
                     )
             return success_rows, error_rows

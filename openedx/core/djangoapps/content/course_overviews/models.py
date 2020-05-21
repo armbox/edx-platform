@@ -107,6 +107,10 @@ class CourseOverview(TimeStampedModel):
     language = TextField(null=True)
     attendance_check_enabled = BooleanField(default=False)
 
+    # to store staff and instructors info after rerun
+    staff = TextField(null=True)
+    instructors = TextField(null=True)
+
     @classmethod
     def _create_or_update(cls, course):
         """

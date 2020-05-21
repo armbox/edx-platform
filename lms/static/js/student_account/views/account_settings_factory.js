@@ -35,8 +35,8 @@
                 emailFieldView, socialFields, accountDeletionFields, platformData,
                 aboutSectionMessageType, aboutSectionMessage, fullnameFieldView, countryFieldView,
                 fullNameFieldData, emailFieldData, countryFieldData, additionalFields, fieldItem,
-                matchupFieldData, matchupFieldView;
-            // var phoneFieldData, phoneFieldView;
+                matchupFieldData, matchupFieldView,
+                phoneFieldData, phoneFieldView;
 
             $accountSettingsElement = $('.wrapper-account-settings');
 
@@ -101,7 +101,6 @@
                 };
             }
 
-            /*
             phoneFieldData = {
                 model: userAccountModel,
                 title: gettext('Phone Number'),
@@ -118,7 +117,6 @@
                     view: new AccountSettingsFieldViews.TextFieldView(phoneFieldData)
                 };
             }
-            */
 
             matchupFieldData = {
                 model: userAccountModel,
@@ -181,7 +179,7 @@
                         },
                         fullnameFieldView,
                         emailFieldView,
-                        // phoneFieldView,
+                        phoneFieldView,
                         matchupFieldView,
                         {
                             view: new AccountSettingsFieldViews.PasswordFieldView({

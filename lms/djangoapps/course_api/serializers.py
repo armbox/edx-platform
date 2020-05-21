@@ -75,6 +75,8 @@ class CourseSerializer(serializers.Serializer):  # pylint: disable=abstract-meth
     hidden = serializers.SerializerMethodField()
     invitation_only = serializers.BooleanField()
     attendance_check_enabled = serializers.BooleanField()
+    staff = serializers.CharField()
+    instructors = serializers.CharField()
 
     # 'course_id' is a deprecated field, please use 'id' instead.
     course_id = serializers.CharField(source='id', read_only=True)

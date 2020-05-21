@@ -25743,3 +25743,13 @@ msgstr "수료증 보고서 생성"
 #: lms/djangoapps/instructor/views/api.py
 msgid "certificate"
 msgstr "수료증"
+
+#: themes/edux/lms/templates/register-form.html
+msgid "Phone Number"
+msgstr "전화번호"
+
+#: themes/edux/lms/templates/register-form.html
+msgid ""
+"The phone number that is only used for identification."
+msgstr ""
+"전화번호는 본인 확인을 위해서만 사용됩니다."
