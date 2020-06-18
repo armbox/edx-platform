@@ -30,7 +30,7 @@ from lms.djangoapps.verify_student.services import IDVerificationService
 from openedx.core.djangoapps.content.block_structure.api import get_course_in_cache
 from openedx.core.djangoapps.course_groups.cohorts import bulk_cache_cohorts, get_cohort, is_course_cohorted
 from openedx.core.djangoapps.user_api.course_tag.api import BulkCourseTags
-from smartlearn import get_course_video_progress, format_course_duration
+from smartlearn import format_course_duration
 from student.models import CourseEnrollment, UserProfile
 from student.roles import BulkRoleCache
 from xmodule.modulestore.django import modulestore

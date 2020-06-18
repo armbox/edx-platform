@@ -3,17 +3,23 @@ CourseGrade Class
 """
 from abc import abstractmethod
 from collections import OrderedDict, defaultdict
+from logging import getLogger
 
 from django.conf import settings
 from lazy import lazy
 
 from ccx_keys.locator import CCXLocator
+from completion.models import BlockCompletion
 from xmodule import block_metadata_utils
+from xmodule.modulestore.django import modulestore
+from smartlearn import get_course_video_progress
 
 from .config import assume_zero_if_absent
 from .subsection_grade import ZeroSubsectionGrade
 from .subsection_grade_factory import SubsectionGradeFactory
 from .scores import compute_percent
+
+log = getLogger(__name__)
 
 
 class CourseGradeBase(object):
@@ -244,6 +250,7 @@ class CourseGrade(CourseGradeBase):
     def __init__(self, user, course_data, *args, **kwargs):
         super(CourseGrade, self).__init__(user, course_data, *args, **kwargs)
         self._subsection_grade_factory = SubsectionGradeFactory(user, course_data=course_data)
+        self.survey = modulestore().get_items(course_data.course.id, qualifiers={'category': 'survey'})
 
     def update(self):
         """
@@ -257,9 +264,31 @@ class CourseGrade(CourseGradeBase):
         # can be passed through and not confusingly stored and used
         # at a later time.
         grade_cutoffs = self.course_data.course.grade_cutoffs
+        video_progress = get_course_video_progress(self.user, self.course_data.course.id)
         self.percent = self._compute_percent(self.grader_result)
-        self.letter_grade = self._compute_letter_grade(grade_cutoffs, self.percent)
-        self.passed = self._compute_passed(grade_cutoffs, self.percent)
+
+        # if survey item is exist, it should be completed.
+        if self.survey:
+            survey_completed = [block for block in BlockCompletion.get_course_completions(self.user, self.course_data.course.id) if block.block_type == 'survey']
+
+        # if video progress is completed.
+        if (not self.survey or survey_completed) and video_progress == 100:
+            if not self.grader_result['grade_breakdown']:
+                # if grade_breakdown is empty, passed is True
+                self.letter_grade = 'Pass'
+                self.passed = True
+            else:
+                self.letter_grade = self._compute_letter_grade(grade_cutoffs, self.percent)
+                self.passed = self._compute_passed(grade_cutoffs, self.percent)
+
+        log.info(
+            u'Survey: %s, Completed: %s, Result: %s, passed: %s',
+            True if self.survey else False,
+            True if survey_completed else False,
+            True if self.grader_result['grade_breakdown'] else False,
+            self.passed,
+        )
+
         return self
 
     @lazy
@@ -275,6 +304,7 @@ class CourseGrade(CourseGradeBase):
             for subsection_grade in chapter['sections']:
                 if subsection_grade.all_total.first_attempted:
                     return True
+
         return False
 
     def _get_subsection_grade(self, subsection, force_update_subsections=False):
@@ -318,6 +348,7 @@ class CourseGrade(CourseGradeBase):
         """
         nonzero_cutoffs = [cutoff for cutoff in grade_cutoffs.values() if cutoff > 0]
         success_cutoff = min(nonzero_cutoffs) if nonzero_cutoffs else None
+
         return success_cutoff and percent >= success_cutoff
 
 
