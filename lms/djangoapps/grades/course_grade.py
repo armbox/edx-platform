@@ -270,6 +270,8 @@ class CourseGrade(CourseGradeBase):
         # if survey item is exist, it should be completed.
         if self.survey:
             survey_completed = [block for block in BlockCompletion.get_course_completions(self.user, self.course_data.course.id) if block.block_type == 'survey']
+        else:
+            survey_completed = False
 
         # if video progress is completed.
         if (not self.survey or survey_completed) and video_progress == 100:
