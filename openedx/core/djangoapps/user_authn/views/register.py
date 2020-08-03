@@ -148,6 +148,11 @@ def create_account_with_params(request, params):
         not eamap.external_domain.startswith(settings.SHIBBOLETH_DOMAIN_PREFIX)
     )
 
+    if smartlearn.auth.skip_email(params):
+        extra_fields['year_of_birth'] = 'optional'
+        extra_fields['month_of_birth'] = 'optional'
+        extra_fields['day_of_birth'] = 'optional'
+
     form = AccountCreationForm(
         data=params,
         extra_fields=extra_fields,
