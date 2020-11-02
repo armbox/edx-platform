@@ -31,3 +31,12 @@ contains a list of types for the tool to summarize with counts.
 python xblock_counts.py -u <email> -p <password> -c <OAUTH2 Client_id> -m 12 -x xblock_studio_configuration.json -a https://courses.edx.org
 
 Use python xblock_counts.py -h to get a list of command line options. 
+
+
+### generate_survey.py 사용법
+
+1. python3로 실행할 것
+
+2. survey 데이터 추출한 파일을 인자로 전달할 것
+
+3. 각 survey block_key, questions, answers 값을 미리 surveys dict에 추가한 후에 실행할 것
