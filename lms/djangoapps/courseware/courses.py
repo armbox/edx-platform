@@ -272,7 +272,9 @@ def get_course_about_section(request, course, section_key):
         'end_date',
         'prerequisites',
         'about_sidebar_html',
-        'ocw_links'
+        'ocw_links',
+        'total_weeks',
+        'total_efforts'
     }
 
     if section_key in html_sections:
