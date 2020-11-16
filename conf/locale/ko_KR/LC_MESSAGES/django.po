@@ -25753,3 +25753,7 @@ msgid ""
 "The phone number that is only used for identification."
 msgstr ""
 "전화번호는 본인 확인을 위해서만 사용됩니다."
+
+#: lms/templates/certificates/_accomplishment-rendering.html
+msgid "Total Effort"
+msgstr "총 학습시간"

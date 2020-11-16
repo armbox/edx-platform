@@ -15,6 +15,7 @@ from django.template import RequestContext
 from django.utils.encoding import smart_str
 from django.utils import translation
 from eventtracking import tracker
+from numpy import around
 from opaque_keys import InvalidKeyError
 from opaque_keys.edx.keys import CourseKey
 
@@ -41,6 +42,7 @@ from edxmako.shortcuts import render_to_response
 from edxmako.template import Template
 from openedx.core.djangoapps.catalog.utils import get_course_run_details
 from openedx.core.djangoapps.lang_pref.api import get_closest_released_language
+from openedx.core.djangoapps.models.course_details import CourseDetails
 from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
 from openedx.core.lib.courses import course_image_url
 from openedx.core.djangoapps.certificates.api import display_date_for_certificate, certificates_viewable_for_course
@@ -240,6 +242,17 @@ def _update_course_context(request, context, course, course_key, platform_name):
     course_number = course.display_coursenumber if course.display_coursenumber else course.number
     context['course_number'] = course_number
     context['course_duration'] = format_course_duration(course) if course.start and course.end else ''
+
+    try:
+        total_weeks = around((course.end - course.start).days / 7) if course.start and course.end else 0
+        effort = CourseDetails.fetch(course.id).effort
+        time_delta = datetime.strptime(effort, '%H:%M') - datetime.strptime('00:00', '%H:%M')
+        course_effort = (time_delta.total_seconds() / 3600) * total_weeks
+        context['course_effort'] = course_effort
+    except:
+        context['course_effort'] = None
+
+
     if context['organization_long_name']:
         # Translators:  This text represents the description of course
         context['accomplishment_copy_course_description'] = _('a course of study offered by {partner_short_name}, '
