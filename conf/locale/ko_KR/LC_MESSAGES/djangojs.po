@@ -11497,3 +11497,12 @@ msgstr "출생월"
 #: lms/templates/register-form.html
 msgid "Day of Birth"
 msgstr "출생일"
+
+#: cms/templates/settings.html
+#: lms/templates/certificates/_accomplishment-rendering.html
+msgid "Total Effort"
+msgstr "학습인정시간"
+
+#: cms/templates/settings.html
+msgid "Total Weeks"
+msgstr "총 주차"

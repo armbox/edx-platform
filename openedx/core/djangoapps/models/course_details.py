@@ -29,6 +29,8 @@ ABOUT_ATTRIBUTES = [
     'entrance_exam_minimum_score_pct',
     'about_sidebar_html',
     'attendance_check_enabled',
+    'total_weeks',
+    'total_efforts',
 ]
 
 
@@ -57,6 +59,8 @@ class CourseDetails(object):
         self.about_sidebar_html = ""
         self.intro_video = None  # a video pointer
         self.effort = None  # hours/week
+        self.total_weeks = None # total weeks
+        self.total_efforts = None   # total efforts
         self.license = "all-rights-reserved"  # default course license is all rights reserved
         self.course_image_name = ""
         self.course_image_asset_path = ""  # URL of the course image

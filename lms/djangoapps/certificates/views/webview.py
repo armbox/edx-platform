@@ -15,7 +15,6 @@ from django.template import RequestContext
 from django.utils.encoding import smart_str
 from django.utils import translation
 from eventtracking import tracker
-from numpy import around
 from opaque_keys import InvalidKeyError
 from opaque_keys.edx.keys import CourseKey
 
@@ -244,10 +243,9 @@ def _update_course_context(request, context, course, course_key, platform_name):
     context['course_duration'] = format_course_duration(course) if course.start and course.end else ''
 
     try:
-        total_weeks = around((course.end - course.start).days / 7) if course.start and course.end else 0
-        effort = CourseDetails.fetch(course.id).effort
+        effort = CourseDetails.fetch(course.id).total_efforts
         time_delta = datetime.strptime(effort, '%H:%M') - datetime.strptime('00:00', '%H:%M')
-        course_effort = (time_delta.total_seconds() / 3600) * total_weeks
+        course_effort = time_delta.total_seconds() / 3600
         context['course_effort'] = course_effort
     except:
         context['course_effort'] = None

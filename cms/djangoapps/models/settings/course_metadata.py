@@ -61,6 +61,8 @@ class CourseMetadata(object):
         'default_tab',
         'highlights_enabled_for_messaging',
         'attendance_check_enabled',
+        'total_weeks',
+        'total_efforts',
     ]
 
     @classmethod

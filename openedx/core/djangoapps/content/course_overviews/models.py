@@ -111,6 +111,9 @@ class CourseOverview(TimeStampedModel):
     staff = TextField(null=True)
     instructors = TextField(null=True)
 
+    total_weeks = TextField(null=True)
+    total_efforts = TextField(null=True)
+
     @classmethod
     def _create_or_update(cls, course):
         """
@@ -198,6 +201,8 @@ class CourseOverview(TimeStampedModel):
         course_overview.catalog_visibility = course.catalog_visibility
         course_overview.short_description = CourseDetails.fetch_about_attribute(course.id, 'short_description')
         course_overview.effort = CourseDetails.fetch_about_attribute(course.id, 'effort')
+        course_overview.total_weeks = CourseDetails.fetch_about_attribute(course.id, 'total_weeks')
+        course_overview.toatl_efforts = CourseDetails.fetch_about_attribute(course.id, 'total_efforts')
         course_overview.course_video_url = CourseDetails.fetch_video_url(course.id)
         course_overview.self_paced = course.self_paced
         course_overview.attendance_check_enabled = course.attendance_check_enabled

@@ -19,7 +19,7 @@ define(['backbone', 'underscore', 'gettext', 'js/models/validation_helpers', 'js
                 short_description: '',
                 overview: '',
                 intro_video: null,
-                effort: null,	// an int or null,
+                effort: '00:00',	// an int or null,
                 license: null,
                 course_image_name: '', // the filename
                 course_image_asset_path: '', // the full URL (/c4x/org/course/num/asset/filename)
@@ -33,7 +33,9 @@ define(['backbone', 'underscore', 'gettext', 'js/models/validation_helpers', 'js
                 learning_info: [],
                 instructor_info: {},
                 self_paced: null,
-                attendance_check_enabled: ''
+                attendance_check_enabled: '',
+                total_weeks: '00',
+                total_efforts: '00:00',
             },
 
             validate: function(newattrs) {

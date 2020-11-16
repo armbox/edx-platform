@@ -108,7 +108,23 @@ define(['js/views/validation', 'codemirror', 'underscore', 'jquery', 'jquery.ui'
                        this.$el.find('.remove-course-introduction-video').show();
                    } else this.$el.find('.remove-course-introduction-video').hide();
 
-                   this.$el.find('#' + this.fieldToSelectorMap.effort).val(this.model.get('effort'));
+                   try {
+                       if (this.model.has('effort')) {
+                           const val = this.model.get('effort').split(':');
+                           this.$el.find(`#${this.fieldToSelectorMap.effort}-hour`).val(val[0] || '00');
+                           this.$el.find(`#${this.fieldToSelectorMap.effort}-minute`).val(val[1] || '00');
+                       }
+
+                       if (this.model.has('total_efforts')) {
+                           const val = this.model.get('total_efforts').split(':');
+                           this.$el.find(`#${this.fieldToSelectorMap.total_efforts}-hour`).val(val[0] || '00');
+                           this.$el.find(`#${this.fieldToSelectorMap.total_efforts}-minute`).val(val[1] || '00');
+                       }
+                   } catch (e) {
+                       console.log(e);
+                   }
+
+                   this.$el.find('#' + this.fieldToSelectorMap.total_weeks).val(this.model.get('total_weeks'));
 
                    var courseImageURL = this.model.get('course_image_asset_path');
                    this.$el.find('#course-image-url').val(courseImageURL);
@@ -186,7 +202,9 @@ define(['js/views/validation', 'codemirror', 'underscore', 'jquery', 'jquery.ui'
                    add_course_learning_info: 'add-course-learning-info',
                    add_course_instructor_info: 'add-course-instructor-info',
                    course_learning_info: 'course-learning-info',
-                   attendance_check_enabled: 'attendance-check-enabled'
+                   attendance_check_enabled: 'attendance-check-enabled',
+                   total_weeks: 'course-total-weeks',
+                   total_efforts: 'course-total-efforts'
                },
 
                addLearningFields: function() {
@@ -305,14 +323,26 @@ define(['js/views/validation', 'codemirror', 'underscore', 'jquery', 'jquery.ui'
                    case 'course-pace-instructor-paced':
                        this.model.set('self_paced', JSON.parse(event.currentTarget.value));
                        break;
+                   case 'course-effort-hour':
+                       this.model.set('effort', event.currentTarget.value + ':' + ($('#course-effort-hour')[0].value || '00'));
+                       break;
+                   case 'course-effort-minute':
+                       this.model.set('effort', ($('#course-effort-hour')[0].value || '00') + ':' + event.currentTarget.value);
+                       break;
+                   case 'course-total-efforts-hour':
+                       this.model.set('total_efforts', event.currentTarget.value + ':' + ($('#course-total-efforts-minute')[0].value || '00'));
+                       break;
+                   case 'course-total-efforts-minute':
+                       this.model.set('total_efforts', ($('#course-total-efforts-hour')[0].value || '00') + ':' + event.currentTarget.value);
+                       break;
                    case 'course-language':
-                   case 'course-effort':
                    case 'course-title':
                    case 'course-subtitle':
                    case 'course-duration':
                    case 'course-description':
                    case 'course-short-description':
                    case 'attendance-check-enabled':
+                   case 'course-total-weeks':
                        this.setField(event);
                        break;
                    default: // Everything else is handled by datepickers and CodeMirror.
