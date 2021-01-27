@@ -156,6 +156,14 @@ def validate_name(name):
     if contains_html(name):
         raise forms.ValidationError(_('Full Name cannot contain the following characters: < >'))
 
+def validate_phone(phone):
+    """
+    Verifies a phone is valid, raises a ValidationError otherwise.
+    Args:
+        phone (unicode): The phone to validate.
+    """
+    if not re.match(r'^\d{10,16}$', phone):
+        raise forms.ValidationError(_('Enter numbers only'))
 
 class UsernameField(forms.CharField):
     """
@@ -193,7 +201,9 @@ class AccountCreationForm(forms.Form):
     """
 
     _EMAIL_INVALID_MSG = _("A properly formatted e-mail is required")
+    _PHONE_INVALID_MSG = _('Enter numbers only')
     _NAME_TOO_SHORT_MSG = _("Your legal name must be a minimum of two characters long")
+    _PHONE_TOO_SHORT_MSG = _("Phone number must be a minimum of 10 characters long")
 
     # TODO: Resolve repetition
 
@@ -218,6 +228,18 @@ class AccountCreationForm(forms.Form):
             "min_length": _NAME_TOO_SHORT_MSG,
         },
         validators=[validate_name]
+    )
+
+    phone = forms.CharField(
+        min_length=10,
+        max_length=16,
+        error_messages={
+            "required": accounts_settings.REQUIRED_FIELD_PHONE_MSG,
+            "invalid": _PHONE_INVALID_MSG,
+            "min_length": _PHONE_TOO_SHORT_MSG,
+            "max_length": _("Phone number cannot be more than %(limit_value)s characters long"),
+        },
+        validators=[validate_phone]
     )
 
     def __init__(

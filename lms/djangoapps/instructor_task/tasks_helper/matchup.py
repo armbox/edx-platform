@@ -194,7 +194,7 @@ class CourseMatchUpReport(object):
         Returns a list of all applicable column headers for this grade report.
         """
         return (
-            ["Name", "Matchup Account", "Gender", "Birth Year", "Email"] +
+            ["Name", "Matchup Account", "Gender", "Birth Year", "Email", "Phone"] +
             ["Enrolled", "Start", "End", "Video Progress", "Attendance"] +
             ["Grade", "Certificated", "Certificate ID"]
         )
@@ -344,7 +344,7 @@ class CourseMatchUpReport(object):
                     attendance = attendances.get(user.email, 0) if context.course.attendance_check_enabled else 'N/A'
 
                     success_rows.append(
-                        [profile.name, profile.matchup_account, profile.gender, birth, user.email] +
+                        [profile.name, profile.matchup_account, profile.gender, birth, user.email, profile.phone] +
                         [enrolled, course_start, course_end] +
                         ["{}%".format(get_course_video_progress(user, context.course_id)), attendance] +
                         [course_grade.percent] +

@@ -106,6 +106,7 @@
                 title: gettext('Phone Number'),
                 valueAttribute: 'phone',
                 helpMessage: gettext('The phone number that is only used for identification.'),  // eslint-disable-line max-len,
+                required: true,
                 persistChanges: true
             };
             if (syncLearnerProfileData && enterpriseReadonlyAccountFields.fields.indexOf('phone') !== -1) {
