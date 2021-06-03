@@ -16,6 +16,7 @@
 // page set up - only available to modern browsers now
 @page {
   size : A4 landscape;
+  margin: 0;
 }
 
 @media print {
