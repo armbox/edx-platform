@@ -7,6 +7,9 @@
 #   * confirm that it has no system requirements beyond what we already install
 #   * run "make upgrade" to update the detailed requirements files
 #
+
+-c ../constraints.txt
+
 -r ../edx-sandbox/shared.txt  # Dependencies which are also used by code sandboxes
 -r github.in              # Forks and other dependencies not yet on PyPI
 -r local.in               # Packages in edx-platform which have their own setup.py
@@ -34,6 +37,7 @@ celery==3.1.25                      # Asynchronous task execution library
 defusedxml==0.4.1                   # XML bomb protection for common XML parsers
 Django==1.11.16                     # Web application framework
 django-babel-underscore             # underscore template extractor for django-babel (internationalization utilities)
+django-classy-tags==0.8.0
 django-config-models>=0.2.2         # Configuration models for Django allowing config management with auditing
 django-cors-headers==2.1.0          # Used to allow to configure CORS headers for cross-domain requests
 django-countries==4.6.1             # Country data for Django forms and model fields
@@ -52,7 +56,7 @@ django-ratelimit
 django-ratelimit-backend==1.1.1
 django-require
 django-rest-swagger                 # API documentation
-django-sekizai
+django-sekizai==0.10.0
 django-ses==0.8.4
 django-simple-history
 django-splash
@@ -63,43 +67,45 @@ django-waffle==0.12.0
 django-webpack-loader               # Used to wire webpack bundles into the django asset pipeline
 djangorestframework-jwt
 django-xforwardedfor-middleware==2.0 # Middleware to use the X-Forwarded-For header as the request IP
+docutils==0.14
 dogapi==1.2.1                       # Python bindings to Datadog's API, for metrics gathering
 edx-ace==0.1.10
 edx-analytics-data-api-client
-edx-ccx-keys
+edx-ccx-keys==0.2.1
 edx-celeryutils
-edx-completion
+edx-completion==1.0.1
 edx-django-oauth2-provider
-edx-django-release-util             # Release utils for the edx release pipeline
+edx-django-release-util==0.3.1      # Release utils for the edx release pipeline
 edx-django-sites-extensions==2.3.1
 edx-django-utils
-edx-drf-extensions
-edx-enterprise
+edx-drf-extensions==2.0.1
+edx-enterprise==1.0.5
 edx-milestones
 edx-oauth2-provider
-edx-organizations
-edx-proctoring
-edx-rest-api-client
+edx-organizations==1.0.0
+edx-proctoring==1.4.0
+edx-rest-api-client==1.9
 edx-search
 edx-submissions
 edx-user-state-client
-edxval
-enum34==1.1.6                       # Backport of Enum from Python 3.4+
-event-tracking
+edxval==0.1.22
+enum34==1.1.10                      # Backport of Enum from Python 3.4+
+event-tracking==0.2.7
 feedparser==5.1.3
 firebase-token-generator==1.3.2
 fs==2.0.18
 fs-s3fs==0.1.8
 futures ; python_version == "2.7"   # via django-pipeline, python-swift-client, s3transfer
 glob2==0.3                          # Enhanced glob module, used in openedx.core.lib.rooted_paths
-gunicorn==17.5
+gunicorn==19.0
 help-tokens
 html5lib                            # HTML parser, used for capa problems
+httplib2==0.11.3
 ipaddr==2.1.11                      # Ip network support for Embargo feature
-jsonfield                           # Django model field for validated JSON; used in several apps
+jsonfield==2.0.2                    # Django model field for validated JSON; used in several apps
 mailsnake==1.6.2                    # Needed for mailchimp (mailing djangoapp)
 mako==1.0.2                         # Primary template language used for server-side page rendering
-Markdown==2.6.11                    # Convert text markup to HTML; used in capa problems, forums, and course wikis; pin Markdown version as tests failed for its upgrade to latest release
+Markdown                            # Convert text markup to HTML; used in capa problems, forums, and course wikis
 mongoengine==0.10.0                 # Object-document mapper for MongoDB, used in the LMS dashboard
 MySQL-python                        # Driver for the default production relational database
 newrelic                            # New Relic agent for performance monitoring
@@ -109,11 +115,10 @@ oauthlib                            # OAuth specification support for authentica
 pdfminer                            # Used in shoppingcart for extracting/parsing pdf text
 piexif==1.0.2                       # Exif image metadata manipulation, used in the profile_images app
 Pillow                              # Image manipulation library; used for course assets, profile images, invoice PDFs, etc.
-py2neo<4.0.0                       # Used to communicate with Neo4j, which is used internally for modulestore inspection
 PyContracts==1.7.1
 pycountry==1.20
 pycryptodomex==3.4.7
-pygments==2.2.0                     # Used to support colors in paver command output
+pygments                            # Used to support colors in paver command output
 pygraphviz==1.1                     # No longer in use?  Optional dependency of networkx, from edx-sandbox/shared.in
 pyjwkest==1.3.2
 # TODO Replace PyJWT usage with pyjwkest
@@ -130,8 +135,8 @@ rest-condition                      # DRF's recommendation for supporting comple
 rfc6266-parser                      # Used to generate Content-Disposition headers.
 social-auth-app-django<3.0.0
 social-auth-core<2.0.0
-pysrt==0.4.7                        # Support for SubRip subtitle files, used in the video XModule
-pytz==2016.10                       # Time zone information database
+pysrt                               # Support for SubRip subtitle files, used in the video XModule
+pytz                                # Time zone information database
 PyYAML                              # Used to parse XModule resource templates
 redis==2.10.6                       # celery task broker
 requests-oauthlib                   # Simplifies use of OAuth via the requests library, used for CCX and LTI
