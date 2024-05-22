@@ -334,8 +334,8 @@ tox-battery==0.6.1
 tox==3.5.3
 traceback2==1.4.0
 transifex-client==0.13.5
-twisted==16.6.0
 typing==3.10.0.0
+twisted==16.6.0
 unicodecsv==0.14.1
 unidecode==1.0.23
 unittest2==1.1.0

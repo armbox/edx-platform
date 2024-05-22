@@ -236,6 +236,7 @@ sqlparse==0.2.4
 stevedore==1.10.0
 sympy==0.7.1
 tincan==1.0.0             # via edx-enterprise
+typing==3.10.0.0
 unicodecsv==0.14.1
 uritemplate==3.0.0
 urllib3==1.23
